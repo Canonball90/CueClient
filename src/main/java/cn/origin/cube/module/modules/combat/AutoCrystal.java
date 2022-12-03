@@ -4,6 +4,7 @@ import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.modules.client.AutoConfig;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.settings.BooleanSetting;
 import cn.origin.cube.settings.IntegerSetting;
@@ -398,6 +399,13 @@ public class AutoCrystal extends Module {
                 this.timer.reset();
             }
     }
+
+    public static AutoCrystal INSTANCE;
+
+    public AutoCrystal() {
+        INSTANCE = this;
+    }
+
 
     public enum Mode{
         Main,Offhand

@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.combat;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.modules.client.AutoConfig;
 import cn.origin.cube.settings.BooleanSetting;
 import cn.origin.cube.settings.DoubleSetting;
 import cn.origin.cube.utils.Timer;
@@ -145,5 +146,11 @@ public class Replenish extends Module {
                 refillSlot = -1;
             }
         }
+    }
+
+    public static Replenish INSTANCE;
+
+    public Replenish() {
+        INSTANCE = this;
     }
 }

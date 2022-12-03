@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.combat
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
 import cn.origin.cube.module.ModuleInfo
+import cn.origin.cube.module.modules.client.AutoConfig
 import net.minecraft.client.gui.inventory.GuiContainer
 import net.minecraft.client.renderer.InventoryEffectRenderer
 import net.minecraft.init.Items
@@ -53,5 +54,11 @@ class AutoArmor:Module() {
                 }
             }
         }
+    }
+
+    var INSTANCE: AutoArmor? = null
+
+    public fun AutoArmor() {
+        INSTANCE = this
     }
 }
