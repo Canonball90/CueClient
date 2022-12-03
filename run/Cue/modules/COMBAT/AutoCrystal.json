@@ -1,0 +1,31 @@
+{
+  "Name": "AutoCrystal",
+  "Toggle": false,
+  "Settings": {
+    "Visible": true,
+    "Switch": false,
+    "Players": false,
+    "Hostiles": false,
+    "Passives": false,
+    "Place": false,
+    "Break": false,
+    "Range": 5,
+    "MinimumDmg": 4,
+    "SelfDamage": 10,
+    "AntiWeakness": false,
+    "Multi-Place": false,
+    "Rotate": false,
+    "Manual-Timer": false,
+    "Ray-trace": false,
+    "Swing": "Main",
+    "BreakSpeed": 20,
+    "PlaceSpeed": 20,
+    "Thinking": false,
+    "Cancel Crystal": true,
+    "Outline": true,
+    "Alpha": 150
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

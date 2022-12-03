@@ -1,0 +1,13 @@
+{
+  "Name": "NoSlow",
+  "Toggle": true,
+  "Settings": {
+    "Visible": true,
+    "Strict": true,
+    "Gui Move": true,
+    "SoulSand": true
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Scaffold",
+  "Toggle": false,
+  "Settings": {
+    "Visible": true,
+    "Rotate": true,
+    "Swing": true,
+    "Switch": true,
+    "Tower": true,
+    "Speed": 0.7
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

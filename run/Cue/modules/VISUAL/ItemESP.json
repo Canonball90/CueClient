@@ -1,0 +1,15 @@
+{
+  "Name": "ItemESP",
+  "Toggle": true,
+  "Settings": {
+    "Visible": true,
+    "Scale": 3,
+    "Count": true,
+    "BackGround": true,
+    "Border": true,
+    "ClientSync": true
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

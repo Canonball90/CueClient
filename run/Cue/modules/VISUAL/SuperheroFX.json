@@ -1,0 +1,14 @@
+{
+  "Name": "SuperheroFX",
+  "Toggle": true,
+  "Settings": {
+    "Visible": true,
+    "Delay": 0.0,
+    "Scale": 1.7468414306640625,
+    "Extra": 2,
+    "RandomColor": true
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

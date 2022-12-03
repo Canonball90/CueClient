@@ -1,0 +1,13 @@
+{
+  "Name": "Chams",
+  "Toggle": false,
+  "Settings": {
+    "Visible": true,
+    "Lines": true,
+    "OutlineWidth": 40.0,
+    "Alpha": 200
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

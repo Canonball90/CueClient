@@ -1,0 +1,30 @@
+{
+  "required": true,
+  "package": "cn.origin.cube.inject.client",
+  "refmap": "mixins.cube.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "MixinEntityPlayerSP",
+    "MixinMinecraft",
+    "ISPacketExplosion",
+    "MixinRenderPlayer",
+    "ModelPlayerMixin",
+    "ISPacketPlayerPosLook",
+    "INetworkManager",
+    "ICPacketPlayer",
+    "IRenderGlobal",
+    "MixinGuiBossOverlay",
+    "MixinMapItemRenderer",
+    "MixinEntityRenderer",
+    "MixinEntityPlayer",
+    "ITimer",
+    "IMinecraft",
+    "MixinAbstractClientPlayer",
+    "ModelCrystalMixin",
+    "MixinPlayerControllerMP",
+    "IEntityRenderer"
+  ],
+  "mixins": [
+    "MixinNetworkManager"
+  ]
+}

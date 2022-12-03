@@ -1,0 +1,15 @@
+{
+  "Name": "ModuleArrayList",
+  "Toggle": true,
+  "HudXPos": 4.0,
+  "HudYPos": 152.0,
+  "HudWidth": 154.0,
+  "HudHeight": 180.0,
+  "Settings": {
+    "Align": "Left",
+    "Sort": "Top"
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

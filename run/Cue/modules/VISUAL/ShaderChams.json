@@ -1,0 +1,16 @@
+{
+  "Name": "ShaderChams",
+  "Toggle": true,
+  "Settings": {
+    "Visible": true,
+    "ShaderMode": "SMOKE",
+    "Targets": false,
+    "PLayers": true,
+    "Crystals": false,
+    "Mobs": false,
+    "Animals": false
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}
