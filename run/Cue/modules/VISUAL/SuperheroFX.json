@@ -3,9 +3,9 @@
   "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Delay": 0.0,
-    "Scale": 1.7468414306640625,
-    "Extra": 2,
+    "Delay": 1.0,
+    "Scale": 1.5,
+    "Extra": 1,
     "RandomColor": true
   },
   "CommonSettings": {

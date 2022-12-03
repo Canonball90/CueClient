@@ -1,6 +1,6 @@
 {
   "Name": "NoRender",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true
   },

@@ -1,12 +1,12 @@
 {
   "Name": "ShaderChams",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
-    "ShaderMode": "SMOKE",
-    "Targets": false,
+    "ShaderMode": "AQUA",
+    "Targets": true,
     "PLayers": true,
-    "Crystals": false,
+    "Crystals": true,
     "Mobs": false,
     "Animals": false
   },

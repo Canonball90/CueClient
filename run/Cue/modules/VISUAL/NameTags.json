@@ -10,13 +10,14 @@
     "Enchantments": false,
     "Health Bar": false,
     "Background": true,
-    "Outline": true,
+    "RoundedBackground": 5.0,
+    "Outline": false,
     "Dynamic Outline": false,
     "Outline Width": 1.0,
     "Y Offset": 0.0,
     "Size": 1.3,
-    "Width": 0,
-    "Height": 0
+    "Width": 2,
+    "Height": 1
   },
   "CommonSettings": {
     "KeyBind": 0

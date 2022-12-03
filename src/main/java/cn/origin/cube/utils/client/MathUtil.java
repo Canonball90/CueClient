@@ -63,4 +63,12 @@ public class MathUtil {
         return new Vec3d(entity.lastTickPosX + (entity.posX - entity.lastTickPosX) * time, entity.lastTickPosY + (entity.posY - entity.lastTickPosY) * time, entity.lastTickPosZ + (entity.posZ - entity.lastTickPosZ) * time);
     }
 
+    public static double lerp(double current,double target,double lerp){
+        current -= (current-target)*MathHelper.clamp(lerp,0, 1);
+
+        return current;
+
+    }
+
+
 }

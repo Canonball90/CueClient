@@ -1,6 +1,6 @@
 {
   "Name": "Crosshair",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "Length": 10.0,

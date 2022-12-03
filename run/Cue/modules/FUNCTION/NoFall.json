@@ -1,11 +1,11 @@
 {
   "Name": "NoFall",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Mode": "OldFag",
+    "Mode": "Ncp",
     "Speed": 5.0,
-    "Fall Distance": 1.4329457
+    "Fall Distance": 5.0
   },
   "CommonSettings": {
     "KeyBind": 0

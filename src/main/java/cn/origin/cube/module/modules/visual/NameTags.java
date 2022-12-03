@@ -5,10 +5,12 @@ import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.settings.BooleanSetting;
+import cn.origin.cube.settings.DoubleSetting;
 import cn.origin.cube.settings.FloatSetting;
 import cn.origin.cube.settings.IntegerSetting;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.render.Render2DUtil;
+import cn.origin.cube.utils.render.RenderUtil;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.math.MathHelper;
@@ -41,9 +43,9 @@ public class NameTags extends Module {
     BooleanSetting enchant = registerSetting("Enchantments", false);
     BooleanSetting healthBar = registerSetting("Health Bar", false);
     BooleanSetting background = registerSetting("Background", true);
+    BooleanSetting roundedOutline = registerSetting("RoundedBackground", true).booleanDisVisible(background);
+    DoubleSetting radius = registerSetting("Radius", 1.0, 1, 5).booleanDisVisible(background);
     BooleanSetting gradientBackground = registerSetting("Background", true).booleanVisible(background);
-    BooleanSetting outline = registerSetting("Outline", true);
-    BooleanSetting dynamicOutline = registerSetting("Dynamic Outline", false).booleanVisible(outline);
     FloatSetting outlineWidth = registerSetting("Outline Width", 1.0f, 0f, 3.0f);
     FloatSetting yOffset = registerSetting("Y Offset", 0, -10.0F, 10.0F);
     FloatSetting sizel = registerSetting("Size", 1.3F, -10.0F, 10.0F);
@@ -89,16 +91,20 @@ public class NameTags extends Module {
                 }else{
                     Render2DUtil.drawBorderedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue(), (int) 10 + height.getValue(), outlineWidth.getValue(), (background.getValue() ? new Color(25,25,25,150).getRGB() :  new Color(25,25,25,0).getRGB()), ClickGui.getCurrentColor().getRGB());
                 }
-            }else{
+
+            }else if(roundedOutline.getValue()){
+                drawRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16) + width.getValue(), (int) 10 + height.getValue(), new Color(25, 25, 25, 150).getRGB(), radius.getValue().intValue());
+                drawOutlineRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16) + width.getValue(), (int) 10 + height.getValue(), ClickGui.getCurrentColor().getRGB(),radius.getValue().intValue(), mc.player.getDistance(e), size);
+            }else {
                 Render2DUtil.drawBorderedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue(), (int) 10 + height.getValue(), outlineWidth.getValue(),new Color(25,25,25,0).getRGB(), ClickGui.getCurrentColor().getRGB());
             }
-            if (healthBar.getValue()) {
-                int length = (int) (((NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") * 2 - 1) * health));
-                length = Math.max(2, length);
-                Color color = new Color(0xBB0A0A);
-                GlStateManager.disableDepth();
-                drawRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), 4, (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() - length, 6, color.getRGB(), 1);
-            }
+//            if (healthBar.getValue()) {
+//                int length = (int) (((NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") * 2 - 1) * health));
+//                length = Math.max(2, length);
+//                Color color = new Color(0xBB0A0A);
+//                GlStateManager.disableDepth();
+//                drawRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), 4, (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() - length, 6, color.getRGB(), 1);
+//            }
             mc.fontRenderer.drawStringWithShadow(e.getName() + " " + (Object) TextFormatting.GREEN + health + (heart.getValue() ? "\u2764" : "%"), 0 - this.getcenter(e.getName() + " " + (Object) TextFormatting.GREEN + health + "%"), 1, -1);
             int posX = -NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 - 8;
             if (healthBar.getValue()) {Render2DUtil.drawLine((-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) 11 + height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() + ( -health), (int) 11 + height.getValue(), 3, new Color(0, 255,0));}
@@ -178,6 +184,57 @@ public class NameTags extends Module {
         drawFilledCircle(x + radius, bottom - radius, radius, color, 270, 360);
         glEnd();
         glDisable(GL_LINE_SMOOTH);
+        GL11.glDisable(GL_LINE_SMOOTH);
+        GlStateManager.depthMask(true);
+        GlStateManager.enableDepth();
+        GlStateManager.enableTexture2D();
+        GlStateManager.disableBlend();
+        GlStateManager.popMatrix();
+    }
+
+    public void drawOutlineRoundedRect(int x, int y, int right, int bottom, int color, int radius, double distance, double distanceScale) {
+
+
+        double divisor = MathUtil.lerp(MathHelper.clamp(distance * (sizel.maxValue + 1 - sizel.getValue()), 1, 90), MathHelper.clamp((sizel.maxValue + 1 - sizel.getValue()) * 2, 1, distance), sizel.getValue());
+
+
+        RenderUtil.drawPolygonOutline(0, 90, (int) (360 / divisor), x, y, radius, 1f, color);
+        RenderUtil.drawPolygonOutline(90, 180, (int) (360 / divisor), right-radius*2, y, radius, 1f, color);
+        RenderUtil.drawPolygonOutline(180, 270, (int) (360 / divisor), right-radius*2, bottom-radius*2, radius, 1f, color);
+        RenderUtil.drawPolygonOutline(270, 360, (int) (360 / divisor), x , bottom-radius*2, radius, 1f, color);
+        GlStateManager.pushMatrix();
+        GlStateManager.enableBlend();
+        GlStateManager.disableDepth();
+        GlStateManager.tryBlendFuncSeparate(770, 771, 0, 1);
+        GlStateManager.disableTexture2D();
+        GlStateManager.depthMask(false);
+        GL11.glEnable(GL11.GL_LINE_SMOOTH);
+        GL11.glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+        GL11.glLineWidth((float) 1);
+
+        float a = (float)(color >> 24 & 255) / 255.0F;
+        float r = (float)(color >> 16 & 255) / 255.0F;
+        float g = (float)(color >> 8 & 255) / 255.0F;
+        float b = (float)(color & 255) / 255.0F;
+
+        final Tessellator tessellator = Tessellator.getInstance();
+        BufferBuilder bufferbuilder = tessellator.getBuffer();
+        bufferbuilder.begin(GL_LINE_STRIP, DefaultVertexFormats.POSITION_COLOR);
+        bufferbuilder.pos(x+radius,y, 0.0D).color(r, g, b, a).endVertex();
+        bufferbuilder.pos(right-radius,y, 0.0D).color(r, g, b, a).endVertex();
+        tessellator.draw();
+        bufferbuilder.begin(GL_LINE_STRIP, DefaultVertexFormats.POSITION_COLOR);
+        bufferbuilder.pos(right,y+radius, 0.0D).color(r, g, b, a).endVertex();
+        bufferbuilder.pos(right,bottom-radius, 0.0D).color(r, g, b, a).endVertex();
+        tessellator.draw();
+        bufferbuilder.begin(GL_LINE_STRIP, DefaultVertexFormats.POSITION_COLOR);
+        bufferbuilder.pos(x+radius,bottom, 0.0D).color(r, g, b, a).endVertex();
+        bufferbuilder.pos(right-radius,bottom, 0.0D).color(r, g, b, a).endVertex();
+        tessellator.draw();
+        bufferbuilder.begin(GL_LINE_STRIP, DefaultVertexFormats.POSITION_COLOR);
+        bufferbuilder.pos(x,y+radius, 0.0D).color(r, g, b, a).endVertex();
+        bufferbuilder.pos(x,bottom-radius, 0.0D).color(r, g, b, a).endVertex();
+        tessellator.draw();
         GL11.glDisable(GL_LINE_SMOOTH);
         GlStateManager.depthMask(true);
         GlStateManager.enableDepth();
