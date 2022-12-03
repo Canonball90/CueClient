@@ -1,5 +1,5 @@
-# CubeBase
-## A Minecraft 1.12.2 Hack mod base for 2b2t skidder
+# Cue
+## A Minecraft 1.12.2 Hack mod for 2b2t
 
 # Usage
 * Hold shift anywhere and right-click to open git Bash
