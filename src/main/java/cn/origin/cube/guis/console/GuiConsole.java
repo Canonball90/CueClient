@@ -59,7 +59,7 @@ public class GuiConsole extends GuiScreen implements ITabCompleter
         this.sentHistoryCursor = this.mc.ingameGUI.getChatGUI().getSentMessages().size();
         this.inputField = new net.minecraft.client.gui.GuiTextField(0, this.fontRenderer, 4, this.height - 12, this.width - 4, 12);
         this.inputField.setMaxStringLength(500);
-        this.inputField.setEnableBackgroundDrawing(false);
+        this.inputField.setEnableBackgroundDrawing(true);
         this.inputField.setFocused(true);
         this.inputField.setText(this.defaultInputFieldText);
         this.inputField.setCanLoseFocus(false);
