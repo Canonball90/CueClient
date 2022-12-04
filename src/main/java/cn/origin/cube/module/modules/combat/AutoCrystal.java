@@ -117,7 +117,6 @@ public class AutoCrystal extends Module {
             lookAtPacket(crystal.posX, crystal.posY, crystal.posZ, mc.player);
             mc.playerController.attackEntity(mc.player, crystal);
             if (timer.getPassedTimeMs() / 50 >= 20 - breakSpeed.getValue()) {
-                //this.mc.getConnection().sendPacket((Packet)new CPacketUseEntity(crystal));
                 timer.reset();
                 mc.player.swingArm(getHandToBreak());
             }

@@ -11,7 +11,7 @@ public class Console extends Module {
 
     @Override
     public void onEnable() {
-        mc.displayGuiScreen(new GuiConsole());
+        //mc.displayGuiScreen(new GuiConsole());
         super.onEnable();
     }
 }
