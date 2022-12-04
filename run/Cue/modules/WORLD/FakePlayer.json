@@ -1,6 +1,6 @@
 {
   "Name": "FakePlayer",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "name": "FakePlayer"

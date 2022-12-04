@@ -1,6 +1,6 @@
 {
   "Name": "ShaderChams",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "ShaderMode": "FLOW",

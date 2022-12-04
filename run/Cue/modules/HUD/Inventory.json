@@ -1,10 +1,13 @@
 {
   "Name": "Inventory",
-  "Toggle": false,
-  "HudXPos": 100.0,
-  "HudYPos": 200.0,
-  "HudWidth": 0.0,
-  "HudHeight": 0.0,
+  "Toggle": true,
+  "HudXPos": 335.0,
+  "HudYPos": 172.0,
+  "HudWidth": 52.0,
+  "HudHeight": 9.0,
+  "Settings": {
+    "Size": 1.064141
+  },
   "CommonSettings": {
     "KeyBind": 0
   }

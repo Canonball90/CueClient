@@ -14,7 +14,7 @@
     "SelfDamage": 10,
     "AntiWeakness": false,
     "Multi-Place": false,
-    "Rotate": true,
+    "Rotate": false,
     "Manual-Timer": false,
     "Ray-trace": false,
     "Swing": "Main",

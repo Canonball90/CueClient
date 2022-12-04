@@ -2,12 +2,12 @@
   "ClickGui": {
     "Combat": {
       "IsShowModules": true,
-      "X": 20.0,
-      "Y": 5.0
+      "X": 12.0,
+      "Y": 4.0
     },
     "Movement": {
       "IsShowModules": true,
-      "X": 130.0,
+      "X": 131.0,
       "Y": 5.0
     },
     "Visual": {
@@ -34,8 +34,8 @@
   "HudEditor": {
     "Hud": {
       "IsShowModules": true,
-      "X": 469.0,
-      "Y": 43.0
+      "X": 357.0,
+      "Y": 16.0
     }
   }
 }

@@ -5,6 +5,7 @@ import cn.origin.cube.module.Category;
 import cn.origin.cube.module.HudModule;
 import cn.origin.cube.module.HudModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.settings.FloatSetting;
 import cn.origin.cube.utils.render.Render2DUtil;
 import cn.origin.cube.utils.render.RenderUtil;
 import net.minecraft.client.Minecraft;
@@ -19,11 +20,14 @@ import java.awt.*;
 @HudModuleInfo(name = "Inventory", descriptions = "Show all enable module", category = Category.HUD, y = 200, x = 100)
 public class InventoryHud extends HudModule {
 
+    public FloatSetting Scala = registerSetting("Size", 1.0f, 0.0f, 10.0f);
+
     @Override
     public void onRender2D(){
-        GlStateManager.pushMatrix();
+
         GL11.glPushMatrix();
         GL11.glTranslated(this.x, (float) this.y, 0);
+        GL11.glScaled((double) this.Scala.getValue(), (double) this.Scala.getValue(), 0.0);
         RenderHelper.enableGUIStandardItemLighting();
         Render2DUtil.drawRect1(x - 2, y - 2, x - 1, y + 58, new Color(64,41,213).getRGB());
         Render2DUtil.drawRect1(x + 177, y - 1, x + 178, y+ 57, new Color(64,41,213, 255).getRGB());
@@ -41,6 +45,8 @@ public class InventoryHud extends HudModule {
         }
         Minecraft.getMinecraft().getRenderItem().zLevel = - 5.0f;
         RenderHelper.disableStandardItemLighting();
-        GlStateManager.popMatrix();
+        GL11.glPopMatrix();
+        this.width = (int) ((float) Cube.fontManager.CustomFont.getStringWidth("CueClient") * this.Scala.getValue());
+        this.height = (int) ((float) Cube.fontManager.CustomFont.getHeight() * this.Scala.getValue());
     }
 }

@@ -1,9 +1,9 @@
 {
   "Name": "ChorusLag",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "TickDelay": 165
+    "TickDelay": 48
   },
   "CommonSettings": {
     "KeyBind": 0
