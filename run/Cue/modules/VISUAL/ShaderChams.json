@@ -1,12 +1,11 @@
 {
   "Name": "ShaderChams",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "ShaderMode": "RB",
-    "Targets": false,
-    "PLayers": false,
-    "Crystals": false,
+    "ShaderMode": "FLOW",
+    "PLayers": true,
+    "Crystals": true,
     "Mobs": false,
     "Animals": false
   },

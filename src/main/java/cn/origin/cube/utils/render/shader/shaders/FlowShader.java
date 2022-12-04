@@ -30,4 +30,5 @@ public class FlowShader extends FramebufferShader {
     static {
         FlowShader.FLOW_SHADER = new FlowShader();
     }
+
 }

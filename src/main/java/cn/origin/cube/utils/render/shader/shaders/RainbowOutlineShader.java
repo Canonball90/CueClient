@@ -24,7 +24,7 @@ public class RainbowOutlineShader extends FramebufferShader {
     public void updateUniforms() {
         GL20.glUniform2f(this.getUniform("resolution"), (float) new ScaledResolution(Minecraft.getMinecraft()).getScaledWidth(), (float) new ScaledResolution(Minecraft.getMinecraft()).getScaledHeight());
         GL20.glUniform1f(this.getUniform("time"), time);
-        time += Float.intBitsToFloat(Float.floatToIntBits(1015.0615f) ^ 0x7F395856) * RenderUtil.deltaTime;
+        //time += Float.intBitsToFloat(Float.floatToIntBits(1015.0615f) ^ 0x7F395856) * RenderUtil.deltaTime;
     }
 
     static {

@@ -10,7 +10,8 @@ import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Shader {
+public abstract class Shader
+{
     public int program;
     public Map<String, Integer> uniformsMap;
 
@@ -18,39 +19,38 @@ public abstract class Shader {
         int vertexShaderID;
         int fragmentShaderID;
         try {
-            final InputStream vertexStream = getClass().getResourceAsStream("/assets/shader/vertex.vert");
-            assert vertexStream != null;
-            vertexShaderID = createShader(IOUtils.toString(vertexStream, Charset.defaultCharset()), 35633);
+            final InputStream vertexStream = this.getClass().getResourceAsStream("/assets/fonts/vertex.vert");
+            vertexShaderID = this.createShader(IOUtils.toString(vertexStream, Charset.defaultCharset()), 35633);
             IOUtils.closeQuietly(vertexStream);
-            final InputStream fragmentStream = getClass().getResourceAsStream("/assets/shader/" + fragmentShader);
-            assert fragmentStream != null;
-            fragmentShaderID = createShader(IOUtils.toString(fragmentStream, Charset.defaultCharset()), 35632);
+            final InputStream fragmentStream = this.getClass().getResourceAsStream("/assets/fonts/" + fragmentShader);
+            fragmentShaderID = this.createShader(IOUtils.toString(fragmentStream, Charset.defaultCharset()), 35632);
             IOUtils.closeQuietly(fragmentStream);
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
             return;
         }
         if (vertexShaderID == 0 || fragmentShaderID == 0) {
             return;
         }
-        program = ARBShaderObjects.glCreateProgramObjectARB();
-        if (program == 0) {
+        this.program = ARBShaderObjects.glCreateProgramObjectARB();
+        if (this.program == 0) {
             return;
         }
-        ARBShaderObjects.glAttachObjectARB(program, vertexShaderID);
-        ARBShaderObjects.glAttachObjectARB(program, fragmentShaderID);
-        ARBShaderObjects.glLinkProgramARB(program);
-        ARBShaderObjects.glValidateProgramARB(program);
+        ARBShaderObjects.glAttachObjectARB(this.program, vertexShaderID);
+        ARBShaderObjects.glAttachObjectARB(this.program, fragmentShaderID);
+        ARBShaderObjects.glLinkProgramARB(this.program);
+        ARBShaderObjects.glValidateProgramARB(this.program);
     }
 
     public void startShader() {
         GL11.glPushMatrix();
-        GL20.glUseProgram(program);
-        if (uniformsMap == null) {
-            uniformsMap = new HashMap<>();
-            setupUniforms();
+        GL20.glUseProgram(this.program);
+        if (this.uniformsMap == null) {
+            this.uniformsMap = new HashMap<>();
+            this.setupUniforms();
         }
-        updateUniforms();
+        this.updateUniforms();
     }
 
     public void stopShader() {
@@ -72,10 +72,11 @@ public abstract class Shader {
             ARBShaderObjects.glShaderSourceARB(shader, shaderSource);
             ARBShaderObjects.glCompileShaderARB(shader);
             if (ARBShaderObjects.glGetObjectParameteriARB(shader, 35713) == 0) {
-                throw new RuntimeException("Error creating shader: " + getLogInfo(shader));
+                throw new RuntimeException("Error creating shader: " + this.getLogInfo(shader));
             }
             return shader;
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             ARBShaderObjects.glDeleteObjectARB(shader);
             throw e;
         }
@@ -86,14 +87,19 @@ public abstract class Shader {
     }
 
     public void setUniform(final String uniformName, final int location) {
-        uniformsMap.put(uniformName, location);
+        this.uniformsMap.put(uniformName, location);
     }
 
     public void setupUniform(final String uniformName) {
-        setUniform(uniformName, GL20.glGetUniformLocation(program, uniformName));
+        this.setUniform(uniformName, GL20.glGetUniformLocation(this.program, uniformName));
     }
 
     public int getUniform(final String uniformName) {
-        return uniformsMap.get(uniformName);
+        return this.uniformsMap.get(uniformName);
     }
+
+    public int getProgramId() {
+        return this.program;
+    }
+
 }
