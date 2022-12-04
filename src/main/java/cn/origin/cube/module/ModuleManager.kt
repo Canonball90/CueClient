@@ -4,6 +4,7 @@ import cn.origin.cube.event.events.world.Render3DEvent
 import cn.origin.cube.module.huds.*
 import cn.origin.cube.module.modules.client.ChatSuffix
 import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.module.modules.client.Console
 import cn.origin.cube.module.modules.client.HudEditor
 import cn.origin.cube.module.modules.combat.*
 import cn.origin.cube.module.modules.function.*
@@ -22,6 +23,7 @@ class ModuleManager {
         registerModule(ClickGui())
         registerModule(HudEditor())
         registerModule(ChatSuffix())
+        registerModule(Console())
 
         //Combat
         registerModule(Surround())

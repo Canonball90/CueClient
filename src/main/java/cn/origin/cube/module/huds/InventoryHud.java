@@ -1,8 +1,10 @@
 package cn.origin.cube.module.huds;
 
+import cn.origin.cube.Cube;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.HudModule;
 import cn.origin.cube.module.HudModuleInfo;
+import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.utils.render.Render2DUtil;
 import cn.origin.cube.utils.render.RenderUtil;
 import net.minecraft.client.Minecraft;
@@ -10,6 +12,7 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
+import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 
@@ -18,15 +21,16 @@ public class InventoryHud extends HudModule {
 
     @Override
     public void onRender2D(){
-
         GlStateManager.pushMatrix();
+        GL11.glPushMatrix();
+        GL11.glTranslated(this.x, (float) this.y, 0);
         RenderHelper.enableGUIStandardItemLighting();
-        Render2DUtil.drawRect(x - 2, y - 2, x - 1, y + 58, new Color(64,41,213).getRGB());
-        Render2DUtil.drawRect(x + 177, y - 1, x + 178, y+ 57, new Color(64,41,213, 255).getRGB());
-        Render2DUtil.drawRect(x + 177, y - 2, x + 178, y + 58, new Color(124,9,77, 255).getRGB());
-        Render2DUtil.drawRect(x -2, y - 3, x + 178, y - 2, new Color(64,41,213,255).getRGB());
-        Render2DUtil.drawRect(x - 1, y + 57, x + 177, y + 58, new Color(64,41,213,255).getRGB());
-        Render2DUtil.drawRect(x - 1, y - 2, x + 177, y + 57, new Color(10,10,10,155).getRGB());
+        Render2DUtil.drawRect1(x - 2, y - 2, x - 1, y + 58, new Color(64,41,213).getRGB());
+        Render2DUtil.drawRect1(x + 177, y - 1, x + 178, y+ 57, new Color(64,41,213, 255).getRGB());
+        Render2DUtil.drawRect1(x + 177, y - 2, x + 178, y + 58, new Color(64,41,213, 255).getRGB());
+        Render2DUtil.drawRect1(x -2, y - 3, x + 178, y - 2, new Color(64,41,213,255).getRGB());
+        Render2DUtil.drawRect1(x - 1, y + 57, x + 177, y + 58, new Color(64,41,213,255).getRGB());
+        Render2DUtil.drawRect1(x - 1, y - 2, x + 177, y + 57, new Color(10,10,10,155).getRGB());
         for (int i = 0; i < 27; i++)
         {
             ItemStack item_stack = Minecraft.getMinecraft().player.inventory.mainInventory.get(i + 9);
