@@ -72,4 +72,17 @@ public class InventoryUtil {
         return -1;
     }
 
+    public static int findItemInHotbar(Item itemToFind) {
+        int slot = -1;
+        for (int i = 0; i < 9; ++i) {
+            ItemStack stack = InventoryUtil.mc.player.inventory.getStackInSlot(i);
+            if (stack == ItemStack.EMPTY) continue;
+            stack.getItem();
+            Item item = stack.getItem();
+            if (!item.equals((Object)itemToFind)) continue;
+            slot = i;
+            break;
+        }
+        return slot;
+    }
 }

@@ -4,17 +4,17 @@
   "Settings": {
     "Visible": true,
     "Switch": false,
-    "Players": false,
+    "Players": true,
     "Hostiles": false,
     "Passives": false,
-    "Place": false,
-    "Break": false,
-    "Range": 5,
+    "Place": true,
+    "Break": true,
+    "Range": 6,
     "MinimumDmg": 4,
     "SelfDamage": 10,
     "AntiWeakness": false,
     "Multi-Place": false,
-    "Rotate": false,
+    "Rotate": true,
     "Manual-Timer": false,
     "Ray-trace": false,
     "Swing": "Main",
@@ -26,6 +26,6 @@
     "Alpha": 150
   },
   "CommonSettings": {
-    "KeyBind": 0
+    "KeyBind": 46
   }
 }

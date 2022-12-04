@@ -2,6 +2,7 @@ package cn.origin.cube.module
 
 import cn.origin.cube.event.events.world.Render3DEvent
 import cn.origin.cube.module.huds.*
+import cn.origin.cube.module.modules.client.ChatSuffix
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.module.modules.client.HudEditor
 import cn.origin.cube.module.modules.combat.*
@@ -20,6 +21,7 @@ class ModuleManager {
         //Client
         registerModule(ClickGui())
         registerModule(HudEditor())
+        registerModule(ChatSuffix())
 
         //Combat
         registerModule(Surround())
@@ -43,6 +45,8 @@ class ModuleManager {
         registerModule(PacketEXP())
         registerModule(AutoFrameDupe())
         registerModule(PearlAlert())
+        registerModule(ChorusLag())
+        registerModule(SilentChorus())
 
         //Movement
         registerModule(Sprint())
@@ -75,6 +79,7 @@ class ModuleManager {
         registerModule(FastPlace())
         registerModule(Rotator())
         registerModule(PacketMine())
+        registerModule(ViewLock())
 
         //Hud
         registerModule(WaterMark())

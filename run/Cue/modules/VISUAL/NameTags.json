@@ -1,6 +1,6 @@
 {
   "Name": "NameTags",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "MutliThread": true,
@@ -10,9 +10,8 @@
     "Enchantments": false,
     "Health Bar": false,
     "Background": true,
-    "RoundedBackground": 5.0,
-    "Outline": false,
-    "Dynamic Outline": false,
+    "RoundedBackground": true,
+    "Radius": 5.0,
     "Outline Width": 1.0,
     "Y Offset": 0.0,
     "Size": 1.3,

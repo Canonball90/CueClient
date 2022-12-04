@@ -1,11 +1,11 @@
 {
   "Name": "Chams",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Lines": true,
+    "Lines": false,
     "OutlineWidth": 40.0,
-    "Alpha": 200
+    "Alpha": 136
   },
   "CommonSettings": {
     "KeyBind": 0

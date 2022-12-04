@@ -1,6 +1,6 @@
 {
   "Name": "Armor",
-  "Toggle": false,
+  "Toggle": true,
   "HudXPos": 100.0,
   "HudYPos": 100.0,
   "HudWidth": 0.0,

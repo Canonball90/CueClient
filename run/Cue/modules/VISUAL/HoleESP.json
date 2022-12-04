@@ -1,14 +1,14 @@
 {
   "Name": "HoleESP",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Hole Radius": 8.0,
+    "Hole Radius": 10.09718,
     "Obsidian Box": false,
-    "Obsidian Outline": false,
+    "Obsidian Outline": true,
     "Obsidian Outline Width": 1.0,
     "Bedrock Box": false,
-    "Bedrock Outline": false,
+    "Bedrock Outline": true,
     "Bedrock Outline Width": 1.0
   },
   "CommonSettings": {

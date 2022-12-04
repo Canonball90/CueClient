@@ -1,6 +1,6 @@
 {
   "Name": "Criticals",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Mode": "PACKET"

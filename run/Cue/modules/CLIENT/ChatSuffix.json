@@ -1,0 +1,12 @@
+{
+  "Name": "ChatSuffix",
+  "Toggle": true,
+  "Settings": {
+    "Visible": true,
+    "Version": true,
+    "Strict": "Arrows"
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}
