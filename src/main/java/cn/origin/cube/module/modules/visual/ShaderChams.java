@@ -26,7 +26,7 @@ import java.util.Objects;
 public class ShaderChams extends Module {
     public static ShaderChams INSTANCE;
     public ModeSetting<ShaderModes> shaderMode = registerSetting("ShaderMode", ShaderModes.AQUA);
-    public enum ShaderModes {AQUA, RED, SMOKE, FLOW}
+    public enum ShaderModes {AQUA, RED, SMOKE, FLOW,RB}
     public BooleanSetting targetParent = registerSetting("Targets", true);
     public BooleanSetting players = registerSetting("PLayers", true);
     public BooleanSetting crystals = registerSetting("Crystals", true);
@@ -46,38 +46,33 @@ public class ShaderChams extends Module {
 
     @Override
     public void onRender3D(Render3DEvent event) {
-        if(fullNullCheck()) return;
-        FramebufferShader framebufferShader = null;
-        if(shaderMode.getValue().equals(ShaderModes.AQUA)) {
-            framebufferShader = AquaShader.AQUA_SHADER;
-        }else if(shaderMode.getValue().equals(ShaderModes.RED)) {
-            framebufferShader = RedShader.RED_SHADER;
-        }else if(shaderMode.getValue().equals(ShaderModes.SMOKE)) {
-            framebufferShader = SmokeShader.SMOKE_SHADER;
-        }else if(shaderMode.getValue().equals(ShaderModes.FLOW)) {
-            framebufferShader = FlowShader.FLOW_SHADER;
+        if (fullNullCheck()) {
+            return;
         }
-        if(framebufferShader == null) return;
+        FramebufferShader framebufferShader = null;
+        if (shaderMode.getValue().equals(ShaderModes.RB))
+            framebufferShader = RainbowOutlineShader.RAINBOW_OUTLINE_SHADER;
+
+        if (framebufferShader == null)
+            return;
         GlStateManager.matrixMode(5889);
         GlStateManager.pushMatrix();
         GlStateManager.matrixMode(5888);
         GlStateManager.pushMatrix();
         framebufferShader.startDraw(event.getPartialTicks());
         for (Entity entity : mc.world.loadedEntityList) {
-            if(entity == mc.player || entity == mc.getRenderViewEntity()) continue;
-            if(!(entity instanceof EntityPlayer && players.getValue()
-                    || entity instanceof EntityEnderCrystal && crystals.getValue()
-                    || (entity instanceof EntityMob || entity instanceof EntitySlime) && mobs.getValue()
-                    || entity instanceof EntityAnimal && animals.getValue())) continue;
+            if (entity == mc.player || entity == mc.getRenderViewEntity())
+                continue;
+            if (!(entity instanceof EntityPlayer))
+                continue;
             Vec3d vector = MathUtil.getInterpolatedRenderPos(entity, event.getPartialTicks());
             Objects.requireNonNull(mc.getRenderManager().getEntityRenderObject(entity)).doRender(entity, vector.x, vector.y, vector.z, entity.rotationYaw, event.getPartialTicks());
         }
         framebufferShader.stopDraw();
-        GlStateManager.color(1f, 1f, 1f);
+        GlStateManager.color(1f, 1f, 1f, 1f);
         GlStateManager.matrixMode(5889);
         GlStateManager.popMatrix();
         GlStateManager.matrixMode(5888);
         GlStateManager.popMatrix();
-
-}
+    }
 }

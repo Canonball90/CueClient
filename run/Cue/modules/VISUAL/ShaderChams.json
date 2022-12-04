@@ -3,10 +3,10 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "ShaderMode": "AQUA",
-    "Targets": true,
-    "PLayers": true,
-    "Crystals": true,
+    "ShaderMode": "RB",
+    "Targets": false,
+    "PLayers": false,
+    "Crystals": false,
     "Mobs": false,
     "Animals": false
   },

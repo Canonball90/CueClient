@@ -9,15 +9,14 @@ import net.minecraft.client.shader.Framebuffer;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
 
-public abstract class FramebufferShader extends Shader
-{
+public abstract class FramebufferShader extends Shader {
     public Minecraft mc;
     public static Framebuffer framebuffer;
     public boolean entityShadows;
 
     public FramebufferShader(final String fragmentShader) {
         super(fragmentShader);
-        this.mc = Minecraft.getMinecraft();
+        mc = Minecraft.getMinecraft();
     }
 
     public void startDraw(final float partialTicks) {
@@ -32,7 +31,7 @@ public abstract class FramebufferShader extends Shader
     }
 
     public void stopDraw() {
-        mc.gameSettings.entityShadows = this.entityShadows;
+        mc.gameSettings.entityShadows = entityShadows;
         GL11.glEnable(3042);
         GL11.glBlendFunc(770, 771);
         mc.getFramebuffer().bindFramebuffer(true);
@@ -51,12 +50,12 @@ public abstract class FramebufferShader extends Shader
         if (frameBuffer != null) {
             frameBuffer.deleteFramebuffer();
         }
-        frameBuffer = new Framebuffer(this.mc.displayWidth, this.mc.displayHeight, true);
+        frameBuffer = new Framebuffer(mc.displayWidth, mc.displayHeight, true);
         return frameBuffer;
     }
 
     public void drawFramebuffer(final Framebuffer framebuffer) {
-        final ScaledResolution scaledResolution = new ScaledResolution(this.mc);
+        final ScaledResolution scaledResolution = new ScaledResolution(mc);
         GL11.glBindTexture(3553, framebuffer.framebufferTexture);
         GL11.glBegin(7);
         GL11.glTexCoord2d(Double.longBitsToDouble(Double.doubleToLongBits(1.7921236082576344E308) ^ 0x7FEFE69EB44D9FE1L), Double.longBitsToDouble(Double.doubleToLongBits(4.899133169559449) ^ 0x7FE398B65D9806D1L));
@@ -71,4 +70,3 @@ public abstract class FramebufferShader extends Shader
         GL20.glUseProgram(0);
     }
 }
-
