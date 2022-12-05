@@ -1,10 +1,10 @@
 {
   "Name": "ChatSuffix",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Version": true,
-    "Strict": "Arrows"
+    "Version": false,
+    "Strict": "Line"
   },
   "CommonSettings": {
     "KeyBind": 0

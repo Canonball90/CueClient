@@ -8,6 +8,7 @@ import cn.origin.cube.utils.render.particle.ParticleSystem
 import net.minecraft.client.gui.GuiScreen
 import net.minecraft.client.gui.ScaledResolution
 import org.lwjgl.input.Mouse
+import org.lwjgl.opengl.GL11
 import java.awt.Color
 
 
@@ -39,6 +40,10 @@ class ClickGuiScreen : GuiScreen() {
                 drawDefaultBackground()
             }
         }
+//        GL11.glPushMatrix()
+//        GL11.glScaled(3.5, 3.5, 0.0)
+//        mc.currentScreen?.let { Cube.fontManager.CustomFont.drawString("CueClient", 0, it.height - 5, ClickGui.getCurrentColor().rgb) }
+//        GL11.glPopMatrix()
         checkDWHeel()
         for (panel in panels) {
             panel.onDraw(mouseX, mouseY)

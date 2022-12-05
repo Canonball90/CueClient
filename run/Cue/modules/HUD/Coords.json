@@ -1,8 +1,8 @@
 {
   "Name": "Coords",
-  "Toggle": true,
-  "HudXPos": 6.0,
-  "HudYPos": 486.0,
+  "Toggle": false,
+  "HudXPos": 114.0,
+  "HudYPos": 114.0,
   "HudWidth": 49.0,
   "HudHeight": 9.0,
   "Settings": {

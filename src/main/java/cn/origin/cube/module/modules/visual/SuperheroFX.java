@@ -39,8 +39,8 @@ public class SuperheroFX extends Module {
     private List<PopupText> popTexts = new CopyOnWriteArrayList<>();
     private final Random rand = new Random();
     private final Timer timer = new Timer();
-    private static final String[] superHeroTextsBlowup = new String[]{"KABOOM", "BOOM", "POW", "KAPOW", "KABLEM"};
-    private static final String[] superHeroTextsDamageTaken = new String[]{"OUCH", "ZAP", "BAM", "WOW", "POW", "SLAP"};
+    private static final String[] superHeroTextsBlowup = new String[]{"KABOOM", "BOOM", "POW", "KAPOW", "KABLEM", "BABOOMY"};
+    private static final String[] superHeroTextsDamageTaken = new String[]{"OUCH", "ZAP", "BAM", "WOW", "POW", "SLAP", "OW", "ZAM"};
 
     @Override
     public void onUpdate() {

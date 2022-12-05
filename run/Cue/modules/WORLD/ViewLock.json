@@ -3,9 +3,9 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Pitch": 0.8746567,
-    "Yaw": 3.9611282,
-    "Mode": "Both"
+    "Pitch": 1.0,
+    "Yaw": 1.0,
+    "Mode": "Yaw"
   },
   "CommonSettings": {
     "KeyBind": 0

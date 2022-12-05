@@ -3,13 +3,13 @@
   "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Hole Radius": 10.09718,
+    "Hole Radius": 8.0,
     "Obsidian Box": false,
     "Obsidian Outline": true,
-    "Obsidian Outline Width": 1.0,
+    "Obsidian Outline Width": 5.0,
     "Bedrock Box": false,
     "Bedrock Outline": true,
-    "Bedrock Outline Width": 1.0
+    "Bedrock Outline Width": 5.0
   },
   "CommonSettings": {
     "KeyBind": 0

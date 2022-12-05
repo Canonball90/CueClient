@@ -2,40 +2,40 @@
   "ClickGui": {
     "Combat": {
       "IsShowModules": true,
-      "X": 12.0,
-      "Y": 4.0
+      "X": 20.0,
+      "Y": 25.0
     },
     "Movement": {
       "IsShowModules": true,
-      "X": 131.0,
-      "Y": 5.0
+      "X": 129.0,
+      "Y": 25.0
     },
     "Visual": {
       "IsShowModules": true,
       "X": 240.0,
-      "Y": 5.0
+      "Y": 25.0
     },
     "World": {
       "IsShowModules": true,
       "X": 350.0,
-      "Y": 5.0
+      "Y": 25.0
     },
     "Function": {
       "IsShowModules": true,
       "X": 460.0,
-      "Y": 5.0
+      "Y": 25.0
     },
     "Client": {
       "IsShowModules": true,
       "X": 570.0,
-      "Y": 5.0
+      "Y": 25.0
     }
   },
   "HudEditor": {
     "Hud": {
       "IsShowModules": true,
-      "X": 357.0,
-      "Y": 16.0
+      "X": 182.0,
+      "Y": 127.0
     }
   }
 }

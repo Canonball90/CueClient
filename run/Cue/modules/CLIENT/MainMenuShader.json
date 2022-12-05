@@ -3,7 +3,7 @@
   "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Shader": "Ranbow"
+    "Shader": "Flow"
   },
   "CommonSettings": {
     "KeyBind": 0
