@@ -31,6 +31,7 @@ public class NoSlow extends Module {
     public BooleanSetting strict = registerSetting("Strict", true);
     public BooleanSetting guiMove = registerSetting("Gui Move", true);;
     public BooleanSetting soulSand = registerSetting("SoulSand", true);;
+    public BooleanSetting TwoBee = registerSetting("2b2t", true);;
     boolean sneaking;
 
     public NoSlow() {
@@ -97,11 +98,20 @@ public class NoSlow extends Module {
                 NoSlow.mc.player.connection.sendPacket((Packet)new CPacketPlayerDigging(CPacketPlayerDigging.Action.ABORT_DESTROY_BLOCK, new BlockPos(Math.floor(NoSlow.mc.player.posX), Math.floor(NoSlow.mc.player.posY), Math.floor(NoSlow.mc.player.posZ)), EnumFacing.DOWN));
             }
         }
+        if(TwoBee.getValue()){
+            if(mc.world != null) {
+                Item item = mc.player.getActiveItemStack().getItem();
+                if (sneaking && ((!mc.player.isHandActive() && item instanceof ItemFood || item instanceof ItemBow || item instanceof ItemPotion) || (!(item instanceof ItemFood) || !(item instanceof ItemBow) || !(item instanceof ItemPotion)))) {
+                    mc.player.connection.sendPacket(new CPacketEntityAction(mc.player, CPacketEntityAction.Action.STOP_SNEAKING));
+                    sneaking = false;
+                }
+            }
+        }
     }
 
     @SubscribeEvent
     public void onUseItem(final LivingEntityUseItemEvent event) {
-        if (this.strict.getValue() && !this.sneaking) {
+        if (this.strict.getValue() || TwoBee.getValue() && !this.sneaking) {
             NoSlow.mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)NoSlow.mc.player, CPacketEntityAction.Action.START_SNEAKING));
             this.sneaking = true;
         }

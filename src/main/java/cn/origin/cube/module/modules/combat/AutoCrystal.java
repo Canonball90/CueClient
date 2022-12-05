@@ -55,6 +55,7 @@ public class AutoCrystal extends Module {
     public BooleanSetting rotate = registerSetting("Rotate", false);
     public BooleanSetting autoTimerl = registerSetting("Manual-Timer", false);
     public BooleanSetting rayTrace = registerSetting("Ray-trace", false);
+    public BooleanSetting predict = registerSetting("Predict", false);
     public ModeSetting<Mode> breakHand = registerSetting("Swing", Mode.Main);
     public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 20, 0, 20);
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 20, 0, 20);
@@ -115,10 +116,14 @@ public class AutoCrystal extends Module {
                 }
             }
             lookAtPacket(crystal.posX, crystal.posY, crystal.posZ, mc.player);
-            mc.playerController.attackEntity(mc.player, crystal);
+            if (predict.getValue()) {
+                final CPacketUseEntity attackPacket = new CPacketUseEntity();
+                mc.player.connection.sendPacket((Packet)attackPacket);
+            }
             if (timer.getPassedTimeMs() / 50 >= 20 - breakSpeed.getValue()) {
                 timer.reset();
                 mc.player.swingArm(getHandToBreak());
+                mc.playerController.attackEntity(mc.player, crystal);
             }
             breaks++;
             if (breaks == 2 && multiPlace.getValue()) {

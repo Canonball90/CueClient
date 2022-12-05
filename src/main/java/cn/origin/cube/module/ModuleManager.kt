@@ -82,6 +82,7 @@ class ModuleManager {
         registerModule(Rotator())
         registerModule(PacketMine())
         registerModule(ViewLock())
+        registerModule(BigPOV())
 
         //Hud
         registerModule(WaterMark())
