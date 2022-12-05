@@ -22,7 +22,8 @@
     "MixinAbstractClientPlayer",
     "ModelCrystalMixin",
     "MixinPlayerControllerMP",
-    "IEntityRenderer"
+    "IEntityRenderer",
+    "MixinGuiMainMenu"
   ],
   "mixins": [
     "MixinNetworkManager"

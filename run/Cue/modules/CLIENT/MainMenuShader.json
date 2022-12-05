@@ -1,0 +1,11 @@
+{
+  "Name": "MainMenuShader",
+  "Toggle": true,
+  "Settings": {
+    "Visible": true,
+    "Shader": "Ranbow"
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

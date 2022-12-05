@@ -22,6 +22,7 @@ class ModuleManager {
         registerModule(ChatSuffix())
         registerModule(Console())
         registerModule(AutoConfig())
+        registerModule(MainMenuShader())
 
         //Combat
         registerModule(Surround())
@@ -57,6 +58,7 @@ class ModuleManager {
         registerModule(PacketFly())
         registerModule(ElytraFly())
         registerModule(ConstFly())
+        registerModule(Speed())
 
         //Visual
         registerModule(FullBright())

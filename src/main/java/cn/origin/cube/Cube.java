@@ -5,6 +5,7 @@ import cn.origin.cube.event.EventManager;
 import cn.origin.cube.font.FontManager;
 import cn.origin.cube.guis.ClickGuiScreen;
 import cn.origin.cube.guis.HudEditorScreen;
+import cn.origin.cube.guis.mainmenu.Shaders;
 import cn.origin.cube.managers.CapeManager;
 import cn.origin.cube.managers.ConfigManager;
 import cn.origin.cube.managers.FriendManager;
@@ -36,6 +37,7 @@ public class Cube {
     public static ConfigManager configManager = null;
     public static CommandManager commandManager = null;
     public static CapeManager capeManager = null;
+    public static Shaders shaders;
 
     public static String commandPrefix = ".";
 
@@ -65,5 +67,6 @@ public class Cube {
         configManager = new ConfigManager();
         commandManager = new CommandManager();
         capeManager = new CapeManager();
+        shaders = new Shaders();
     }
 }

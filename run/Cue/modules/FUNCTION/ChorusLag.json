@@ -1,6 +1,6 @@
 {
   "Name": "ChorusLag",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "TickDelay": 48
