@@ -5,6 +5,7 @@
     "Visible": true,
     "Switch": false,
     "MultiThread": false,
+    "Machine Gun": true,
     "Players": true,
     "Hostiles": false,
     "Passives": false,

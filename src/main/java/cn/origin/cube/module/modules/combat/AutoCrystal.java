@@ -46,6 +46,7 @@ public class AutoCrystal extends Module {
 
     public BooleanSetting switchToCrystal = registerSetting("Switch", false);
     public BooleanSetting multiThread = registerSetting("MultiThread", false);
+    public BooleanSetting ak47 = registerSetting("Machine Gun", false);
     public BooleanSetting players = registerSetting("Players", false);
     public BooleanSetting mobs = registerSetting("Hostiles", false);
     public BooleanSetting passives = registerSetting("Passives", false);
@@ -98,6 +99,9 @@ public class AutoCrystal extends Module {
                 if (!isAttacking) {
                     oldSlot = mc.player.inventory.currentItem;
                     isAttacking = true;
+                }
+                if (ak47.getValue()) {
+                    crystal.setDead();
                 }
                 newSlot = -1;
                 for (int i = 0; i < 9; i++) {

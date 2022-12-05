@@ -1,8 +1,8 @@
 {
   "Name": "Inventory",
   "Toggle": true,
-  "HudXPos": 335.0,
-  "HudYPos": 172.0,
+  "HudXPos": 281.0,
+  "HudYPos": 210.0,
   "HudWidth": 52.0,
   "HudHeight": 9.0,
   "Settings": {
