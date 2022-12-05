@@ -4,6 +4,7 @@
   "Settings": {
     "Visible": true,
     "Switch": false,
+    "MultiThread": false,
     "Players": true,
     "Hostiles": false,
     "Passives": false,
@@ -18,6 +19,7 @@
     "Manual-Timer": true,
     "Ray-trace": false,
     "Predict": true,
+    "PacketPlace": false,
     "Swing": "Main",
     "BreakSpeed": 20,
     "PlaceSpeed": 20,

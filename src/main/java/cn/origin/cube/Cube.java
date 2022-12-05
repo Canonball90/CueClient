@@ -9,6 +9,7 @@ import cn.origin.cube.guis.mainmenu.Shaders;
 import cn.origin.cube.managers.CapeManager;
 import cn.origin.cube.managers.ConfigManager;
 import cn.origin.cube.managers.FriendManager;
+import cn.origin.cube.managers.ThreadManager;
 import cn.origin.cube.module.ModuleManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -38,6 +39,7 @@ public class Cube {
     public static CommandManager commandManager = null;
     public static CapeManager capeManager = null;
     public static Shaders shaders;
+    public static ThreadManager threadManager;
 
     public static String commandPrefix = ".";
 
@@ -68,5 +70,6 @@ public class Cube {
         commandManager = new CommandManager();
         capeManager = new CapeManager();
         shaders = new Shaders();
+        threadManager = new ThreadManager();
     }
 }

@@ -1,5 +1,6 @@
 package cn.origin.cube.module.modules.combat;
 
+import cn.origin.cube.Cube;
 import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
@@ -12,6 +13,7 @@ import cn.origin.cube.settings.ModeSetting;
 import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
+import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -38,10 +40,12 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//ToDo add mutlithread cause like idk just seems usefull or smth
 @ModuleInfo(name = "AutoCrystal", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class AutoCrystal extends Module {
 
     public BooleanSetting switchToCrystal = registerSetting("Switch", false);
+    public BooleanSetting multiThread = registerSetting("MultiThread", false);
     public BooleanSetting players = registerSetting("Players", false);
     public BooleanSetting mobs = registerSetting("Hostiles", false);
     public BooleanSetting passives = registerSetting("Passives", false);
@@ -56,6 +60,7 @@ public class AutoCrystal extends Module {
     public BooleanSetting autoTimerl = registerSetting("Manual-Timer", false);
     public BooleanSetting rayTrace = registerSetting("Ray-trace", false);
     public BooleanSetting predict = registerSetting("Predict", false);
+    public BooleanSetting packetPlace = registerSetting("PacketPlace", false);
     public ModeSetting<Mode> breakHand = registerSetting("Swing", Mode.Main);
     public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 20, 0, 20);
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 20, 0, 20);
@@ -170,7 +175,11 @@ public class AutoCrystal extends Module {
         List<BlockPos> blocks = findCrystalBlocks();
         List<Entity> entities = new ArrayList<>();
         if (players.getValue()) {
-            entities.addAll(mc.world.playerEntities);
+            if(multiThread.getValue()) {
+                Cube.threadManager.run(() -> entities.addAll(mc.world.playerEntities));
+            }else {
+                entities.addAll(mc.world.playerEntities);
+            }
         }
         entities.addAll(mc.world.loadedEntityList.stream().filter(entity -> EntityUtil.isLiving(entity) && (EntityUtil.isPassive(entity) ? passives.getValue() : mobs.getValue())).collect(Collectors.toList()));
 
@@ -240,7 +249,11 @@ public class AutoCrystal extends Module {
             }
             if (timer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
                 timer.reset();
-                mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
+                if(packetPlace.getValue()) {
+                    mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
+                }else {
+                    placeCrystalOnBlock(q, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
+                }
             }
         }
 
@@ -253,6 +266,21 @@ public class AutoCrystal extends Module {
                 togglePitch = true;
             }
         }
+    }
+
+    public void placeCrystalOnBlock(BlockPos pos, EnumHand hand) {
+        RayTraceResult result = Minecraft.getMinecraft().world
+                .rayTraceBlocks(
+                        new Vec3d(
+                                Minecraft.getMinecraft().player.posX,
+                                Minecraft.getMinecraft().player.posY
+                                        + (double) Minecraft.getMinecraft().player.getEyeHeight(),
+                                Minecraft.getMinecraft().player.posZ),
+                        new Vec3d((double) pos.getX() + 0.5, (double) pos.getY() - 0.5, (double) pos.getZ() + 0.5));
+        EnumFacing facing = result == null || result.sideHit == null ? EnumFacing.UP : result.sideHit;
+        lookAtPacket(pos.getX() + 0.5, pos.getY() - 0.5, pos.getZ() + 0.5, mc.player);
+        Minecraft.getMinecraft().player.connection
+                .sendPacket(new CPacketPlayerTryUseItemOnBlock(pos, facing, hand, 0.0f, 0.0f, 0.0f));
     }
 
     private void lookAtPacket(double px, double py, double pz, EntityPlayer me) {

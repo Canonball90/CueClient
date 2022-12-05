@@ -11,7 +11,7 @@ public class RainbowOutlineShader extends FramebufferShader {
     public float time;
 
     public RainbowOutlineShader() {
-        super("ranbow.frag");
+        super("og.frag");
     }
 
     @Override
