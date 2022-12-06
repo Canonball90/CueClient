@@ -4,16 +4,22 @@
   "Settings": {
     "Visible": true,
     "Range": 5.5,
-    "HitDelay": true,
+    "Delay": 40,
+    "Random Delay": 0,
+    "Iterations": 10,
+    "Wall Range": 1.0,
+    "TicksExisted": 41,
+    "HitDelay": false,
     "PacketHit": false,
     "SwimArm": true,
     "Rotate": true,
+    "ThroughWalls": true,
     "PlayerOnly": true,
     "WeaponOnly": true,
     "SwitchWeapon": false,
     "CurrentWeapon": "NONE"
   },
   "CommonSettings": {
-    "KeyBind": 0
+    "KeyBind": 19
   }
 }

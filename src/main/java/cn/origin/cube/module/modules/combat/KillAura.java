@@ -7,6 +7,7 @@ import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
 import cn.origin.cube.settings.BooleanSetting;
 import cn.origin.cube.settings.DoubleSetting;
+import cn.origin.cube.settings.IntegerSetting;
 import cn.origin.cube.settings.ModeSetting;
 import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
@@ -21,13 +22,22 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.util.Date;
+
 @ModuleInfo(name = "KillAura", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class KillAura extends Module {
+    long killLast = new Date().getTime();
     DoubleSetting hittingRange = registerSetting("Range", 5.5, 0.1, 10.0);
+    IntegerSetting delay = registerSetting("Delay", 4, 0, 70);
+    IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40);
+    IntegerSetting iterations = registerSetting("Iterations", 1, 1, 10);
+    DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10);
+    IntegerSetting ticksExisted = registerSetting("TicksExisted", 20, 0, 150);
     BooleanSetting hitDelay = registerSetting("HitDelay", true);
     BooleanSetting packet = registerSetting("PacketHit", false);
     BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet);
     BooleanSetting rotate = registerSetting("Rotate", true);
+    BooleanSetting throughWalls = registerSetting("ThroughWalls", true);
 
     BooleanSetting playerOnly = registerSetting("PlayerOnly", true);
     BooleanSetting weaponOnly = registerSetting("WeaponOnly", true);
@@ -47,7 +57,11 @@ public class KillAura extends Module {
                 .filter(entity -> entity != mc.player)
                 .forEach(target -> {
                     if (playerOnly.getValue()) {
-                        if (!(target instanceof EntityPlayer)) return;
+                        if (!(target instanceof EntityPlayer) ||
+                                target.ticksExisted >= this.ticksExisted.getValue() &&
+                                        mc.player.getDistance(target) <= this.hittingRange.getValue() &&
+                                        (mc.player.canEntityBeSeen(target) || !this.throughWalls.getValue() ||
+                                                mc.player.getDistance(target) <= this.wallsRange.getValue()))return;
                     }
                     if (switchWeapon.getValue()) {
                         int currentSlot;
@@ -61,7 +75,6 @@ public class KillAura extends Module {
                             }
                         }
                     }
-                    if (rotate.getValue()) rotateTo(target);
                     if (!weaponCurrent.getValue().equals(currentW.NONE)) {
                         if (mc.player.getHeldItemMainhand() == ItemStack.EMPTY
                                 || !(weaponCurrent.getValue().equals(currentW.AXE) ? ItemAxe.class : ItemSword.class)
@@ -69,7 +82,14 @@ public class KillAura extends Module {
                             return;
                         }
                     }
-                    attack(target);
+                    final int delay = (int)(this.delay.getValue() * 10 + this.randomDelay.getValue() * 10 * Math.random());
+                    if (new Date().getTime() >= this.killLast + delay) {
+                        this.killLast = new Date().getTime();
+                        if (rotate.getValue()) rotateTo(target);
+                        for (int i = 0; i < this.iterations.getValue(); ++i) {
+                            attack(target);
+                        }
+                    }
                 });
 
     }
