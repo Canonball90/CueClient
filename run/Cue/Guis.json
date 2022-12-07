@@ -2,7 +2,7 @@
   "ClickGui": {
     "Combat": {
       "IsShowModules": true,
-      "X": 20.0,
+      "X": 19.0,
       "Y": 35.0
     },
     "Movement": {
@@ -27,7 +27,7 @@
     },
     "Client": {
       "IsShowModules": true,
-      "X": 570.0,
+      "X": 572.0,
       "Y": 35.0
     }
   },

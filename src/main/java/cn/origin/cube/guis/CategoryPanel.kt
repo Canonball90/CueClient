@@ -32,7 +32,7 @@ class CategoryPanel(
             this.x = this.x2 + mouseX
             this.y = this.y2 + mouseY
         }
-        Render2DUtil.drawRect(x-1, y, width+1, height, ClickGui.getCurrentColor().rgb)
+        Render2DUtil.drawRect(x-1, y, width+2, height, ClickGui.getCurrentColor().rgb)
         Cube.fontManager!!.IconFont.drawStringWithShadow(
             category.icon,
             x + 3,

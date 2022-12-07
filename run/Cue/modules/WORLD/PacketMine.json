@@ -1,6 +1,6 @@
 {
   "Name": "PacketMine",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "AntiNeededBlocks": true,

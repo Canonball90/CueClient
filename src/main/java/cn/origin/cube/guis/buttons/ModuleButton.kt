@@ -89,7 +89,11 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             Render2DUtil.drawBorderedRect(x.toDouble(), y.toDouble() - 1,x + this.width.toDouble(),y + this.height.toDouble(),
                 1.0, Color(15, 15, 15, 125).rgb, ClickGui.getCurrentColor().rgb)
         }else{
-            Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 125).rgb)
+            if(!father.isEnabled) {
+                Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 125).rgb)
+            }else{
+                Render2DUtil.drawGradientHRect(x,y, x+width,y+height, Color(15, 15, 15, 125).rgb, ClickGui.getCurrentColor().rgb)
+            }
         }
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             father.name,

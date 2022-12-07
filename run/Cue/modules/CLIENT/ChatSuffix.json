@@ -1,6 +1,6 @@
 {
   "Name": "ChatSuffix",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Version": false,
