@@ -4,19 +4,20 @@
   "Settings": {
     "Visible": true,
     "MutliThread": true,
+    "CFont": false,
     "Armor": true,
     "Items": true,
     "Heart": false,
     "Enchantments": false,
     "Health Bar": false,
     "Background": true,
-    "RoundedBackground": false,
+    "RoundedBackground": true,
     "Radius": 5.0,
     "Outline Width": 1.0,
     "Y Offset": 0.0,
     "Size": 1.3,
     "Width": 0,
-    "Height": 1
+    "Height": 0
   },
   "CommonSettings": {
     "KeyBind": 0

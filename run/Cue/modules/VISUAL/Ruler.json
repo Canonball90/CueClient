@@ -1,6 +1,6 @@
 {
   "Name": "Ruler",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true
   },

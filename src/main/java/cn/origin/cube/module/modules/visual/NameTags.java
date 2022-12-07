@@ -1,5 +1,6 @@
 package cn.origin.cube.module.modules.visual;
 
+import cn.origin.cube.Cube;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
@@ -37,6 +38,7 @@ import static org.lwjgl.opengl.GL11.*;
 public class NameTags extends Module {
     public static NameTags INSTANCE;
     BooleanSetting mutiThread = registerSetting("MutliThread", true);
+    BooleanSetting cFont = registerSetting("CFont", false);
     BooleanSetting armor = registerSetting("Armor", true);
     BooleanSetting items = registerSetting("Items", true);
     BooleanSetting heart = registerSetting("Heart", false);
@@ -105,7 +107,11 @@ public class NameTags extends Module {
 //                GlStateManager.disableDepth();
 //                drawRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), 4, (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() - length, 6, color.getRGB(), 1);
 //            }
-            mc.fontRenderer.drawStringWithShadow(e.getName() + " " + (Object) TextFormatting.GREEN + health + (heart.getValue() ? "\u2764" : "%"), 0 - this.getcenter(e.getName() + " " + (Object) TextFormatting.GREEN + health + "%"), 1, -1);
+            if(cFont.getValue()) {
+                Cube.fontManager.CustomFont.drawStringWithShadow(e.getName() + " " + (Object) TextFormatting.GREEN + health + (heart.getValue() ? "\u2764" : "%"), 0 - this.getcenter(e.getName() + " " + (Object) TextFormatting.GREEN + health + "%"), 1, -1);
+            }else{
+                mc.fontRenderer.drawStringWithShadow(e.getName() + " " + (Object) TextFormatting.GREEN + health + (heart.getValue() ? "\u2764" : "%"), 0 - this.getcenter(e.getName() + " " + (Object) TextFormatting.GREEN + health + "%"), 1, -1);
+            }
             int posX = -NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 - 8;
             if (healthBar.getValue()) {Render2DUtil.drawLine((-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) 11 + height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() + ( -health), (int) 11 + height.getValue(), 3, new Color(0, 255,0));}
             if(items.getValue()) {

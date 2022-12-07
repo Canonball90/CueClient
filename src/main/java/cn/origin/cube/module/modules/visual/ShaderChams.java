@@ -27,7 +27,7 @@ import java.util.Objects;
 public class ShaderChams extends Module {
     public static ShaderChams INSTANCE;
     public ModeSetting<ShaderModes> shaderMode = registerSetting("ShaderMode", ShaderModes.AQUA);
-    public enum ShaderModes {AQUA, RED, SMOKE, FLOW,RB}
+    public enum ShaderModes {AQUA, RED, SMOKE, FLOW,RB,GOLD}
     public BooleanSetting players = registerSetting("PLayers", true);
     public BooleanSetting crystals = registerSetting("Crystals", true);
     public BooleanSetting mobs = registerSetting("Mobs", false);
@@ -58,6 +58,8 @@ public class ShaderChams extends Module {
             framebufferShader = FlowShader.FLOW_SHADER;
         }else if(shaderMode.getValue() == ShaderModes.RB) {
             framebufferShader = RainbowOutlineShader.RAINBOW_OUTLINE_SHADER;
+        }else if(shaderMode.getValue() == ShaderModes.RB) {
+            framebufferShader = GoldenShader.Golden_Shader;
         }
         if(framebufferShader == null) return;
         GlStateManager.matrixMode(5889);

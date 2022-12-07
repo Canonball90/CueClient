@@ -1,0 +1,32 @@
+package cn.origin.cube.utils.render.shader.shaders;
+
+import cn.origin.cube.utils.render.shader.FramebufferShader;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.ScaledResolution;
+import org.lwjgl.opengl.GL20;
+
+public class GoldenShader extends FramebufferShader {
+    public static GoldenShader Golden_Shader;
+    public float time;
+
+    public GoldenShader() {
+        super("golden.frag");
+    }
+
+    @Override
+    public void setupUniforms() {
+        this.setupUniform("resolution");
+        this.setupUniform("time");
+    }
+
+    @Override
+    public void updateUniforms() {
+        GL20.glUniform2f(this.getUniform("resolution"), (float)new ScaledResolution(Minecraft.getMinecraft()).getScaledWidth(), (float)new ScaledResolution(Minecraft.getMinecraft()).getScaledHeight());
+        GL20.glUniform1f(this.getUniform("time"), this.time);
+        this.time += Float.intBitsToFloat(Float.floatToIntBits(1015.0615f) ^ 0x7F395856);
+    }
+
+    static {
+        GoldenShader.Golden_Shader = new GoldenShader();
+    }
+}
