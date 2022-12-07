@@ -1,6 +1,6 @@
 {
   "Name": "BlockHighlight",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "Outline": true,

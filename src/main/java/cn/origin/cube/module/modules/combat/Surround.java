@@ -1,12 +1,16 @@
 package cn.origin.cube.module.modules.combat;
 
 import cn.origin.cube.event.events.player.UpdateWalkingPlayerEvent;
+import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.settings.BooleanSetting;
+import cn.origin.cube.settings.DoubleSetting;
 import cn.origin.cube.utils.player.BlockUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
+import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.block.BlockObsidian;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
@@ -30,6 +34,7 @@ public class Surround extends Module {
     public BlockPos startPos;
     public BooleanSetting packet = registerSetting("Packet", true);
     public BooleanSetting rot = registerSetting("Rotate", false);
+    public DoubleSetting height = registerSetting("Height", 1.0, -5, 5.0);
     public BlockPos newPos2;
 
     @Override
@@ -38,6 +43,15 @@ public class Surround extends Module {
         startPos = new BlockPos(Math.floor(mc.player.posX), Math.floor(mc.player.posY), Math.floor(mc.player.posZ));
     }
 
+    @Override
+    public void onRender3D(Render3DEvent event) {
+        if(startPos == null)return;
+        for (BlockPos pos : surroundPos) {
+            newPos2 = addPos(pos);
+            Render3DUtil.drawBox(addPos(pos), ClickGui.getCurrentColor(), height.getValue(), false, false, 0);
+        }
+        super.onRender3D(event);
+    }
 
     @SubscribeEvent
     public void onUpdate(UpdateWalkingPlayerEvent event) {
