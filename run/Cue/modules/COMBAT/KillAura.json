@@ -1,6 +1,6 @@
 {
   "Name": "KillAura",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Range": 10.0,
