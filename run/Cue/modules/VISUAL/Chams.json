@@ -3,9 +3,14 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Lines": true,
-    "OutlineWidth": 23.27502,
-    "Alpha": 200
+    "Pulse": true,
+    "Pulse Max": 255.0,
+    "Pulse Min": 101.47958,
+    "Pulse Speed": 5.0,
+    "Pulse W": 8.153546,
+    "Lines": false,
+    "OutlineWidth": 28.134108,
+    "Alpha": 67
   },
   "CommonSettings": {
     "KeyBind": 0

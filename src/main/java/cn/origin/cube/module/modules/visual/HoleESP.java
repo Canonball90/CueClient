@@ -9,6 +9,7 @@ import cn.origin.cube.settings.FloatSetting;
 import cn.origin.cube.utils.player.BlockUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 
 import java.awt.*;
@@ -23,7 +24,11 @@ public class HoleESP extends Module {
     HashSet<BlockPos> obsidianHoles = new HashSet<>();
     HashSet<BlockPos> bedrockHoles = new HashSet<>();
 
-    public FloatSetting holeRadius = registerSetting("Hole Radius", 8.0f, 0.0f, 20.0f);
+    public FloatSetting holeRadius = registerSetting("Hole Radius", 8.0f, 0.0f, 20.0f);    private final BooleanSetting pulse = registerSetting("Pulse", true);
+    private final FloatSetting pulseMax = registerSetting("Pulse Max", 1.5f, 0.0f, 255.0f);
+    private final FloatSetting pulseMin = registerSetting("Pulse Min", 1.0f, 0.0f, 255.0f);
+    private final FloatSetting pulseSpeed = registerSetting("Pulse Speed", 4.0f, 0.0f, 5.0f);
+    private final FloatSetting rollingWidth = registerSetting("Pulse W", 8.0f, 0.0f, 20.0f);
 
     public BooleanSetting obsidianBox = registerSetting("Obsidian Box", false);
     public BooleanSetting obsidianOutline = registerSetting("Obsidian Outline", false);
@@ -38,7 +43,9 @@ public class HoleESP extends Module {
     public void onRender3D(Render3DEvent event){
         if (!obsidianHoles.isEmpty())
             obsidianHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, obsidianBox.getValue(), obsidianOutline.getValue(), new Color(255,0,0, 120), new Color(255,0,0, 150), obsidianOutlineWidth.getValue()));
-
+//            obsidianHoles.forEach(pos -> Render3DUtil.drawGradientPlane(pos, EnumFacing.UP, new Color(255,0,0, 120), new Color(255,0,0, 0), getRolledHeight(4))
+//            );
+//ToDo
         if (!bedrockHoles.isEmpty())
             bedrockHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, bedrockBox.getValue(), bedrockOutline.getValue(), new Color(0,255,0, 120), new Color(0,255,0, 150), bedrockOutlineWidth.getValue()));
 
@@ -79,5 +86,12 @@ public class HoleESP extends Module {
                 obsidianHoles.add(pos.west());
             }
         }
+    }
+
+    private float getRolledHeight(float offset) {
+        double s = (System.currentTimeMillis() / (double)pulseSpeed.getValue()) + (offset * rollingWidth.getValue() * 100.0f);
+        s %= 300.0;
+        s = (150.0f * Math.sin(((s - 75.0f) * Math.PI) / 150.0f)) + 150.0f;
+        return pulseMax.getValue() + ((float)s * ((pulseMin.getValue() - pulseMax.getValue()) / 300.0f));
     }
 }
