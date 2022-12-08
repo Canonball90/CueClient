@@ -72,6 +72,7 @@ class ModuleManager {
         registerModule(Crosshair())
         registerModule(SuperheroFX())
         registerModule(ShaderCharms())
+        registerModule(ItemPhysics())
 
         //World
         registerModule(FakePlayer())

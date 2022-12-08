@@ -11,7 +11,7 @@
     "Saturation": 0.65,
     "Brightness": 1.0,
     "Outline": false,
-    "BackGround": true,
+    "BackGround": false,
     "Gradient": false,
     "Particles": false,
     "Length": 150

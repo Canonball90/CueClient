@@ -23,7 +23,9 @@
     "ModelCrystalMixin",
     "MixinPlayerControllerMP",
     "IEntityRenderer",
-    "MixinGuiMainMenu"
+    "MixinGuiMainMenu",
+    "MixinRenderEntityItem",
+    "MixinRenderer"
   ],
   "mixins": [
     "MixinNetworkManager"
