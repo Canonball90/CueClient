@@ -4,14 +4,14 @@
   "Settings": {
     "Visible": true,
     "Rainbow": false,
-    "Red": 104,
+    "Red": 243,
     "Green": 40,
-    "Blue": 243,
+    "Blue": 114,
     "RainbowSpeed": 1.0,
     "Saturation": 0.65,
     "Brightness": 1.0,
     "Outline": false,
-    "BackGround": false,
+    "BackGround": true,
     "Gradient": false,
     "Particles": false,
     "Length": 150

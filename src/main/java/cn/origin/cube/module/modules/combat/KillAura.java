@@ -32,7 +32,8 @@ public class KillAura extends Module {
     long killLast = new Date().getTime();
     DoubleSetting hittingRange = registerSetting("Range", 5.5, 0.1, 10.0);
     IntegerSetting delay = registerSetting("Delay", 4, 0, 70);
-    IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40);
+    BooleanSetting randomD = registerSetting("RandomDelay", false);
+    IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40).booleanVisible(randomD);
     IntegerSetting iterations = registerSetting("Iterations", 1, 1, 10);
     DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10);
     IntegerSetting ticksExisted = registerSetting("TicksExisted", 20, 0, 150);
@@ -85,7 +86,7 @@ public class KillAura extends Module {
                             return;
                         }
                     }
-                    final int delay = (int)(this.delay.getValue() * 10 + this.randomDelay.getValue() * 10 * Math.random());
+                    final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
                     if (new Date().getTime() >= this.killLast + delay) {
                         this.killLast = new Date().getTime();
                         if (rotate.getValue()) rotateTo(target);
