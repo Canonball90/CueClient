@@ -1,6 +1,7 @@
 package cn.origin.cube.module.modules.combat;
 
 import cn.origin.cube.Cube;
+import cn.origin.cube.event.events.client.PacketEvent;
 import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
@@ -12,6 +13,7 @@ import cn.origin.cube.settings.IntegerSetting;
 import cn.origin.cube.settings.ModeSetting;
 import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.player.EntityUtil;
+import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.render.Render2DUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.client.Minecraft;
@@ -28,12 +30,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraft.network.Packet;
+import net.minecraft.network.play.client.CPacketHeldItemChange;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
 import net.minecraft.network.play.client.CPacketUseEntity;
+import net.minecraft.network.play.server.SPacketSpawnObject;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import net.minecraft.world.Explosion;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -46,6 +51,7 @@ import java.util.stream.Collectors;
 public class AutoCrystal extends Module {
 
     public BooleanSetting switchToCrystal = registerSetting("Switch", false);
+    public BooleanSetting silent = registerSetting("Silent", false).booleanVisible(switchToCrystal);
     public BooleanSetting multiThread = registerSetting("MultiThread", false);
     public BooleanSetting ak47 = registerSetting("Machine Gun", false);
     public BooleanSetting players = registerSetting("Players", false);
@@ -69,6 +75,7 @@ public class AutoCrystal extends Module {
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 20, 0, 20);
     public BooleanSetting thinking = registerSetting("Thinking", false);
     public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
+    public BooleanSetting inhibit = registerSetting("Inhibit", false);
     public BooleanSetting outline = registerSetting("Outline", true);
     public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255);
     public BooleanSetting targetHud = registerSetting("Target Hud", false);
@@ -240,15 +247,25 @@ public class AutoCrystal extends Module {
             return;
         }
         render = q;
-
+        //ToDo Work on Silent switch
+        final int oldSlot = KillAura.mc.player.inventory.currentItem;
         if (place.getValue()) {
             if (!offhand && mc.player.inventory.currentItem != crystalSlot) {
-                if (switchToCrystal.getValue()) {
-                    mc.player.inventory.currentItem = crystalSlot;
+                if(switchToCrystal.getValue()){
+                    if(silent.getValue()) {
+                        if(InventoryUtil.findItemInHotbar(Items.END_CRYSTAL) != -1) {
+                            mc.getConnection().sendPacket(new CPacketHeldItemChange(crystalSlot));
+                        }
+                    }else{
+                        InventoryUtil.switchToHotbarSlot(crystalSlot, false);
+                    }
                     if (rotate.getValue()) {
                         resetRotation();
                     }
                     switchCooldown = true;
+                }
+                if(silent.getValue()){
+                    //InventoryUtil.switchToHotbarSlot(oldSlot, true);
                 }
                 return;
             }
@@ -285,6 +302,19 @@ public class AutoCrystal extends Module {
             } else {
                 mc.player.rotationPitch -= 0.0004;
                 togglePitch = true;
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onPacketRecieve(PacketEvent.Receive event){
+        if(event.getPacket() instanceof SPacketSpawnObject) {
+            final SPacketSpawnObject packet = (SPacketSpawnObject)event.getPacket();
+            if (this.inhibit.getValue()) {
+                try {
+                    this.renderEnt = mc.world.getEntityByID(packet.getEntityID());
+                } catch (Exception ex) {
+                }
             }
         }
     }

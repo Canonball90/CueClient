@@ -34,8 +34,8 @@
   "HudEditor": {
     "Hud": {
       "IsShowModules": true,
-      "X": 20.0,
-      "Y": 35.0
+      "X": 310.0,
+      "Y": 55.0
     }
   }
 }
