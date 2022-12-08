@@ -3,24 +3,24 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Range": 10.0,
-    "Delay": 70,
+    "Range": 5.5,
+    "Delay": 4,
     "RandomDelay": false,
-    "Random Delay": 40,
-    "Iterations": 3,
-    "Wall Range": 2.482507348060608,
-    "TicksExisted": 6,
-    "HitDelay": false,
+    "Random Delay": 4,
+    "Iterations": 1,
+    "Wall Range": 3.5,
+    "TicksExisted": 20,
+    "HitDelay": true,
     "PacketHit": false,
     "SwimArm": true,
-    "Rotate": false,
+    "Rotate": true,
     "ThroughWalls": true,
-    "PlayerOnly": false,
+    "PlayerOnly": true,
     "WeaponOnly": true,
     "SwitchWeapon": false,
     "CurrentWeapon": "NONE"
   },
   "CommonSettings": {
-    "KeyBind": 19
+    "KeyBind": 0
   }
 }

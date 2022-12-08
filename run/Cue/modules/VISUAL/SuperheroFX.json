@@ -1,6 +1,6 @@
 {
   "Name": "SuperheroFX",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "Delay": 1.0,

@@ -1,6 +1,6 @@
 {
   "Name": "MainMenuShader",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "Shader": "Flow"

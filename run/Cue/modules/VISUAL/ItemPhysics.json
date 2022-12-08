@@ -1,9 +1,9 @@
 {
-  "Name": "Jaxie",
-  "Toggle": true,
+  "Name": "ItemPhysics",
+  "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Scale": 0.6782309770584106
+    "Scale": 3.0
   },
   "CommonSettings": {
     "KeyBind": 0

@@ -4,9 +4,9 @@
   "Settings": {
     "Visible": true,
     "Rainbow": false,
-    "Red": 243,
-    "Green": 40,
-    "Blue": 114,
+    "Red": 25,
+    "Green": 115,
+    "Blue": 255,
     "RainbowSpeed": 1.0,
     "Saturation": 0.65,
     "Brightness": 1.0,

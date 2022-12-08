@@ -1,12 +1,12 @@
 {
   "Name": "WaterMark",
-  "Toggle": true,
-  "HudXPos": 11.0,
-  "HudYPos": 18.0,
-  "HudWidth": 209.0,
-  "HudHeight": 38.0,
+  "Toggle": false,
+  "HudXPos": 114.0,
+  "HudYPos": 114.0,
+  "HudWidth": 0.0,
+  "HudHeight": 0.0,
   "Settings": {
-    "Size": 4.2711363,
+    "Size": 1.0,
     "Mode": "Word",
     "Version": false
   },

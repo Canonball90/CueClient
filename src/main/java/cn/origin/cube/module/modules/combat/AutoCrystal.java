@@ -12,6 +12,7 @@ import cn.origin.cube.settings.IntegerSetting;
 import cn.origin.cube.settings.ModeSetting;
 import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.player.EntityUtil;
+import cn.origin.cube.utils.render.Render2DUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -62,6 +63,7 @@ public class AutoCrystal extends Module {
     public BooleanSetting rayTrace = registerSetting("Ray-trace", false);
     public BooleanSetting predict = registerSetting("Predict", false);
     public BooleanSetting packetPlace = registerSetting("PacketPlace", false);
+    public BooleanSetting packetExplode = registerSetting("PacketExplode", false);
     public ModeSetting<Mode> breakHand = registerSetting("Swing", Mode.Main);
     public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 20, 0, 20);
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 20, 0, 20);
@@ -69,7 +71,9 @@ public class AutoCrystal extends Module {
     public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
     public BooleanSetting outline = registerSetting("Outline", true);
     public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255);
-
+    public BooleanSetting targetHud = registerSetting("Target Hud", false);
+    public IntegerSetting tx = registerSetting("Alpha", 150, 0, 1000);
+    public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000);
 
     private BlockPos render;
     private Entity renderEnt;
@@ -80,6 +84,11 @@ public class AutoCrystal extends Module {
     private int newSlot;
     private int breaks;
     private String arrayListEntityName;
+
+    private int x = tx.getValue();
+    private int y = ty.getValue();
+    private int width = 200;
+    private int height = 100;
 
     private Timer timer = new Timer();
 
@@ -131,8 +140,16 @@ public class AutoCrystal extends Module {
             }
             if (timer.getPassedTimeMs() / 50 >= 20 - breakSpeed.getValue()) {
                 timer.reset();
+                if(packetExplode.getValue()){
+                    mc.player.connection.sendPacket(new CPacketUseEntity(crystal));
+                    CPacketUseEntity packet = new CPacketUseEntity();
+                    packet.entityId = crystal.entityId;
+                    packet.action = CPacketUseEntity.Action.ATTACK;
+                    mc.player.connection.sendPacket(packet);
+                }else{
+                    mc.playerController.attackEntity(mc.player, crystal);
+                }
                 mc.player.swingArm(getHandToBreak());
-                mc.playerController.attackEntity(mc.player, crystal);
             }
             breaks++;
             if (breaks == 2 && multiPlace.getValue()) {
@@ -295,8 +312,21 @@ public class AutoCrystal extends Module {
     @Override
     public void onRender3D(Render3DEvent event){
         if(render != null || renderEnt != null){
-            Render3DUtil.drawBlockBox(render, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), alpha.getValue()), outline.getValue(), 3);
+            Render3DUtil.drawBlockBox(render, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), outline.getValue(), 3);
         }
+    }
+
+    //ToDo add more to this
+
+    @Override
+    public void onRender2D() {
+        if(targetHud.getValue() && renderEnt != null){
+            Render2DUtil.drawBorderedRect(tx.getValue(), ty.getValue(),tx.getValue() + width,ty.getValue() + height, 1, new Color(35,35,35,150).getRGB(), ClickGui.getCurrentColor().getRGB());
+            Cube.fontManager.CustomFont.drawString(renderEnt.getName(), tx.getValue() + 5, ty.getValue() + 10, ClickGui.getCurrentColor().getRGB(), true);
+            Cube.fontManager.CustomFont.drawString(""+renderEnt.getDistance(mc.player), tx.getValue() + 65, ty.getValue() + 10, ClickGui.getCurrentColor().getRGB(), true);
+            Render2DUtil.drawGradientHRect(tx.getValue() + 20, ty.getValue() + 45,tx.getValue() + 140,ty.getValue() + 55, new Color(255, 0,0).getRGB(), new Color(0,255,0).getRGB());
+        }
+        super.onRender2D();
     }
 
     private boolean canPlaceCrystal(BlockPos blockPos) {
