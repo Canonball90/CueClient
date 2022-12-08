@@ -71,7 +71,7 @@ class ModuleManager {
         registerModule(ESP())
         registerModule(Crosshair())
         registerModule(SuperheroFX())
-        registerModule(ShaderChams())
+        registerModule(ShaderCharms())
 
         //World
         registerModule(FakePlayer())

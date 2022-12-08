@@ -6,8 +6,9 @@ import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.opengl.GL20;
 
 public class GoldenShader extends FramebufferShader {
-    public static GoldenShader Golden_Shader;
+    public static GoldenShader GOLDEN_SHADER;
     public float time;
+    public float timeMult = 0.01f;
 
     public GoldenShader() {
         super("golden.frag");
@@ -23,10 +24,10 @@ public class GoldenShader extends FramebufferShader {
     public void updateUniforms() {
         GL20.glUniform2f(this.getUniform("resolution"), (float)new ScaledResolution(Minecraft.getMinecraft()).getScaledWidth(), (float)new ScaledResolution(Minecraft.getMinecraft()).getScaledHeight());
         GL20.glUniform1f(this.getUniform("time"), this.time);
-        this.time += Float.intBitsToFloat(Float.floatToIntBits(1015.0615f) ^ 0x7F395856);
+        time += timeMult * animationSpeed;
     }
 
     static {
-        GoldenShader.Golden_Shader = new GoldenShader();
+        GOLDEN_SHADER = new GoldenShader();
     }
 }

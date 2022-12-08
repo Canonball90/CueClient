@@ -3,32 +3,32 @@
     "Combat": {
       "IsShowModules": true,
       "X": 19.0,
-      "Y": 15.0
+      "Y": 55.0
     },
     "Movement": {
       "IsShowModules": true,
       "X": 129.0,
-      "Y": 15.0
+      "Y": 55.0
     },
     "Visual": {
       "IsShowModules": true,
       "X": 240.0,
-      "Y": 15.0
+      "Y": 55.0
     },
     "World": {
       "IsShowModules": true,
       "X": 350.0,
-      "Y": 15.0
+      "Y": 55.0
     },
     "Function": {
       "IsShowModules": true,
       "X": 460.0,
-      "Y": 15.0
+      "Y": 55.0
     },
     "Client": {
       "IsShowModules": true,
       "X": 572.0,
-      "Y": 15.0
+      "Y": 55.0
     }
   },
   "HudEditor": {

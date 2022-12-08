@@ -1,0 +1,37 @@
+{
+  "Name": "ShaderCharms",
+  "Toggle": false,
+  "Settings": {
+    "Visible": true,
+    "Range": 27,
+    "Mode": "Sheldon",
+    "Crystals": true,
+    "Players": true,
+    "Friends": true,
+    "Mobs": false,
+    "Animals": false,
+    "Ender Pearls": false,
+    "Items(Entity)": false,
+    "Items": true,
+    "Items Fix": true,
+    "Animation Speed": 1,
+    "Blur": false,
+    "Radius": 2.3303204,
+    "Mix": 1.0,
+    "Red": 1.0,
+    "Green": 1.0,
+    "Blue": 1.0,
+    "Quality": 1,
+    "Gradient Alpha": false,
+    "Alpha Gradient Value": 255,
+    "Duplicate Outline": 20.0,
+    "More Gradient": 0.2866858,
+    "Creepy": 0.0,
+    "Alpha": 1.0,
+    "Num Octaves": 1,
+    "Speed": 0.001
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}

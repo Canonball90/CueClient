@@ -1,17 +1,17 @@
 package cn.origin.cube.utils.render.shader.shaders;
 
-import cn.origin.cube.utils.render.RenderUtil;
 import cn.origin.cube.utils.render.shader.FramebufferShader;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.opengl.GL20;
 
-public class RainbowOutlineShader extends FramebufferShader {
-    public static RainbowOutlineShader RAINBOW_OUTLINE_SHADER;
+public class HotShitShader extends FramebufferShader {
+    public static HotShitShader HotShit_SHADER;
     public float time;
+    public float timeMult = 0.005f;
 
-    public RainbowOutlineShader() {
-        super("og.frag");
+    public HotShitShader() {
+        super("hotshit.frag");
     }
 
     @Override
@@ -23,11 +23,11 @@ public class RainbowOutlineShader extends FramebufferShader {
     @Override
     public void updateUniforms() {
         GL20.glUniform2f(this.getUniform("resolution"), (float)new ScaledResolution(Minecraft.getMinecraft()).getScaledWidth(), (float)new ScaledResolution(Minecraft.getMinecraft()).getScaledHeight());
-        GL20.glUniform1f(this.getUniform("time"), this.time);
-        this.time += Float.intBitsToFloat(Float.floatToIntBits(1015.0615f) ^ 0x7F395856);
+        GL20.glUniform1f(this.getUniform("time"), time);
+        time += timeMult * animationSpeed;
     }
 
     static {
-        RAINBOW_OUTLINE_SHADER = new RainbowOutlineShader();
+        HotShit_SHADER = new HotShitShader();
     }
 }
