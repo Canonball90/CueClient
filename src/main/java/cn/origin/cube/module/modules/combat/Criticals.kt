@@ -7,6 +7,7 @@ import cn.origin.cube.inject.client.INetworkManager
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
 import cn.origin.cube.module.ModuleInfo
+import cn.origin.cube.settings.BooleanSetting
 import cn.origin.cube.settings.ModeSetting
 import net.minecraft.entity.EntityLivingBase
 import net.minecraft.network.play.client.CPacketPlayer
@@ -19,6 +20,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 class Criticals: Module() {
 
     val mode: ModeSetting<model> = registerSetting("Mode", model.PACKET)
+    val moveCancel: BooleanSetting = registerSetting("MoveCancel", false)
 
     private var pauseTicks = 0
 
@@ -52,9 +54,10 @@ class Criticals: Module() {
                 }
             }
         } else if (event.packet is CPacketPlayer) {
-
-            if ((event.packet as ICPacketPlayer).isMoving && pauseTicks > 0) {
-                event.isCanceled
+            if(moveCancel.value) {
+                if ((event.packet as ICPacketPlayer).isMoving && pauseTicks > 0) {
+                    event.isCanceled
+                }
             }
         }
     }

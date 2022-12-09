@@ -45,14 +45,15 @@ public class HoleESP extends Module {
     public void onRender3D(Render3DEvent event){
         if (!obsidianHoles.isEmpty())
             if(pulse.getValue()) {
-                obsidianHoles.forEach(pos -> Render3DUtil.drawBox(pos, new Color(255, 0, 0, 100), getRolledHeight(4), true, false, 0));
+                obsidianHoles.forEach(pos -> Render3DUtil.drawBox(pos, new Color(255, 0, 0, 90), getRolledHeight(4), true, false, 0));
                 obsidianHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, obsidianBox.getValue(), obsidianOutline.getValue(), new Color(255,0,0, 120), new Color(255,0,0, 150), obsidianOutlineWidth.getValue()));
             }else{
                 obsidianHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, obsidianBox.getValue(), obsidianOutline.getValue(), new Color(255,0,0, 120), new Color(255,0,0, 150), obsidianOutlineWidth.getValue()));
             }
         if (!bedrockHoles.isEmpty())
             if(pulse.getValue()){
-                bedrockHoles.forEach(pos -> Render3DUtil.drawBox(pos, new Color(0,255,0, 120), getRolledHeight(4), true, false, 0));
+                bedrockHoles.forEach(pos -> Render3DUtil.drawBox(pos, new Color(0,255,0, 90), getRolledHeight(4), true, false, 0));
+                bedrockHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, bedrockBox.getValue(), bedrockOutline.getValue(), new Color(0, 255, 0, 120), new Color(0, 255, 0, 150), bedrockOutlineWidth.getValue()));
             }else {
                 bedrockHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, bedrockBox.getValue(), bedrockOutline.getValue(), new Color(0, 255, 0, 120), new Color(0, 255, 0, 150), bedrockOutlineWidth.getValue()));
             }

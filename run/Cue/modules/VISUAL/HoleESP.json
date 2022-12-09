@@ -5,7 +5,7 @@
     "Visible": true,
     "Hole Radius": 8.0,
     "Pulse": true,
-    "Pulse Max": 0.48347893,
+    "Pulse Max": 0.0,
     "Pulse Min": 0.0,
     "Pulse Speed": 2.0869775,
     "Pulse W": 8.0,
@@ -13,8 +13,8 @@
     "Obsidian Outline": true,
     "Obsidian Outline Width": 3.35034,
     "Bedrock Box": false,
-    "Bedrock Outline": false,
-    "Bedrock Outline Width": 1.0
+    "Bedrock Outline": true,
+    "Bedrock Outline Width": 3.3989308
   },
   "CommonSettings": {
     "KeyBind": 0

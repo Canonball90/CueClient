@@ -4,7 +4,7 @@
   "Settings": {
     "Visible": true,
     "Mode": "GAMMA",
-    "Gamma": 800.0
+    "Gamma": 1000.0
   },
   "CommonSettings": {
     "KeyBind": 0

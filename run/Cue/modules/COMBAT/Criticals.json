@@ -3,7 +3,8 @@
   "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Mode": "PACKET"
+    "Mode": "UPDATED_NCP",
+    "MoveCancel": false
   },
   "CommonSettings": {
     "KeyBind": 0
