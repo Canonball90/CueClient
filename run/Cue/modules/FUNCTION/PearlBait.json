@@ -1,0 +1,11 @@
+{
+  "Name": "PearlBait",
+  "Toggle": false,
+  "Settings": {
+    "Visible": true,
+    "100%": true
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}
