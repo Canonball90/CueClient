@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.event.events.client.PacketEvent
 import cn.origin.cube.event.events.player.UpdateWalkingPlayerEvent
+import cn.origin.cube.inject.client.ICPacketPlayer
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
 import cn.origin.cube.module.ModuleInfo
@@ -94,16 +95,15 @@ class NoFall: Module() {
         super.onUpdate()
     }
 
-    //ToDo this
     @SubscribeEvent
     fun onSend(event: PacketEvent.Send) {
         if (event.getPacket<Packet<*>>() is CPacketPlayer) return
-//        if(mode.value.equals(modeds.Offground)){
-//            (event.getPacket() as ICPacketPlayer).setOnGround(false)
-//        }
-//        if(mode.value.equals(modeds.OnGround)){
-//            (event.getPacket() as ICPacketPlayer).setOnGround(true)
-//        }
+        if(mode.value == modeds.Offground){
+            (event.getPacket() as ICPacketPlayer).setOnGround(false)
+        }
+        if(mode.value == modeds.OnGround){
+            (event.getPacket() as ICPacketPlayer).setOnGround(true)
+        }
     }
 
     override fun getHudInfo(): String {
@@ -113,6 +113,6 @@ class NoFall: Module() {
         !mc.player.isElytraFlying && !mc.player.capabilities.allowFlying && mc.player.fallDistance > 3
 
     enum class modeds {
-        Ncp, Predict, anti, OnGround, Glide, OldFag
+        Ncp, Predict, anti, OnGround, Offground, Glide, OldFag
     }
 }
