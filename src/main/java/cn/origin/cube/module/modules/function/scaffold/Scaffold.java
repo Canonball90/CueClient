@@ -5,6 +5,7 @@ import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
 import cn.origin.cube.settings.BooleanSetting;
 import cn.origin.cube.settings.DoubleSetting;
+import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.BlockUtil;
 import net.minecraft.block.Block;
@@ -33,11 +34,14 @@ public class Scaffold extends Module {
     BooleanSetting swing = registerSetting("Swing", true);
     BooleanSetting Switch = registerSetting("Switch", true);
     BooleanSetting Tower = registerSetting("Tower", true);
+    BooleanSetting center = registerSetting("Center", true);
     DoubleSetting speed = registerSetting("Speed", 0.7, 0.0, 1.0);
 
     private List<ScaffoldBlock> blocksToRender = new ArrayList<ScaffoldBlock>();
+    private boolean teleported;
     private BlockPos pos;
     private boolean packet = false;
+    Timer time = new Timer();
 
     @Override
     public void onUpdate() {
@@ -66,10 +70,22 @@ public class Scaffold extends Module {
                 break;
             }
         }
-        if (this.Tower.getValue().booleanValue() && this.mc.gameSettings.keyBindJump.isKeyDown() && this.mc.player.moveForward == 0.0f && this.mc.player.moveStrafing == 0.0f && !this.mc.player.isPotionActive(MobEffects.JUMP_BOOST)) {
-            this.mc.player.motionY = 0.2444441;
-            this.mc.player.motionZ = 0.0;
-            this.mc.player.motionX = 0.0;
+        if (mc.gameSettings.keyBindJump.isKeyDown() && mc.player.moveForward == 0.0F && mc.player.moveStrafing == 0.0F && Tower.getValue() && !mc.player.isPotionActive(MobEffects.JUMP_BOOST)) {
+            if (!this.teleported && center.getValue()) {
+                this.teleported = true;
+                BlockPos pos = new BlockPos(mc.player.posX, mc.player.posY, mc.player.posZ);
+                mc.player.setPosition(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D);
+            }
+            if (center.getValue() && !this.teleported)
+                return;
+            mc.player.motionY = 0.41999998688697815D;
+            mc.player.motionZ = 0.0D;
+            mc.player.motionX = 0.0D;
+            if (this.time.passed(1500L)) {
+                //ToDo add timer manager
+                time.reset();
+                mc.player.motionY = -0.28D;
+            }
         }
     }
 

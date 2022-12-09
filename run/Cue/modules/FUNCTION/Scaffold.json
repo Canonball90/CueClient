@@ -4,10 +4,11 @@
   "Settings": {
     "Visible": true,
     "Rotate": true,
-    "Swing": true,
+    "Swing": false,
     "Switch": true,
     "Tower": true,
-    "Speed": 0.7
+    "Bypass": true,
+    "Speed": 0.6992226839065552
   },
   "CommonSettings": {
     "KeyBind": 0
