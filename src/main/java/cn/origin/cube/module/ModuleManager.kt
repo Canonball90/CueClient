@@ -48,6 +48,7 @@ class ModuleManager {
         registerModule(PearlAlert())
         registerModule(ChorusLag())
         registerModule(SilentChorus())
+        registerModule(BoatPlace())
 
         //Movement
         registerModule(Sprint())
