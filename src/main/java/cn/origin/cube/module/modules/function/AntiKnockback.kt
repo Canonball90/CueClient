@@ -51,6 +51,6 @@ class AntiKnockback : Module() {
     }
 
     override fun getHudInfo(): String? {
-        return "[H%,"+horiz.value+",V%,"+vert.value+"]"
+        return "H%,"+horiz.value+",V%,"+vert.value+""
     }
 }

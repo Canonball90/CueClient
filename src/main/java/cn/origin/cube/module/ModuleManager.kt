@@ -73,6 +73,7 @@ class ModuleManager {
         registerModule(SuperheroFX())
         registerModule(ShaderCharms())
         registerModule(ItemPhysics())
+        registerModule(ChunkBorders())
 
         //World
         registerModule(FakePlayer())

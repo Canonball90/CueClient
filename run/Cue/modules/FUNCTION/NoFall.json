@@ -1,6 +1,6 @@
 {
   "Name": "NoFall",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Mode": "Ncp",

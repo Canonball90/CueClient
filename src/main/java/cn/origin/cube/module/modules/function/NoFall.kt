@@ -106,6 +106,9 @@ class NoFall: Module() {
 //        }
     }
 
+    override fun getHudInfo(): String {
+        return mode.value.name
+    }
     private fun shouldCancel() =
         !mc.player.isElytraFlying && !mc.player.capabilities.allowFlying && mc.player.fallDistance > 3
 
