@@ -529,7 +529,6 @@ public class AutoCrystal extends Module {
         if (mc.isSingleplayer()) {
             return false;
         }
-
         return explosionPackets.size() > 40 || placementPackets.size() > 40;
     }
 

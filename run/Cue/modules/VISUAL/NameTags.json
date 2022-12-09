@@ -4,7 +4,8 @@
   "Settings": {
     "Visible": true,
     "MutliThread": true,
-    "CFont": false,
+    "CFont": true,
+    "Y Offset": 0.09718037,
     "Armor": true,
     "Items": true,
     "Heart": false,
@@ -14,10 +15,9 @@
     "RoundedBackground": true,
     "Radius": 1.0,
     "Outline Width": 1.0,
-    "Y Offset": 0.0,
     "Size": 1.3,
     "Width": 0,
-    "Height": 0
+    "Height": 1
   },
   "CommonSettings": {
     "KeyBind": 0

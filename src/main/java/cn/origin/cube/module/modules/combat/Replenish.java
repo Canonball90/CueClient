@@ -41,6 +41,7 @@ public class Replenish extends Module {
 
     @Override
     public void onUpdate() {
+        if(fullNullCheck())return;
 
         if (refillSlot == -1) {
 
