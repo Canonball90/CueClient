@@ -3,10 +3,10 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Range": 32,
-    "Mode": "SMOKE",
+    "Range": 37,
+    "Mode": "HotShit",
     "Crystals": true,
-    "Players": false,
+    "Players": true,
     "Friends": true,
     "Mobs": false,
     "Animals": false,

@@ -53,7 +53,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-//ToDo add mutlithread cause like idk just seems usefull or smth
 @ModuleInfo(name = "AutoCrystal", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class AutoCrystal extends Module {
 
@@ -100,6 +99,15 @@ public class AutoCrystal extends Module {
     private String arrayListEntityName;
     private final List<Integer> deadCrystals = new ArrayList<>();
     private final Map<Integer, Long> attackedCrystals = new ConcurrentHashMap<>();
+    private final List<Integer> explosionPackets = new ArrayList<>();
+    private final List<BlockPos> placementPackets = new ArrayList<>();
+
+    private static boolean autoTimeractive;
+    private static boolean cancelingCrystals;
+    private static boolean Isthinking;
+    private static boolean isSpoofingAngles;
+    private static double yaw;
+    private static double pitch;
 
     private int x = tx.getValue();
     private int y = ty.getValue();
@@ -155,6 +163,13 @@ public class AutoCrystal extends Module {
             if (predict.getValue()) {
                 final CPacketUseEntity attackPacket = new CPacketUseEntity();
                 mc.player.connection.sendPacket((Packet)attackPacket);
+            }
+            if (isDesynced()) {
+                if (breakTimer.passedTicks(5)) {
+                    mc.player.setSneaking(true);
+                    mc.player.setSneaking(false);
+                    breakTimer.reset();
+                }
             }
             if (timer.getPassedTimeMs() / 50 >= 20 - breakSpeed.getValue()) {
                 timer.reset();
@@ -280,30 +295,28 @@ public class AutoCrystal extends Module {
                 }
                 return;
             }
-            if(ableToPlace(q)) {
-                EnumFacing f;
-                lookAtPacket(q.getX() + .5, q.getY() - .5, q.getZ() + .5, mc.player);
-                if (rayTrace.getValue()) {
-                    RayTraceResult result = mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(q.getX() + .5, q.getY() - .5d, q.getZ() + .5));
-                    if (result == null || result.sideHit == null) {
-                        f = EnumFacing.UP;
-                    } else {
-                        f = result.sideHit;
-                    }
-                    if (switchCooldown) {
-                        switchCooldown = false;
-                        return;
-                    }
-                } else {
+            EnumFacing f;
+            lookAtPacket(q.getX() + .5, q.getY() - .5, q.getZ() + .5, mc.player);
+            if (rayTrace.getValue()) {
+                RayTraceResult result = mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(q.getX() + .5, q.getY() - .5d, q.getZ() + .5));
+                if (result == null || result.sideHit == null) {
                     f = EnumFacing.UP;
+                } else {
+                    f = result.sideHit;
                 }
-                if (timer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
-                    timer.reset();
-                    if (packetPlace.getValue()) {
-                        mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
-                    } else {
-                        placeCrystalOnBlock(q, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
-                    }
+                if (switchCooldown) {
+                    switchCooldown = false;
+                    return;
+                }
+            } else {
+                f = EnumFacing.UP;
+            }
+            if (timer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
+                timer.reset();
+                if (packetPlace.getValue()) {
+                    mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
+                } else {
+                    placeCrystalOnBlock(q, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
                 }
             }
         }
@@ -483,26 +496,13 @@ public class AutoCrystal extends Module {
         super.onRender2D();
     }
 
-    private boolean canPlaceCrystal(BlockPos blockPos) {
-        BlockPos boost = blockPos.add(0, 1, 0);
-        BlockPos boost2 = blockPos.add(0, 2, 0);
-        if ((mc.world.getBlockState(blockPos).getBlock() != Blocks.BEDROCK
-                && mc.world.getBlockState(blockPos).getBlock() != Blocks.OBSIDIAN)
-                || mc.world.getBlockState(boost).getBlock() != Blocks.AIR
-                || mc.world.getBlockState(boost2).getBlock() != Blocks.AIR
-                || !mc.world.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(boost)).isEmpty()) {
-            return false;
-        }
-        return true;
-    }
-
     public BlockPos getPlayerPos() {
         return new BlockPos(Math.floor(mc.player.posX), Math.floor(mc.player.posY), Math.floor(mc.player.posZ));
     }
 
     private List<BlockPos> findCrystalBlocks() {
         NonNullList<BlockPos> positions = NonNullList.create();
-        positions.addAll(getSphere(getPlayerPos(), (float) range.getValue(), (int) range.getValue(), false, true, 0).stream().filter(this::canPlaceCrystal).collect(Collectors.toList()));
+        positions.addAll(getSphere(getPlayerPos(), (float) range.getValue(), (int) range.getValue(), false, true, 0).stream().filter(this::ableToPlace).collect(Collectors.toList()));
         return positions;
     }
 
@@ -523,6 +523,14 @@ public class AutoCrystal extends Module {
             }
         }
         return circleblocks;
+    }
+
+    public boolean isDesynced() {
+        if (mc.isSingleplayer()) {
+            return false;
+        }
+
+        return explosionPackets.size() > 40 || placementPackets.size() > 40;
     }
 
     public float calculateDamage(double posX, double posY, double posZ, Entity entity) {
@@ -567,13 +575,6 @@ public class AutoCrystal extends Module {
     public float calculateDamage(EntityEnderCrystal crystal, Entity entity) {
         return calculateDamage(crystal.posX, crystal.posY, crystal.posZ, entity);
     }
-
-    private static boolean autoTimeractive;
-    private static boolean cancelingCrystals;
-    private static boolean Isthinking;
-    private static boolean isSpoofingAngles;
-    private static double yaw;
-    private static double pitch;
 
     private void setYawAndPitch(float yaw1, float pitch1) {
         yaw = yaw1;

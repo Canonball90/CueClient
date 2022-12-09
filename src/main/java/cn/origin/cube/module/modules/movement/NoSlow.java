@@ -29,9 +29,9 @@ public class NoSlow extends Module {
 
     public static NoSlow INSTANCE;
     public BooleanSetting strict = registerSetting("Strict", true);
-    public BooleanSetting guiMove = registerSetting("Gui Move", true);;
-    public BooleanSetting soulSand = registerSetting("SoulSand", true);;
-    public BooleanSetting TwoBee = registerSetting("2b2t", true);;
+    public BooleanSetting guiMove = registerSetting("Gui Move", true);
+    public BooleanSetting soulSand = registerSetting("SoulSand", true);
+    public BooleanSetting TwoBee = registerSetting("2b2t", true);
     boolean sneaking;
 
     public NoSlow() {
