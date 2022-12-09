@@ -45,7 +45,8 @@ public class HoleESP extends Module {
     public void onRender3D(Render3DEvent event){
         if (!obsidianHoles.isEmpty())
             if(pulse.getValue()) {
-                obsidianHoles.forEach(pos -> Render3DUtil.drawBox(pos, new Color(255, 0, 0, 120), getRolledHeight(4), true, false, 0));
+                obsidianHoles.forEach(pos -> Render3DUtil.drawBox(pos, new Color(255, 0, 0, 100), getRolledHeight(4), true, false, 0));
+                obsidianHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, obsidianBox.getValue(), obsidianOutline.getValue(), new Color(255,0,0, 120), new Color(255,0,0, 150), obsidianOutlineWidth.getValue()));
             }else{
                 obsidianHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, obsidianBox.getValue(), obsidianOutline.getValue(), new Color(255,0,0, 120), new Color(255,0,0, 150), obsidianOutlineWidth.getValue()));
             }
