@@ -5,7 +5,7 @@ Time: 12/8/22 5:10 PM
 Description: There was a severe problem during mod loading that has caused the game to fail
 
 net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Cue (cue)
-Caused by: java.lang.IllegalArgumentException: No enum constant cn.origin.cube.module.modules.combat.AutoCrystal.Mode.Old
+Caused by: java.lang.IllegalArgumentException: No enum constant cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal.Mode.Old
 	at java.lang.Enum.valueOf(Enum.java:238)
 	at cn.origin.cube.settings.ModeSetting.setValueByString(ModeSetting.java:31)
 	at cn.origin.cube.managers.ConfigManager.setSetting(ConfigManager.kt:351)

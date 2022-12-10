@@ -1,6 +1,6 @@
 {
   "Name": "Scaffold",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "Rotate": true,

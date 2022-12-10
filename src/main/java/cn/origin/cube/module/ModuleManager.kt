@@ -4,6 +4,7 @@ import cn.origin.cube.event.events.world.Render3DEvent
 import cn.origin.cube.module.huds.*
 import cn.origin.cube.module.modules.client.*
 import cn.origin.cube.module.modules.combat.*
+import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal
 import cn.origin.cube.module.modules.function.*
 import cn.origin.cube.module.modules.function.scaffold.Scaffold
 import cn.origin.cube.module.modules.movement.*

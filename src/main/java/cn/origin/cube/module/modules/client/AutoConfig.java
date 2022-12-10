@@ -3,7 +3,7 @@ package cn.origin.cube.module.modules.client;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.module.modules.combat.AutoCrystal;
+import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
 import cn.origin.cube.module.modules.combat.Replenish;
 import cn.origin.cube.module.modules.movement.NoSlow;
 import cn.origin.cube.settings.ModeSetting;

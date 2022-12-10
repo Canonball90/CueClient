@@ -1,47 +1,47 @@
-[12:56:01] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[12:56:01] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[12:56:01] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[12:56:01] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
-[12:56:01] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
-[12:56:01] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
-[12:56:01] [main/ERROR] [FML]: Full: C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
-[12:56:01] [main/ERROR] [FML]: Trimmed: c:/users/natha/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
-[12:56:02] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[12:56:02] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
-[12:56:02] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
-[12:56:02] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
-[12:56:02] [main/INFO] [FML]: Found a command line coremod : cn.origin.cube.inject.ForgeCoreModsLoader
-[12:56:02] [main/INFO] [FML]: Ignoring missing certificate for coremod Cube (cn.origin.cube.inject.ForgeCoreModsLoader), as this is probably a dev workspace
-[12:56:02] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/natha/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
-[12:56:03] [main/INFO] [mixin]: Compatibility level set to JAVA_8
-[12:56:03] [main/ERROR] [mixin]: Mixin config mixins.cube.json does not specify "minVersion" property
-[12:56:03] [main/INFO] [Cue]: searge
-[12:56:03] [main/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
-[12:56:03] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[12:56:03] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[12:56:03] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[12:56:03] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[12:56:03] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[12:56:03] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[12:56:08] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
-[12:56:08] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[12:56:08] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[12:56:08] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[12:56:08] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@7f92b990
-[12:56:08] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[12:56:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[12:56:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[12:56:09] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[12:56:12] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player404
-[12:56:18] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[12:56:18] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
-[12:56:19] [Client thread/INFO] [FML]: -- System Details --
+[13:26:41] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[13:26:41] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[13:26:41] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[13:26:41] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
+[13:26:41] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
+[13:26:41] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[13:26:41] [main/ERROR] [FML]: Full: C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[13:26:41] [main/ERROR] [FML]: Trimmed: c:/users/natha/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[13:26:41] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[13:26:41] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[13:26:42] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[13:26:42] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[13:26:42] [main/INFO] [FML]: Found a command line coremod : cn.origin.cube.inject.ForgeCoreModsLoader
+[13:26:42] [main/INFO] [FML]: Ignoring missing certificate for coremod Cube (cn.origin.cube.inject.ForgeCoreModsLoader), as this is probably a dev workspace
+[13:26:42] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/natha/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
+[13:26:43] [main/INFO] [mixin]: Compatibility level set to JAVA_8
+[13:26:43] [main/ERROR] [mixin]: Mixin config mixins.cube.json does not specify "minVersion" property
+[13:26:43] [main/INFO] [Cue]: searge
+[13:26:43] [main/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
+[13:26:43] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[13:26:43] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[13:26:43] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[13:26:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[13:26:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[13:26:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[13:26:48] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[13:26:48] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[13:26:48] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[13:26:48] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[13:26:48] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@7f92b990
+[13:26:48] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[13:26:49] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[13:26:49] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[13:26:49] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[13:26:52] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player636
+[13:27:01] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[13:27:01] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[13:27:03] [Client thread/INFO] [FML]: -- System Details --
 Details:
 	Minecraft Version: 1.12.2
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_202, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 238791744 bytes (227 MB) / 622854144 bytes (594 MB) up to 1875378176 bytes (1788 MB)
+	Memory: 560418728 bytes (534 MB) / 789577728 bytes (753 MB) up to 1875378176 bytes (1788 MB)
 	JVM Flags: 0 total; 
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
@@ -49,12 +49,13 @@ Details:
 Cube (unknown)
   
 	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 26.20.100.6911' Renderer: 'Intel(R) UHD Graphics 630'
-[12:56:20] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
-[12:56:20] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
-[12:56:20] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
-[12:56:20] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
-[12:56:21] [Client thread/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
-[12:56:21] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[13:27:03] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
+[13:27:03] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[13:27:03] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[13:27:03] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
+[13:27:05] [Client thread/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
+[13:27:06] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 164553100 nanos
+[13:27:07] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -83,7 +84,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[12:56:21] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.7.10\d70d7d2c56371f7aa18f32e984e3e2e998fe9081\kotlin-stdlib-jdk8-1.7.10.jar - probably a corrupt zip
+[13:27:07] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.7.10\d70d7d2c56371f7aa18f32e984e3e2e998fe9081\kotlin-stdlib-jdk8-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -116,7 +117,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:21] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk8-1.7.10.jar failed to read properly, it will be ignored
+[13:27:07] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk8-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -149,7 +150,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:21] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[13:27:07] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -178,7 +179,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[12:56:21] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar - probably a corrupt zip
+[13:27:07] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -211,7 +212,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:21] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk7-1.7.10.jar failed to read properly, it will be ignored
+[13:27:07] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk7-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -244,7 +245,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:22] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[13:27:07] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -273,7 +274,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[12:56:22] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar - probably a corrupt zip
+[13:27:07] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -306,7 +307,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:22] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-1.7.10.jar failed to read properly, it will be ignored
+[13:27:07] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -339,8 +340,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:22] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 137129100 nanos
-[12:56:23] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[13:27:08] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -369,7 +369,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[12:56:23] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\6.2\a9690730f92cc79eeadc20e400ebb41eccce10b1\asm-util-6.2.jar - probably a corrupt zip
+[13:27:08] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\6.2\a9690730f92cc79eeadc20e400ebb41eccce10b1\asm-util-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -402,7 +402,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:23] [Client thread/WARN] [FML]: Zip file asm-util-6.2.jar failed to read properly, it will be ignored
+[13:27:08] [Client thread/WARN] [FML]: Zip file asm-util-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -435,7 +435,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:23] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[13:27:08] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -464,7 +464,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[12:56:23] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\6.2\c7d9a90d221cbb977848d2c777eb3aa7637e89df\asm-analysis-6.2.jar - probably a corrupt zip
+[13:27:08] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\6.2\c7d9a90d221cbb977848d2c777eb3aa7637e89df\asm-analysis-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -497,7 +497,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:23] [Client thread/WARN] [FML]: Zip file asm-analysis-6.2.jar failed to read properly, it will be ignored
+[13:27:08] [Client thread/WARN] [FML]: Zip file asm-analysis-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -530,7 +530,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:23] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[13:27:08] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -559,7 +559,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[12:56:23] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\6.2\61570e046111559f38d4e0e580c005f75988c0a6\asm-tree-6.2.jar - probably a corrupt zip
+[13:27:08] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\6.2\61570e046111559f38d4e0e580c005f75988c0a6\asm-tree-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -592,7 +592,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:23] [Client thread/WARN] [FML]: Zip file asm-tree-6.2.jar failed to read properly, it will be ignored
+[13:27:08] [Client thread/WARN] [FML]: Zip file asm-tree-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -625,7 +625,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:23] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[13:27:08] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -654,7 +654,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[12:56:23] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\6.2\1b6c4ff09ce03f3052429139c2a68e295cae6604\asm-6.2.jar - probably a corrupt zip
+[13:27:08] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\6.2\1b6c4ff09ce03f3052429139c2a68e295cae6604\asm-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -687,7 +687,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:23] [Client thread/WARN] [FML]: Zip file asm-6.2.jar failed to read properly, it will be ignored
+[13:27:08] [Client thread/WARN] [FML]: Zip file asm-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -720,169 +720,165 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[12:56:23] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
-[12:56:24] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at CLIENT
-[12:56:24] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at SERVER
-[12:56:25] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Cue
-[12:56:26] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[12:56:26] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
-[12:56:26] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[12:56:26] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
-[12:56:26] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[12:56:26] [Client thread/INFO] [Cue]: Begin loading Cue
-[12:56:26] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[12:56:26] [Client thread/INFO] [FML]: Applying holder lookups
-[12:56:26] [Client thread/INFO] [FML]: Holder lookups applied
-[12:56:26] [Client thread/INFO] [FML]: Applying holder lookups
-[12:56:26] [Client thread/INFO] [FML]: Holder lookups applied
-[12:56:26] [Client thread/INFO] [FML]: Applying holder lookups
-[12:56:26] [Client thread/INFO] [FML]: Holder lookups applied
-[12:56:26] [Client thread/INFO] [FML]: Applying holder lookups
-[12:56:26] [Client thread/INFO] [FML]: Holder lookups applied
-[12:56:26] [Client thread/INFO] [FML]: Injecting itemstacks
-[12:56:26] [Client thread/INFO] [FML]: Itemstack injection complete
-[12:56:27] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: AHEAD Target: null
-[12:56:32] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
-[12:56:32] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
-[12:56:32] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[12:56:32] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
-[12:56:32] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
-[12:56:49] [Client thread/INFO] [FML]: Max texture size: 8192
-[12:56:56] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
-[12:56:59] [Client thread/INFO] [FML]: Applying holder lookups
-[12:56:59] [Client thread/INFO] [FML]: Holder lookups applied
-[12:56:59] [Client thread/INFO] [Cue]: Loading Cue...
-[12:57:02] [Client thread/INFO] [FML]: Injecting itemstacks
-[12:57:02] [Client thread/INFO] [FML]: Itemstack injection complete
-[12:57:02] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
-[12:57:02] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[12:57:02] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1018)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:545)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.onResize(GuiScreen.java:685)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.resize(Minecraft.java:1679)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.toggleFullscreen(Minecraft.java:1649)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:556)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[12:57:03] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[12:57:03] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
-[12:57:13] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
-[12:57:13] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
-[12:57:13] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
-[12:57:13] [Server thread/INFO] [FML]: Applying holder lookups
-[12:57:13] [Server thread/INFO] [FML]: Holder lookups applied
-[12:57:14] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@6ad5f279)
-[12:57:15] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
-[12:57:15] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@6ad5f279)
-[12:57:15] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@6ad5f279)
-[12:57:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
-[12:57:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 45%
-[12:57:16] [Server thread/INFO] [FML]: Unloading dimension -1
-[12:57:16] [Server thread/INFO] [FML]: Unloading dimension 1
-[12:57:16] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
-[12:57:18] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
-[12:57:18] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
-[12:57:18] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,cue@0.1,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42
-[12:57:18] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
-[12:57:18] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
-[12:57:18] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player404[local:E:0885ac18] logged in with entity id 215 at (117.25529837816089, 72.0, 129.83495195677577)
-[12:57:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player404 joined the game
-[12:57:20] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[12:57:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[12:57:36] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [Player404: Set own game mode to Survival Mode]
-[12:57:36] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Your game mode has been updated to Survival Mode
-[12:57:41] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [Player404: Set own game mode to Creative Mode]
-[12:57:41] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Your game mode has been updated to Creative Mode
-[12:57:46] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [Player404: Set the time to 1000]
-[12:57:46] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Set the time to 1000
-[12:58:05] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 5 advancements
-[12:58:18] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[12:58:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[12:58:54] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[12:58:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[12:58:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
-[12:58:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
-[12:58:54] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player404 lost connection: Disconnected
-[12:58:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player404 left the game
-[12:58:55] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
-[12:58:55] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
-[12:58:55] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[12:58:55] [Server thread/INFO] [FML]: Unloading dimension 0
-[12:58:55] [Server thread/INFO] [FML]: Applying holder lookups
-[12:58:55] [Server thread/INFO] [FML]: Holder lookups applied
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1018)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiIngameMenu.actionPerformed(GuiIngameMenu.java:56)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.mouseClicked(GuiScreen.java:443)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:533)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:501)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1759)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1098)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:398)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[12:58:55] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[12:58:56] [Client thread/WARN] [Cue]: Saving configuration please wait...
-[12:58:56] [Client thread/WARN] [Cue]: Configuration saved!
-[12:58:56] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
-[12:58:56] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
-[12:58:56] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
+[13:27:08] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
+[13:27:09] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at CLIENT
+[13:27:09] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at SERVER
+[13:27:10] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Cue
+[13:27:11] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[13:27:11] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
+[13:27:11] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[13:27:11] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[13:27:11] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[13:27:11] [Client thread/INFO] [Cue]: Begin loading Cue
+[13:27:11] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[13:27:11] [Client thread/INFO] [FML]: Applying holder lookups
+[13:27:11] [Client thread/INFO] [FML]: Holder lookups applied
+[13:27:11] [Client thread/INFO] [FML]: Applying holder lookups
+[13:27:11] [Client thread/INFO] [FML]: Holder lookups applied
+[13:27:11] [Client thread/INFO] [FML]: Applying holder lookups
+[13:27:11] [Client thread/INFO] [FML]: Holder lookups applied
+[13:27:11] [Client thread/INFO] [FML]: Applying holder lookups
+[13:27:11] [Client thread/INFO] [FML]: Holder lookups applied
+[13:27:11] [Client thread/INFO] [FML]: Injecting itemstacks
+[13:27:11] [Client thread/INFO] [FML]: Itemstack injection complete
+[13:27:12] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: AHEAD Target: null
+[13:27:16] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[13:27:16] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[13:27:16] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[13:27:17] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[13:27:17] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[13:27:33] [Client thread/INFO] [FML]: Max texture size: 8192
+[13:27:39] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
+[13:27:42] [Client thread/INFO] [FML]: Applying holder lookups
+[13:27:42] [Client thread/INFO] [FML]: Holder lookups applied
+[13:27:42] [Client thread/INFO] [Cue]: Loading Cue...
+[13:27:46] [Client thread/INFO] [FML]: Injecting itemstacks
+[13:27:46] [Client thread/INFO] [FML]: Itemstack injection complete
+[13:27:46] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
+[13:27:46] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[13:27:46] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1018)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:545)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.onResize(GuiScreen.java:685)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.resize(Minecraft.java:1679)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.toggleFullscreen(Minecraft.java:1649)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:556)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+[13:27:46] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+[13:27:46] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
+[13:28:02] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[13:28:02] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[13:28:03] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[13:28:03] [Server thread/INFO] [FML]: Applying holder lookups
+[13:28:03] [Server thread/INFO] [FML]: Holder lookups applied
+[13:28:04] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@20ef18e2)
+[13:28:04] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
+[13:28:04] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@20ef18e2)
+[13:28:05] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@20ef18e2)
+[13:28:05] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[13:28:06] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 19%
+[13:28:06] [Server thread/INFO] [FML]: Unloading dimension -1
+[13:28:06] [Server thread/INFO] [FML]: Unloading dimension 1
+[13:28:06] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
+[13:28:08] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[13:28:08] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[13:28:08] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,cue@0.1,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42
+[13:28:08] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[13:28:08] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[13:28:08] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player636[local:E:eeb37937] logged in with entity id 213 at (119.47185616056038, 80.0, 118.87210338638721)
+[13:28:08] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player636 joined the game
+[13:28:11] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:28:12] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[13:28:12] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 5 advancements
+[13:31:34] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:31:34] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[13:33:50] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:33:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[13:34:51] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:34:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[13:34:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[13:34:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[13:34:52] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player636 lost connection: Disconnected
+[13:34:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player636 left the game
+[13:34:52] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[13:34:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[13:34:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[13:34:52] [Server thread/INFO] [FML]: Unloading dimension 0
+[13:34:52] [Server thread/INFO] [FML]: Applying holder lookups
+[13:34:52] [Server thread/INFO] [FML]: Holder lookups applied
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1018)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiIngameMenu.actionPerformed(GuiIngameMenu.java:56)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.mouseClicked(GuiScreen.java:443)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:533)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:501)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1759)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1098)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:398)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+[13:34:53] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+[13:34:53] [Client thread/WARN] [Cue]: Saving configuration please wait...
+[13:34:53] [Client thread/WARN] [Cue]: Configuration saved!
+[13:34:53] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[13:34:53] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[13:34:53] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
