@@ -5,13 +5,13 @@ import cn.origin.cube.utils.IconFontKt;
 import java.awt.*;
 
 public enum Category {
-    COMBAT("Combat", IconFontKt.TARGET, false, new Color(255,0,0)),
-    MOVEMENT("Movement", IconFontKt.METER, false, new Color(0, 176, 0)),
-    VISUAL("Visual", IconFontKt.EYE, false, new Color(0, 0, 189)),
-    WORLD("World", IconFontKt.EARTH, false, new Color(176, 176, 0)),
-    FUNCTION("Function", IconFontKt.COGS, false, new Color(0, 189, 255)),
-    CLIENT("Client", IconFontKt.EQUALIZER, false, new Color(182, 55, 0)),
-    HUD("Hud", IconFontKt.PENCLI, true, new Color(161, 0, 197));
+    COMBAT("Combat", IconFontKt.TARGET, false, new Color(213,100,100)),
+    MOVEMENT("Movement", IconFontKt.METER, false, new Color(61,29,158)),
+    VISUAL("Visual", IconFontKt.EYE, false, new Color(158,28,158)),
+    WORLD("World", IconFontKt.EARTH, false, new Color(222, 113, 0)),
+    FUNCTION("Function", IconFontKt.COGS, false, new Color(43,169,102)),
+    CLIENT("Client", IconFontKt.EQUALIZER, false, new Color(182, 0, 33)),
+    HUD("Hud", IconFontKt.PENCLI, true, new Color(255,35,35));
 
     private final String name;
     private final String icon;

@@ -7,7 +7,8 @@
   "HudHeight": 260.0,
   "Settings": {
     "Align": "Right",
-    "Sort": "Top"
+    "Sort": "Top",
+    "CoolColor": true
   },
   "CommonSettings": {
     "KeyBind": 0

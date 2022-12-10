@@ -4,7 +4,7 @@
   "Settings": {
     "Visible": true,
     "Rainbow": false,
-    "Gay": true,
+    "Gay": false,
     "Red": 240,
     "Green": 77,
     "Blue": 37,
