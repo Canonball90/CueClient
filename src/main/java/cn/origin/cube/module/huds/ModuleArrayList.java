@@ -3,6 +3,7 @@ package cn.origin.cube.module.huds;
 import cn.origin.cube.Cube;
 import cn.origin.cube.module.*;
 import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.settings.BooleanSetting;
 import cn.origin.cube.settings.ModeSetting;
 
 import java.util.Comparator;
@@ -13,6 +14,7 @@ public class ModuleArrayList extends HudModule {
 
     public ModeSetting<?> alignSetting = registerSetting("Align", alignMode.Left);
     public ModeSetting<?> sortSetting = registerSetting("Sort", sortMode.Top);
+    public BooleanSetting colorNew = registerSetting("CoolColor", false);
     public int count = 0;
 
     @Override
@@ -30,12 +32,12 @@ public class ModuleArrayList extends HudModule {
                         Cube.fontManager.CustomFont.drawStringWithShadow(modText,
                                 (int) (this.x - 2 - modWidth + this.width),
                                 this.y + (10 * count),
-                                ClickGui.getCurrentColor().getRGB());
+                                (colorNew.getValue()) ?module.category.getColor().getRGB() : ClickGui.getCurrentColor().getRGB());
                     } else {
                         Cube.fontManager.CustomFont.drawStringWithShadow(modText,
                                 this.x - 2,
                                 this.y + (10 * count),
-                                ClickGui.getCurrentColor().getRGB());
+                                (colorNew.getValue()) ?module.category.getColor().getRGB() : ClickGui.getCurrentColor().getRGB());
                     }
                     count++;
                 });

@@ -1,6 +1,6 @@
 {
   "Name": "Replenish",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Percent": 1.0,

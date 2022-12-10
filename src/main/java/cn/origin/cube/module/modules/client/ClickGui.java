@@ -17,6 +17,7 @@ import java.awt.*;
 @ModuleInfo(name = "ClickGui", descriptions = "open click gui screen", category = Category.CLIENT, defaultKeyBind = Keyboard.KEY_RSHIFT)
 public final class ClickGui extends Module {
     public BooleanSetting rainbow = registerSetting("Rainbow", false);
+    public BooleanSetting gay = registerSetting("Gay", false);
     public IntegerSetting red = registerSetting("Red", 25, 0, 255).booleanDisVisible(rainbow);
     public IntegerSetting green = registerSetting("Green", 115, 0, 255).booleanDisVisible(rainbow);
     public IntegerSetting blue = registerSetting("Blue", 255, 0, 255).booleanDisVisible(rainbow);

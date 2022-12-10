@@ -6,7 +6,7 @@
     "Switch": true,
     "Silent": false,
     "MultiThread": false,
-    "Machine Gun": true,
+    "Machine Gun": false,
     "Players": true,
     "Hostiles": false,
     "Passives": false,

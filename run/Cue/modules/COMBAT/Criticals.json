@@ -1,9 +1,9 @@
 {
   "Name": "Criticals",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Mode": "UPDATED_NCP",
+    "Mode": "PACKET",
     "MoveCancel": false
   },
   "CommonSettings": {

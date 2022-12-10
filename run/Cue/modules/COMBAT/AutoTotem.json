@@ -1,6 +1,6 @@
 {
   "Name": "AutoTotem",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true
   },

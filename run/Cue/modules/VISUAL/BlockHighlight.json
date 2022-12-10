@@ -1,9 +1,9 @@
 {
   "Name": "BlockHighlight",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Outline": true,
+    "Outline": false,
     "FullBlock": true,
     "OutlineWidth": 1.5,
     "Alpha": 55

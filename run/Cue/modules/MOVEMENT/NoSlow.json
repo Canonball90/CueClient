@@ -1,6 +1,6 @@
 {
   "Name": "NoSlow",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Strict": true,

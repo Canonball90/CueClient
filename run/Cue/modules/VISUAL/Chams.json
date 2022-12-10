@@ -1,11 +1,11 @@
 {
   "Name": "Chams",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Pulse": true,
-    "Pulse Max": 1.5,
-    "Pulse Min": 1.0,
+    "Pulse Max": 235.29881,
+    "Pulse Min": 103.95772,
     "Pulse Speed": 4.0,
     "Pulse W": 8.0,
     "Lines": true,
