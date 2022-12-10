@@ -24,7 +24,7 @@ public abstract class MixinAbstractClientPlayer {
     public void getLocationCape(CallbackInfoReturnable<ResourceLocation> callbackInfoReturnable) {
         UUID uuid = Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId();
         if (Cube.capeManager.hasCape(uuid)) {
-            callbackInfoReturnable.setReturnValue(new ResourceLocation("/assets/cue/cape.png"));
+            callbackInfoReturnable.setReturnValue(new ResourceLocation("assets/fonts/cape.png"));
         }
     }
 }

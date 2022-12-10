@@ -1,6 +1,6 @@
 {
   "Name": "ClickGui",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Rainbow": false,

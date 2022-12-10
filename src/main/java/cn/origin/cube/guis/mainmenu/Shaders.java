@@ -44,8 +44,8 @@ public class Shaders {
         if (!MainMenuShader.INSTANCE.isEnabled()) {
             return null;
         }
-        randomname = String.valueOf(GLSLSandboxShader.class.getResource("/assets/fonts/techno.frag"));
-        fis = GLSLSandboxShader.class.getResourceAsStream("/assets/fonts/techno.frag");
+        randomname = String.valueOf(GLSLSandboxShader.class.getResource("assets/fonts/flow.frag"));
+        fis = GLSLSandboxShader.class.getResourceAsStream("assets/fonts/flow.frag");
         return new Object[]{randomname, fis};
     }
 }

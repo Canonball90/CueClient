@@ -19,7 +19,7 @@ public class GLSLSandboxShader {
     public GLSLSandboxShader(String name, InputStream is) throws IOException {
         int program = glCreateProgram();
 
-        glAttachShader(program, createShader("/assets/fonts/passthrough.vsh", GLSLSandboxShader.class.getResourceAsStream("/assets/fonts/passthrough.vsh"), GL_VERTEX_SHADER));
+        glAttachShader(program, createShader("assets/fonts/passthrough.vsh", GLSLSandboxShader.class.getResourceAsStream("assets/fonts/passthrough.vsh"), GL_VERTEX_SHADER));
         glAttachShader(program, createShader(name, is, GL_FRAGMENT_SHADER));
 
         glLinkProgram(program);

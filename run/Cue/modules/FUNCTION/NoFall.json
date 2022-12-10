@@ -3,7 +3,7 @@
   "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Mode": "Ncp",
+    "Mode": "OnGround",
     "Speed": 5.0,
     "Fall Distance": 5.0
   },
