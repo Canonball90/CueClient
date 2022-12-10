@@ -6,6 +6,7 @@ import cn.origin.cube.utils.client.ChatUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public abstract class AbstractModule {
@@ -118,6 +119,12 @@ public abstract class AbstractModule {
 
     public LongSetting registerSetting(String name, long currentValue, long minValue, long maxValue) {
         LongSetting setting = new LongSetting(name, currentValue, minValue, maxValue, this);
+        this.settingList.add(setting);
+        return setting;
+    }
+//ToDo
+    public ColorSetting registerSetting(String name, Color color){
+        ColorSetting setting = new ColorSetting(name, color, this);
         this.settingList.add(setting);
         return setting;
     }
