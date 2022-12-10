@@ -1,12 +1,12 @@
 {
   "Name": "ModuleArrayList",
   "Toggle": true,
-  "HudXPos": 11.0,
-  "HudYPos": 216.0,
+  "HudXPos": 810.0,
+  "HudYPos": 39.0,
   "HudWidth": 148.0,
-  "HudHeight": 110.0,
+  "HudHeight": 150.0,
   "Settings": {
-    "Align": "Left",
+    "Align": "Right",
     "Sort": "Top"
   },
   "CommonSettings": {

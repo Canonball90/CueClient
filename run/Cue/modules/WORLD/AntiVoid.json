@@ -1,6 +1,6 @@
 {
   "Name": "AntiVoid",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Mode": "Jump"

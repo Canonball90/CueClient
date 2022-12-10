@@ -1,6 +1,6 @@
 {
   "Name": "Criticals",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "Mode": "UPDATED_NCP",

@@ -1,12 +1,12 @@
 {
   "Name": "Crosshair",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Length": 10.0,
-    "Part Width": 2.5,
-    "Gap": 6.1,
-    "Outline Width": 1.0,
+    "Length": 4.361029,
+    "Part Width": 0.9596689,
+    "Gap": 2.4173946,
+    "Outline Width": 0.0,
     "Dynamic": true,
     "Attack Indicator": true,
     "Fill": true,

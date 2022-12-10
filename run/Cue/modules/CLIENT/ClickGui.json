@@ -1,12 +1,12 @@
 {
   "Name": "ClickGui",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Rainbow": false,
-    "Red": 25,
-    "Green": 115,
-    "Blue": 255,
+    "Red": 161,
+    "Green": 2,
+    "Blue": 213,
     "RainbowSpeed": 1.0,
     "Saturation": 0.65,
     "Brightness": 1.0,

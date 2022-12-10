@@ -3,7 +3,7 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Mode": "TwoDee",
+    "Mode": "ThreeDee",
     "Hunger": true,
     "Health": true,
     "healthValue": true,

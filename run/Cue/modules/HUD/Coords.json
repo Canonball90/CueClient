@@ -1,10 +1,10 @@
 {
   "Name": "Coords",
-  "Toggle": false,
-  "HudXPos": 114.0,
-  "HudYPos": 114.0,
-  "HudWidth": 0.0,
-  "HudHeight": 0.0,
+  "Toggle": true,
+  "HudXPos": 3.0,
+  "HudYPos": 530.0,
+  "HudWidth": 49.0,
+  "HudHeight": 9.0,
   "Settings": {
     "Size": 1.0
   },

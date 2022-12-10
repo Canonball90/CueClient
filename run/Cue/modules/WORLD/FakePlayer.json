@@ -3,7 +3,7 @@
   "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Moving": true,
+    "Moving": false,
     "MoveDelay": 27,
     "Popping": true,
     "Particle": true,

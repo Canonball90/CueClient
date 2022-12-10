@@ -3,17 +3,17 @@
   "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Hole Radius": 8.0,
+    "Hole Radius": 20.0,
     "Pulse": true,
-    "Pulse Max": 0.0,
+    "Pulse Max": 0.19193378,
     "Pulse Min": 0.0,
-    "Pulse Speed": 2.0869775,
-    "Pulse W": 8.0,
+    "Pulse Speed": 4.856657,
+    "Pulse W": 3.8775504,
     "Obsidian Box": false,
-    "Obsidian Outline": true,
+    "Obsidian Outline": false,
     "Obsidian Outline Width": 3.35034,
     "Bedrock Box": false,
-    "Bedrock Outline": true,
+    "Bedrock Outline": false,
     "Bedrock Outline Width": 3.3989308
   },
   "CommonSettings": {
