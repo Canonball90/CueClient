@@ -45,7 +45,7 @@ class CategoryPanel(
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
             Color.WHITE.rgb
         )
-        if(isShowModules == true) {
+        if(isShowModules) {
             Cube.fontManager!!.IconFont.drawStringWithShadow(
                 "I",
                 x + width - 15,
