@@ -54,8 +54,8 @@ narrator:0
 tutorialStep:none
 key_key.attack:-100
 key_key.use:-99
-key_key.forward:44
-key_key.left:16
+key_key.forward:17
+key_key.left:30
 key_key.back:31
 key_key.right:32
 key_key.jump:57

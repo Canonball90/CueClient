@@ -1,10 +1,10 @@
 {
   "Name": "Scaffold",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Rotate": true,
-    "Swing": false,
+    "Swing": true,
     "Switch": true,
     "Tower": true,
     "Center": true,

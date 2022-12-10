@@ -15,7 +15,7 @@ class BooleanSettingButton(
     father: ModuleButton
 ) : SettingButton<BooleanSetting>(width, height, value, father) {
     override fun drawButton(x: Float, y: Float, mouseX: Int, mouseY: Int) {
-        Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 205).rgb)
+        Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 95).rgb)
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             value.name,
             x + 3,

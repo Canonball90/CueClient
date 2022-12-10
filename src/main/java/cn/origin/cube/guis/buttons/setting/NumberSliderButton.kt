@@ -48,7 +48,7 @@ class NumberSliderButton(width: Float, height: Float, value: Setting<*>, father:
 
     override fun drawButton(x: Float, y: Float, mouseX: Int, mouseY: Int) {
         dragSetting(mouseX)
-        Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 205).rgb)
+        Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 95).rgb)
         Render2DUtil.drawRect(
             x,
             y + 0.5f,

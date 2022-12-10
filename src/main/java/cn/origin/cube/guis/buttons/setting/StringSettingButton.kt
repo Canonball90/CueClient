@@ -41,7 +41,7 @@ class StringSettingButton(
             timer.reset()
         }
         val renderString = stringRef.get() + addText
-        Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 205).rgb)
+        Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 95).rgb)
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             if (inputting) renderString else ChatUtil.translateAlternateColorCodes(value.name + ": " + value.value),
             x + 3,
