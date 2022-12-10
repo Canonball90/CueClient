@@ -1,9 +1,19 @@
 {
   "Name": "FakePlayer",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "name": "FakePlayer"
+    "Moving": true,
+    "MoveDelay": 27,
+    "Popping": true,
+    "Particle": true,
+    "Sound": true,
+    "DistanceCheck": true,
+    "Distance": 15,
+    "Inventory": true,
+    "InventoryMode": "OP",
+    "Gapple": true,
+    "GappleDelay(Secs)": 5
   },
   "CommonSettings": {
     "KeyBind": 0

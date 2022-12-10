@@ -1,11 +1,11 @@
 {
   "Name": "SuperheroFX",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Delay": 1.0,
+    "Delay": 0.0,
     "Scale": 1.5,
-    "Extra": 1,
+    "Extra": 2,
     "RandomColor": true
   },
   "CommonSettings": {

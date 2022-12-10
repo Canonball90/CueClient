@@ -5,9 +5,9 @@
     "Visible": true,
     "Packet": true,
     "Rotate": false,
-    "Height": 1.0
+    "Height": -5.0
   },
   "CommonSettings": {
-    "KeyBind": 0
+    "KeyBind": 29
   }
 }

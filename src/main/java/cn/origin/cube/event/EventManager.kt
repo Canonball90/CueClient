@@ -1,6 +1,7 @@
 package cn.origin.cube.event
 
 import cn.origin.cube.Cube
+import cn.origin.cube.event.events.player.TotemPopListener
 import cn.origin.cube.event.events.render.RenderOverlayEvent
 import cn.origin.cube.event.events.world.Render3DEvent
 import cn.origin.cube.utils.Utils
@@ -21,9 +22,15 @@ import org.lwjgl.input.Keyboard
 
 class EventManager {
     val mc: Minecraft = Minecraft.getMinecraft()
+    val totemPopListener: TotemPopListener
 
     init {
         MinecraftForge.EVENT_BUS.register(this)
+        totemPopListener = TotemPopListener()
+    }
+
+    fun EventManager(){
+
     }
 
     @SubscribeEvent
