@@ -12,7 +12,7 @@
     "Passives": false,
     "Place": true,
     "Break": true,
-    "Instant": true,
+    "Instant": false,
     "Range": 5,
     "MinimumDmg": 4,
     "SelfDamage": 10,
@@ -35,6 +35,6 @@
     "Target Hud": false
   },
   "CommonSettings": {
-    "KeyBind": 0
+    "KeyBind": 46
   }
 }

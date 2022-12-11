@@ -1,9 +1,9 @@
 {
   "Name": "Chams",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Pulse": true,
+    "Pulse": false,
     "Pulse Max": 1.5,
     "Pulse Min": 1.0,
     "Pulse Speed": 4.0,

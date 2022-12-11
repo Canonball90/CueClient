@@ -8,7 +8,7 @@
     "Switch": true,
     "Tower": true,
     "Center": true,
-    "Speed": 0.7
+    "Speed": 1.0
   },
   "CommonSettings": {
     "KeyBind": 0
