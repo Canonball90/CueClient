@@ -44,12 +44,14 @@ public class NameTags extends Module {
     BooleanSetting armor = registerSetting("Armor", true);
     BooleanSetting items = registerSetting("Items", true);
     BooleanSetting heart = registerSetting("Heart", false);
+    BooleanSetting sneak = registerSetting("Sneak", false);
+    FloatSetting sneakHeight = registerSetting("Sneak Height", -1f, -4f, 1f).booleanVisible(sneak);
     BooleanSetting enchant = registerSetting("Enchantments", false);
     BooleanSetting healthBar = registerSetting("Health Bar", false);
     BooleanSetting background = registerSetting("Background", true);
     BooleanSetting roundedOutline = registerSetting("RoundedBackground", true).booleanDisVisible(background);
     DoubleSetting radius = registerSetting("Radius", 1.0, 1, 5).booleanDisVisible(background);
-    BooleanSetting gradientBackground = registerSetting("Background", true).booleanVisible(background);
+    BooleanSetting gradientBackground = registerSetting("Gradient Background", true).booleanVisible(background);
     FloatSetting outlineWidth = registerSetting("Outline Width", 1.0f, 0f, 3.0f);
     FloatSetting yOffset = registerSetting("Y Offset", 0, -10.0F, 10.0F);
     FloatSetting sizel = registerSetting("Size", 1.3F, -10.0F, 10.0F);
@@ -74,7 +76,7 @@ public class NameTags extends Module {
         for (Entity e : NameTags.mc.world.loadedEntityList) {
             if (!(e instanceof EntityPlayer) || e == NameTags.mc.player) continue;
             double x = e.lastTickPosX + (e.posX - e.lastTickPosX) * (double)event.getPartialTicks() - NameTags.mc.getRenderManager().viewerPosX;
-            double y = e.lastTickPosY + (e.posY - e.lastTickPosY) * (double)event.getPartialTicks() - NameTags.mc.getRenderManager().viewerPosY - yOffset.getValue();
+            double y = e.lastTickPosY + (e.posY - e.lastTickPosY) * (double)event.getPartialTicks() - NameTags.mc.getRenderManager().viewerPosY - yOffset.getValue() + (sneak.getValue() ? sneakHeight.getValue() : 0);
             double z = e.lastTickPosZ + (e.posZ - e.lastTickPosZ) * (double)event.getPartialTicks() - NameTags.mc.getRenderManager().viewerPosZ;
             GL11.glPushMatrix();
             GL11.glDisable((int)2929);
