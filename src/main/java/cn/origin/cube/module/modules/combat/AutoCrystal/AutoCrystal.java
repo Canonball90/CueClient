@@ -21,11 +21,18 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.*;
+import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.entity.item.EntityEnderCrystal;
+import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.item.EntityXPOrb;
+import net.minecraft.entity.monster.EntityEnderman;
+import net.minecraft.entity.monster.EntityIronGolem;
+import net.minecraft.entity.monster.EntityPigZombie;
+import net.minecraft.entity.monster.EntitySpider;
+import net.minecraft.entity.passive.EntityAmbientCreature;
+import net.minecraft.entity.passive.EntitySquid;
+import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -425,9 +432,9 @@ public class AutoCrystal extends Module {
                         continue;
                     }
 
-//                    if (target instanceof EntityPlayer && !targetPlayers.getValue() || EntityUtil.isPassiveMob(target) && !targetPassives.getValue() || EntityUtil.isNeutralMob(target) && !targetNeutrals.getValue() || EntityUtil.isHostileMob(target) && !targetHostiles.getValue()) {
-//                        continue;
-//                    }
+                    if (target instanceof EntityPlayer && !players.getValue() || isPassiveMob(target) && !passives.getValue() || isNeutralMob(target) && !passives.getValue() || isHostileMob(target) && !mobs.getValue()) {
+                        continue;
+                    }
 
                     double entityRange = mc.player.getDistance(target);
 
@@ -472,6 +479,31 @@ public class AutoCrystal extends Module {
             unsafeEntities++;
         }
         return unsafeEntities <= 0;
+    }
+
+    public static boolean isPassiveMob(Entity entity) {
+
+        if (entity instanceof EntityWolf) {
+            return !((EntityWolf) entity).isAngry();
+        }
+
+        if (entity instanceof EntityIronGolem) {
+            return ((EntityIronGolem) entity).getRevengeTarget() == null;
+        }
+
+        return entity instanceof EntityAgeable || entity instanceof EntityAmbientCreature || entity instanceof EntitySquid;
+    }
+
+    public static boolean isVehicleMob(Entity entity) {
+        return entity instanceof EntityBoat || entity instanceof EntityMinecart;
+    }
+
+    public static boolean isHostileMob(Entity entity) {
+        return (entity.isCreatureType(EnumCreatureType.MONSTER, false) && !isNeutralMob(entity)) || entity instanceof EntitySpider;
+    }
+
+    public static boolean isNeutralMob(Entity entity) {
+        return entity instanceof EntityPigZombie && !((EntityPigZombie) entity).isAngry() || entity instanceof EntityWolf && !((EntityWolf) entity).isAngry() || entity instanceof EntityEnderman && ((EntityEnderman) entity).isScreaming();
     }
 
     public static boolean canTakeDamage() {
