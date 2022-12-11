@@ -1,6 +1,6 @@
 {
   "Name": "Chams",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Pulse": false,

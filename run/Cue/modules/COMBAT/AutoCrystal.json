@@ -31,8 +31,8 @@
     "Cancel Crystal": true,
     "Inhibit": false,
     "Outline": true,
-    "Alpha": 150,
-    "Target Hud": false
+    "Alpha": 320,
+    "Target Hud": true
   },
   "CommonSettings": {
     "KeyBind": 46
