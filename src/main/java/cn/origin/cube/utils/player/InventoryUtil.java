@@ -23,6 +23,14 @@ public class InventoryUtil {
         return -1;
     }
 
+    public static boolean isBlock(Item item, Class clazz) {
+        if (item instanceof ItemBlock) {
+            Block block = ((ItemBlock) item).getBlock();
+            return clazz.isInstance(block);
+        }
+        return false;
+    }
+
     public static void switchToHotbarSlot(final int slot, final boolean silent) {
         if (mc.player == null || mc.world == null || mc.player.inventory == null) {
             return;

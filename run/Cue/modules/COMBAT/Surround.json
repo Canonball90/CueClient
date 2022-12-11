@@ -3,11 +3,17 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
+    "BPT": 12,
+    "Delay": 0,
     "Packet": true,
-    "Rotate": false,
-    "Height": 1.0
+    "TPCenter": false,
+    "Rotate": true,
+    "HelpingBlocks": true,
+    "Always Help": false,
+    "Floor": false,
+    "Render": true
   },
   "CommonSettings": {
-    "KeyBind": 0
+    "KeyBind": 29
   }
 }

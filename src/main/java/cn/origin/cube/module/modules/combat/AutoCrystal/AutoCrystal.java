@@ -944,18 +944,16 @@ public class AutoCrystal extends Module {
 }
 
 
-    final class Threads extends Thread {
-        AutoCrystal.ThreadType type;
-        BlockPos bestBlock;
-        EntityEnderCrystal bestCrystal;
+final class Threads extends Thread {
+    AutoCrystal.ThreadType type;
+    BlockPos bestBlock;
+    EntityEnderCrystal bestCrystal;
 
-        public Threads(AutoCrystal.ThreadType type) {
+    public Threads(AutoCrystal.ThreadType type) {
             this.type = type;
         }
-
         @Override
         public void run() {
-
             if (this.type == AutoCrystal.ThreadType.BLOCK) {
                 bestBlock = AutoCrystal.INSTANCE.render;
                 AutoCrystal.INSTANCE.render = bestBlock;

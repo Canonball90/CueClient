@@ -79,6 +79,19 @@ public class EntityUtil {
         return baseSpeed;
     }
 
+    public static Vec3d[] getUnsafeBlockArray(Entity entity, int height, boolean floor) {
+        List<Vec3d> list = EntityUtil.getUnsafeBlocks(entity, height, floor);
+        Vec3d[] array = new Vec3d[list.size()];
+        return list.toArray(array);
+    }
+
+    public static Vec3d[] getUnsafeBlockArrayFromVec3d(Vec3d pos, int height, boolean floor) {
+        List<Vec3d> list = EntityUtil.getUnsafeBlocksFromVec3d(pos, height, floor);
+        Vec3d[] array = new Vec3d[list.size()];
+        return list.toArray(array);
+    }
+
+
     public static double[] forward(final double speed) {
         float forward = mc.player.movementInput.moveForward;
         float side = mc.player.movementInput.moveStrafe;

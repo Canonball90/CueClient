@@ -1,10 +1,12 @@
 package cn.origin.cube.utils.player;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityEnderCrystal;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.init.Blocks;
 import net.minecraft.network.play.client.CPacketAnimation;
 import net.minecraft.network.play.client.CPacketEntityAction;
@@ -94,6 +96,74 @@ public class BlockUtil {
             return iterator.next();
         }
         return null;
+    }
+
+    public static boolean isSafe(Entity entity, int height, boolean floor) {
+        return getUnsafeBlocks(entity, height, floor).size() == 0;
+    }
+
+    public static List<Vec3d> getUnsafeBlocks(Entity entity, int height, boolean floor) {
+        return getUnsafeBlocksFromVec3d(entity.getPositionVector(), height, floor);
+    }
+
+    public static List<Vec3d> getUnsafeBlocksFromVec3d(Vec3d pos, int height, boolean floor) {
+        final List<Vec3d> vec3ds = new ArrayList<>(5);
+        for (final Vec3d vector : BlockUtil.getOffsets(height, floor)) {
+            final Block block = mc.world.getBlockState(new BlockPos(pos).add(vector.x, vector.y, vector.z)).getBlock();
+            if (block instanceof BlockAir || block instanceof BlockLiquid || block instanceof BlockTallGrass || block instanceof BlockFire || block instanceof BlockDeadBush || block instanceof BlockSnow) {
+                vec3ds.add(vector);
+            }
+        }
+        return vec3ds;
+    }
+
+    public static Vec3d[] getOffsets(int y, boolean floor) {
+        final List<Vec3d> offsets = getOffsetList(y, floor);
+        final Vec3d[] array = new Vec3d[offsets.size()];
+        return offsets.toArray(array);
+    }
+
+    public static int isPositionPlaceable(BlockPos pos, boolean rayTrace) {
+        return BlockUtil.isPositionPlaceable(pos, rayTrace, true);
+    }
+
+    public static boolean rayTracePlaceCheck(BlockPos pos, boolean shouldCheck, float height) {
+        return !shouldCheck || mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + (double) mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(pos.getX(), (float) pos.getY() + height, pos.getZ()), false, true, false) == null;
+    }
+
+    public static int isPositionPlaceable(BlockPos pos, boolean rayTrace, boolean entityCheck) {
+        Block block = mc.world.getBlockState(pos).getBlock();
+        if (!(block instanceof BlockAir || block instanceof BlockLiquid || block instanceof BlockTallGrass || block instanceof BlockFire || block instanceof BlockDeadBush || block instanceof BlockSnow)) {
+            return 0;
+        }
+        if (!BlockUtil.rayTracePlaceCheck(pos, rayTrace, 0.0f)) {
+            return -1;
+        }
+        if (entityCheck) {
+            for (Entity entity : mc.world.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(pos))) {
+                if (entity instanceof EntityItem || entity instanceof EntityXPOrb) continue;
+                return 1;
+            }
+        }
+        for (EnumFacing side : BlockUtil.getPossibleSides(pos)) {
+            if (!BlockUtil.canBeClicked(pos.offset(side))) continue;
+            return 3;
+        }
+        return 2;
+    }
+
+    public static List<Vec3d> getOffsetList(int y, boolean floor) {
+        final List<Vec3d> offsets = new ArrayList<>(5);
+        offsets.add(new Vec3d(-1, y, 0));
+        offsets.add(new Vec3d(1, y, 0));
+        offsets.add(new Vec3d(0, y, -1));
+        offsets.add(new Vec3d(0, y, 1));
+
+        if(floor) {
+            offsets.add(new Vec3d(0, y - 1, 0));
+        }
+
+        return offsets;
     }
 
     public static List<BlockPos> getSphereAutoCrystal(double radius, boolean noAir) {
@@ -212,7 +282,53 @@ public class BlockUtil {
         return list;
     }
 
+    public static boolean placeBlock(BlockPos pos, EnumHand hand, boolean rotate, boolean packet, boolean isSneaking) {
+        boolean sneaking = false;
+        EnumFacing side = BlockUtil.getFirstFacing(pos);
+        if (side == null) {
+            return isSneaking;
+        }
+        BlockPos neighbour = pos.offset(side);
+        EnumFacing opposite = side.getOpposite();
+        Vec3d hitVec = new Vec3d(neighbour).add(0.5, 0.5, 0.5).add(new Vec3d(opposite.getDirectionVec()).scale(0.5));
+        Block neighbourBlock = mc.world.getBlockState(neighbour).getBlock();
+        if (!mc.player.isSneaking() && (blackList.contains(neighbourBlock) || shulkerList.contains(neighbourBlock))) {
+            mc.player.connection.sendPacket(new CPacketEntityAction(mc.player, CPacketEntityAction.Action.START_SNEAKING));
+            mc.player.setSneaking(true);
+            sneaking = true;
+        }
+        if (rotate) {
+            RotationUtil.faceVector(hitVec, true);
+        }
+        BlockUtil.rightClickBlock(neighbour, hitVec, hand, opposite, packet);
+        mc.player.swingArm(EnumHand.MAIN_HAND);
+        return sneaking || isSneaking;
+    }
+
+    public static Vec3d[] getHelpingBlocks(Vec3d vec3d) {
+        return new Vec3d[]{new Vec3d(vec3d.x, vec3d.y - 1.0, vec3d.z), new Vec3d(vec3d.x != 0.0 ? vec3d.x * 2.0 : vec3d.x, vec3d.y, vec3d.x != 0.0 ? vec3d.z : vec3d.z * 2.0), new Vec3d(vec3d.x == 0.0 ? vec3d.x + 1.0 : vec3d.x, vec3d.y, vec3d.x == 0.0 ? vec3d.z : vec3d.z + 1.0), new Vec3d(vec3d.x == 0.0 ? vec3d.x - 1.0 : vec3d.x, vec3d.y, vec3d.x == 0.0 ? vec3d.z : vec3d.z - 1.0), new Vec3d(vec3d.x, vec3d.y + 1.0, vec3d.z)};
+    }
+
+    public static Vec3d[] getUnsafeBlockArray(Entity entity, int height, boolean floor) {
+        final List<Vec3d> list = getUnsafeBlocks(entity, height, floor);
+        final Vec3d[] array = new Vec3d[list.size()];
+        return list.toArray(array);
+    }
+
+
     public static Vec3d posToVec3d(BlockPos pos) {
         return new Vec3d(pos);
+    }
+
+    public static boolean canBeClicked(BlockPos pos) {
+        return BlockUtil.getBlock(pos).canCollideCheck(BlockUtil.getState(pos), false);
+    }
+
+    private static Block getBlock(BlockPos pos) {
+        return BlockUtil.getState(pos).getBlock();
+    }
+
+    private static IBlockState getState(BlockPos pos) {
+        return mc.world.getBlockState(pos);
     }
 }
