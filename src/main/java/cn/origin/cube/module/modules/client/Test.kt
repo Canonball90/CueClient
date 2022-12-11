@@ -10,7 +10,6 @@ class Test: Module() {
 
 
     override fun onEnable() {
-        ChatUtil.sendMessage("TTTEESSSSSTTTT!!!!!!!!")
         super.onEnable()
     }
 }

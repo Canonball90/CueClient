@@ -78,6 +78,7 @@ class ModuleManager {
         registerModule(ItemPhysics())
         registerModule(ChunkBorders())
         registerModule(Animations())
+        registerModule(XRay())
 
         //World
         registerModule(FakePlayer())
