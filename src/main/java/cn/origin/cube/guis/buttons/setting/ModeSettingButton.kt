@@ -3,6 +3,7 @@ package cn.origin.cube.guis.buttons.setting
 import cn.origin.cube.Cube
 import cn.origin.cube.guis.buttons.ModuleButton
 import cn.origin.cube.guis.buttons.SettingButton
+import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.settings.ModeSetting
 import cn.origin.cube.utils.render.Render2DUtil
 import java.awt.Color
@@ -25,6 +26,9 @@ class ModeSettingButton(
             (value as ModeSetting<*>).valueAsString,
             x + width - 3 - Cube.fontManager!!.CustomFont.getStringWidth(value.valueAsString),
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
+            if(ClickGui.INSTANCE.gay.value)
+                father.father.category.color.rgb
+                        else
             Color.WHITE.rgb
         )
         this.x = x

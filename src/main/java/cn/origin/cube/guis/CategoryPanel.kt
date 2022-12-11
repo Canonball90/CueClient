@@ -100,6 +100,9 @@ class CategoryPanel(
                     buttonX,
                     calcYPos.toDouble(),
                     0.75f,
+                    if(ClickGui.INSTANCE.gay.value)
+                        moduleButton.father.category.color
+                            else
                     ClickGui.getCurrentColor()
                 )
             }

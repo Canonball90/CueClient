@@ -20,7 +20,12 @@ class BooleanSettingButton(
             value.name,
             x + 3,
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            if (value.value as Boolean) ClickGui.getCurrentColor().rgb else Color.WHITE.rgb
+            if (value.value as Boolean)
+                if(ClickGui.INSTANCE.gay.value)
+                father.father.category.color.rgb
+                else
+                ClickGui.getCurrentColor().rgb
+            else Color.WHITE.rgb
         )
         this.x = x
         this.y = y

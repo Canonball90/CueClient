@@ -112,7 +112,7 @@ public class NameTags extends Module {
 //                drawRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), 4, (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() - length, 6, color.getRGB(), 1);
 //            }
             if(cFont.getValue()) {
-                Cube.fontManager.CustomFont.drawStringWithShadow(e.getName() + " " + (Object) TextFormatting.GREEN + health + (heart.getValue() ? "\u2764" : "%"), 0 - this.getcenter(e.getName() + " " + (Object) TextFormatting.GREEN + health + "%") + cfontOffsetX.getValue(), cfontOffsetY.getValue(), -1);
+                Cube.fontManager.CustomFont.drawStringWithShadow(e.getName() + " " + (Object) TextFormatting.GREEN + health + (heart.getValue() ? "\u2764" : "%"), 0 - this.getcenter(e.getName() + " " + (Object) TextFormatting.GREEN + health + "%") + cfontOffsetX.getValue(), 2, -1);
             }else{
                 mc.fontRenderer.drawStringWithShadow(e.getName() + " " + (Object) TextFormatting.GREEN + health + (heart.getValue() ? "\u2764" : "%"), 0 - this.getcenter(e.getName() + " " + (Object) TextFormatting.GREEN + health + "%"), 1, -1);
             }

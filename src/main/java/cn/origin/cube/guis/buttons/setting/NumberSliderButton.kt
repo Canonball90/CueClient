@@ -54,6 +54,9 @@ class NumberSliderButton(width: Float, height: Float, value: Setting<*>, father:
             y + 0.5f,
             if ((value.value as Number).toDouble() <= min.toDouble()) 0.0f else width * partialMultiplier(),
             height - 1.0f,
+            if(ClickGui.INSTANCE.gay.value)
+                father.father.category.color.rgb
+            else
             ClickGui.getCurrentColor().rgb
         )
         Cube.fontManager!!.CustomFont.drawStringWithShadow(

@@ -1,47 +1,47 @@
-[19:54:59] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[19:54:59] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[19:54:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[19:54:59] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
-[19:54:59] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
-[19:54:59] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
-[19:54:59] [main/ERROR] [FML]: Full: C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
-[19:54:59] [main/ERROR] [FML]: Trimmed: c:/users/natha/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
-[19:54:59] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[19:54:59] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
-[19:55:00] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
-[19:55:00] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
-[19:55:00] [main/INFO] [FML]: Found a command line coremod : cn.origin.cube.inject.ForgeCoreModsLoader
-[19:55:00] [main/INFO] [FML]: Ignoring missing certificate for coremod Cube (cn.origin.cube.inject.ForgeCoreModsLoader), as this is probably a dev workspace
-[19:55:00] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/natha/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
-[19:55:01] [main/INFO] [mixin]: Compatibility level set to JAVA_8
-[19:55:01] [main/ERROR] [mixin]: Mixin config mixins.cube.json does not specify "minVersion" property
-[19:55:01] [main/INFO] [Cue]: searge
-[19:55:01] [main/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
-[19:55:01] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[19:55:01] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[19:55:01] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[19:55:01] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[19:55:01] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[19:55:01] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[19:55:06] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
-[19:55:06] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[19:55:06] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[19:55:06] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[19:55:06] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@7f92b990
-[19:55:06] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[19:55:07] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[19:55:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[19:55:08] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[19:55:09] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player242
-[19:55:15] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[19:55:15] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
-[19:55:16] [Client thread/INFO] [FML]: -- System Details --
+[20:13:27] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[20:13:27] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[20:13:27] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[20:13:27] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
+[20:13:27] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
+[20:13:27] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[20:13:27] [main/ERROR] [FML]: Full: C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[20:13:27] [main/ERROR] [FML]: Trimmed: c:/users/natha/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[20:13:28] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[20:13:28] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[20:13:28] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[20:13:28] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[20:13:28] [main/INFO] [FML]: Found a command line coremod : cn.origin.cube.inject.ForgeCoreModsLoader
+[20:13:28] [main/INFO] [FML]: Ignoring missing certificate for coremod Cube (cn.origin.cube.inject.ForgeCoreModsLoader), as this is probably a dev workspace
+[20:13:29] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/natha/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
+[20:13:29] [main/INFO] [mixin]: Compatibility level set to JAVA_8
+[20:13:29] [main/ERROR] [mixin]: Mixin config mixins.cube.json does not specify "minVersion" property
+[20:13:29] [main/INFO] [Cue]: searge
+[20:13:29] [main/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
+[20:13:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[20:13:29] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[20:13:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[20:13:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[20:13:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[20:13:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[20:13:34] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[20:13:34] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[20:13:34] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[20:13:34] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[20:13:34] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@7f92b990
+[20:13:34] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[20:13:35] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[20:13:35] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[20:13:35] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[20:13:37] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player147
+[20:13:42] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[20:13:42] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[20:13:44] [Client thread/INFO] [FML]: -- System Details --
 Details:
 	Minecraft Version: 1.12.2
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_202, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 219265408 bytes (209 MB) / 623378432 bytes (594 MB) up to 1875378176 bytes (1788 MB)
+	Memory: 187039584 bytes (178 MB) / 535822336 bytes (511 MB) up to 1875378176 bytes (1788 MB)
 	JVM Flags: 0 total; 
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
@@ -49,12 +49,12 @@ Details:
 Cube (unknown)
   
 	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 26.20.100.6911' Renderer: 'Intel(R) UHD Graphics 630'
-[19:55:16] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
-[19:55:16] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
-[19:55:16] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
-[19:55:17] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
-[19:55:18] [Client thread/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
-[19:55:18] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[20:13:45] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
+[20:13:45] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[20:13:45] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[20:13:45] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
+[20:13:45] [Client thread/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
+[20:13:46] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -83,7 +83,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[19:55:18] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.7.10\d70d7d2c56371f7aa18f32e984e3e2e998fe9081\kotlin-stdlib-jdk8-1.7.10.jar - probably a corrupt zip
+[20:13:46] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.7.10\d70d7d2c56371f7aa18f32e984e3e2e998fe9081\kotlin-stdlib-jdk8-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -116,7 +116,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:19] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk8-1.7.10.jar failed to read properly, it will be ignored
+[20:13:46] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk8-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -149,7 +149,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:19] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[20:13:46] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -178,7 +178,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[19:55:19] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar - probably a corrupt zip
+[20:13:46] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -211,7 +211,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:19] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk7-1.7.10.jar failed to read properly, it will be ignored
+[20:13:46] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk7-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -244,7 +244,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:19] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[20:13:46] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -273,7 +273,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[19:55:19] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar - probably a corrupt zip
+[20:13:46] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -306,7 +306,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:19] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-1.7.10.jar failed to read properly, it will be ignored
+[20:13:46] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -339,8 +339,8 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:19] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 259894000 nanos
-[19:55:20] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[20:13:47] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 72653100 nanos
+[20:13:47] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -369,7 +369,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[19:55:20] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\6.2\a9690730f92cc79eeadc20e400ebb41eccce10b1\asm-util-6.2.jar - probably a corrupt zip
+[20:13:47] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\6.2\a9690730f92cc79eeadc20e400ebb41eccce10b1\asm-util-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -402,7 +402,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:20] [Client thread/WARN] [FML]: Zip file asm-util-6.2.jar failed to read properly, it will be ignored
+[20:13:47] [Client thread/WARN] [FML]: Zip file asm-util-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -435,7 +435,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:20] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[20:13:47] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -464,7 +464,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[19:55:20] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\6.2\c7d9a90d221cbb977848d2c777eb3aa7637e89df\asm-analysis-6.2.jar - probably a corrupt zip
+[20:13:47] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\6.2\c7d9a90d221cbb977848d2c777eb3aa7637e89df\asm-analysis-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -497,7 +497,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:20] [Client thread/WARN] [FML]: Zip file asm-analysis-6.2.jar failed to read properly, it will be ignored
+[20:13:47] [Client thread/WARN] [FML]: Zip file asm-analysis-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -530,7 +530,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:20] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[20:13:47] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -559,7 +559,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[19:55:20] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\6.2\61570e046111559f38d4e0e580c005f75988c0a6\asm-tree-6.2.jar - probably a corrupt zip
+[20:13:47] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\6.2\61570e046111559f38d4e0e580c005f75988c0a6\asm-tree-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -592,7 +592,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:20] [Client thread/WARN] [FML]: Zip file asm-tree-6.2.jar failed to read properly, it will be ignored
+[20:13:47] [Client thread/WARN] [FML]: Zip file asm-tree-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -625,7 +625,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:20] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[20:13:47] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -654,7 +654,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[19:55:20] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\6.2\1b6c4ff09ce03f3052429139c2a68e295cae6604\asm-6.2.jar - probably a corrupt zip
+[20:13:47] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\6.2\1b6c4ff09ce03f3052429139c2a68e295cae6604\asm-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -687,7 +687,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:20] [Client thread/WARN] [FML]: Zip file asm-6.2.jar failed to read properly, it will be ignored
+[20:13:47] [Client thread/WARN] [FML]: Zip file asm-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -720,455 +720,305 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[19:55:20] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
-[19:55:20] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at CLIENT
-[19:55:20] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at SERVER
-[19:55:22] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Cue
-[19:55:22] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[19:55:22] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
-[19:55:22] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[19:55:22] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
-[19:55:22] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[19:55:22] [Client thread/INFO] [Cue]: Begin loading Cue
-[19:55:22] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[19:55:22] [Client thread/INFO] [FML]: Applying holder lookups
-[19:55:22] [Client thread/INFO] [FML]: Holder lookups applied
-[19:55:22] [Client thread/INFO] [FML]: Applying holder lookups
-[19:55:22] [Client thread/INFO] [FML]: Holder lookups applied
-[19:55:22] [Client thread/INFO] [FML]: Applying holder lookups
-[19:55:22] [Client thread/INFO] [FML]: Holder lookups applied
-[19:55:22] [Client thread/INFO] [FML]: Applying holder lookups
-[19:55:22] [Client thread/INFO] [FML]: Holder lookups applied
-[19:55:22] [Client thread/INFO] [FML]: Injecting itemstacks
-[19:55:22] [Client thread/INFO] [FML]: Itemstack injection complete
-[19:55:23] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: AHEAD Target: null
-[19:55:27] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
-[19:55:28] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
-[19:55:28] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[19:55:28] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
-[19:55:28] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
-[19:55:46] [Client thread/INFO] [FML]: Max texture size: 8192
-[19:55:54] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
-[19:55:57] [Client thread/INFO] [FML]: Applying holder lookups
-[19:55:57] [Client thread/INFO] [FML]: Holder lookups applied
-[19:55:57] [Client thread/INFO] [Cue]: Loading Cue...
-[19:56:01] [Client thread/INFO] [FML]: Injecting itemstacks
-[19:56:01] [Client thread/INFO] [FML]: Itemstack injection complete
-[19:56:01] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
-[19:56:01] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[19:56:02] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1018)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:545)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.onResize(GuiScreen.java:685)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.resize(Minecraft.java:1679)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.toggleFullscreen(Minecraft.java:1649)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:556)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[19:56:02] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[19:56:02] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
-[19:56:12] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
-[19:56:12] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
-[19:56:12] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
-[19:56:12] [Server thread/INFO] [FML]: Applying holder lookups
-[19:56:12] [Server thread/INFO] [FML]: Holder lookups applied
-[19:56:12] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@485ff81f)
-[19:56:13] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
-[19:56:13] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@485ff81f)
-[19:56:13] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@485ff81f)
-[19:56:13] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
-[19:56:14] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 26%
-[19:56:15] [Server thread/INFO] [FML]: Unloading dimension -1
-[19:56:15] [Server thread/INFO] [FML]: Unloading dimension 1
-[19:56:15] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
-[19:56:17] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
-[19:56:17] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
-[19:56:17] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,cue@0.1,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42
-[19:56:17] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
-[19:56:17] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
-[19:56:17] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player242[local:E:b50855e6] logged in with entity id 214 at (162.69999998807907, 81.0, 226.69999998807907)
-[19:56:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player242 joined the game
-[19:56:21] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[19:56:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[19:56:37] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Unknown command.
-[19:56:37] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]hahahahah
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:11] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:42] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:43] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:57:59] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:58:00] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:58:00] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:58:00] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[19:58:00] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[19:58:00] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[19:58:00] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:12] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:13] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: ########## GL ERROR ##########
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: @ Post render
-[20:00:14] [Client thread/ERROR] [net.minecraft.client.Minecraft]: 1282: Invalid operation
-[20:02:46] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[20:02:46] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[20:02:48] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[20:02:48] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[20:02:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
-[20:02:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
-[20:02:51] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player242 lost connection: Disconnected
-[20:02:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player242 left the game
-[20:02:51] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
-[20:02:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
-[20:02:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[20:02:51] [Server thread/INFO] [FML]: Unloading dimension 0
-[20:02:51] [Server thread/INFO] [FML]: Applying holder lookups
-[20:02:51] [Server thread/INFO] [FML]: Holder lookups applied
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: java.lang.NullPointerException
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.readStreamToString(GLSLSandboxShader.java:80)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.createShader(GLSLSandboxShader.java:58)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.GLSLSandboxShader.<init>(GLSLSandboxShader.java:22)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at cn.origin.cube.guis.mainmenu.Shaders.init(Shaders.java:31)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.handler$initGui$zzm000(GuiMainMenu.java:667)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:218)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1018)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiIngameMenu.actionPerformed(GuiIngameMenu.java:56)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.mouseClicked(GuiScreen.java:443)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:533)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:501)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1759)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1098)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:398)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[20:02:52] [Client thread/INFO] [STDERR]: [cn.origin.cube.guis.mainmenu.Shaders:init:38]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[20:02:53] [Client thread/WARN] [Cue]: Saving configuration please wait...
-[20:02:53] [Client thread/WARN] [Cue]: Configuration saved!
-[20:02:53] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
-[20:02:53] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
-[20:02:53] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
+[20:13:47] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
+[20:13:48] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at CLIENT
+[20:13:49] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at SERVER
+[20:13:49] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Cue
+[20:13:50] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[20:13:50] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
+[20:13:50] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[20:13:50] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[20:13:50] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[20:13:50] [Client thread/INFO] [Cue]: Begin loading Cue
+[20:13:50] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[20:13:50] [Client thread/INFO] [FML]: Applying holder lookups
+[20:13:50] [Client thread/INFO] [FML]: Holder lookups applied
+[20:13:50] [Client thread/INFO] [FML]: Applying holder lookups
+[20:13:50] [Client thread/INFO] [FML]: Holder lookups applied
+[20:13:50] [Client thread/INFO] [FML]: Applying holder lookups
+[20:13:50] [Client thread/INFO] [FML]: Holder lookups applied
+[20:13:50] [Client thread/INFO] [FML]: Applying holder lookups
+[20:13:50] [Client thread/INFO] [FML]: Holder lookups applied
+[20:13:50] [Client thread/INFO] [FML]: Injecting itemstacks
+[20:13:50] [Client thread/INFO] [FML]: Itemstack injection complete
+[20:13:57] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[20:13:57] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[20:13:57] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[20:13:58] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[20:13:58] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[20:14:14] [Client thread/INFO] [FML]: Max texture size: 8192
+[20:14:21] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
+[20:14:23] [Client thread/INFO] [FML]: Applying holder lookups
+[20:14:23] [Client thread/INFO] [FML]: Holder lookups applied
+[20:14:23] [Client thread/INFO] [Cue]: Loading Cue...
+[20:14:27] [Client thread/INFO] [FML]: Injecting itemstacks
+[20:14:27] [Client thread/INFO] [FML]: Itemstack injection complete
+[20:14:27] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
+[20:14:27] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[20:14:28] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[20:14:28] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
+[20:14:28] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
+[20:14:36] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[20:14:36] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[20:14:37] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[20:14:37] [Server thread/INFO] [FML]: Applying holder lookups
+[20:14:37] [Server thread/INFO] [FML]: Holder lookups applied
+[20:14:37] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@719e7b42)
+[20:14:38] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
+[20:14:38] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@719e7b42)
+[20:14:38] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@719e7b42)
+[20:14:38] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[20:14:40] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 44%
+[20:14:40] [Server thread/INFO] [FML]: Unloading dimension -1
+[20:14:40] [Server thread/INFO] [FML]: Unloading dimension 1
+[20:14:40] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
+[20:14:42] [Client thread/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@6282d83f[id=2dc91382-bdf7-3364-b2ee-09532f57b948,name=Player147,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:85) ~[YggdrasilAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) [YggdrasilMinecraftSessionService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:173) [YggdrasilMinecraftSessionService.class:?]
+	at net.minecraft.client.Minecraft.launchIntegratedServer(Minecraft.java:2421) [Minecraft.class:?]
+	at net.minecraftforge.fml.client.FMLClientHandler.tryLoadExistingWorld(FMLClientHandler.java:734) [FMLClientHandler.class:?]
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.loadWorld(GuiListWorldSelectionEntry.java:249) [GuiListWorldSelectionEntry.class:?]
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.joinWorld(GuiListWorldSelectionEntry.java:199) [GuiListWorldSelectionEntry.class:?]
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.mousePressed(GuiListWorldSelectionEntry.java:163) [GuiListWorldSelectionEntry.class:?]
+	at net.minecraft.client.gui.GuiListExtended.mouseClicked(GuiListExtended.java:51) [GuiListExtended.class:?]
+	at net.minecraft.client.gui.GuiWorldSelection.mouseClicked(GuiWorldSelection.java:116) [GuiWorldSelection.class:?]
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:533) [GuiScreen.class:?]
+	at net.minecraft.client.gui.GuiWorldSelection.handleMouseInput(GuiWorldSelection.java:40) [GuiWorldSelection.class:?]
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:501) [GuiScreen.class:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1759) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1098) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:398) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
+Caused by: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263) ~[?:1.8.0_202]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:130) ~[HttpAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:66) ~[YggdrasilAuthenticationService.class:?]
+	... 28 more
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397) ~[?:1.8.0_202]
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:302) ~[?:1.8.0_202]
+	at sun.security.validator.Validator.validate(Validator.java:262) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263) ~[?:1.8.0_202]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:130) ~[HttpAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:66) ~[YggdrasilAuthenticationService.class:?]
+	... 28 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141) ~[?:1.8.0_202]
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126) ~[?:1.8.0_202]
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280) ~[?:1.8.0_202]
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392) ~[?:1.8.0_202]
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:302) ~[?:1.8.0_202]
+	at sun.security.validator.Validator.validate(Validator.java:262) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263) ~[?:1.8.0_202]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:130) ~[HttpAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:66) ~[YggdrasilAuthenticationService.class:?]
+	... 28 more
+[20:14:42] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[20:14:42] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[20:14:42] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,cue@0.1,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42
+[20:14:42] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[20:14:42] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[20:14:42] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player147[local:E:f206b003] logged in with entity id 219 at (167.65003070868835, 82.0, 226.854958357359)
+[20:14:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player147 joined the game
+[20:14:47] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[20:14:47] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[20:14:47] [pool-2-thread-1/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@123aca4a[id=2dc91382-bdf7-3364-b2ee-09532f57b948,name=Player147,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:85) ~[YggdrasilAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) [YggdrasilMinecraftSessionService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:60) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:57) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3716) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2424) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2298) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2211) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4154) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4158) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:5147) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:5153) [guava-21.0.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:170) [YggdrasilMinecraftSessionService.class:?]
+	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:3001) [Minecraft.class:?]
+	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:132) [SkinManager$3.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_202]
+Caused by: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263) ~[?:1.8.0_202]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:130) ~[HttpAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:66) ~[YggdrasilAuthenticationService.class:?]
+	... 19 more
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397) ~[?:1.8.0_202]
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:302) ~[?:1.8.0_202]
+	at sun.security.validator.Validator.validate(Validator.java:262) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263) ~[?:1.8.0_202]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:130) ~[HttpAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:66) ~[YggdrasilAuthenticationService.class:?]
+	... 19 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141) ~[?:1.8.0_202]
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126) ~[?:1.8.0_202]
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280) ~[?:1.8.0_202]
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392) ~[?:1.8.0_202]
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:302) ~[?:1.8.0_202]
+	at sun.security.validator.Validator.validate(Validator.java:262) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229) ~[?:1.8.0_202]
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621) ~[?:1.8.0_202]
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037) ~[?:1.8.0_202]
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395) ~[?:1.8.0_202]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_202]
+	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481) ~[?:1.8.0_202]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263) ~[?:1.8.0_202]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:130) ~[HttpAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:66) ~[YggdrasilAuthenticationService.class:?]
+	... 19 more
+[20:17:21] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[20:17:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[20:17:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[20:17:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[20:17:22] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player147 lost connection: Disconnected
+[20:17:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player147 left the game
+[20:17:22] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[20:17:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[20:17:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[20:17:22] [Server thread/INFO] [FML]: Unloading dimension 0
+[20:17:22] [Server thread/INFO] [FML]: Applying holder lookups
+[20:17:22] [Server thread/INFO] [FML]: Holder lookups applied
+[20:17:23] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
+[20:17:24] [Client thread/WARN] [Cue]: Saving configuration please wait...
+[20:17:24] [Client thread/WARN] [Cue]: Configuration saved!
+[20:17:24] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[20:17:24] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[20:17:24] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
