@@ -63,7 +63,7 @@ class NumberSliderButton(width: Float, height: Float, value: Setting<*>, father:
             value.name,
             x + 3,
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            Color(150,150,150).rgb
+            Color.WHITE.rgb
         )
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             when (value) {
@@ -83,7 +83,7 @@ class NumberSliderButton(width: Float, height: Float, value: Setting<*>, father:
                 }
             ),
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            Color(150,150,150).rgb
+            Color.WHITE.rgb
         )
         this.x = x
         this.y = y

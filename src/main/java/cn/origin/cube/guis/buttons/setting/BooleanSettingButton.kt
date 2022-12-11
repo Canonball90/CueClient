@@ -25,7 +25,7 @@ class BooleanSettingButton(
                 father.father.category.color.rgb
                 else
                 ClickGui.getCurrentColor().rgb
-            else Color(150,150,150).rgb
+            else Color.WHITE.rgb
         )
         this.x = x
         this.y = y

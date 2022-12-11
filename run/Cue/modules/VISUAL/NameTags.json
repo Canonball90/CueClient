@@ -1,6 +1,6 @@
 {
   "Name": "NameTags",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "MutliThread": true,

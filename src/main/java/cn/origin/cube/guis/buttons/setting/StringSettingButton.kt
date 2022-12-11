@@ -46,7 +46,7 @@ class StringSettingButton(
             if (inputting) renderString else ChatUtil.translateAlternateColorCodes(value.name + ": " + value.value),
             x + 3,
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            Color(150,150,150).rgb
+            Color.WHITE.rgb
         )
         this.x = x
         this.y = y

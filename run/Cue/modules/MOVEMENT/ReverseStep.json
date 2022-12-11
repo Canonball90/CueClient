@@ -1,6 +1,6 @@
 {
   "Name": "ReverseStep",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Power": 10.0
