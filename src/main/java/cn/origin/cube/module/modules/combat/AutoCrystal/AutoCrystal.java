@@ -12,6 +12,7 @@ import cn.origin.cube.settings.BooleanSetting;
 import cn.origin.cube.settings.IntegerSetting;
 import cn.origin.cube.settings.ModeSetting;
 import cn.origin.cube.utils.Timer;
+import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.render.Render2DUtil;
@@ -92,8 +93,8 @@ public class AutoCrystal extends Module {
     public IntegerSetting tx = registerSetting("Alpha", 150, 0, 1000);
     public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000);
 
-    private BlockPos render;
-    private Entity renderEnt;
+    public BlockPos render;
+    public Entity renderEnt;
     private static boolean togglePitch = false;
     private boolean switchCooldown = false;
     private boolean isAttacking = false;
@@ -478,6 +479,11 @@ public class AutoCrystal extends Module {
     }
 
     public void placeCrystalOnBlock(BlockPos pos, EnumHand hand) {
+        if(multiThread.getValue()){
+            Threads threads = new Threads(ThreadType.BLOCK);
+            threads.start();
+            pos = pos;
+        }
         RayTraceResult result = Minecraft.getMinecraft().world
                 .rayTraceBlocks(
                         new Vec3d(
@@ -674,6 +680,7 @@ public class AutoCrystal extends Module {
         return Math.max(damage, 0);
     }
 
+
     public static double getBlockDensity(boolean blockDestruction, Vec3d vector, AxisAlignedBB bb) {
 
         double diffX = 1 / ((bb.maxX - bb.minX) * 2D + 1D);
@@ -841,6 +848,31 @@ public class AutoCrystal extends Module {
         return false;
     }
 
+    public final EntityEnderCrystal getBestCrystal() {
+        double bestDamage = 0;
+        EntityEnderCrystal bestCrystal = null;
+        for (Entity e : mc.world.loadedEntityList) {
+            if (!(e instanceof EntityEnderCrystal)) continue;
+            EntityEnderCrystal crystal = (EntityEnderCrystal) e;
+            for (EntityPlayer target : new ArrayList<>(mc.world.playerEntities)) {
+                if (mc.player.getDistanceSq(target) > MathUtil.square(range.getValue())) continue;
+                if (predict.getValue() && target != mc.player && this.timer.getPassedTimeMs() > this.breakSpeed.getValue().longValue()) {
+                    float f = target.width / 2.0F, f1 = target.height;
+                    target.setEntityBoundingBox(new AxisAlignedBB(target.posX - (double) f, target.posY, target.posZ - (double) f, target.posX + (double) f, target.posY + (double) f1, target.posZ + (double) f));
+                    Entity y = renderEnt;
+                    target.setEntityBoundingBox(y.getEntityBoundingBox());
+                }
+                double targetDamage = this.calculateDamage(crystal, target);
+                if (targetDamage == 0) continue;
+                if (targetDamage > bestDamage) {
+                    bestDamage = targetDamage;
+                    bestCrystal = crystal;
+                }
+            }
+        }
+        return bestCrystal;
+    }
+
     public static float getScaledDamage(float damage) {
         World world = mc.world;
         if (world == null) {
@@ -873,4 +905,32 @@ public class AutoCrystal extends Module {
     public enum PlaceMode{
         New
     }
+
+    public enum ThreadType{
+        BLOCK,CRYSTAL
+    }
 }
+
+
+    final class Threads extends Thread {
+        AutoCrystal.ThreadType type;
+        BlockPos bestBlock;
+        EntityEnderCrystal bestCrystal;
+
+        public Threads(AutoCrystal.ThreadType type) {
+            this.type = type;
+        }
+
+        @Override
+        public void run() {
+
+            if (this.type == AutoCrystal.ThreadType.BLOCK) {
+                bestBlock = AutoCrystal.INSTANCE.render;
+                AutoCrystal.INSTANCE.render = bestBlock;
+            } else if (this.type ==AutoCrystal.ThreadType.CRYSTAL) {
+                bestCrystal = AutoCrystal.INSTANCE.getBestCrystal();
+                AutoCrystal.INSTANCE.renderEnt = bestCrystal;
+            }
+        }
+
+    }
