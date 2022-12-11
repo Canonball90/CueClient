@@ -17,6 +17,9 @@ class CategoryPanel(
 ) {
     val modules = arrayListOf<ModuleButton>()
     var isShowModules = true
+    var showingModuleCount = 0
+    var opening = false
+    var closing = false
     private var dragging = false
     private var x2 = 0.0f
     private var y2 = 0.0f
@@ -60,6 +63,25 @@ class CategoryPanel(
                 Color.WHITE.rgb
             )
         }
+        if (opening)
+        {
+            showingModuleCount++;
+            if (showingModuleCount == modules.size)
+            {
+                opening = false;
+                isShowModules = true;
+            }
+        }
+
+        if (closing)
+        {
+            showingModuleCount--;
+            if (showingModuleCount == 0)
+            {
+                closing = false;
+                isShowModules = false;
+            }
+        }
         if (modules.isEmpty() || !isShowModules) return
         var calcYPos = this.y + this.height
         for (moduleButton in modules) {
@@ -82,6 +104,7 @@ class CategoryPanel(
                 )
             }
         }
+
     }
 
     fun mouseClicked(mouseX: Int, mouseY: Int, mouseButton: Int) {
@@ -109,5 +132,23 @@ class CategoryPanel(
 
     fun keyTyped(typedChar: Char, keyCode: Int) {
         modules.forEach { it.keyTyped(typedChar, keyCode) }
+    }
+
+    fun isOpening(): Boolean {
+        return opening
+    }
+
+    fun isClosing(): Boolean {
+        return closing
+    }
+
+    fun processRightClick() {
+        if (!isShowModules) {
+            showingModuleCount = 0
+            opening = true
+        } else {
+            showingModuleCount = modules.size
+            closing = true
+        }
     }
 }
