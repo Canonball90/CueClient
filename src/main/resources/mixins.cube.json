@@ -25,7 +25,8 @@
     "IEntityRenderer",
     "MixinGuiMainMenu",
     "MixinRenderEntityItem",
-    "MixinRenderer"
+    "MixinRenderer",
+    "MixinEntityLivingBase"
   ],
   "mixins": [
     "MixinNetworkManager"

@@ -24,7 +24,7 @@
     "Predict": false,
     "PacketPlace": true,
     "PacketExplode": true,
-    "Swing": "Offhand",
+    "Swing": "Main",
     "BreakSpeed": 20,
     "PlaceSpeed": 20,
     "Thinking": false,

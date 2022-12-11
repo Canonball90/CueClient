@@ -76,6 +76,7 @@ class ModuleManager {
         registerModule(ShaderCharms())
         registerModule(ItemPhysics())
         registerModule(ChunkBorders())
+        registerModule(Animations())
 
         //World
         registerModule(FakePlayer())
