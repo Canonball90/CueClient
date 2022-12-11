@@ -3,7 +3,7 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "AntiNeededBlocks": true,
+    "AntiNeededBlocks": false,
     "Cancel": true
   },
   "CommonSettings": {
