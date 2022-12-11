@@ -24,7 +24,7 @@ class BindSettingButton(
             "${value.name}: ${if (listening) "..." else Keyboard.getKeyName((value.value as KeyBind).keyCode)}",
             x + 3,
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            Color.WHITE.rgb
+            Color(150,150,150).rgb
         )
         this.x = x
         this.y = y

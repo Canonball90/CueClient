@@ -1,0 +1,14 @@
+{
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2022-12-11 12:39:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "savanna": "2022-12-11 12:34:58 +0100"
+    },
+    "done": false
+  }
+}

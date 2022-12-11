@@ -1,6 +1,6 @@
 {
   "Name": "FullBright",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
     "Mode": "GAMMA",

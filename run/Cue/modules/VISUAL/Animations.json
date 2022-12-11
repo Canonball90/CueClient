@@ -1,13 +1,13 @@
 {
   "Name": "Animations",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Version": "OneDotEight",
+    "Version": "OneDotTwelve",
     "PlayersAnimations": false,
-    "ChangeMainhand": false,
+    "ChangeMainhand": true,
     "ChangeOffhand": false,
-    "ChangeSwing": 30
+    "ChangeSwing": 5
   },
   "CommonSettings": {
     "KeyBind": 0

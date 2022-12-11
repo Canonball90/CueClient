@@ -3,10 +3,10 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "Mode": "FACTOR",
-    "Factor": 1.2,
+    "Mode": "SETBACK",
+    "Factor": 4.276384449005127,
     "Bounds": "DOWN",
-    "Phase": "NCP",
+    "Phase": "NONE",
     "Conceal": false,
     "AntiKick": false
   },

@@ -1,6 +1,6 @@
 {
   "Name": "AutoArmor",
-  "Toggle": true,
+  "Toggle": false,
   "Settings": {
     "Visible": true
   },

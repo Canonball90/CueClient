@@ -20,7 +20,7 @@ class ModeSettingButton(
             value.name,
             x + 3,
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            Color.WHITE.rgb
+            Color(150,150,150).rgb
         )
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             (value as ModeSetting<*>).valueAsString,
@@ -29,7 +29,7 @@ class ModeSettingButton(
             if(ClickGui.INSTANCE.gay.value)
                 father.father.category.color.rgb
                         else
-            Color.WHITE.rgb
+                            Color(150,150,150).rgb
         )
         this.x = x
         this.y = y
