@@ -2,13 +2,13 @@
   {
     "modid": "cue",
     "name": "Cue",
-    "description": "a base for 2b2t skidder",
+    "description": "",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "https://github.com/jiyun233/CubeBase/",
-    "updateUrl": "https://github.com/jiyun233/CubeBase/release/",
+    "url": "",
+    "updateUrl": "",
     "authorList": [
-      "jiyun233"
+      ""
     ]
   }
 ]
