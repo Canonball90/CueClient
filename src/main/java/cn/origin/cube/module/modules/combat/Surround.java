@@ -1,5 +1,6 @@
 package cn.origin.cube.module.modules.combat;
 
+import cn.origin.cube.Cube;
 import cn.origin.cube.event.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
@@ -40,6 +41,9 @@ public class Surround extends Module {
     private final BooleanSetting antiPedo = registerSetting("Always Help", false);
     private final BooleanSetting floor = registerSetting("Floor", false);
     private final BooleanSetting render = registerSetting("Render", false);
+    private final BooleanSetting renderString = registerSetting("String Render", false);
+    private final IntegerSetting x = registerSetting("X", 40, 0, 1000);
+    private final IntegerSetting y = registerSetting("Y", 40, 0, 1000);
     private final Timer timer = new Timer();
     private final Timer retryTimer = new Timer();
     private final Set<Vec3d> extendingBlocks = new HashSet<Vec3d>();
@@ -76,7 +80,16 @@ public class Surround extends Module {
     @Override
     public void onRender3D(Render3DEvent event){
         if(startPos == null) return;
-        Render3DUtil.drawBlockBox(getRoundedBlockPos(mc.player), new Color(255, 60,58, 100), true, 3);
+        if(render.getValue()) {
+            Render3DUtil.drawBlockBox(getRoundedBlockPos(mc.player), new Color(255, 60, 58, 100), true, 3);
+        }
+    }
+
+    @Override
+    public void onRender2D(){
+        if(render.getValue() && renderString.getValue()){
+            Cube.fontManager.CustomFont.drawString((didPlace ? "Placed" : "Not Placed"), x.getValue(), y.getValue(), -1);
+        }
     }
 
     @Override

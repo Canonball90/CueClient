@@ -7,7 +7,7 @@ import net.minecraft.client.Minecraft
 import net.minecraft.client.entity.EntityPlayerSP
 import net.minecraft.util.math.MathHelper
 
-@ModuleInfo(name = "Speed",
+@ModuleInfo(name = "Strafe",
     descriptions = "Speed",
     category = Category.MOVEMENT)
 class Speed: Module() {

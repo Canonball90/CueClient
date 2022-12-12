@@ -3,7 +3,7 @@
   "Toggle": false,
   "Settings": {
     "Visible": true,
-    "BPT": 12,
+    "BPT": 1,
     "Delay": 0,
     "Packet": true,
     "TPCenter": false,
@@ -11,7 +11,10 @@
     "HelpingBlocks": true,
     "Always Help": false,
     "Floor": false,
-    "Render": true
+    "Render": true,
+    "String Render": true,
+    "X": 505,
+    "Y": 281
   },
   "CommonSettings": {
     "KeyBind": 29
