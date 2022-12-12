@@ -317,11 +317,7 @@ public class AutoCrystal extends Module {
             }
             if (timer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
                 timer.reset();
-                if (packetPlace.getValue()) {
-                    mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
-                } else {
-                    placeCrystalOnBlock(q, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
-                }
+                placee(q,f,offhand);
             }
         }
 
@@ -344,7 +340,13 @@ public class AutoCrystal extends Module {
         }
     }
 
-    public void placee(EntityEnderCrystal crystal){}
+    public void placee(BlockPos q, EnumFacing f, Boolean offhand) {
+        if (packetPlace.getValue()) {
+            mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
+        } else {
+            placeCrystalOnBlock(q, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
+        }
+    }
 
     public void breka(EntityEnderCrystal crystal){
         if(packetExplode.getValue()){
