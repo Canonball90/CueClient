@@ -1,0 +1,21 @@
+{
+  "Name": "XRay",
+  "Toggle": false,
+  "Settings": {
+    "Visible": true,
+    "Water": true,
+    "Lava": true,
+    "Diamond": true,
+    "Iron": true,
+    "Gold": true,
+    "Coal": true,
+    "Stone": true,
+    "Quartz": true,
+    "Lapiz": true,
+    "Obsidian": true,
+    "Redstone": true
+  },
+  "CommonSettings": {
+    "KeyBind": 0
+  }
+}
