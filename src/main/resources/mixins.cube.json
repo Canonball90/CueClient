@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "dev.canon.cue.inject.client",
+  "package": "cn.origin.cube.inject.client",
   "refmap": "mixins.cube.refmap.json",
   "compatibilityLevel": "JAVA_8",
   "client": [
