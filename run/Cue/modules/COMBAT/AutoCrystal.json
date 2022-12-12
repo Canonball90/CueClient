@@ -32,7 +32,7 @@
     "Inhibit": false,
     "Outline": true,
     "Alpha": 320,
-    "Target Hud": true
+    "Target Hud": false
   },
   "CommonSettings": {
     "KeyBind": 46

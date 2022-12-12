@@ -76,7 +76,8 @@ public class AutoCrystal extends Module {
     public BooleanSetting place = registerSetting("Place", false);
     public BooleanSetting explode = registerSetting("Break", false);
     public BooleanSetting instant = registerSetting("Instant", false).booleanVisible(explode);
-    public IntegerSetting range = registerSetting("Range", 5, 0, 6);
+    public IntegerSetting placeRange = registerSetting("Range", 5, 0, 6);
+    public IntegerSetting breakRange = registerSetting("Range", 5, 0, 6);
     public IntegerSetting minDamage = registerSetting("MinimumDmg", 4, 0, 20);
     public IntegerSetting selfDamage = registerSetting("SelfDamage", 10, 0, 20);
     public BooleanSetting antiWeakness = registerSetting("AntiWeakness", false);
@@ -141,7 +142,7 @@ public class AutoCrystal extends Module {
                 .map(entity -> (EntityEnderCrystal) entity)
                 .min(Comparator.comparing(c -> mc.player.getDistance(c)))
                 .orElse(null);
-        if (explode.getValue() && crystal != null && mc.player.getDistance(crystal) <= range.getValue() && mc.player.getHealth() >= selfDamage.getValue()) {
+        if (explode.getValue() && crystal != null && mc.player.getDistance(crystal) <= breakRange.getValue() && mc.player.getHealth() >= selfDamage.getValue()) {
             if (antiWeakness.getValue() && mc.player.isPotionActive(MobEffects.WEAKNESS)) {
                 if(!silentAntiWeakness.getValue()) {
                     if (!isAttacking) {
@@ -177,29 +178,15 @@ public class AutoCrystal extends Module {
                 crystal.setDead();
             }
             lookAtPacket(crystal.posX, crystal.posY, crystal.posZ, mc.player);
-            if (predict.getValue()) {
-                final CPacketUseEntity attackPacket = new CPacketUseEntity();
-                mc.player.connection.sendPacket((Packet)attackPacket);
+            if (predict.getValue()) {//ToDo make better predict
+
             }
             if (isDesynced()) {
-                if (breakTimer.passedTicks(5)) {
-                    mc.player.setSneaking(true);
-                    mc.player.setSneaking(false);
-                    breakTimer.reset();
-                }
+                ReSync();
             }
             if (timer.getPassedTimeMs() / 50 >= 20 - breakSpeed.getValue()) {
                 timer.reset();
-                if(packetExplode.getValue()){
-                    mc.player.connection.sendPacket(new CPacketUseEntity(crystal));
-                    CPacketUseEntity packet = new CPacketUseEntity();
-                    packet.entityId = crystal.entityId;
-                    packet.action = CPacketUseEntity.Action.ATTACK;
-                    mc.player.connection.sendPacket(packet);
-                }else{
-                    mc.playerController.attackEntity(mc.player, crystal);
-                }
-                mc.player.swingArm(getHandToBreak());
+                breka(crystal);
             }
             breaks++;
             if (breaks == 2 && multiPlace.getValue()) {
@@ -349,6 +336,29 @@ public class AutoCrystal extends Module {
         }
     }
 
+    public void ReSync(){
+        if (breakTimer.passedTicks(5)) {
+            mc.player.setSneaking(true);
+            mc.player.setSneaking(false);
+            breakTimer.reset();
+        }
+    }
+
+    public void placee(EntityEnderCrystal crystal){}
+
+    public void breka(EntityEnderCrystal crystal){
+        if(packetExplode.getValue()){
+            mc.player.connection.sendPacket(new CPacketUseEntity(crystal));
+            CPacketUseEntity packet = new CPacketUseEntity();
+            packet.entityId = crystal.entityId;
+            packet.action = CPacketUseEntity.Action.ATTACK;
+            mc.player.connection.sendPacket(packet);
+        }else{
+            mc.playerController.attackEntity(mc.player, crystal);
+        }
+        mc.player.swingArm(getHandToBreak());
+    }
+
     @SubscribeEvent
     public void onPacketRecieve(PacketEvent.Receive event){
         if(event.getPacket() instanceof SPacketSpawnObject) {
@@ -438,7 +448,7 @@ public class AutoCrystal extends Module {
 
                     double entityRange = mc.player.getDistance(target);
 
-                    if (entityRange > range.getValue()) {
+                    if (entityRange > placeRange.getValue()) {
                         continue;
                     }
 
@@ -561,7 +571,7 @@ public class AutoCrystal extends Module {
 
     private List<BlockPos> findCrystalBlocks() {
         NonNullList<BlockPos> positions = NonNullList.create();
-        positions.addAll(getSphere(getPlayerPos(), (float) range.getValue(), (int) range.getValue(), false, true, 0).stream().filter(this::ableToPlace).collect(Collectors.toList()));
+        positions.addAll(getSphere(getPlayerPos(), (float) placeRange.getValue(), (int) placeRange.getValue(), false, true, 0).stream().filter(this::ableToPlace).collect(Collectors.toList()));
         return positions;
     }
 
@@ -660,7 +670,7 @@ public class AutoCrystal extends Module {
     private void Thinking() {
         if(Isthinking) {
             this.rayTrace.setValue(true);
-            this.range.setValue(6);
+            this.placeRange.setValue(6);
             this.breakSpeed.setValue(20);
             this.timer.reset();
         }
@@ -710,6 +720,9 @@ public class AutoCrystal extends Module {
         }
 
         return Math.max(damage, 0);
+    }
+
+    public void LOGIC(){
     }
 
 
@@ -887,7 +900,7 @@ public class AutoCrystal extends Module {
             if (!(e instanceof EntityEnderCrystal)) continue;
             EntityEnderCrystal crystal = (EntityEnderCrystal) e;
             for (EntityPlayer target : new ArrayList<>(mc.world.playerEntities)) {
-                if (mc.player.getDistanceSq(target) > MathUtil.square(range.getValue())) continue;
+                if (mc.player.getDistanceSq(target) > MathUtil.square(placeRange.getValue())) continue;
                 if (predict.getValue() && target != mc.player && this.timer.getPassedTimeMs() > this.breakSpeed.getValue().longValue()) {
                     float f = target.width / 2.0F, f1 = target.height;
                     target.setEntityBoundingBox(new AxisAlignedBB(target.posX - (double) f, target.posY, target.posZ - (double) f, target.posX + (double) f, target.posY + (double) f1, target.posZ + (double) f));
@@ -933,6 +946,9 @@ public class AutoCrystal extends Module {
 
     public enum Mode{
         Main,Offhand
+    }
+    public enum Logic{
+        BP,PB
     }
     public enum PlaceMode{
         New

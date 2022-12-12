@@ -31,7 +31,7 @@ public class AutoConfig extends Module {
             AutoCrystal.INSTANCE.passives.setValue(false);
             AutoCrystal.INSTANCE.place.setValue(true);
             AutoCrystal.INSTANCE.explode.setValue(true);
-            AutoCrystal.INSTANCE.range.setValue(5);
+            AutoCrystal.INSTANCE.placeRange.setValue(5);
             AutoCrystal.INSTANCE.minDamage.setValue(6);
             AutoCrystal.INSTANCE.selfDamage.setValue(12);
             AutoCrystal.INSTANCE.antiWeakness.setValue(false);
