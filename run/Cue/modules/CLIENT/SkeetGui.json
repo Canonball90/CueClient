@@ -1,0 +1,10 @@
+{
+  "Name": "SkeetGui",
+  "Toggle": false,
+  "Settings": {
+    "Visible": true
+  },
+  "CommonSettings": {
+    "KeyBind": 24
+  }
+}

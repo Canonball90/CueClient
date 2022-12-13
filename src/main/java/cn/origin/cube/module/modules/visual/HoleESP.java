@@ -27,8 +27,8 @@ public class HoleESP extends Module {
 
     public FloatSetting holeRadius = registerSetting("Hole Radius", 8.0f, 0.0f, 20.0f);
     private final BooleanSetting pulse = registerSetting("Pulse", true);
-    private final FloatSetting pulseMax = registerSetting("Pulse Max", 1.5f, 0.0f, 5).booleanVisible(pulse);
-    private final FloatSetting pulseMin = registerSetting("Pulse Min", 1.0f, 0.0f, 5).booleanVisible(pulse);
+    private final FloatSetting pulseMax = registerSetting("Pulse Max", 1.5f, -5.0f, 5).booleanVisible(pulse);
+    private final FloatSetting pulseMin = registerSetting("Pulse Min", 1.0f, -5.0f, 5).booleanVisible(pulse);
     private final FloatSetting pulseSpeed = registerSetting("Pulse Speed", 4.0f, 0.0f, 5.0f).booleanVisible(pulse);
     private final FloatSetting rollingWidth = registerSetting("Pulse W", 8.0f, 0.0f, 20.0f).booleanVisible(pulse);
 
