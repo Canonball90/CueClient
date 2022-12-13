@@ -98,12 +98,6 @@ class NoFall: Module() {
     @SubscribeEvent
     fun onSend(event: PacketEvent.Send) {
         if (event.getPacket<Packet<*>>() is CPacketPlayer) return
-        if(mode.value == modeds.Offground){
-            (event.getPacket() as ICPacketPlayer).setOnGround(false)
-        }
-        if(mode.value == modeds.OnGround){
-            (event.getPacket() as ICPacketPlayer).setOnGround(true)
-        }
     }
 
     override fun getHudInfo(): String {
@@ -113,6 +107,6 @@ class NoFall: Module() {
         !mc.player.isElytraFlying && !mc.player.capabilities.allowFlying && mc.player.fallDistance > 3
 
     enum class modeds {
-        Ncp, Predict, anti, OnGround, Offground, Glide, OldFag
+        Ncp, Predict, anti, Glide, OldFag
     }
 }
