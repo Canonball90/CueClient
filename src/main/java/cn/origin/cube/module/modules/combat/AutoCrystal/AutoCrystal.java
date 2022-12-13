@@ -140,19 +140,6 @@ public class AutoCrystal extends Module {
 
     @Override
     public void onUpdate() {
-        doLogic();
-        if (isSpoofingAngles) {
-            if (togglePitch) {
-                mc.player.rotationPitch += 0.0004;
-                togglePitch = false;
-            } else {
-                mc.player.rotationPitch -= 0.0004;
-                togglePitch = true;
-            }
-        }
-    }
-
-    public void BCrystal(){
         EntityEnderCrystal crystal = mc.world.loadedEntityList.stream()
                 .filter(entity -> entity instanceof EntityEnderCrystal)
                 .map(entity -> (EntityEnderCrystal) entity)
@@ -242,9 +229,16 @@ public class AutoCrystal extends Module {
             }
             isAttacking = false;
         }
-    }
+        if (isSpoofingAngles) {
+            if (togglePitch) {
+                mc.player.rotationPitch += 0.0004;
+                togglePitch = false;
+            } else {
+                mc.player.rotationPitch -= 0.0004;
+                togglePitch = true;
+            }
+        }
 
-    public void PCrystal(){
         int crystalSlot = mc.player.getHeldItemMainhand().getItem() == Items.END_CRYSTAL ? mc.player.inventory.currentItem : -1;
         if (crystalSlot == -1) {
             for (int l = 0; l < 9; ++l) {
@@ -354,6 +348,14 @@ public class AutoCrystal extends Module {
                 }
             }
         }
+    }
+
+    public void BCrystal(){
+
+    }
+
+    public void PCrystal(){
+
     }
 
     public void ReSync(){
