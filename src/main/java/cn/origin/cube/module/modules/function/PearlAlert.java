@@ -42,7 +42,7 @@ public class PearlAlert extends Module {
                 }
                 if (closest != null && closest.getDistance(entity) < 2 && !uuidMap.containsKey(entity.getUniqueID()) && !closest.getName().equalsIgnoreCase(mc.player.getName())) {
                     uuidMap.put(entity.getUniqueID(), 200);
-                    ChatUtil.sendColoredMessage(closest.getName() + " threw a pearl towards " + getTitle(entity.getHorizontalFacing().getName()) + "!");
+                    ChatUtil.sendMessage(closest.getName() + " threw a pearl towards " + getTitle(entity.getHorizontalFacing().getName()) + "!");
                 }
             }
         }
