@@ -24,6 +24,7 @@ class ModuleManager {
         registerModule(Console())
         registerModule(AutoConfig())
         registerModule(MainMenuShader())
+        registerModule(SkeetSkeet())
 
         //Combat
         registerModule(Surround())
