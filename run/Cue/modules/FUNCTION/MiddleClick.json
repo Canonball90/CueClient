@@ -1,9 +1,9 @@
 {
   "Name": "MiddleClick",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
-    "Mode": "ENDRPEARL"
+    "Mode": "FRIEND"
   },
   "CommonSettings": {
     "KeyBind": 0

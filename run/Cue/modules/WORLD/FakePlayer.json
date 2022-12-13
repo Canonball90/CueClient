@@ -1,10 +1,10 @@
 {
   "Name": "FakePlayer",
-  "Toggle": false,
+  "Toggle": true,
   "Settings": {
     "Visible": true,
     "Moving": false,
-    "MoveDelay": 75,
+    "MoveDelay": 25,
     "Popping": true,
     "Particle": true,
     "Sound": false,

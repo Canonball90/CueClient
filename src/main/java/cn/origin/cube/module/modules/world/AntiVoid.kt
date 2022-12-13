@@ -22,12 +22,12 @@ class AntiVoid: Module() {
     override fun onUpdate() {
         if (mc.player == null || mc.world == null) return
         if (isAboveVoid() && !mc.player.isSneaking) {
-            if (mode.value.equals("Place")) {
+            if (mode.value.equals(Mode.Place)) {
                 val slot = getObsidianSlot()
                 if (slot != -1) {
                     BlockUtil.placeBlock(BlockPos(mc.player.posX, mc.player.posY - 1, mc.player.posZ), EnumHand.MAIN_HAND, true, true)
                 }
-            } else if (mode.value.equals("NoFall")) {
+            } else if (mode.value.equals(Mode.Nofall)) {
                 mc.player.motionY = 0.0
             } else {
                 mc.player.moveVertical = 5.0f

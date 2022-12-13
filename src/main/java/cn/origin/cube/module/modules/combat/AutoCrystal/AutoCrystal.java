@@ -94,6 +94,7 @@ public class AutoCrystal extends Module {
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 20, 0, 20);
     public BooleanSetting thinking = registerSetting("Thinking", false);
     public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
+    public BooleanSetting antiFriend = registerSetting("AntiFriend", true);
     public BooleanSetting inhibit = registerSetting("Inhibit", false);
     public BooleanSetting outline = registerSetting("Outline", true);
     public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255);
@@ -143,6 +144,13 @@ public class AutoCrystal extends Module {
                 .min(Comparator.comparing(c -> mc.player.getDistance(c)))
                 .orElse(null);
         if (explode.getValue() && crystal != null && mc.player.getDistance(crystal) <= breakRange.getValue() && mc.player.getHealth() >= selfDamage.getValue()) {
+            if(!Cube.friendManager.isFriend((EntityPlayer) renderEnt)){
+                try{
+
+                }catch (NullPointerException io){
+                    return;
+                }
+            }
             if (antiWeakness.getValue() && mc.player.isPotionActive(MobEffects.WEAKNESS)) {
                 if(!silentAntiWeakness.getValue()) {
                     if (!isAttacking) {
@@ -315,9 +323,11 @@ public class AutoCrystal extends Module {
             } else {
                 f = EnumFacing.UP;
             }
-            if (timer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
-                timer.reset();
-                placee(q,f,offhand);
+            if(!Cube.friendManager.isFriend((EntityPlayer) renderEnt)) {
+                if (timer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
+                    timer.reset();
+                    placee(q, f, offhand);
+                }
             }
         }
 
@@ -949,9 +959,11 @@ public class AutoCrystal extends Module {
     public enum Mode{
         Main,Offhand
     }
+
     public enum Logic{
         BP,PB
     }
+
     public enum PlaceMode{
         New
     }
