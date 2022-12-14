@@ -140,19 +140,26 @@ public class AutoCrystal extends Module {
 
     @Override
     public void onUpdate() {
+        doLogic();
+    }
+
+    public void doLogic(){
+        if(logic.getValue()){
+            PCrystal();
+            BCrystal();
+        }else{
+            BCrystal();
+            PCrystal();
+        }
+    }
+
+    public void BCrystal(){
         EntityEnderCrystal crystal = mc.world.loadedEntityList.stream()
                 .filter(entity -> entity instanceof EntityEnderCrystal)
                 .map(entity -> (EntityEnderCrystal) entity)
                 .min(Comparator.comparing(c -> mc.player.getDistance(c)))
                 .orElse(null);
         if (explode.getValue() && crystal != null && mc.player.getDistance(crystal) <= breakRange.getValue() && mc.player.getHealth() >= selfDamage.getValue()) {
-            if(!Cube.friendManager.isFriend((EntityPlayer) renderEnt)){
-                try{
-
-                }catch (NullPointerException io){
-                    return;
-                }
-            }
             if (antiWeakness.getValue() && mc.player.isPotionActive(MobEffects.WEAKNESS)) {
                 if(!silentAntiWeakness.getValue()) {
                     if (!isAttacking) {
@@ -194,6 +201,9 @@ public class AutoCrystal extends Module {
                 placeSpeed.setValue(18);
                 breakSpeed.setValue(17);
             }
+//            if(Cube.friendManager.isFriend((EntityPlayer) renderEnt)){
+//                return;
+//            }
             lookAtPacket(crystal.posX, crystal.posY, crystal.posZ, mc.player);
             if (predict.getValue()) {//ToDo make better predict
 
@@ -239,6 +249,9 @@ public class AutoCrystal extends Module {
             }
         }
 
+    }
+
+    public void PCrystal(){
         int crystalSlot = mc.player.getHeldItemMainhand().getItem() == Items.END_CRYSTAL ? mc.player.inventory.currentItem : -1;
         if (crystalSlot == -1) {
             for (int l = 0; l < 9; ++l) {
@@ -348,14 +361,6 @@ public class AutoCrystal extends Module {
                 }
             }
         }
-    }
-
-    public void BCrystal(){
-
-    }
-
-    public void PCrystal(){
-
     }
 
     public void ReSync(){
@@ -517,16 +522,6 @@ public class AutoCrystal extends Module {
             unsafeEntities++;
         }
         return unsafeEntities <= 0;
-    }
-
-    public void doLogic(){
-        if(logic.getValue()){
-            PCrystal();
-            BCrystal();
-        }else{
-            BCrystal();
-            PCrystal();
-        }
     }
 
     public static boolean isPassiveMob(Entity entity) {
