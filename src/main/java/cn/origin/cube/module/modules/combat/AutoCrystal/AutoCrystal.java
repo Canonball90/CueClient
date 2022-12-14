@@ -283,6 +283,7 @@ public class AutoCrystal extends Module {
             if (entity == mc.player || ((EntityLivingBase) entity).getHealth() <= 0) {
                 continue;
             }
+
             for (BlockPos blockPos : blocks) {
                 double b = entity.getDistanceSq(blockPos);
                 if (b >= 169) {
@@ -589,8 +590,8 @@ public class AutoCrystal extends Module {
         if(targetHud.getValue()){
             Render2DUtil.drawBorderedRect(tx.getValue(), ty.getValue(),tx.getValue() + width,ty.getValue() + height, 1, new Color(35,35,35,150).getRGB(), ClickGui.getCurrentColor().getRGB());
             Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" :renderEnt.getName(), tx.getValue() + 5, ty.getValue() + 10, ClickGui.getCurrentColor().getRGB(), true);
-            Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : "" + renderEnt.getDistance(mc.player), tx.getValue() + 65, ty.getValue() + 10, ClickGui.getCurrentColor().getRGB(), true);
-            Render2DUtil.drawGradientHRect(tx.getValue() + 20, ty.getValue() + 45,tx.getValue() + 140,ty.getValue() + 55, new Color(255, 0,0).getRGB(), new Color(0,255,0).getRGB());
+            Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : "" + renderEnt.getDistance(mc.player), tx.getValue() + 5, ty.getValue() + 13, ClickGui.getCurrentColor().getRGB(), true);
+            Render2DUtil.drawGradientHRect(tx.getValue() + 20, ty.getValue() + 45,tx.getValue() + 140,ty.getValue() + 55 - (7), new Color(255, 0,0).getRGB(), new Color(0,255,0).getRGB());
         }
         super.onRender2D();
     }

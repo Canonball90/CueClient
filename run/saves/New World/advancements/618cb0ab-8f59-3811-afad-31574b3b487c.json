@@ -5,6 +5,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/carrot_on_a_stick": {
+    "criteria": {
+      "has_carrot": "2022-12-13 21:09:48 -0500"
+    },
+    "done": true
+  },
   "minecraft:story/form_obsidian": {
     "criteria": {
       "obsidian": "2022-12-12 19:01:53 -0500"
@@ -19,6 +25,7 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "savanna": "2022-12-13 21:09:48 -0500",
       "savanna_rock": "2022-12-12 19:01:53 -0500"
     },
     "done": false
