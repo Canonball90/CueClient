@@ -3,8 +3,12 @@ package cn.origin.cube.module.modules.client;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.modules.combat.AutoArmor;
 import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
+import cn.origin.cube.module.modules.combat.AutoTote;
+import cn.origin.cube.module.modules.combat.Criticals;
 import cn.origin.cube.module.modules.combat.Replenish;
+import cn.origin.cube.module.modules.function.AntiKnockback;
 import cn.origin.cube.module.modules.movement.NoSlow;
 import cn.origin.cube.settings.ModeSetting;
 
@@ -13,6 +17,10 @@ import cn.origin.cube.settings.ModeSetting;
 public class AutoConfig extends Module {
 
     ModeSetting<Server> server = registerSetting("Server", Server.TwoBee);
+    AutoArmor aA = new AutoArmor();
+    AutoTote at = new AutoTote();
+    Criticals crit = new Criticals();
+    AntiKnockback ak = new AntiKnockback();
 
     @Override
     public void onEnable() {
@@ -43,6 +51,17 @@ public class AutoConfig extends Module {
             AutoCrystal.INSTANCE.placeSpeed.setValue(10);
             AutoCrystal.INSTANCE.thinking.setValue(true);
             AutoCrystal.INSTANCE.cancelCrystal.setValue(false);
+
+            //AutoArmor
+            aA.enable();
+            //AutoTotem
+            at.enable();
+            //Criticals
+            crit.enable();
+            crit.getMoveCancel().setValue(true);
+            crit.getMode().setValue(Criticals.model.UPDATED_NCP);
+            //Velocity
+            ak.enable();
         }
         super.onEnable();
     }

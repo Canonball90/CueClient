@@ -19,8 +19,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
     category = Category.COMBAT)
 class Criticals: Module() {
 
-    val mode: ModeSetting<model> = registerSetting("Mode", model.PACKET)
-    val moveCancel: BooleanSetting = registerSetting("MoveCancel", false)
+    public val mode: ModeSetting<model> = registerSetting("Mode", model.PACKET)
+    public val moveCancel: BooleanSetting = registerSetting("MoveCancel", false)
 
     private var pauseTicks = 0
 
@@ -79,7 +79,7 @@ class Criticals: Module() {
         ), null)
     }
 
-    enum class model{
+    public enum class model{
         PACKET,UPDATED_NCP,MINIS
     }
 }
