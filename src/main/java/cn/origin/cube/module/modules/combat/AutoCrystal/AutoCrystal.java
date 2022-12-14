@@ -75,7 +75,6 @@ public class AutoCrystal extends Module {
     public BooleanSetting passives = registerSetting("Passives", false);
     public BooleanSetting place = registerSetting("Place", false);
     public BooleanSetting explode = registerSetting("Break", false);
-    public BooleanSetting instant = registerSetting("Instant", false).booleanVisible(explode);
     public IntegerSetting placeRange = registerSetting("PlaceRange", 5, 0, 6);
     public IntegerSetting breakRange = registerSetting("BreakRange", 5, 0, 6);
     public IntegerSetting minDamage = registerSetting("MinimumDmg", 4, 0, 20);
@@ -84,7 +83,9 @@ public class AutoCrystal extends Module {
     public BooleanSetting silentAntiWeakness = registerSetting("Silent", false).booleanVisible(antiWeakness);
     public BooleanSetting multiPlace = registerSetting("Multi-Place", false);
     public BooleanSetting rotate = registerSetting("Rotate", false);
-    public BooleanSetting logic = registerSetting("PB-Logic", false);
+    public BooleanSetting logic = registerSetting("Logic", false);
+    public BooleanSetting placeBreak = registerSetting("PlaceBreak", false).booleanVisible(logic);
+    public BooleanSetting breakPlace = registerSetting("BreakPlace", false).booleanVisible(logic).booleanDisVisible(placeBreak);
     public BooleanSetting highPing = registerSetting("High Ping", false);
     public BooleanSetting autoTimerl = registerSetting("Manual-Timer", false);
     public BooleanSetting rayTrace = registerSetting("Ray-trace", false);
@@ -96,7 +97,6 @@ public class AutoCrystal extends Module {
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 20, 0, 25);
     public BooleanSetting thinking = registerSetting("Thinking", false);
     public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
-    public BooleanSetting antiFriend = registerSetting("AntiFriend", true);
     public BooleanSetting inhibit = registerSetting("Inhibit", false);
     public BooleanSetting outline = registerSetting("Outline", true);
     public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255);
@@ -144,10 +144,10 @@ public class AutoCrystal extends Module {
     }
 
     public void doLogic(){
-        if(logic.getValue()){
+        if(logic.getValue() && placeBreak.getValue()){
             PCrystal();
             BCrystal();
-        }else{
+        }else if(logic.getValue() && breakPlace.getValue()){
             BCrystal();
             PCrystal();
         }
@@ -201,9 +201,6 @@ public class AutoCrystal extends Module {
                 placeSpeed.setValue(18);
                 breakSpeed.setValue(17);
             }
-//            if(Cube.friendManager.isFriend((EntityPlayer) renderEnt)){
-//                return;
-//            }
             lookAtPacket(crystal.posX, crystal.posY, crystal.posZ, mc.player);
             if (predict.getValue()) {//ToDo make better predict
 
