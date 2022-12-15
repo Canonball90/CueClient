@@ -11,6 +11,7 @@ import cn.origin.cube.settings.BooleanSetting;
 import cn.origin.cube.settings.DoubleSetting;
 import cn.origin.cube.settings.IntegerSetting;
 import cn.origin.cube.settings.ModeSetting;
+import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
@@ -30,6 +31,24 @@ import java.util.Date;
 @ModuleInfo(name = "KillAura", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class KillAura extends Module {
     long killLast = new Date().getTime();
+    public boolean shouldRotate;
+    public float yaw;
+    public float pitch;
+    public boolean shouldReset;
+    public float playerPitch;
+    public float lastPlayerPitch;
+    public float playerYaw;
+    public float renderYaw;
+    public float YawOffset;
+    float rotationYaw;
+    boolean smoothRotatePitch;
+    boolean smoothRotated;
+    boolean smoothRotateYaw;
+    int addedInputYaw;
+    float smoothYaw;
+    float rotationPitch;
+    int addedOriginYaw;
+    float smoothPitch;
     DoubleSetting hittingRange = registerSetting("Range", 5.5, 0.1, 10.0);
     IntegerSetting delay = registerSetting("Delay", 4, 0, 70);
     BooleanSetting randomD = registerSetting("RandomDelay", false);
@@ -41,6 +60,7 @@ public class KillAura extends Module {
     BooleanSetting packet = registerSetting("PacketHit", false);
     BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet);
     BooleanSetting rotate = registerSetting("Rotate", true);
+    BooleanSetting rotateStrict = registerSetting("StrictRotate", true);
     BooleanSetting throughWalls = registerSetting("ThroughWalls", true);
 
     BooleanSetting playerOnly = registerSetting("PlayerOnly", true);
@@ -89,7 +109,13 @@ public class KillAura extends Module {
                     final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
                     if (new Date().getTime() >= this.killLast + delay) {
                         this.killLast = new Date().getTime();
-                        if (rotate.getValue()) rotateTo(target);
+                        if (rotate.getValue()) {
+                            if(rotateStrict.getValue()) {
+                                rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                            }else{
+                                rotateTo(target);
+                            }
+                        }
                         for (int i = 0; i < this.iterations.getValue(); ++i) {
                             attack(target);
                         }
@@ -120,7 +146,7 @@ public class KillAura extends Module {
 //    }
 
     public void attack(Entity entity) {
-            rotateTo(entity);
+            rotateTo(entity.posX, entity.posY, entity.posZ, mc.player, false);
                 if (hitDelay.getValue()) {
                     if(!packet.getValue()) {
                         if (mc.player.getCooledAttackStrength(0) >= 1) {
@@ -140,6 +166,101 @@ public class KillAura extends Module {
 
     public void rotateTo(Entity target) {
         RotationUtil.faceVector(new Vec3d(target.posX, target.posY + 1, target.posZ), true);
+    }
+
+    public boolean rotateTo(final double n, final double n2, final double n3, final EntityPlayer entityPlayer, final boolean b){
+        final double[] calculateLook = EntityUtil.calculateLookAt(n, n2, n3, entityPlayer);
+        return setRotation((float) calculateLook[0], (float) calculateLook[1], b);
+    }
+
+    public boolean setRotation(float setSmoothRotationYaw, float n, final boolean b) {
+        final boolean b2 = false;
+        smoothRotatePitch = b2;
+        smoothRotateYaw = b2;
+        smoothRotated = true;
+        if (b) {
+            if (!shouldRotate) {
+                yaw = mc.player.prevRotationYaw;
+                pitch = mc.player.prevRotationPitch;
+            }
+            if (calculateDirectionDifference(setSmoothRotationYaw + 180.0f, yaw + 180.0f) > 90.0) {
+                setSmoothRotationYaw = setSmoothRotationYaw(setSmoothRotationYaw, yaw);
+                smoothRotated = false;
+            }
+            if (Math.abs(n - pitch) > 90.0f) {
+                smoothRotatePitch = true;
+                smoothRotated = false;
+                smoothPitch = n;
+                if (n > pitch) {
+                    n -= (n - pitch) / 2.0f;
+                } else {
+                    n += (pitch - n) / 2.0f;
+                }
+            }
+        }
+        yaw = setSmoothRotationYaw;
+        pitch = n;
+        shouldRotate = true;
+        return !smoothRotatePitch && !smoothRotateYaw;
+    }
+
+    public float setSmoothRotationYaw(float smoothYaw, float n) {
+        smoothRotateYaw = true;
+        final int n2 = 0;
+        addedOriginYaw = n2;
+        addedInputYaw = n2;
+        while (smoothYaw + 180.0f < 0.0f) {
+            smoothYaw += 360.0f;
+            ++addedInputYaw;
+        }
+        while (smoothYaw + 180.0f > 360.0f) {
+            smoothYaw -= 360.0f;
+            --addedInputYaw;
+        }
+        while (n + 180.0f < 0.0f) {
+            n += 360.0f;
+            ++addedOriginYaw;
+        }
+        while (n + 180.0f > 360.0f) {
+            n -= 360.0f;
+            --addedOriginYaw;
+        }
+        smoothYaw += 180.0f;
+        n += 180.0f;
+        final double n3 = n - smoothYaw;
+        if (n3 >= -180.0 && n3 >= 180.0) {
+            smoothYaw -= (float) (n3 / 2.0);
+        } else {
+            smoothYaw += (float) (n3 / 2.0);
+        }
+        smoothYaw -= 180.0f;
+        if (addedInputYaw > 0) {
+            for (int i = 0; i < addedInputYaw; ++i) {
+                smoothYaw -= 360.0f;
+            }
+        } else if (addedInputYaw < 0) {
+            for (int j = 0; j > addedInputYaw; --j) {
+                smoothYaw += 360.0f;
+            }
+        }
+        return smoothYaw;
+    }
+
+    public static double calculateDirectionDifference(double n, double n2) {
+        while (n < 0.0) {
+            n += 360.0;
+        }
+        while (n > 360.0) {
+            n -= 360.0;
+        }
+        while (n2 < 0.0) {
+            n2 += 360.0;
+        }
+        while (n2 > 360.0) {
+            n2 -= 360.0;
+        }
+        final double n3 = Math.abs(n2 - n) % 360.0;
+        return (n3 > 180.0) ? (360.0 - n3) : n3;
     }
 
     enum currentW {
