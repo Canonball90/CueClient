@@ -2,8 +2,10 @@ package cn.origin.cube.inject.client;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.event.events.client.DisplayGuiScreenEvent;
+import cn.origin.cube.viaforge.ViaForge;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.main.GameConfiguration;
 import net.minecraft.crash.CrashReport;
 import net.minecraftforge.common.MinecraftForge;
 import org.spongepowered.asm.mixin.Mixin;
@@ -39,4 +41,9 @@ public class MixinMinecraft {
         Objects.requireNonNull(Cube.configManager).saveAll();
         Cube.logger.warn("Configuration saved!");
     }
+
+    @Inject(method = "<init>", at = @At("RETURN"))
+    public void injectConstructor(GameConfiguration p_i45547_1_, CallbackInfo ci) {
+        try {
+            ViaForge.getInstance().start();} catch (Exception e) {Cube.logger.error("[ViaForge] ViaForge did not loaded! If you need it, restart the client");}}
 }

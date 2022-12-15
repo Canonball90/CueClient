@@ -32,7 +32,8 @@
     "MixinGuiDisconnected",
     "MixinGuiScreenAddServer",
     "MixinGuiScreenServerList",
-    "MixinNetworkManagerChInit"
+    "MixinNetworkManagerChInit",
+    "MixinGuiMultiplayer"
   ],
   "mixins": [
     "MixinNetworkManager"
