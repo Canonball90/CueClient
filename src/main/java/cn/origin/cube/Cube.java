@@ -12,6 +12,7 @@ import cn.origin.cube.managers.FriendManager;
 import cn.origin.cube.managers.ThreadManager;
 import cn.origin.cube.module.ModuleManager;
 import cn.origin.cube.utils.client.jsonutils.JSON;
+import cn.origin.cube.viaforge.ViaForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
