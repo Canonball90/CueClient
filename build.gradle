@@ -12,6 +12,7 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:4.+'
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.yaml:snakeyaml:1.28"
     }
 }
 
@@ -85,7 +86,7 @@ dependencies {
         exclude module: 'kotlin-stdlib-common'
         exclude module: 'annotations'
     }
-
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.28'
     compile group: 'com.viaversion', name: 'viaversion', version: '4.2.2-SNAPSHOT'
     compile group: 'com.viaversion', name: 'viabackwards', version: '4.2.1-SNAPSHOT'
     compileOnly "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
