@@ -20,6 +20,7 @@ import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.item.EntityBoat;
@@ -38,6 +39,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.ItemEndCrystal;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
@@ -54,6 +56,7 @@ import net.minecraft.util.math.*;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -587,13 +590,24 @@ public class AutoCrystal extends Module {
 
     @Override
     public void onRender2D() {
-        if(targetHud.getValue()){
-            Render2DUtil.drawBorderedRect(tx.getValue(), ty.getValue(),tx.getValue() + width,ty.getValue() + height, 1, new Color(35,35,35,150).getRGB(), ClickGui.getCurrentColor().getRGB());
-            Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" :renderEnt.getName(), tx.getValue() + 5, ty.getValue() + 10, ClickGui.getCurrentColor().getRGB(), true);
-            Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : "" + renderEnt.getDistance(mc.player), tx.getValue() + 5, ty.getValue() + 13, ClickGui.getCurrentColor().getRGB(), true);
-            Render2DUtil.drawGradientHRect(tx.getValue() + 20, ty.getValue() + 45,tx.getValue() + 140,ty.getValue() + 55 - (7), new Color(255, 0,0).getRGB(), new Color(0,255,0).getRGB());
+        if(targetHud.getValue()) {
+            if ((mc.player.getHeldItemMainhand().getItem() == Items.END_CRYSTAL || mc.player.getHeldItemOffhand().getItem() == Items.END_CRYSTAL)) {
+                Render2DUtil.drawBorderedRect(tx.getValue(), ty.getValue(), tx.getValue() + width, ty.getValue() + height, 1, new Color(35, 35, 35, 150).getRGB(), ClickGui.getCurrentColor().getRGB());
+                if(renderEnt != null) {
+                    drawHead((mc.getConnection()).getPlayerInfo(renderEnt.getUniqueID()).getLocationSkin(), tx.getValue() + 5, ty.getValue() + 10);
+                }
+                Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : renderEnt.getName(), tx.getValue() + 43, ty.getValue() + 10, ClickGui.getCurrentColor().getRGB(), true);
+                Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : "" + renderEnt.getDistance(mc.player), tx.getValue() + 43, ty.getValue() + 20, ClickGui.getCurrentColor().getRGB(), true);
+                Render2DUtil.drawGradientHRect(tx.getValue() + 5, ty.getValue() + 55, tx.getValue() + 140, ty.getValue() + 67 - (7), new Color(255, 0, 0).getRGB(), new Color(0, 255, 0).getRGB());
+            }
         }
         super.onRender2D();
+    }
+
+    public void drawHead(ResourceLocation skin, int width, int height) {
+        GL11.glColor4f(1, 1, 1, 1);
+        mc.getTextureManager().bindTexture(skin);
+        Gui.drawScaledCustomSizeModalRect(width, height, 8, 8, 8, 8, 37, 37, 64, 64);
     }
 
     public BlockPos getPlayerPos() {

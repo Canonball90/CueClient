@@ -17,6 +17,7 @@ class CommandManager {
         register(ReloadCommand())
         register(BookCommand())
         register(IpCommand())
+        register(SaveCommand())
     }
 
     private fun register(command: Command) {
