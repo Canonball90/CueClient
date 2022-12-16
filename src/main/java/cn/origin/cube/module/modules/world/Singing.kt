@@ -7,7 +7,7 @@ import cn.origin.cube.settings.IntegerSetting
 import cn.origin.cube.settings.ModeSetting
 import cn.origin.cube.utils.Timer
 
-@ModuleInfo(name = "Singing", descriptions = "", category = Category.WORLD)
+@ModuleInfo(name = "Singing", descriptions = "Sing", category = Category.WORLD)
 class Singing: Module() {
     val delay: IntegerSetting = registerSetting("Delay", 3, 0, 5);
     var song: ModeSetting<Songs> = registerSetting("Song", Songs.HereWithMe)
