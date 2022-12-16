@@ -41,7 +41,7 @@ class ModuleManager {
         registerModule(MiddleClick())
         registerModule(FakeKick())
         registerModule(NoRotate())
-        registerModule(AntiKnockback())
+        // registerModule(AntiKnockback())
         registerModule(FastEXP())
         registerModule(NoFall())
         registerModule(Scaffold())
@@ -53,6 +53,7 @@ class ModuleManager {
         registerModule(BoatPlace())
 
         //Movement
+        registerModule(Velocity())
         registerModule(Sprint())
         registerModule(AutoWalk())
         registerModule(ReverseStep())
