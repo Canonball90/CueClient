@@ -144,6 +144,7 @@ public class AutoCrystal extends Module {
 
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent event) {
+        if(fullNullCheck())return;
         doLogic();
     }
 

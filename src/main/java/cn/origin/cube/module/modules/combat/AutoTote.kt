@@ -13,13 +13,16 @@ import net.minecraft.network.Packet
 import net.minecraft.network.play.client.CPacketClickWindow
 import net.minecraft.network.play.client.CPacketEntityAction
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
 
 @ModuleInfo(name = "AutoTotem",
     descriptions = "A",
     category = Category.COMBAT)
 class AutoTote : Module() {
 
-    override fun onUpdate() {
+
+        @SubscribeEvent
+        fun onTick(event: ClientTickEvent?) {
         if (mc.currentScreen is GuiContainer && mc.currentScreen !is GuiInventory) return
         val totemslot = InventoryUtil.getItemSlot(Items.TOTEM_OF_UNDYING)
         if (mc.player.heldItemOffhand.item !== Items.TOTEM_OF_UNDYING && totemslot != -1) {

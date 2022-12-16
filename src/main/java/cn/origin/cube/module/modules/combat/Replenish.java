@@ -11,6 +11,8 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.ClickType;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -39,8 +41,8 @@ public class Replenish extends Module {
         refillSlot = -1;
     }
 
-    @Override
-    public void onUpdate() {
+    @SubscribeEvent
+    public void onTick(TickEvent.ClientTickEvent event) {
         if(fullNullCheck())return;
 
         if (refillSlot == -1) {

@@ -10,6 +10,8 @@ import net.minecraft.init.Items
 import net.minecraft.inventory.ClickType
 import net.minecraft.item.ItemArmor
 import net.minecraft.item.ItemStack
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+import net.minecraftforge.fml.common.gameevent.TickEvent
 
 
 @ModuleInfo(name = "AutoArmor",
@@ -17,7 +19,8 @@ import net.minecraft.item.ItemStack
     category = Category.COMBAT)
 class AutoArmor:Module() {
 
-    override fun onUpdate() {
+    @SubscribeEvent
+    fun onTick(event: TickEvent.ClientTickEvent?) {
         if (!(mc.player == null || mc.world == null)) {
             if (mc.player.ticksExisted % 2 == 0) return
             if (mc.currentScreen is GuiContainer && mc.currentScreen !is InventoryEffectRenderer) return
