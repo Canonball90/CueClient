@@ -23,7 +23,8 @@ class AutoTote : Module() {
 
         @SubscribeEvent
         fun onTick(event: ClientTickEvent?) {
-        if (mc.currentScreen is GuiContainer && mc.currentScreen !is GuiInventory) return
+            if (fullNullCheck()) return
+            if (mc.currentScreen is GuiContainer && mc.currentScreen !is GuiInventory) return
         val totemslot = InventoryUtil.getItemSlot(Items.TOTEM_OF_UNDYING)
         if (mc.player.heldItemOffhand.item !== Items.TOTEM_OF_UNDYING && totemslot != -1) {
             mc.playerController.windowClick(

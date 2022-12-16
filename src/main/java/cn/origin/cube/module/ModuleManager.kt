@@ -92,6 +92,7 @@ class ModuleManager {
         registerModule(BigPOV())
         registerModule(AutoRacist())
         registerModule(Singing())
+        registerModule(PopLag())
 
         //Hud
         registerModule(WaterMark())
