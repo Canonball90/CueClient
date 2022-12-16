@@ -117,7 +117,8 @@ public class NameTags extends Module {
                 mc.fontRenderer.drawStringWithShadow(e.getName() + " " + (Object) TextFormatting.GREEN + health + (heart.getValue() ? "\u2764" : "%"), 0 - this.getcenter(e.getName() + " " + (Object) TextFormatting.GREEN + health + "%"), 1, -1);
             }
             int posX = -NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 - 8;
-            if (healthBar.getValue()) {Render2DUtil.drawLine((-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) 11 + height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() + ( -health), (int) 11 + height.getValue(), 3, new Color(0, 255,0));}
+            if (healthBar.getValue()) {
+                Render2DUtil.drawLine((-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) 11 + height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() * ((NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue() -health), (int) 11 + height.getValue(), 3, new Color(0, 255,0));}
             if(items.getValue()) {
                 if (Item.getIdFromItem((Item) ((EntityPlayer) e).inventory.getCurrentItem().getItem()) != 0) {
                     NameTags.mc.getRenderItem().zLevel = -100.0f;
@@ -252,6 +253,9 @@ public class NameTags extends Module {
         GlStateManager.disableBlend();
         GlStateManager.popMatrix();
     }
+    /*
+    RenderUtil.drawRect(-allWidth+2, 2, (allWidth - (allWidth * (1 - healthP)) * 2)-1, 1, Colors.RED.getRGB());
+     */
 
     public static void drawFilledCircle(int x, int y, double radius, int color, int start, int stop) {
         glColor4f(((color >> 16) & 0xff) / 255F, ((color >> 8) & 0xff) / 255F, (color & 0xff) / 255F, ((color >> 24) & 0xff) / 255F);
