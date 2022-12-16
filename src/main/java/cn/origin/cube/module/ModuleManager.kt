@@ -90,6 +90,8 @@ class ModuleManager {
         registerModule(PacketMine())
         registerModule(ViewLock())
         registerModule(BigPOV())
+        registerModule(AutoRacist())
+        registerModule(Singing())
 
         //Hud
         registerModule(WaterMark())
