@@ -49,11 +49,12 @@ public class SkeetGUI extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         super.drawScreen(mouseX, mouseY, partialTicks);
-        Render2DUtil.drawGradientBorderedRect((float) posX,(float) posY,(float) width,(float) height, new Color(35,35,35,150).getRGB());
+        Render2DUtil.drawGradientBorderedRect((float) posX,(float) posY,(float) width,(float) height, new Color(150,150,150,150).getRGB());
 
         int offset = 0;
         for (Category category : Category.values()) {
             Cube.fontManager.IconFont.drawString(category.getIcon(), (int) posX + 20 + offset, (int) (posY + 15),category.equals(selectedCategory) ? new Color(170, 255, 170).getRGB() : new Color(170, 170, 170).getRGB());
+            Render2DUtil.drawGradientHLine((float)posX + 20, (float)posY + 20, (float)posX + 20 + offset,new Color(170, 255, 170).getRGB(), new Color(170, 170, 170).getRGB());
             offset += 25;
         }
         offset = 0;
@@ -80,14 +81,14 @@ public class SkeetGUI extends GuiScreen {
     @Override
     protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
         super.mouseClicked(mouseX, mouseY, mouseButton);
-        if (isInside(mouseX, mouseY, posX, posY - 10, width, posY) && mouseButton == 0) {
+        if (isInside(mouseX, mouseY, posX, posY + 15, width, posY) && mouseButton == 0) {
             dragging = true;
             dragX = mouseX - posX;
             dragY = mouseY - posY;
         }
         int offset = 0;
         for (Category category : Category.values()) {
-            if (isInside(mouseX, mouseY,posX + offset,posY + 1,posX + 30 + offset,posY + 15) && mouseButton == 0) {
+            if (isInside(mouseX, mouseY,posX + offset,posY + 1,posX + 20 + offset,posY + 20) && mouseButton == 0) {
                 selectedCategory = category;
             }
             offset += 25;

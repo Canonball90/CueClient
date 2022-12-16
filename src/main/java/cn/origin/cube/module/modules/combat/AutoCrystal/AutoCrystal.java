@@ -96,8 +96,8 @@ public class AutoCrystal extends Module {
     public BooleanSetting packetPlace = registerSetting("PacketPlace", false);
     public BooleanSetting packetExplode = registerSetting("PacketExplode", false);
     public ModeSetting<Mode> breakHand = registerSetting("Swing", Mode.Main);
-    public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 50 , 0 , 500);
-    public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 50 , 0 , 500);
+    public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 17 , 0 , 20);
+    public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 18 , 0 , 20);
     public BooleanSetting thinking = registerSetting("Thinking", false);
     public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
     public BooleanSetting inhibit = registerSetting("Inhibit", false);
@@ -211,8 +211,8 @@ public class AutoCrystal extends Module {
             if (isDesynced()) {
                 ReSync();
             }
-            if (breakTimer.passed(breakSpeed.getValue())) {
-                timer.reset();
+            if (breakTimer.getPassedTimeMs() / 50 >= 20 - breakSpeed.getValue()) {
+                breakTimer.reset();
                 breka(crystal);
             }
             breaks++;
@@ -356,8 +356,8 @@ public class AutoCrystal extends Module {
                 f = EnumFacing.UP;
             }
             if(!Cube.friendManager.isFriend((EntityPlayer) renderEnt)) {
-                if (placeTimer.passed(placeSpeed.getValue())) {
-                    timer.reset();
+                if (placeTimer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
+                    placeTimer.reset();
                     placee(q, f, offhand);
                 }
             }
