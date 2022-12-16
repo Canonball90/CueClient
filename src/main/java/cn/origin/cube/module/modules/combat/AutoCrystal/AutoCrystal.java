@@ -356,11 +356,9 @@ public class AutoCrystal extends Module {
             } else {
                 f = EnumFacing.UP;
             }
-            if(!Cube.friendManager.isFriend((EntityPlayer) renderEnt)) {
-                if (placeTimer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
-                    placeTimer.reset();
-                    placee(q, f, offhand);
-                }
+            if (placeTimer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
+                placeTimer.reset();
+                placee(q, f, offhand);
             }
         }
     }
@@ -1015,7 +1013,7 @@ final class Threads extends Thread {
 
     public Threads(AutoCrystal.ThreadType type) {
             this.type = type;
-        }
+    }
         @Override
         public void run() {
             if (this.type == AutoCrystal.ThreadType.BLOCK) {
@@ -1027,4 +1025,4 @@ final class Threads extends Thread {
             }
         }
 
-    }
+}
