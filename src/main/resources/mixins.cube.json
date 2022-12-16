@@ -27,13 +27,7 @@
     "MixinRenderEntityItem",
     "MixinRenderer",
     "MixinEntityLivingBase",
-    "MixinBlock",
-    "MixinGuiConnecting",
-    "MixinGuiDisconnected",
-    "MixinGuiScreenAddServer",
-    "MixinGuiScreenServerList",
-    "MixinNetworkManagerChInit",
-    "MixinGuiMultiplayer"
+    "MixinBlock"
   ],
   "mixins": [
     "MixinNetworkManager"
