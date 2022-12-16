@@ -49,21 +49,17 @@ public class SkeetGUI extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         super.drawScreen(mouseX, mouseY, partialTicks);
-        SkeetUtils.renderSkeetBox(new Quad(10, 10, 400, 400));
+        Render2DUtil.drawGradientBorderedRect((float) posX,(float) posY,(float) width,(float) height, new Color(35,35,35,150).getRGB());
 
         int offset = 0;
         for (Category category : Category.values()) {
-            Render2DUtil.drawRect1((int) (posX), (int) (posY + 1 + offset), (int) (posX + 50), (int) (posY + 35 + offset),category.equals(selectedCategory) ? new Color(55, 255, 0).getRGB() : new Color(28, 28, 28).getRGB());
-            Cube.fontManager.IconFont.drawString(category.getIcon(), (int) posX + 20, (int) (posY + 15) + offset, new Color(170, 170, 170).getRGB());
-            offset += 50;
+            Cube.fontManager.IconFont.drawString(category.getIcon(), (int) posX + 20 + offset, (int) (posY + 15),category.equals(selectedCategory) ? new Color(170, 255, 170).getRGB() : new Color(170, 170, 170).getRGB());
+            offset += 25;
         }
-        Render2DUtil.drawRect1((int) (posX), (int) (posY + 1 + offset), (int) (posX + 50), (int) (posY + 390 + offset),new Color(10, 10, 10).getRGB());
-
         offset = 0;
         for (AbstractModule m : Cube.moduleManager.getModulesByCategory(selectedCategory)) {
-            Render2DUtil.drawRect1((int) (posX + 65), (int) (posY + 1 + offset), (int) (posX + 135), (int) (posY + 15 + offset),m.isEnabled() ? new Color(55,255,0).getRGB() : new Color(28,28,28).getRGB());
-            Minecraft.getMinecraft().fontRenderer.drawString(m.name,(int)posX + 67, (int)(posY + 5) + offset, new Color(170,170,170).getRGB());
-            offset += 15;
+            Cube.fontManager.CustomFont.drawString(m.name,(int)posX + 20, (int)(posY + 30) + offset,m.isEnabled() ? new Color(170, 255, 170).getRGB() : new Color(170,170,170).getRGB());
+            offset += 10;
         }
 
         for (Comp comp : comps) {
@@ -91,14 +87,14 @@ public class SkeetGUI extends GuiScreen {
         }
         int offset = 0;
         for (Category category : Category.values()) {
-            if (isInside(mouseX, mouseY,posX,posY + 1 + offset,posX + 60,posY + 45 + offset) && mouseButton == 0) {
+            if (isInside(mouseX, mouseY,posX + offset,posY + 1,posX + 30 + offset,posY + 15) && mouseButton == 0) {
                 selectedCategory = category;
             }
-            offset += 50;
+            offset += 25;
         }
         offset = 0;
         for (AbstractModule m : Cube.moduleManager.getModulesByCategory(selectedCategory)) {
-            if (isInside(mouseX, mouseY,posX + 65,posY + 1 + offset,posX + 125,posY + 15 + offset)) {
+            if (isInside(mouseX, mouseY,posX + 20,posY + 30 + offset,posX + 90,posY + 40 + offset)) {
                 if (mouseButton == 0) {
                     m.toggle();
                 }
@@ -124,7 +120,7 @@ public class SkeetGUI extends GuiScreen {
 //                        }
                 }
             }
-            offset += 15;
+            offset += 10;
         }
         for (Comp comp : comps) {
             comp.mouseClicked(mouseX, mouseY, mouseButton);
