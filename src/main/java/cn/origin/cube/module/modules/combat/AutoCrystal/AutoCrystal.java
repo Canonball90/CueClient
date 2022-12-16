@@ -56,6 +56,7 @@ import net.minecraft.util.math.*;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
@@ -141,8 +142,8 @@ public class AutoCrystal extends Module {
         return cancelingCrystals;
     }
 
-    @Override
-    public void onUpdate() {
+    @SubscribeEvent
+    public void onTick(TickEvent.ClientTickEvent event) {
         doLogic();
     }
 
