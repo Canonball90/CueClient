@@ -24,6 +24,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.awt.*;
 import java.util.*;
@@ -72,8 +73,9 @@ public class Surround extends Module {
         retryTimer.reset();
     }
 
-    @Override
-    public void onUpdate() {
+    @SubscribeEvent
+    public void onTick(TickEvent.ClientTickEvent event) {
+        if(fullNullCheck())return;
         doFeetPlace();
     }
 

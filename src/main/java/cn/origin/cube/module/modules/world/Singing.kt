@@ -379,6 +379,12 @@ class Singing: Module() {
         }
     }
 
+    override fun onDisable() {
+        messageCount == 0
+        timer.reset()
+        super.onDisable()
+    }
+
     enum class Songs{
         HereWithMe, MondayToSonday
     }

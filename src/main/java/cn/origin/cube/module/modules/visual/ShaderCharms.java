@@ -40,7 +40,7 @@ public class ShaderCharms  extends Module {
     private final BooleanSetting enderPearls = registerSetting("Ender Pearls", false);
     private final BooleanSetting itemsEntity = registerSetting("Items(Entity)", false);
     public final BooleanSetting items = registerSetting("Items", true);
-    private final BooleanSetting itemsFix = registerSetting("Items Fix", false);
+    private final BooleanSetting renderHand = registerSetting("RenderHand", false);
 
     private final IntegerSetting animationSpeed = registerSetting("Animation Speed", 0, 1, 10);
 
@@ -70,7 +70,7 @@ public class ShaderCharms  extends Module {
 
     @SubscribeEvent
     public void onRenderHand(RenderHandEvent event) {
-        if(items.getValue() && (!criticalSection)) event.setCanceled(true);
+        if(items.getValue() && (!criticalSection) && renderHand.getValue()) event.setCanceled(true);
     }
 
     @SubscribeEvent
