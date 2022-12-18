@@ -41,16 +41,31 @@ public class ModuleArrayList extends HudModule {
                         c = ClickGui.getCurrentColor();
                     }
                     if(colorSetting.getValue().equals(colorMode.Static) || colorSetting.getValue().equals(colorMode.CategoryC)) {
-                        if (alignMode.Right.equals(alignSetting.getValue())) {
-                            Cube.fontManager.CustomFont.drawStringWithShadow(modText,
-                                    (int) (this.x - 2 - modWidth + this.width),
-                                    this.y + (10 * count),
-                                    c.getRGB());
-                        } else {
-                            Cube.fontManager.CustomFont.drawStringWithShadow(modText,
-                                    this.x - 2,
-                                    this.y + (10 * count),
-                                    c.getRGB());
+                        if(colorSetting.getValue().equals(colorMode.Static)) {
+                            if (alignMode.Right.equals(alignSetting.getValue())) {
+                                Cube.fontManager.CustomFont.drawStringWithShadow(modText,
+                                        (int) (this.x - 2 - modWidth + this.width),
+                                        this.y + (10 * count),
+                                        c.getRGB());
+                            } else {
+                                Cube.fontManager.CustomFont.drawStringWithShadow(modText,
+                                        this.x - 2,
+                                        this.y + (10 * count),
+                                        c.getRGB());
+                            }
+                        }
+                        if(colorSetting.getValue().equals(colorMode.CategoryC)){
+                            if (alignMode.Right.equals(alignSetting.getValue())) {
+                                Cube.fontManager.CustomFont.drawStringWithShadow(modText,
+                                        (int) (this.x - 2 - modWidth + this.width),
+                                        this.y + (10 * count),
+                                        module.category.getColor().getRGB());
+                            } else {
+                                Cube.fontManager.CustomFont.drawStringWithShadow(modText,
+                                        this.x - 2,
+                                        this.y + (10 * count),
+                                        module.category.getColor().getRGB());
+                            }
                         }
                     }else{
                         if (alignMode.Right.equals(alignSetting.getValue())) {
