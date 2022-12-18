@@ -102,6 +102,7 @@ class ModuleManager {
         registerModule(ArmorHud())
         registerModule(InventoryHud())
         registerModule(CoordsHud())
+        registerModule(TargetHud())
 
     }
 

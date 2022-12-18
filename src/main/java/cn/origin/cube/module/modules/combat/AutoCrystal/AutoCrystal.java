@@ -708,6 +708,8 @@ public class AutoCrystal extends Module {
     private EnumHand getHandToBreak() {
         if (breakHand.getValue().equals(Mode.Offhand)) {
             return EnumHand.OFF_HAND;
+        }else if(breakHand.getValue().equals(Mode.Both)){
+            return EnumHand.OFF_HAND;
         }
         return EnumHand.MAIN_HAND;
     }
@@ -990,7 +992,7 @@ public class AutoCrystal extends Module {
 
 
     public enum Mode{
-        Main,Offhand
+        Main,Offhand,Both
     }
 
     public enum Logic{

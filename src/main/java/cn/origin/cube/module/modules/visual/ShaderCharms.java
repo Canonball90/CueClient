@@ -70,7 +70,7 @@ public class ShaderCharms  extends Module {
 
     @SubscribeEvent
     public void onRenderHand(RenderHandEvent event) {
-        if(items.getValue() && (!criticalSection) && renderHand.getValue()) event.setCanceled(true);
+        if(items.getValue() && (!criticalSection) && !renderHand.getValue()) event.setCanceled(true);
     }
 
     @SubscribeEvent
