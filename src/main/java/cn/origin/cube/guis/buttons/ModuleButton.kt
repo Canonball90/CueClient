@@ -94,6 +94,9 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             }else{
                 Render2DUtil.drawGradientHRect(x,y, x+width,y+height, Color(15, 15, 15, 125).rgb,  if(ClickGui.INSTANCE.gay.value) father.category.color.rgb else ClickGui.getCurrentColor().rgb)
             }
+        }//ToDo putting here so i dont forget
+        if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {
+            Render2DUtil.drawRect(x,y,this.width,this.height, if(ClickGui.INSTANCE.gay.value) father.category.color.rgb else ClickGui.getCurrentColor().rgb)
         }
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             father.name,
