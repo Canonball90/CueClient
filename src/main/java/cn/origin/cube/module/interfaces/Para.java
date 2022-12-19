@@ -10,7 +10,7 @@ public @interface Para {
 
     ParaMode para();
 
-    public enum ParaMode{
+     enum ParaMode{
         Full,Light,Test
     }
 }
