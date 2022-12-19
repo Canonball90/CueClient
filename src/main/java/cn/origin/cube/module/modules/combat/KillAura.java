@@ -2,19 +2,17 @@ package cn.origin.cube.module.modules.combat;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.event.events.player.UpdateWalkingPlayerEvent;
-import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.module.modules.client.ClickGui;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.DoubleSetting;
-import cn.origin.cube.settings.IntegerSetting;
-import cn.origin.cube.settings.ModeSetting;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.DoubleSetting;
+import cn.origin.cube.core.settings.IntegerSetting;
+import cn.origin.cube.core.settings.ModeSetting;
+import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
-import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -28,6 +26,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Date;
 
+@Para(para = Para.ParaMode.Light)
 @ModuleInfo(name = "KillAura", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class KillAura extends Module {
     long killLast = new Date().getTime();

@@ -1,6 +1,6 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.viaforge.ViaForge;
+import cn.origin.cube.core.viaforge.ViaForge;
 import net.minecraft.client.multiplayer.GuiConnecting;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;

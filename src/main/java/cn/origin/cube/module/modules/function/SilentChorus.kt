@@ -2,7 +2,8 @@ package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.module.interfaces.Para
 import cn.origin.cube.utils.player.InventoryUtil
 import net.minecraft.init.Items
 import net.minecraft.network.Packet
@@ -10,6 +11,7 @@ import net.minecraft.network.play.client.CPacketHeldItemChange
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem
 import net.minecraft.util.EnumHand
 
+@Para(para = Para.ParaMode.Test)
 @ModuleInfo(name = "SilentChorus",
     descriptions = "SilentChorus",
     category = Category.FUNCTION)

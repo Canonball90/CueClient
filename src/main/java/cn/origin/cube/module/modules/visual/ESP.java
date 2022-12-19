@@ -4,10 +4,10 @@ import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import java.awt.Color;
 
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.FloatSetting;
-import cn.origin.cube.settings.ModeSetting;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.FloatSetting;
+import cn.origin.cube.core.settings.ModeSetting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderGlobal;

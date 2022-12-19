@@ -1,7 +1,7 @@
 package cn.origin.cube.event.events.client;
 
 import cn.origin.cube.event.events.EventStage;
-import cn.origin.cube.settings.Setting;
+import cn.origin.cube.core.settings.Setting;
 
 public class SettingChangeEvent<T> extends EventStage {
     public final Setting<?> setting;

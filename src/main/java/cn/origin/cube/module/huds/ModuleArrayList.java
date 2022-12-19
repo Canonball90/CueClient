@@ -2,9 +2,9 @@ package cn.origin.cube.module.huds;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.module.*;
+import cn.origin.cube.module.interfaces.HudModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.ModeSetting;
+import cn.origin.cube.core.settings.ModeSetting;
 import net.minecraft.client.Minecraft;
 
 import java.awt.*;

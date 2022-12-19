@@ -1,14 +1,15 @@
 package cn.origin.cube.module.modules.movement
 
+import cn.origin.cube.core.settings.BooleanSetting
+import cn.origin.cube.core.settings.FloatSetting
+import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.event.events.player.TravelEvent
 import cn.origin.cube.inject.client.IMinecraft
 import cn.origin.cube.inject.client.ITimer
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.settings.BooleanSetting
-import cn.origin.cube.settings.FloatSetting
-import cn.origin.cube.settings.ModeSetting
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.module.interfaces.Para
 import cn.origin.cube.utils.Utils
 import net.minecraft.block.Block
 import net.minecraft.client.renderer.EnumFaceDirection
@@ -24,6 +25,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import kotlin.math.cos
 import kotlin.math.sin
 
+@Para(para = Para.ParaMode.Test)
 @ModuleInfo(name = "ElytraFly",
     descriptions = "ElytraFly",
     category = Category.MOVEMENT)

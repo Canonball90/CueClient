@@ -2,11 +2,11 @@ package cn.origin.cube.module.modules.visual;
 
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.FloatSetting;
-import cn.origin.cube.settings.IntegerSetting;
-import cn.origin.cube.settings.ModeSetting;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.FloatSetting;
+import cn.origin.cube.core.settings.IntegerSetting;
+import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.render.shader.*;
 import cn.origin.cube.utils.render.shader.shaders.*;

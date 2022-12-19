@@ -2,8 +2,8 @@ package cn.origin.cube.module.modules.movement;
 
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.settings.BooleanSetting;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.BooleanSetting;
 
 @ModuleInfo(name = "Sprint", descriptions = "Always run fast", category = Category.MOVEMENT)
 public class Sprint extends Module {

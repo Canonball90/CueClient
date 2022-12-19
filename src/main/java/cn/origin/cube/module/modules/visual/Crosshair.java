@@ -2,10 +2,10 @@ package cn.origin.cube.module.modules.visual;
 
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.FloatSetting;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.utils.render.Render2DUtil;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraftforge.client.GuiIngameForge;

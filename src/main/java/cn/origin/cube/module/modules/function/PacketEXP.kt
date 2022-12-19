@@ -2,17 +2,16 @@ package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.settings.BooleanSetting
-import cn.origin.cube.settings.FloatSetting
-import cn.origin.cube.settings.ModeSetting
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.BooleanSetting
+import cn.origin.cube.core.settings.FloatSetting
+import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.utils.Utils.nullCheck
 import net.minecraft.init.Items
 import net.minecraft.item.Item
 import net.minecraft.network.play.client.CPacketHeldItemChange
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem
 import net.minecraft.util.EnumHand
-import org.lwjgl.input.Keyboard
 import org.lwjgl.input.Mouse
 
 @ModuleInfo(name = "PacketEXP",

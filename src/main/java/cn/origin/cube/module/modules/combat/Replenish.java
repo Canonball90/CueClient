@@ -2,10 +2,9 @@ package cn.origin.cube.module.modules.combat;
 
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.module.modules.client.AutoConfig;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.DoubleSetting;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.utils.Timer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ClickType;

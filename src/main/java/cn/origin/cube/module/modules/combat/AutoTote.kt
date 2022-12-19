@@ -3,7 +3,7 @@ package cn.origin.cube.module.modules.combat
 import cn.origin.cube.event.events.client.PacketEvent
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
+import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.utils.player.InventoryUtil
 import net.minecraft.client.gui.inventory.GuiContainer
 import net.minecraft.client.gui.inventory.GuiInventory

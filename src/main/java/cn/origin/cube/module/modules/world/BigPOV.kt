@@ -2,8 +2,8 @@ package cn.origin.cube.module.modules.world
 
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.settings.FloatSetting
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.utils.Utils.nullCheck
 import net.minecraft.client.renderer.entity.RenderPig
 import net.minecraft.entity.passive.EntityPig

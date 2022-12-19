@@ -3,7 +3,7 @@ package cn.origin.cube.guis.buttons.setting
 import cn.origin.cube.Cube
 import cn.origin.cube.guis.buttons.ModuleButton
 import cn.origin.cube.guis.buttons.SettingButton
-import cn.origin.cube.settings.StringSetting
+import cn.origin.cube.core.settings.StringSetting
 import cn.origin.cube.utils.Timer
 import cn.origin.cube.utils.client.ChatUtil
 import cn.origin.cube.utils.render.Render2DUtil

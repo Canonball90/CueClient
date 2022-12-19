@@ -3,8 +3,8 @@ package cn.origin.cube.guis.buttons.setting
 import cn.origin.cube.Cube
 import cn.origin.cube.guis.buttons.ModuleButton
 import cn.origin.cube.guis.buttons.SettingButton
-import cn.origin.cube.settings.BindSetting
-import cn.origin.cube.settings.BindSetting.KeyBind
+import cn.origin.cube.core.settings.BindSetting
+import cn.origin.cube.core.settings.BindSetting.KeyBind
 import cn.origin.cube.utils.render.Render2DUtil
 import org.lwjgl.input.Keyboard
 import java.awt.Color

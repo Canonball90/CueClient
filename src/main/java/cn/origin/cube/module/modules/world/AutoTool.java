@@ -2,11 +2,9 @@ package cn.origin.cube.module.modules.world;
 
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.modules.combat.KillAura;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.utils.player.InventoryUtil;
+import cn.origin.cube.core.settings.BooleanSetting;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 

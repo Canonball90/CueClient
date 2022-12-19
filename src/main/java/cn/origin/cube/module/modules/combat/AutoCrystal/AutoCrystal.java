@@ -5,12 +5,13 @@ import cn.origin.cube.event.events.client.PacketEvent;
 import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.module.modules.combat.KillAura;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.IntegerSetting;
-import cn.origin.cube.settings.ModeSetting;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.IntegerSetting;
+import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.EntityUtil;
@@ -39,11 +40,9 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.ItemEndCrystal;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
-import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketHeldItemChange;
 import net.minecraft.network.play.client.CPacketPlayerDigging;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
@@ -68,6 +67,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
+@Para(para = Para.ParaMode.Full)
 @ModuleInfo(name = "AutoCrystal", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class AutoCrystal extends Module {
 

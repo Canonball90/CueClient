@@ -3,9 +3,9 @@ package cn.origin.cube.module.huds;
 import cn.origin.cube.Cube;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.HudModule;
-import cn.origin.cube.module.HudModuleInfo;
+import cn.origin.cube.module.interfaces.HudModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
-import cn.origin.cube.settings.FloatSetting;
+import cn.origin.cube.core.settings.FloatSetting;
 import org.lwjgl.opengl.GL11;
 
 @HudModuleInfo(name = "Coords", x = 114, y = 114, descriptions = "Show hack name", category = Category.HUD)

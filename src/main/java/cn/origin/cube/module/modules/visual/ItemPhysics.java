@@ -2,9 +2,8 @@ package cn.origin.cube.module.modules.visual;
 
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.module.modules.client.ClickGui;
-import cn.origin.cube.settings.DoubleSetting;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.DoubleSetting;
 
 @ModuleInfo(name = "ItemPhysics",
 descriptions = "",

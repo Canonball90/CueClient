@@ -2,7 +2,7 @@ package cn.origin.cube.module.modules.client;
 
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.modules.combat.AutoArmor;
 import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
 import cn.origin.cube.module.modules.combat.AutoTote;
@@ -10,7 +10,7 @@ import cn.origin.cube.module.modules.combat.Criticals;
 import cn.origin.cube.module.modules.combat.Replenish;
 import cn.origin.cube.module.modules.function.AntiKnockback;
 import cn.origin.cube.module.modules.movement.NoSlow;
-import cn.origin.cube.settings.ModeSetting;
+import cn.origin.cube.core.settings.ModeSetting;
 
 //ToDo finish this shit
 @ModuleInfo(name = "AutoConfig", descriptions = "AutoConfig", category = Category.CLIENT)

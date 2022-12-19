@@ -3,10 +3,10 @@ package cn.origin.cube.module.modules.combat
 import cn.origin.cube.event.events.world.Render3DEvent
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
+import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.module.modules.client.ClickGui
-import cn.origin.cube.settings.BooleanSetting
-import cn.origin.cube.settings.FloatSetting
+import cn.origin.cube.core.settings.BooleanSetting
+import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.utils.client.MathUtil
 import cn.origin.cube.utils.player.BlockUtil
 import cn.origin.cube.utils.player.EntityUtil

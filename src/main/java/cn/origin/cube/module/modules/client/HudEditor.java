@@ -1,11 +1,11 @@
 package cn.origin.cube.module.modules.client;
 
 import cn.origin.cube.Cube;
+import cn.origin.cube.core.managers.ConfigManager;
 import cn.origin.cube.guis.HudEditorScreen;
-import cn.origin.cube.managers.ConfigManager;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.interfaces.ModuleInfo;
 import org.lwjgl.input.Keyboard;
 
 @ModuleInfo(

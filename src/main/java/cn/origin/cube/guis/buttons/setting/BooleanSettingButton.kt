@@ -4,7 +4,7 @@ import cn.origin.cube.Cube
 import cn.origin.cube.guis.buttons.ModuleButton
 import cn.origin.cube.guis.buttons.SettingButton
 import cn.origin.cube.module.modules.client.ClickGui
-import cn.origin.cube.settings.BooleanSetting
+import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.utils.render.Render2DUtil
 import java.awt.Color
 

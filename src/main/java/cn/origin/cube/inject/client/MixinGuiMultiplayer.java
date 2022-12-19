@@ -1,8 +1,8 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.viaforge.ViaForge;
-import cn.origin.cube.viaforge.gui.GuiProtocolSelector;
-import cn.origin.cube.viaforge.protocol.ProtocolCollection;
+import cn.origin.cube.core.viaforge.ViaForge;
+import cn.origin.cube.core.viaforge.gui.GuiProtocolSelector;
+import cn.origin.cube.core.viaforge.protocol.ProtocolCollection;
 import net.minecraft.client.gui.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;

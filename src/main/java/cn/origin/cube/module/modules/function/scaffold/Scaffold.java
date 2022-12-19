@@ -2,34 +2,25 @@ package cn.origin.cube.module.modules.function.scaffold;
 
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.DoubleSetting;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.BlockUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.play.client.CPacketEntityAction;
-import net.minecraft.network.play.client.CPacketHeldItemChange;
-import net.minecraft.network.play.client.CPacketPlayer;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Para(para = Para.ParaMode.Light)
 @ModuleInfo(name = "Scaffold", descriptions = "Automatically places blocks under you", category = Category.FUNCTION)
 public class Scaffold extends Module {
 

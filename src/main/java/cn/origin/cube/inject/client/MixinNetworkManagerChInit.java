@@ -1,9 +1,9 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.viaforge.ViaForge;
-import cn.origin.cube.viaforge.handler.CommonTransformer;
-import cn.origin.cube.viaforge.handler.DecodeHandler;
-import cn.origin.cube.viaforge.handler.EncodeHandler;
+import cn.origin.cube.core.viaforge.ViaForge;
+import cn.origin.cube.core.viaforge.handler.CommonTransformer;
+import cn.origin.cube.core.viaforge.handler.DecodeHandler;
+import cn.origin.cube.core.viaforge.handler.EncodeHandler;
 import com.viaversion.viaversion.api.connection.UserConnection;
 import com.viaversion.viaversion.connection.UserConnectionImpl;
 import com.viaversion.viaversion.protocol.ProtocolPipelineImpl;

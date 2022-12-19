@@ -2,8 +2,8 @@ package cn.origin.cube.module.modules.world
 
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.settings.ModeSetting
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.ModeSetting
 
 @ModuleInfo(name = "Suicide", descriptions = "Auto Kill ur self", category = Category.WORLD)
 class Suicide : Module() {

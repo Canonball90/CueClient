@@ -2,9 +2,9 @@ package cn.origin.cube.module.modules.world
 
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.settings.IntegerSetting
-import cn.origin.cube.settings.ModeSetting
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.IntegerSetting
+import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.utils.Timer
 
 @ModuleInfo(name = "Singing", descriptions = "Sing", category = Category.WORLD)

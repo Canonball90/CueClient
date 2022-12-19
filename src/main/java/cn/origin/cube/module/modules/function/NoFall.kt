@@ -2,12 +2,11 @@ package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.event.events.client.PacketEvent
 import cn.origin.cube.event.events.player.UpdateWalkingPlayerEvent
-import cn.origin.cube.inject.client.ICPacketPlayer
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.settings.FloatSetting
-import cn.origin.cube.settings.ModeSetting
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.FloatSetting
+import cn.origin.cube.core.settings.ModeSetting
 import net.minecraft.block.Block
 import net.minecraft.init.Blocks
 import net.minecraft.network.Packet

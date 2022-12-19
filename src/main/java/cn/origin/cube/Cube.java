@@ -1,18 +1,17 @@
 package cn.origin.cube;
 
-import cn.origin.cube.command.CommandManager;
-import cn.origin.cube.event.EventManager;
-import cn.origin.cube.font.FontManager;
+import cn.origin.cube.core.CommandManager;
+import cn.origin.cube.core.EventManager;
+import cn.origin.cube.core.FontManager;
+import cn.origin.cube.core.ModuleManager;
+import cn.origin.cube.core.managers.ConfigManager;
+import cn.origin.cube.core.managers.FriendManager;
 import cn.origin.cube.guis.ClickGuiScreen;
 import cn.origin.cube.guis.HudEditorScreen;
 import cn.origin.cube.guis.mainmenu.Shaders;
-import cn.origin.cube.managers.CapeManager;
-import cn.origin.cube.managers.ConfigManager;
-import cn.origin.cube.managers.FriendManager;
-import cn.origin.cube.managers.ThreadManager;
-import cn.origin.cube.module.ModuleManager;
+import cn.origin.cube.core.managers.CapeManager;
+import cn.origin.cube.core.managers.ThreadManager;
 import cn.origin.cube.utils.client.jsonutils.JSON;
-import cn.origin.cube.viaforge.ViaForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

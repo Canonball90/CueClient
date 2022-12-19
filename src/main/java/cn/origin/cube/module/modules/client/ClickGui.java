@@ -1,15 +1,14 @@
 package cn.origin.cube.module.modules.client;
 
 import cn.origin.cube.Cube;
+import cn.origin.cube.core.managers.ConfigManager;
 import cn.origin.cube.guis.ClickGuiScreen;
-import cn.origin.cube.managers.ConfigManager;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.FloatSetting;
-import cn.origin.cube.settings.IntegerSetting;
-import cn.origin.cube.settings.StringSetting;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.FloatSetting;
+import cn.origin.cube.core.settings.IntegerSetting;
 import org.lwjgl.input.Keyboard;
 
 import java.awt.*;

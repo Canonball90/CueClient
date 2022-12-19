@@ -2,7 +2,7 @@ package cn.origin.cube.module.modules.movement
 
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
+import cn.origin.cube.module.interfaces.ModuleInfo
 import net.minecraft.client.Minecraft
 import net.minecraft.client.entity.EntityPlayerSP
 import net.minecraft.util.math.MathHelper

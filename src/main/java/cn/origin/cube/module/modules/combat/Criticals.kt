@@ -6,9 +6,9 @@ import cn.origin.cube.inject.client.ICPacketPlayer
 import cn.origin.cube.inject.client.INetworkManager
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.settings.BooleanSetting
-import cn.origin.cube.settings.ModeSetting
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.BooleanSetting
+import cn.origin.cube.core.settings.ModeSetting
 import net.minecraft.entity.EntityLivingBase
 import net.minecraft.network.play.client.CPacketPlayer
 import net.minecraft.network.play.client.CPacketUseEntity

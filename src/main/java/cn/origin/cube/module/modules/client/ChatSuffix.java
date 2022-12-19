@@ -1,13 +1,11 @@
 package cn.origin.cube.module.modules.client;
 
 import cn.origin.cube.Cube;
-import cn.origin.cube.event.events.client.PacketEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.ModeSetting;
-import net.minecraft.network.play.client.CPacketChatMessage;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.ModeSetting;
 import net.minecraftforge.client.event.ClientChatEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;

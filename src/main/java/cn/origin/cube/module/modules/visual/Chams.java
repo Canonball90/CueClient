@@ -5,11 +5,11 @@ import cn.origin.cube.event.events.render.RenderEntityModelEvent;
 import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
-import cn.origin.cube.settings.BooleanSetting;
-import cn.origin.cube.settings.FloatSetting;
-import cn.origin.cube.settings.IntegerSetting;
+import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.core.settings.FloatSetting;
+import cn.origin.cube.core.settings.IntegerSetting;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.opengl.GL11;
 

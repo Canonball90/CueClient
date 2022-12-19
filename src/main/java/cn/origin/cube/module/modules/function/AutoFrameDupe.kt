@@ -2,9 +2,9 @@ package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.settings.BooleanSetting
-import cn.origin.cube.settings.IntegerSetting
+import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.BooleanSetting
+import cn.origin.cube.core.settings.IntegerSetting
 import net.minecraft.entity.item.EntityItemFrame
 import net.minecraft.init.Items
 import net.minecraft.item.ItemShulkerBox

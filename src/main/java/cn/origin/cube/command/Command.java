@@ -1,9 +1,6 @@
 package cn.origin.cube.command;
 
-import cn.origin.cube.module.ModuleInfo;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
+import cn.origin.cube.module.interfaces.CommandInfo;
 
 public abstract class Command {
     public final String name;

@@ -2,7 +2,7 @@ package cn.origin.cube.command.commands;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.command.Command;
-import cn.origin.cube.command.CommandInfo;
+import cn.origin.cube.module.interfaces.CommandInfo;
 import cn.origin.cube.utils.client.ChatUtil;
 
 import java.util.Arrays;

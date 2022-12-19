@@ -2,8 +2,7 @@ package cn.origin.cube.module.modules.combat
 
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
-import cn.origin.cube.module.ModuleInfo
-import cn.origin.cube.module.modules.client.AutoConfig
+import cn.origin.cube.module.interfaces.ModuleInfo
 import net.minecraft.client.gui.inventory.GuiContainer
 import net.minecraft.client.renderer.InventoryEffectRenderer
 import net.minecraft.init.Items

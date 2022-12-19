@@ -3,7 +3,7 @@ package cn.origin.cube.module.modules.visual;
 import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
+import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.utils.render.RenderUtil;
 import net.minecraft.client.renderer.RenderGlobal;
 import net.minecraft.util.math.AxisAlignedBB;

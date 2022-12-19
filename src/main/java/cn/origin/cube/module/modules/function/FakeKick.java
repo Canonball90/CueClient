@@ -2,8 +2,8 @@ package cn.origin.cube.module.modules.function;
 
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
-import cn.origin.cube.module.ModuleInfo;
-import cn.origin.cube.settings.StringSetting;
+import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.settings.StringSetting;
 import cn.origin.cube.utils.client.ChatUtil;
 import net.minecraft.util.text.TextComponentString;
 
