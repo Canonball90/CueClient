@@ -86,6 +86,21 @@ public class RenderUtil {
         GlStateManager.scale(scaleDistance, scaleDistance, scaleDistance);
     }
 
+    public static void setColor(Color color) {
+        GL11.glColor4f((float)color.getRed() / 255.0f, (float)color.getGreen() / 255.0f, (float)color.getBlue() / 255.0f, (float)color.getAlpha() / 255.0f);
+    }
+
+    public static void setColor(int color) {
+        RenderUtil.setColor(new Color(color));
+    }
+
+    public static void setColor(int red, int green, int blue, int alpha) {
+        RenderUtil.setColor(new Color(red, green, blue, alpha));
+    }
+
+    public static void setColor(int red, int green, int blue) {
+        RenderUtil.setColor(red, green, blue, 255);
+    }
 
     public static void addBuilderVertex(final BufferBuilder bufferBuilder, final double x, final double y, final double z, final Color color) {
         bufferBuilder.pos(x, y, z).color(color.getRed() / 255.0f, color.getGreen() / 255.0f, color.getBlue() / 255.0f, color.getAlpha() / 255.0f).endVertex();

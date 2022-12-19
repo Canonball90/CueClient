@@ -434,10 +434,10 @@ public class AutoCrystal extends Module {
             return false;
         }
 
-            Block updatedBlock = mc.world.getBlockState(updatedPosition).getBlock();
-            if (!updatedBlock.equals(Blocks.AIR) && !updatedBlock.equals(Blocks.FIRE)) {
-                return false;
-            }
+        Block updatedBlock = mc.world.getBlockState(updatedPosition).getBlock();
+        if (!updatedBlock.equals(Blocks.AIR) && !updatedBlock.equals(Blocks.FIRE)) {
+            return false;
+        }
 
         int unsafeEntities = 0;
 
@@ -496,13 +496,13 @@ public class AutoCrystal extends Module {
                         if (localDamage + 0.5 > health) {
                             safetyIndex = -9999;
                         }
-                            double efficiency = targetDamage - localDamage;
+                        double efficiency = targetDamage - localDamage;
 
-                            if (efficiency < 0 && Math.abs(efficiency) < 0.25) {
-                                efficiency = 0;
-                            }
+                        if (efficiency < 0 && Math.abs(efficiency) < 0.25) {
+                            efficiency = 0;
+                        }
 
-                            safetyIndex = efficiency;
+                        safetyIndex = efficiency;
 
                     }
 
@@ -731,10 +731,9 @@ public class AutoCrystal extends Module {
             this.timer.reset();
 
         }
-            if(autoTimerl.getValue()) {
-
-                this.timer.reset();
-            }
+        if(autoTimerl.getValue()) {
+            this.timer.reset();
+        }
     }
 
     public static float getDamageFromExplosion(Entity entity, Vec3d vector, boolean blockDestruction) {
@@ -1015,17 +1014,17 @@ final class Threads extends Thread {
     EntityEnderCrystal bestCrystal;
 
     public Threads(AutoCrystal.ThreadType type) {
-            this.type = type;
+        this.type = type;
     }
-        @Override
-        public void run() {
-            if (this.type == AutoCrystal.ThreadType.BLOCK) {
-                bestBlock = AutoCrystal.INSTANCE.render;
-                AutoCrystal.INSTANCE.render = bestBlock;
-            } else if (this.type ==AutoCrystal.ThreadType.CRYSTAL) {
-                bestCrystal = AutoCrystal.INSTANCE.getBestCrystal();
-                AutoCrystal.INSTANCE.renderEnt = bestCrystal;
-            }
+    @Override
+    public void run() {
+        if (this.type == AutoCrystal.ThreadType.BLOCK) {
+            bestBlock = AutoCrystal.INSTANCE.render;
+            AutoCrystal.INSTANCE.render = bestBlock;
+        } else if (this.type ==AutoCrystal.ThreadType.CRYSTAL) {
+            bestCrystal = AutoCrystal.INSTANCE.getBestCrystal();
+            AutoCrystal.INSTANCE.renderEnt = bestCrystal;
         }
+    }
 
 }
