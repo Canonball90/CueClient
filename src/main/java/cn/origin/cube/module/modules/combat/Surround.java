@@ -87,7 +87,7 @@ public class Surround extends Module {
     @Override
     public void onRender2D(){
         if(render.getValue() && renderString.getValue()){
-            Cube.fontManager.CustomFont.drawString((didPlace ? "Placed" : "Not Placed"), x.getValue(), y.getValue(), -1);
+            Cube.fontManager.CustomFont.drawString((didPlace ? "Placing" : "Placed"), x.getValue(), y.getValue(), -1);
         }
     }
 

@@ -72,6 +72,7 @@ class ModuleManager {
         //Visual
         registerModule(FullBright())
         registerModule(BlockHighlight())
+        registerModule(BreakEsp())
         registerModule(NameTags())
         registerModule(Chams())
         registerModule(HoleESP())
