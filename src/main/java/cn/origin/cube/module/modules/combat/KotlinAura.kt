@@ -19,6 +19,8 @@ import net.minecraft.network.play.client.CPacketUseEntity
 import net.minecraft.util.EnumFacing
 import net.minecraft.util.EnumHand
 import net.minecraft.util.math.BlockPos
+import net.minecraftforge.fml.common.gameevent.TickEvent;
+
 
 @ModuleInfo(name = "KotlinAura",
     descriptions = "Render current block",
@@ -35,7 +37,7 @@ class KotlinAura: Module() {
     private val packetBreak: BooleanSetting = registerSetting("packetBreak", true)
     private val onlySelfCrystal: BooleanSetting = registerSetting("onlySelf", true)
 
-    override fun onUpdate() {
+    override fun onTick(TickEvent.ClientTickEvent event) {
         target = EntityUtil.getTarget(targetRange.value)
         doPlace()
         doBreak()
