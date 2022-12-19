@@ -1,17 +1,20 @@
 package cn.origin.cube.core
 
 import cn.origin.cube.Cube
+import cn.origin.cube.event.events.player.DeathEvent
 import cn.origin.cube.event.events.player.TotemPopListener
 import cn.origin.cube.event.events.render.RenderOverlayEvent
 import cn.origin.cube.event.events.world.Render3DEvent
 import cn.origin.cube.utils.Utils
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.GlStateManager
+import net.minecraft.entity.player.EntityPlayer
 import net.minecraftforge.client.event.ClientChatEvent
 import net.minecraftforge.client.event.RenderBlockOverlayEvent
 import net.minecraftforge.client.event.RenderGameOverlayEvent
 import net.minecraftforge.client.event.RenderWorldLastEvent
 import net.minecraftforge.common.MinecraftForge
+import net.minecraftforge.fml.common.eventhandler.Event
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.InputEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
@@ -46,6 +49,12 @@ class EventManager {
     fun onTick(event: ClientTickEvent) {
         if (Utils.nullCheck()) return
         Cube.moduleManager!!.onUpdate()
+        mc.world.playerEntities.stream().filter { player -> player != null && player.getHealth() <= 0.0f }
+            .map { player: EntityPlayer? -> DeathEvent(player) }.forEach { event: Event? ->
+                MinecraftForge.EVENT_BUS.post(
+                    event
+                )
+            }
     }
 
     @SubscribeEvent

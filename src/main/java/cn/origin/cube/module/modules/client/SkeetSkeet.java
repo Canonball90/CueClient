@@ -12,14 +12,14 @@ import cn.origin.cube.module.interfaces.ModuleInfo;
 public class SkeetSkeet extends Module {
 
     public void onEnable() {
-        if (!this.fullNullCheck() && !(Module.mc.currentScreen instanceof ClickGuiScreen)) {
+        if (!this.fullNullCheck() && !(Module.mc.currentScreen instanceof SkeetGUI)) {
             Module.mc.displayGuiScreen(new SkeetGUI());
         }
         disable();
     }
 
     public void onDisable() {
-        if (!this.fullNullCheck() && Module.mc.currentScreen instanceof ClickGuiScreen) {
+        if (!this.fullNullCheck() && Module.mc.currentScreen instanceof SkeetGUI) {
             Module.mc.displayGuiScreen(null);
             ConfigManager configManager = Cube.configManager;
             configManager.saveAll();

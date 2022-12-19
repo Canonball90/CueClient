@@ -29,6 +29,7 @@ class ModuleManager {
         registerModule(AutoConfig())
         registerModule(MainMenuShader())
         registerModule(SkeetSkeet())
+        registerModule(Stats())
 
         //Combat
         registerModule(Surround())
