@@ -103,7 +103,6 @@ public class NoSlow extends Module {
             if(mc.world != null) {
                 Item item = mc.player.getActiveItemStack().getItem();
                 if (sneaking && ((!mc.player.isHandActive() && item instanceof ItemFood || item instanceof ItemBow || item instanceof ItemPotion) || (!(item instanceof ItemFood) || !(item instanceof ItemBow) || !(item instanceof ItemPotion)))) {
-                    mc.player.connection.sendPacket(new CPacketHeldItemChange(mc.player.inventory.currentItem));
                     mc.player.connection.sendPacket(new CPacketEntityAction(mc.player, CPacketEntityAction.Action.STOP_SNEAKING));
                     sneaking = false;
                 }
@@ -115,6 +114,7 @@ public class NoSlow extends Module {
     public void onUseItem(final LivingEntityUseItemEvent event) {
         if (this.strict.getValue() || TwoBee.getValue() && !this.sneaking) {
             NoSlow.mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)NoSlow.mc.player, CPacketEntityAction.Action.START_SNEAKING));
+            NoSlow.mc.player.connection.sendPacket(new CPacketHeldItemChange(mc.player.inventory.currentItem));
             this.sneaking = true;
         }
     }
