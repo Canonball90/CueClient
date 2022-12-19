@@ -21,7 +21,6 @@ import net.minecraft.util.EnumHand
 import net.minecraft.util.math.BlockPos
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-
 @ModuleInfo(name = "KotlinAura",
     descriptions = "Render current block",
     category = Category.COMBAT)
