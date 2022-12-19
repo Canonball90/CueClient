@@ -45,6 +45,7 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketHeldItemChange;
+import net.minecraft.network.play.client.CPacketPlayerDigging;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
 import net.minecraft.network.play.client.CPacketUseEntity;
 import net.minecraft.network.play.server.SPacketSoundEffect;
@@ -79,6 +80,8 @@ public class AutoCrystal extends Module {
     public BooleanSetting passives = registerSetting("Passives", false);
     public BooleanSetting place = registerSetting("Place", false);
     public BooleanSetting explode = registerSetting("Break", false);
+    public BooleanSetting packetPlace = registerSetting("PacketPlace", false).booleanVisible(place);
+    public BooleanSetting packetExplode = registerSetting("PacketExplode", false).booleanVisible(explode);
     public IntegerSetting placeRange = registerSetting("PlaceRange", 5, 0, 6);
     public IntegerSetting breakRange = registerSetting("BreakRange", 5, 0, 6);
     public IntegerSetting minDamage = registerSetting("MinimumDmg", 4, 0, 20);
@@ -94,8 +97,10 @@ public class AutoCrystal extends Module {
     public BooleanSetting autoTimerl = registerSetting("Manual-Timer", false);
     public BooleanSetting rayTrace = registerSetting("Ray-trace", false);
     public BooleanSetting predict = registerSetting("Predict", false);
-    public BooleanSetting packetPlace = registerSetting("PacketPlace", false);
-    public BooleanSetting packetExplode = registerSetting("PacketExplode", false);
+    public IntegerSetting BlastHealth = registerSetting("BlastHealth", 17 , 0 , 20);
+    public BooleanSetting AutoMineHole = registerSetting("AutoHoleMine", false);
+    public BooleanSetting ArmorCheck = registerSetting("ArmorCheck", false);
+    public IntegerSetting ArmorRate = registerSetting("ArmorRate", 18 , 0 , 100).booleanVisible(ArmorCheck);
     public ModeSetting<Mode> breakHand = registerSetting("Swing", Mode.Main);
     public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 17 , 0 , 20);
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 18 , 0 , 20);
@@ -128,6 +133,7 @@ public class AutoCrystal extends Module {
     private static boolean isSpoofingAngles;
     private static double yaw;
     private static double pitch;
+    private static boolean canMine;
 
     private int x = tx.getValue();
     private int y = ty.getValue();
@@ -136,6 +142,7 @@ public class AutoCrystal extends Module {
 
     private Timer breakTimer = new Timer();
     private Timer placeTimer = new Timer();
+    private Timer HoleMiningTimer = new Timer();
     private Timer timer = new Timer();
 
     public static boolean isCancelingCrystals() {
@@ -253,123 +260,187 @@ public class AutoCrystal extends Module {
 
     }
 
+
+    public BlockPos blockPos;
     public void PCrystal(){
-        int crystalSlot = mc.player.getHeldItemMainhand().getItem() == Items.END_CRYSTAL ? mc.player.inventory.currentItem : -1;
-        if (crystalSlot == -1) {
-            for (int l = 0; l < 9; ++l) {
-                if (mc.player.inventory.getStackInSlot(l).getItem() == Items.END_CRYSTAL) {
-                    crystalSlot = l;
-                    break;
+        try {
+            int crystalSlot = mc.player.getHeldItemMainhand().getItem() == Items.END_CRYSTAL ? mc.player.inventory.currentItem : -1;
+            if (crystalSlot == -1) {
+                for (int l = 0; l < 9; ++l) {
+                    if (mc.player.inventory.getStackInSlot(l).getItem() == Items.END_CRYSTAL) {
+                        crystalSlot = l;
+                        break;
+                    }
                 }
             }
-        }
 
-        boolean offhand = false;
-        if (mc.player.getHeldItemOffhand().getItem() == Items.END_CRYSTAL) {
-            offhand = true;
-        } else if (crystalSlot == -1) {
-            return;
-        }
-
-        List<BlockPos> blocks = findCrystalBlocks();
-        List<Entity> entities = new ArrayList<>();
-        if (players.getValue()) {
-            if(multiThread.getValue()) {
-                Cube.threadManager.run(() -> entities.addAll(mc.world.playerEntities));
-            }else {
-                entities.addAll(mc.world.playerEntities);
-            }
-        }
-        entities.addAll(mc.world.loadedEntityList.stream().filter(entity -> EntityUtil.isLiving(entity) && (EntityUtil.isPassive(entity) ? passives.getValue() : mobs.getValue())).collect(Collectors.toList()));
-
-        BlockPos q = null;
-        double damage = .5;
-        for (Entity entity : entities) {
-            if (entity == mc.player || ((EntityLivingBase) entity).getHealth() <= 0) {
-                continue;
+            boolean offhand = false;
+            if (mc.player.getHeldItemOffhand().getItem() == Items.END_CRYSTAL) {
+                offhand = true;
+            } else if (crystalSlot == -1) {
+                return;
             }
 
-            for (BlockPos blockPos : blocks) {
-                double b = entity.getDistanceSq(blockPos);
-                if (b >= 169) {
+            List<BlockPos> blocks = findCrystalBlocks();
+            List<Entity> entities = new ArrayList<>();
+            if (players.getValue()) {
+                if (multiThread.getValue()) {
+                    Cube.threadManager.run(() -> entities.addAll(mc.world.playerEntities));
+                } else {
+                    entities.addAll(mc.world.playerEntities);
+                }
+            }
+            entities.addAll(mc.world.loadedEntityList.stream().filter(entity -> EntityUtil.isLiving(entity) && (EntityUtil.isPassive(entity) ? passives.getValue() : mobs.getValue())).collect(Collectors.toList()));
+
+            BlockPos q = null;
+            double damage = .5;
+            for (Entity entity : entities) {
+                if (entity == mc.player || ((EntityLivingBase) entity).getHealth() <= 0) {
                     continue;
                 }
-                double d = calculateDamage(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, entity);
-                if (d < minDamage.getValue()) {
-                    continue;
-                }
-                if (d > damage) {
-                    double self = calculateDamage(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, mc.player);
-                    if ((self > d && !(d < ((EntityLivingBase) entity).getHealth())) || self - .5 > mc.player.getHealth()) {
+
+                for (BlockPos blockPos : blocks) {
+                    double b = entity.getDistanceSq(blockPos);
+                    if (b >= 169) {
                         continue;
                     }
-                    damage = d;
-                    q = blockPos;
-                    renderEnt = entity;
-                    arrayListEntityName = renderEnt.getName();
-                }
-            }
-        }
-        if (damage == .5) {
-            render = null;
-            renderEnt = null;
-            if (rotate.getValue()) {
-                resetRotation();
-            }
-            return;
-        }
-        render = q;
-        //ToDo Work on Silent switch
-        final int oldSlot = KillAura.mc.player.inventory.currentItem;
-        if (place.getValue()) {
-            if (!offhand && mc.player.inventory.currentItem != crystalSlot) {
-                if(switchToCrystal.getValue()){
-                    if(silent.getValue()) {
-                        if(InventoryUtil.findItemInHotbar(Items.END_CRYSTAL) != -1) {
-                            InventoryUtil.switchToHotbarSlot(crystalSlot, true);
+                    double d = calculateDamage1(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, entity);
+                    if (d < minDamage.getValue()) {
+                        continue;
+                    }
+                    if (d > damage) {
+                        double self = calculateDamage1(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, mc.player);
+                        if ((self > d && !(d < ((EntityLivingBase) entity).getHealth())) || self - .5 > mc.player.getHealth()) {
+                            continue;
                         }
-                    }else{
-                        InventoryUtil.switchToHotbarSlot(crystalSlot, false);
+                        damage = d;
+                        q = blockPos;
+                        renderEnt = entity;
+                        arrayListEntityName = renderEnt.getName();
                     }
-                    if (rotate.getValue()) {
-                        resetRotation();
-                    }
-                    switchCooldown = true;
                 }
-                if(silent.getValue()){
-                    InventoryUtil.switchToHotbarSlot(oldSlot, false);
+            }
+            if (damage == .5) {
+                render = null;
+                renderEnt = null;
+                if (rotate.getValue()) {
+                    resetRotation();
                 }
                 return;
             }
-            EnumFacing f;
-            lookAtPacket(q.getX() + .5, q.getY() - .5, q.getZ() + .5, mc.player);
-            if (rayTrace.getValue()) {
-                RayTraceResult result = mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(q.getX() + .5, q.getY() - .5d, q.getZ() + .5));
-                if (result == null || result.sideHit == null) {
-                    f = EnumFacing.UP;
-                } else {
-                    f = result.sideHit;
-                }
-                if (switchCooldown) {
-                    switchCooldown = false;
+            render = q;
+            //ToDo Work on Silent switch
+            final int oldSlot = KillAura.mc.player.inventory.currentItem;
+            if (place.getValue()) {
+                if (!offhand && mc.player.inventory.currentItem != crystalSlot) {
+                    if (switchToCrystal.getValue()) {
+                        if (silent.getValue()) {
+                            if (InventoryUtil.findItemInHotbar(Items.END_CRYSTAL) != -1) {
+                                InventoryUtil.switchToHotbarSlot(crystalSlot, true);
+                            }
+                        } else {
+                            InventoryUtil.switchToHotbarSlot(crystalSlot, false);
+                        }
+                        if (rotate.getValue()) {
+                            resetRotation();
+                        }
+                        switchCooldown = true;
+                    }
+                    if (silent.getValue()) {
+                        InventoryUtil.switchToHotbarSlot(oldSlot, false);
+                    }
                     return;
                 }
-            } else {
-                f = EnumFacing.UP;
+                EnumFacing f;
+                lookAtPacket(q.getX() + .5, q.getY() - .5, q.getZ() + .5, mc.player);
+                if (rayTrace.getValue()) {
+                    RayTraceResult result = mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(q.getX() + .5, q.getY() - .5d, q.getZ() + .5));
+                    if (result == null || result.sideHit == null) {
+                        f = EnumFacing.UP;
+                    } else {
+                        f = result.sideHit;
+                    }
+                    if (switchCooldown) {
+                        switchCooldown = false;
+                        return;
+                    }
+                } else {
+                    f = EnumFacing.UP;
+                }
+                if (placeTimer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
+                    placeTimer.reset();
+                    placee(q, f, offhand);
+                }
             }
-            if (placeTimer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
-                placeTimer.reset();
-                placee(q, f, offhand);
+            if (AutoMineHole.getValue()) {
+                BlockPos minePos = null;
+                blockPos = new BlockPos(renderEnt.posX, renderEnt.posY, renderEnt.posZ);
+                for (EnumFacing facing : EnumFacing.HORIZONTALS) {
+                    IBlockState touchingState = mc.world.getBlockState(blockPos.offset(facing));
+                    if (touchingState.getBlock() == Blocks.OBSIDIAN) {
+                        canMine = true;
+                        minePos = blockPos.offset(facing);
+                    }
+                }
+                if (isInHole((EntityPlayer) renderEnt) && canMine && minePos != null && mc.getConnection() != null) {
+                    mc.player.swingArm(EnumHand.MAIN_HAND);
+                    if (HoleMiningTimer.passed(breakSpeed.getValue())) {
+                        mc.player.connection.sendPacket(new CPacketPlayerDigging(CPacketPlayerDigging.Action.START_DESTROY_BLOCK, minePos, EnumFacing.DOWN));
+                        mc.player.connection.sendPacket(new CPacketPlayerDigging(CPacketPlayerDigging.Action.STOP_DESTROY_BLOCK, minePos, EnumFacing.DOWN));
+                        HoleMiningTimer.reset();
+                    }
+                }
+            }
+        } catch (Exception ignored) {
+        }
+    }
+
+    public static boolean isInHole(final EntityPlayer entity) {
+        return isBlockValid(new BlockPos(entity.posX, entity.posY, entity.posZ));
+    }
+
+    public static boolean isBlockValid(final BlockPos blockPos) {
+        return isBedrockHole(blockPos) || isObbyHole(blockPos) || isBothHole(blockPos);
+    }
+
+    public static boolean isBothHole(final BlockPos blockPos) {
+        final BlockPos[] array = new BlockPos[]{blockPos.north(), blockPos.south(), blockPos.east(), blockPos.west(), blockPos.down()};
+        for (final BlockPos pos : array) {
+            final IBlockState touchingState = mc.world.getBlockState(pos);
+            if (touchingState.getBlock() == Blocks.AIR || (touchingState.getBlock() != Blocks.BEDROCK && touchingState.getBlock() != Blocks.OBSIDIAN)) {
+                return false;
             }
         }
+        return true;
+    }
+
+    public static boolean isObbyHole(final BlockPos blockPos) {
+        final BlockPos[] array = new BlockPos[]{blockPos.north(), blockPos.south(), blockPos.east(), blockPos.west(), blockPos.down()};
+        for (final BlockPos pos : array) {
+            final IBlockState touchingState = mc.world.getBlockState(pos);
+            if (touchingState.getBlock() == Blocks.AIR || touchingState.getBlock() != Blocks.OBSIDIAN) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean isBedrockHole(final BlockPos blockPos) {
+        final BlockPos[] array = new BlockPos[]{blockPos.north(), blockPos.south(), blockPos.east(), blockPos.west(), blockPos.down()};
+        for (final BlockPos pos : array) {
+            final IBlockState touchingState = mc.world.getBlockState(pos);
+            if (touchingState.getBlock() == Blocks.AIR || touchingState.getBlock() != Blocks.BEDROCK) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void ReSync(){
         if (breakTimer.passedTicks(5)) {
             mc.player.setSneaking(true);
-            mc.player.setSneaking(false);
             breakTimer.reset();
         }
+        mc.player.setSneaking(false);
     }
 
     public void placee(BlockPos q, EnumFacing f, Boolean offhand) {
@@ -550,6 +621,24 @@ public class AutoCrystal extends Module {
         return entity instanceof EntityPigZombie && !((EntityPigZombie) entity).isAngry() || entity instanceof EntityWolf && !((EntityWolf) entity).isAngry() || entity instanceof EntityEnderman && ((EntityEnderman) entity).isScreaming();
     }
 
+    public boolean canFacePlace(EntityLivingBase target) {
+        float healthTarget = target.getHealth() + target.getAbsorptionAmount();
+        if (healthTarget <= BlastHealth.getValue()) {
+            return true;
+        } else if (ArmorCheck.getValue()) {
+            for (ItemStack itemStack : target.getArmorInventoryList()) {
+                if (itemStack.isEmpty()) {
+                    continue;
+                }
+                float dmg = ((float) itemStack.getMaxDamage() - (float) itemStack.getItemDamage()) / (float) itemStack.getMaxDamage();
+                if (dmg <= ArmorRate.getValue() / 100f) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public static boolean canTakeDamage() {
         return !mc.player.capabilities.isCreativeMode;
     }
@@ -583,6 +672,9 @@ public class AutoCrystal extends Module {
     public void onRender3D(Render3DEvent event){
         if(render != null || renderEnt != null){
             Render3DUtil.drawBlockBox(render, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), outline.getValue(), 3);
+            if(AutoMineHole.getValue() && blockPos != null){
+                Render3DUtil.drawBlockBox(blockPos, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), outline.getValue(), 3);
+            }
         }
     }
 
@@ -646,18 +738,51 @@ public class AutoCrystal extends Module {
         return explosionPackets.size() > 40 || placementPackets.size() > 40;
     }
 
-    public float calculateDamage(double posX, double posY, double posZ, Entity entity) {
-        float doubleExplosionSize = 6.0F * 2.0F;
-        double distancedsize = entity.getDistance(posX, posY, posZ) / (double) doubleExplosionSize;
+//    public float calculateDamage(double posX, double posY, double posZ, Entity entity) {
+//        float doubleExplosionSize = 6.0F * 2.0F;
+//        double distancedsize = entity.getDistance(posX, posY, posZ) / (double) doubleExplosionSize;
+//        Vec3d vec3d = new Vec3d(posX, posY, posZ);
+//        double blockDensity = (double) entity.world.getBlockDensity(vec3d, entity.getEntityBoundingBox());
+//        double v = (1.0D - distancedsize) * blockDensity;
+//        float damage = (float) ((int) ((v * v + v) / 2.0D * 9.0D * (double) doubleExplosionSize + 1.0D));
+//        double finald = 1;
+//        if (entity instanceof EntityLivingBase) {
+//            finald = getBlastReduction((EntityLivingBase) entity, getDamageMultiplied(damage), new Explosion(mc.world, null, posX, posY, posZ, 6F, false, true));
+//        }
+//        return (float) finald;
+//    }
+
+    public float calculateDamage1(double posX, double posY, double posZ, Entity entity) {
+        Vec3d offset = new Vec3d(entity.posX, entity.posY, entity.posZ);
+        return calculateDamage(posX, posY, posZ, entity, offset);
+    }
+
+    public float calculateDamage(double posX, double posY, double posZ, Entity entity, Vec3d vec) {
+        float doubleExplosionSize = 12.0f;
+        double distancedsize = getRange(vec, posX, posY, posZ) / doubleExplosionSize;
         Vec3d vec3d = new Vec3d(posX, posY, posZ);
-        double blockDensity = (double) entity.world.getBlockDensity(vec3d, entity.getEntityBoundingBox());
-        double v = (1.0D - distancedsize) * blockDensity;
-        float damage = (float) ((int) ((v * v + v) / 2.0D * 9.0D * (double) doubleExplosionSize + 1.0D));
-        double finald = 1;
+        double blockDensity = 0.0;
+        try {
+            blockDensity = entity.world.getBlockDensity(vec3d, entity.getEntityBoundingBox());
+        } catch (Exception ignore) {
+        }
+        double v = (1.0 - distancedsize) * blockDensity;
+        float damage = (float) ((v * v + v) / 2.0 * 7.0 * doubleExplosionSize + 1.0);
+        double finald = 1.0;
         if (entity instanceof EntityLivingBase) {
-            finald = getBlastReduction((EntityLivingBase) entity, getDamageMultiplied(damage), new Explosion(mc.world, null, posX, posY, posZ, 6F, false, true));
+            try {
+                finald = getBlastReduction((EntityLivingBase) entity, getDamageMultiplied(damage), new Explosion(mc.world, null, posX, posY, posZ, 6.0f, false, true));
+            } catch (Exception ignored) {
+            }
         }
         return (float) finald;
+    }
+
+    public static double getRange(Vec3d a, double x, double y, double z) {
+        double xl = a.x - x;
+        double yl = a.y - y;
+        double zl = a.z - z;
+        return Math.sqrt(xl * xl + yl * yl + zl * zl);
     }
 
     public static float getBlastReduction(EntityLivingBase entity, float damage, Explosion explosion) {
@@ -686,7 +811,7 @@ public class AutoCrystal extends Module {
     }
 
     public float calculateDamage(EntityEnderCrystal crystal, Entity entity) {
-        return calculateDamage(crystal.posX, crystal.posY, crystal.posZ, entity);
+        return calculateDamage1(crystal.posX, crystal.posY, crystal.posZ, entity);
     }
 
     private void setYawAndPitch(float yaw1, float pitch1) {
@@ -991,11 +1116,14 @@ public class AutoCrystal extends Module {
 
 
     public enum Mode{
-        Main,Offhand,Both
+        Main,
+        Offhand,
+        Both
     }
 
     public enum Logic{
-        BP,PB
+        BP,
+        PB
     }
 
     public enum PlaceMode{
@@ -1003,7 +1131,8 @@ public class AutoCrystal extends Module {
     }
 
     public enum ThreadType{
-        BLOCK,CRYSTAL
+        BLOCK,
+        CRYSTAL
     }
 }
 
