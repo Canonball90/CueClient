@@ -95,6 +95,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
                 Render2DUtil.drawGradientHRect(x,y, x+width,y+height, Color(15, 15, 15, 125).rgb,  if(ClickGui.INSTANCE.gay.value) father.category.color.rgb else ClickGui.getCurrentColor().rgb)
             }
         }
+
         if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {
             Render2DUtil.drawLine(x.toDouble(),y+this.height.toDouble(),x + this.width.toDouble(),y+this.height.toDouble(),3F, if(ClickGui.INSTANCE.gay.value) father.category.color else ClickGui.getCurrentColor())
         }
