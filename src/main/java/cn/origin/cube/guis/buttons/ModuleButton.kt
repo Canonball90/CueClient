@@ -96,7 +96,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             }
         }
         if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {
-            Render2DUtil.drawRect(x - 1,y + this.height - 2,this.width + 2,this.height, if(ClickGui.INSTANCE.gay.value) father.category.color.rgb else ClickGui.getCurrentColor().rgb)
+            Render2DUtil.drawLine(x.toDouble(),y+this.height.toDouble(),x + this.width.toDouble(),y+this.height.toDouble(),3F, if(ClickGui.INSTANCE.gay.value) father.category.color else ClickGui.getCurrentColor())
         }
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             father.name,
