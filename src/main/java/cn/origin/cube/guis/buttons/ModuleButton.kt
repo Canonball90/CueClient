@@ -8,6 +8,9 @@ import cn.origin.cube.module.AbstractModule
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.COG
 import cn.origin.cube.utils.render.Render2DUtil
+import me.surge.animation.Animation
+import me.surge.animation.ColourAnimation
+import me.surge.animation.Easing
 import java.awt.Color
 
 class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father: AbstractModule) :
@@ -60,6 +63,9 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
         }
     }
 
+    private val colourAnimation = ColourAnimation(Color(15, 15, 15, 125),father.category.color, 200f, false, Easing.LINEAR)
+    private val textcolourAnimation = ColourAnimation(Color.WHITE,father.category.color, 200f, false, Easing.LINEAR)
+
     override fun drawButton(x: Float, y: Float, mouseX: Int, mouseY: Int) {
         if (father.isHud && father.isEnabled) {
             this.solveHUDPos(mouseX, mouseY)
@@ -89,26 +95,19 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             Render2DUtil.drawBorderedRect(x.toDouble(), y.toDouble() - 1,x + this.width.toDouble(),y + this.height.toDouble(),
                 1.0, Color(15, 15, 15, 125).rgb, ClickGui.getCurrentColor().rgb)
         }else{
-            if(!father.isEnabled) {
-                Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 125).rgb)
-            }else{
-                Render2DUtil.drawGradientHRect(x,y, x+width,y+height, Color(15, 15, 15, 125).rgb,  if(ClickGui.INSTANCE.gay.value) father.category.color.rgb else ClickGui.getCurrentColor().rgb)
-            }
+            colourAnimation.state = father.isEnabled
+            Render2DUtil.drawGradientHRect(x,y, x+width,y+height, Color(15, 15, 15, 125).rgb,  colourAnimation.getColour().rgb)
         }
 
         if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {
             Render2DUtil.drawLine(x.toDouble(),y+this.height.toDouble(),x + this.width.toDouble(),y+this.height.toDouble(),3F, if(ClickGui.INSTANCE.gay.value) father.category.color else ClickGui.getCurrentColor())
         }
+        textcolourAnimation.state = father.isEnabled
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             father.name,
             x + 3,
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            if (father.isEnabled)
-                if(ClickGui.INSTANCE.gay.value)
-                father.category.color.rgb
-                else
-                ClickGui.getCurrentColor().rgb
-            else Color.WHITE.rgb
+            textcolourAnimation.getColour().rgb
         )
         Cube.fontManager!!.IconFont.drawStringWithShadow(
             COG, (x + width) - 3 - Cube.fontManager!!.IconFont.getStringWidth(
