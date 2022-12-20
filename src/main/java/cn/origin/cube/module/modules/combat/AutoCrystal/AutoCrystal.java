@@ -205,7 +205,7 @@ public class AutoCrystal extends Module {
                 }
             }
             if (ak47.getValue()) {
-                crystal.setDead();
+                mc.world.removeEntity(crystal);
             }
             if (highPing.getValue()) {
                 crystal.setDead();
