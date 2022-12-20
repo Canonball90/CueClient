@@ -30,6 +30,7 @@ class ModuleManager {
         registerModule(MainMenuShader())
         registerModule(SkeetSkeet())
         registerModule(Stats())
+        registerModule(PacketLogger())
 
         //Combat
         registerModule(Surround())
