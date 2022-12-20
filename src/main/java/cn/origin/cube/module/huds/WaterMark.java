@@ -53,10 +53,10 @@ public class WaterMark extends HudModule {
 
             Minecraft mc = Minecraft.getMinecraft();
             double colorOffset = (Math.abs(((System.currentTimeMillis()) / 20D)) / 50) + (50 / (mc.fontRenderer.FONT_HEIGHT + i * 14f + 50D));
-            Color color = getGradientOffset1(new Color(0xFFFFFF), new Color(0x0081FF), colorOffset, 160);
+            Color color = getGradientOffset1(new Color(0xFFFFFF), new Color(0x0081FF), colorOffset, 255);
 
             Cube.fontManager.CustomFont.drawString(str, (int) updateX, (int) y, color.hashCode());
-            updateX += mc.fontRenderer.getStringWidth(str);
+            updateX += Cube.fontManager.CustomFont.getStringWidth(str);
         }
     }
 
