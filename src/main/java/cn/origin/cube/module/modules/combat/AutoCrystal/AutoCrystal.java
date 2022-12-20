@@ -101,7 +101,8 @@ public class AutoCrystal extends Module {
     public BooleanSetting AutoMineHole = registerSetting("AutoHoleMine", false);
     public BooleanSetting ArmorCheck = registerSetting("ArmorCheck", false);
     public IntegerSetting ArmorRate = registerSetting("ArmorRate", 18 , 0 , 100).booleanVisible(ArmorCheck);
-    public ModeSetting<Mode> breakHand = registerSetting("Swing", Mode.Main);
+    public BooleanSetting swing = registerSetting("Swing", true);
+    public ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main).booleanVisible(swing);
     public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 17 , 0 , 20);
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 18 , 0 , 20);
     public BooleanSetting thinking = registerSetting("Thinking", false);
@@ -461,7 +462,11 @@ public class AutoCrystal extends Module {
         }else{
             mc.playerController.attackEntity(mc.player, crystal);
         }
-        mc.player.swingArm(getHandToBreak());
+        if(swing.getValue()) {
+            mc.player.swingArm(getHandToBreak());
+        }else{
+
+        }
     }
 
     @SubscribeEvent

@@ -59,9 +59,24 @@
     },
     "done": true
   },
+  "minecraft:story/shiny_gear": {
+    "criteria": {
+      "diamond_leggings": "2022-12-19 22:25:28 -0800",
+      "diamond_helmet": "2022-12-19 22:25:28 -0800",
+      "diamond_chestplate": "2022-12-19 22:25:28 -0800",
+      "diamond_boots": "2022-12-19 22:25:28 -0800"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/enchanting_table": {
     "criteria": {
       "has_obsidian": "2022-12-08 10:53:35 -0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/arrow": {
+    "criteria": {
+      "has_feather": "2022-12-19 22:25:28 -0800"
     },
     "done": true
   },

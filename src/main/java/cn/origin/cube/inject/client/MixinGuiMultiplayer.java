@@ -1,23 +1,30 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.core.viaforge.ViaForge;
-import cn.origin.cube.core.viaforge.gui.GuiProtocolSelector;
-import cn.origin.cube.core.viaforge.protocol.ProtocolCollection;
-import net.minecraft.client.gui.*;
+import java.io.File;
+import java.util.List;
+
+import cn.origin.cube.core.viaforge.gui.GuiProtocolSlider;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiMultiplayer;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.multiplayer.ServerData;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@SuppressWarnings("unused")
-@Mixin(value = GuiMultiplayer.class, priority = 10000)
-public class MixinGuiMultiplayer extends GuiScreen {
-    @Inject(method = "initGui", at = @At("RETURN"))
-    public void initGui(CallbackInfo ci) {
-        buttonList.add(new GuiButton(1337, 7, 7 * 2 + 20, 98, 20, ProtocolCollection.getProtocolById(ViaForge.getInstance().getVersion()).getName()));
+@Mixin(value={GuiMultiplayer.class})
+public abstract class MixinGuiMultiplayer
+extends GuiScreen {
+    @Inject(method={"createButtons"}, at=@At(value="HEAD"), cancellable=true)
+    public void Method279(CallbackInfo ci) {
+        AccessorGuiScreen screen = (AccessorGuiScreen) this;
+        List<GuiButton> buttonList = screen.getButtonList();
+        if (!new File(Minecraft.getMinecraft().gameDir, "novia").exists()) {
+            buttonList.add(new GuiProtocolSlider(1200, this.width / 2 + 4 + 76 + 76, this.height - 28, 105, 20));
+            screen.setButtonList(buttonList);
+        }
     }
 
-    @Inject(method = "actionPerformed", at = @At("RETURN"))
-    public void actionPerformed(GuiButton button, CallbackInfo ci) {
-        if (button.id == 1337) mc.displayGuiScreen(new GuiProtocolSelector(this));
-    }
 }

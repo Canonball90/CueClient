@@ -28,7 +28,11 @@
     "MixinRenderer",
     "MixinEntityLivingBase",
     "MixinBlock",
-    "MixinFontRenderer"
+    "MixinFontRenderer",
+    "MixinGuiConnecting",
+    "MixinGuiMultiplayer",
+    "AccessorGuiScreen",
+    "MixinNetworkManagerChInit"
   ],
   "mixins": [
     "MixinNetworkManager"
