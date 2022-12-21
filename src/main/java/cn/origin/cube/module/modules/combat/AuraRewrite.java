@@ -330,10 +330,16 @@ public class AuraRewrite extends Module {
         return (n3 > 180.0) ? (360.0 - n3) : n3;
     }
 
+    private void resetRotation() {
+        yaw = mc.player.rotationYaw;
+        pitch = mc.player.rotationPitch;
+    }
+
     @Override
     public void onDisable() {
         if(target != null)
             target = null;
+        resetRotation();
     }
 
     public enum RenderMode{
