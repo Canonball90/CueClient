@@ -71,6 +71,15 @@
     },
     "done": true
   },
+  "minecraft:story/shiny_gear": {
+    "criteria": {
+      "diamond_leggings": "2022-12-20 20:27:34 -0500",
+      "diamond_helmet": "2022-12-20 20:27:34 -0500",
+      "diamond_chestplate": "2022-12-20 20:27:34 -0500",
+      "diamond_boots": "2022-12-20 20:27:34 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/enchanting_table": {
     "criteria": {
       "has_obsidian": "2022-12-07 01:10:15 -0500"
