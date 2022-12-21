@@ -5,6 +5,8 @@ import cn.origin.cube.guis.buttons.ModuleButton
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.render.Render2DUtil
+import me.surge.animation.ColourAnimation
+import me.surge.animation.Easing
 import java.awt.Color
 import java.util.*
 
@@ -23,6 +25,7 @@ class CategoryPanel(
     private var dragging = false
     private var x2 = 0.0f
     private var y2 = 0.0f
+    private val hover = ColourAnimation(category.color, Color(category.color.red, category.color.green, category.color.blue, 100), 300f, false, Easing.LINEAR)
 
     init {
         for (module in Cube.moduleManager!!.getModulesByCategory(this.category).sortedBy { it.name }) {
@@ -35,7 +38,8 @@ class CategoryPanel(
             this.x = this.x2 + mouseX
             this.y = this.y2 + mouseY
         }
-        Render2DUtil.drawRect(x-1, y, width+2, height,if(ClickGui.INSTANCE.gay.value) category.color.rgb else ClickGui.getCurrentColor().rgb)
+        hover.state = isHoveredCategoryTab(mouseX,mouseY)
+        Render2DUtil.drawRect(x-1, y, width+2, height, hover.getColour().rgb)
         Cube.fontManager!!.IconFont.drawStringWithShadow(
             category.icon,
             x + 3,
@@ -108,6 +112,10 @@ class CategoryPanel(
             }
         }
 
+    }
+
+    fun clikc(){
+        if(ClickGui.INSTANCE.gay.value) category.color.rgb else ClickGui.getCurrentColor().rgb
     }
 
     fun mouseClicked(mouseX: Int, mouseY: Int, mouseButton: Int) {

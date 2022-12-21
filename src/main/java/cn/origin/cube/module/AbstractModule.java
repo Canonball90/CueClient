@@ -20,6 +20,7 @@ public abstract class AbstractModule {
     public float y;
     public float width;
     public float height;
+    public boolean optim;
 
     public final BindSetting keyBind = new BindSetting("KeyBind", new BindSetting.KeyBind(0), this);
 

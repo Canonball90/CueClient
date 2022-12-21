@@ -21,6 +21,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
     private var x2 = 0.0f
     private var y2 = 0.0f
     private var dragging = false
+    private val hover = ColourAnimation(Color(15, 15, 15,100), father.category.color, 300f, false, Easing.LINEAR)
 
     init {
         if (father.settingList.isNotEmpty()) {
@@ -67,6 +68,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
     private val textcolourAnimation = ColourAnimation(Color.WHITE,father.category.color, 200f, false, Easing.LINEAR)
 
     override fun drawButton(x: Float, y: Float, mouseX: Int, mouseY: Int) {
+        hover.state = isHoveredButton(mouseX,mouseY)
         if (father.isHud && father.isEnabled) {
             this.solveHUDPos(mouseX, mouseY)
             Cube.fontManager.CustomFont.drawString(
@@ -96,7 +98,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
                 1.0, Color(15, 15, 15, 125).rgb, ClickGui.getCurrentColor().rgb)
         }else{
             colourAnimation.state = father.isEnabled
-            Render2DUtil.drawGradientHRect(x,y, x+width,y+height, Color(15, 15, 15, 125).rgb,  colourAnimation.getColour().rgb)
+            Render2DUtil.drawGradientHRect(x,y, x+width,y+height, hover.getColour().rgb, colourAnimation.getColour().rgb)
         }
 
         if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {
