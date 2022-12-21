@@ -1,47 +1,47 @@
-[10:28:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[10:28:14] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[10:28:14] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[10:28:14] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
-[10:28:14] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
-[10:28:14] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
-[10:28:14] [main/ERROR] [FML]: Full: C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
-[10:28:14] [main/ERROR] [FML]: Trimmed: c:/users/natha/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
-[10:28:15] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[10:28:15] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
-[10:28:16] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
-[10:28:16] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
-[10:28:16] [main/INFO] [FML]: Found a command line coremod : cn.origin.cube.inject.ForgeCoreModsLoader
-[10:28:16] [main/INFO] [FML]: Ignoring missing certificate for coremod Cube (cn.origin.cube.inject.ForgeCoreModsLoader), as this is probably a dev workspace
-[10:28:16] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/natha/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
-[10:28:17] [main/INFO] [mixin]: Compatibility level set to JAVA_8
-[10:28:17] [main/ERROR] [mixin]: Mixin config mixins.cube.json does not specify "minVersion" property
-[10:28:17] [main/INFO] [Cue]: searge
-[10:28:17] [main/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
-[10:28:17] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[10:28:17] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[10:28:17] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[10:28:17] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[10:28:17] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[10:28:17] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:28:24] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
-[10:28:24] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:28:24] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:28:24] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[10:28:24] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@70211e49
-[10:28:24] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[10:28:25] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[10:28:25] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[10:28:26] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[10:28:30] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player958
-[10:28:37] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[10:28:37] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
-[10:28:39] [Client thread/INFO] [FML]: -- System Details --
+[10:59:57] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[10:59:57] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[10:59:57] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[10:59:57] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
+[10:59:57] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
+[10:59:57] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[10:59:57] [main/ERROR] [FML]: Full: C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[10:59:57] [main/ERROR] [FML]: Trimmed: c:/users/natha/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[10:59:58] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[10:59:58] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[10:59:58] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[10:59:58] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[10:59:58] [main/INFO] [FML]: Found a command line coremod : cn.origin.cube.inject.ForgeCoreModsLoader
+[10:59:58] [main/INFO] [FML]: Ignoring missing certificate for coremod Cube (cn.origin.cube.inject.ForgeCoreModsLoader), as this is probably a dev workspace
+[10:59:59] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/natha/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
+[10:59:59] [main/INFO] [mixin]: Compatibility level set to JAVA_8
+[10:59:59] [main/ERROR] [mixin]: Mixin config mixins.cube.json does not specify "minVersion" property
+[10:59:59] [main/INFO] [Cue]: searge
+[10:59:59] [main/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
+[10:59:59] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[10:59:59] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[10:59:59] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[10:59:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[10:59:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[10:59:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:00:05] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[11:00:05] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:00:05] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:00:05] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[11:00:05] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@70211e49
+[11:00:05] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[11:00:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[11:00:06] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[11:00:08] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[11:00:10] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player669
+[11:00:21] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[11:00:21] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[11:00:23] [Client thread/INFO] [FML]: -- System Details --
 Details:
 	Minecraft Version: 1.12.2
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_202, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 412734072 bytes (393 MB) / 532152320 bytes (507 MB) up to 1875378176 bytes (1788 MB)
+	Memory: 398613768 bytes (380 MB) / 555745280 bytes (530 MB) up to 1875378176 bytes (1788 MB)
 	JVM Flags: 0 total; 
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
@@ -49,13 +49,12 @@ Details:
 Cube (unknown)
   
 	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 26.20.100.6911' Renderer: 'Intel(R) UHD Graphics 630'
-[10:28:39] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
-[10:28:39] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
-[10:28:39] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
-[10:28:40] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
-[10:28:41] [Client thread/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
-[10:28:42] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 136775700 nanos
-[10:28:42] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[11:00:23] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
+[11:00:23] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[11:00:23] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[11:00:23] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
+[11:00:24] [Client thread/INFO] [FML]: Searching C:\Users\natha\Downloads\CubeBase-master\CubeBase-master\run\.\mods for mods
+[11:00:25] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -84,7 +83,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[10:28:42] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.7.10\d70d7d2c56371f7aa18f32e984e3e2e998fe9081\kotlin-stdlib-jdk8-1.7.10.jar - probably a corrupt zip
+[11:00:25] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.7.10\d70d7d2c56371f7aa18f32e984e3e2e998fe9081\kotlin-stdlib-jdk8-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -117,7 +116,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:42] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk8-1.7.10.jar failed to read properly, it will be ignored
+[11:00:25] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk8-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -150,7 +149,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:42] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[11:00:25] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -179,7 +178,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[10:28:42] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar - probably a corrupt zip
+[11:00:25] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -212,7 +211,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:42] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk7-1.7.10.jar failed to read properly, it will be ignored
+[11:00:25] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk7-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -245,7 +244,8 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:43] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[11:00:25] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 101263800 nanos
+[11:00:25] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -274,7 +274,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[10:28:43] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar - probably a corrupt zip
+[11:00:25] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -307,7 +307,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:43] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-1.7.10.jar failed to read properly, it will be ignored
+[11:00:25] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -340,7 +340,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[11:00:26] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -369,7 +369,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[10:28:44] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\6.2\a9690730f92cc79eeadc20e400ebb41eccce10b1\asm-util-6.2.jar - probably a corrupt zip
+[11:00:26] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\6.2\a9690730f92cc79eeadc20e400ebb41eccce10b1\asm-util-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -402,7 +402,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/WARN] [FML]: Zip file asm-util-6.2.jar failed to read properly, it will be ignored
+[11:00:26] [Client thread/WARN] [FML]: Zip file asm-util-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -435,7 +435,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[11:00:26] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -464,7 +464,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[10:28:44] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\6.2\c7d9a90d221cbb977848d2c777eb3aa7637e89df\asm-analysis-6.2.jar - probably a corrupt zip
+[11:00:26] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\6.2\c7d9a90d221cbb977848d2c777eb3aa7637e89df\asm-analysis-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -497,7 +497,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/WARN] [FML]: Zip file asm-analysis-6.2.jar failed to read properly, it will be ignored
+[11:00:26] [Client thread/WARN] [FML]: Zip file asm-analysis-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -530,7 +530,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[11:00:26] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -559,7 +559,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[10:28:44] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\6.2\61570e046111559f38d4e0e580c005f75988c0a6\asm-tree-6.2.jar - probably a corrupt zip
+[11:00:26] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\6.2\61570e046111559f38d4e0e580c005f75988c0a6\asm-tree-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -592,7 +592,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/WARN] [FML]: Zip file asm-tree-6.2.jar failed to read properly, it will be ignored
+[11:00:26] [Client thread/WARN] [FML]: Zip file asm-tree-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -625,7 +625,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[11:00:26] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -654,7 +654,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[10:28:44] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\6.2\1b6c4ff09ce03f3052429139c2a68e295cae6604\asm-6.2.jar - probably a corrupt zip
+[11:00:26] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\natha\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\6.2\1b6c4ff09ce03f3052429139c2a68e295cae6604\asm-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -687,7 +687,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/WARN] [FML]: Zip file asm-6.2.jar failed to read properly, it will be ignored
+[11:00:26] [Client thread/WARN] [FML]: Zip file asm-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -720,277 +720,272 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[10:28:44] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
-[10:28:44] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at CLIENT
-[10:28:44] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at SERVER
-[10:28:46] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Cue
-[10:28:46] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[10:28:46] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
-[10:28:46] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[10:28:46] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
-[10:28:46] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[10:28:46] [Client thread/INFO] [Cue]: Begin loading Cue
-[10:28:46] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[10:28:46] [Client thread/INFO] [FML]: Applying holder lookups
-[10:28:46] [Client thread/INFO] [FML]: Holder lookups applied
-[10:28:46] [Client thread/INFO] [FML]: Applying holder lookups
-[10:28:46] [Client thread/INFO] [FML]: Holder lookups applied
-[10:28:46] [Client thread/INFO] [FML]: Applying holder lookups
-[10:28:46] [Client thread/INFO] [FML]: Holder lookups applied
-[10:28:46] [Client thread/INFO] [FML]: Applying holder lookups
-[10:28:46] [Client thread/INFO] [FML]: Holder lookups applied
-[10:28:46] [Client thread/INFO] [FML]: Injecting itemstacks
-[10:28:46] [Client thread/INFO] [FML]: Itemstack injection complete
-[10:28:48] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: AHEAD Target: null
-[10:28:56] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
-[10:28:56] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
-[10:28:56] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[10:28:57] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
-[10:28:57] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
-[10:29:15] [Client thread/INFO] [FML]: Max texture size: 8192
-[10:29:23] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
-[10:29:25] [Client thread/INFO] [FML]: Applying holder lookups
-[10:29:25] [Client thread/INFO] [FML]: Holder lookups applied
-[10:29:25] [Client thread/INFO] [Cue]: Loading Cue...
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: java.io.FileNotFoundException: https://discordapp.com/api/webhooks/1052411560582184991/q9ZtSZ5LZl6huUUPbkqkXJZNkC3BR-LOkhkQE25MiLX36eLEnBsgPhNcppIb5qej7vId
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1890)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivileged(Native Method)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser.post(JSONParser.java:47)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.JSONRegexHandler.send(JSONRegexHandler.java:23)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.client.jsonutils.JSON.parseJson(JSON.java:28)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.loadManagers(Cube.java:75)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.init(Cube.java:57)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:639)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.Loader.initializeMods(Loader.java:749)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:336)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:535)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[10:29:29] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: java.io.FileNotFoundException: https://discordapp.com/api/webhooks/1052411560582184991/q9ZtSZ5LZl6huUUPbkqkXJZNkC3BR-LOkhkQE25MiLX36eLEnBsgPhNcppIb5qej7vId
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1890)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivileged(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser.post(JSONParser.java:47)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.JSONRegexHandler.send(JSONRegexHandler.java:23)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.command.commands.impl.FutureData.handle(FutureData.java:28)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.client.jsonutils.JSON.lambda$parseJson$0(JSON.java:31)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.client.jsonutils.JSON.parseJson(JSON.java:29)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.loadManagers(Cube.java:75)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.init(Cube.java:57)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:639)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.Loader.initializeMods(Loader.java:749)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:336)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:535)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: java.io.FileNotFoundException: https://discordapp.com/api/webhooks/1052411560582184991/q9ZtSZ5LZl6huUUPbkqkXJZNkC3BR-LOkhkQE25MiLX36eLEnBsgPhNcppIb5qej7vId
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1890)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivileged(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser.post(JSONParser.java:47)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.JSONRegexHandler.send(JSONRegexHandler.java:23)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.client.jsonutils.JSON.parseJson(JSON.java:38)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.loadManagers(Cube.java:75)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.init(Cube.java:57)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:639)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.Loader.initializeMods(Loader.java:749)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:336)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:535)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.main.Main.main(Main.java:118)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
-[10:29:30] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
-[10:29:31] [Client thread/INFO] [FML]: Injecting itemstacks
-[10:29:31] [Client thread/INFO] [FML]: Itemstack injection complete
-[10:29:31] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
-[10:29:31] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[10:29:31] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
-[10:29:31] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
-[10:29:31] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
-[10:29:41] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
-[10:29:41] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
-[10:29:41] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
-[10:29:41] [Server thread/INFO] [FML]: Applying holder lookups
-[10:29:41] [Server thread/INFO] [FML]: Holder lookups applied
-[10:29:42] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@dff43d6)
-[10:29:43] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
-[10:29:43] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@dff43d6)
-[10:29:43] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@dff43d6)
-[10:29:44] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
-[10:29:45] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 0%
-[10:29:46] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 81%
-[10:29:46] [Server thread/INFO] [FML]: Unloading dimension -1
-[10:29:46] [Server thread/INFO] [FML]: Unloading dimension 1
-[10:29:46] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
-[10:29:49] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
-[10:29:49] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
-[10:29:49] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,cue@0.1,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42
-[10:29:49] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
-[10:29:49] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
-[10:29:49] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player958[local:E:7c747d40] logged in with entity id 214 at (172.00032805973075, 89.0, 222.3000000119209)
-[10:29:49] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player958 joined the game
-[10:29:49] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player958 has made the advancement [Cover Me With Diamonds]
-[10:29:49] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player958 has made the advancement [Ice Bucket Challenge]
-[10:29:51] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[10:29:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[10:29:51] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Player958 has made the advancement [Cover Me With Diamonds]
-[10:29:51] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Player958 has made the advancement [Ice Bucket Challenge]
-[10:29:51] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 23 advancements
-[10:29:52] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[10:29:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[10:31:23] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[10:31:23] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[10:31:24] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
-[10:31:24] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
-[10:31:24] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player958 lost connection: Disconnected
-[10:31:24] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player958 left the game
-[10:31:24] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
-[10:31:24] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
-[10:31:24] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[10:31:24] [Server thread/INFO] [FML]: Unloading dimension 0
-[10:31:24] [Server thread/INFO] [FML]: Applying holder lookups
-[10:31:24] [Server thread/INFO] [FML]: Holder lookups applied
-[10:31:25] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
-[10:31:25] [Client thread/WARN] [Cue]: Saving configuration please wait...
-[10:31:26] [Client thread/WARN] [Cue]: Configuration saved!
-[10:31:26] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
-[10:31:26] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
-[10:31:26] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
+[11:00:27] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
+[11:00:27] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at CLIENT
+[11:00:27] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at SERVER
+[11:00:29] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Cue
+[11:00:29] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[11:00:29] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
+[11:00:30] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[11:00:30] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[11:00:30] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[11:00:30] [Client thread/INFO] [Cue]: Begin loading Cue
+[11:00:30] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[11:00:30] [Client thread/INFO] [FML]: Applying holder lookups
+[11:00:30] [Client thread/INFO] [FML]: Holder lookups applied
+[11:00:30] [Client thread/INFO] [FML]: Applying holder lookups
+[11:00:30] [Client thread/INFO] [FML]: Holder lookups applied
+[11:00:30] [Client thread/INFO] [FML]: Applying holder lookups
+[11:00:30] [Client thread/INFO] [FML]: Holder lookups applied
+[11:00:30] [Client thread/INFO] [FML]: Applying holder lookups
+[11:00:30] [Client thread/INFO] [FML]: Holder lookups applied
+[11:00:30] [Client thread/INFO] [FML]: Injecting itemstacks
+[11:00:30] [Client thread/INFO] [FML]: Itemstack injection complete
+[11:00:32] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: AHEAD Target: null
+[11:00:38] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[11:00:39] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[11:00:39] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:00:39] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[11:00:39] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[11:00:58] [Client thread/INFO] [FML]: Max texture size: 8192
+[11:01:06] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
+[11:01:09] [Client thread/INFO] [FML]: Applying holder lookups
+[11:01:09] [Client thread/INFO] [FML]: Holder lookups applied
+[11:01:09] [Client thread/INFO] [Cue]: Loading Cue...
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: java.io.FileNotFoundException: https://discordapp.com/api/webhooks/1052411560582184991/q9ZtSZ5LZl6huUUPbkqkXJZNkC3BR-LOkhkQE25MiLX36eLEnBsgPhNcppIb5qej7vId
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1890)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivileged(Native Method)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser.post(JSONParser.java:47)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.JSONRegexHandler.send(JSONRegexHandler.java:23)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.client.jsonutils.JSON.parseJson(JSON.java:28)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.loadManagers(Cube.java:75)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.init(Cube.java:57)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:639)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.Loader.initializeMods(Loader.java:749)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:336)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:535)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.main.Main.main(Main.java:118)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+[11:01:13] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: java.io.FileNotFoundException: https://discordapp.com/api/webhooks/1052411560582184991/q9ZtSZ5LZl6huUUPbkqkXJZNkC3BR-LOkhkQE25MiLX36eLEnBsgPhNcppIb5qej7vId
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1890)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivileged(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser.post(JSONParser.java:47)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.JSONRegexHandler.send(JSONRegexHandler.java:23)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.command.commands.impl.FutureData.handle(FutureData.java:28)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.client.jsonutils.JSON.lambda$parseJson$0(JSON.java:31)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.client.jsonutils.JSON.parseJson(JSON.java:29)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.loadManagers(Cube.java:75)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.init(Cube.java:57)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:639)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.Loader.initializeMods(Loader.java:749)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:336)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:535)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.main.Main.main(Main.java:118)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: java.io.FileNotFoundException: https://discordapp.com/api/webhooks/1052411560582184991/q9ZtSZ5LZl6huUUPbkqkXJZNkC3BR-LOkhkQE25MiLX36eLEnBsgPhNcppIb5qej7vId
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1890)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1484)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1482)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivileged(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1481)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser.post(JSONParser.java:47)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.render.advancedRender.misc.parsers.JSONRegexHandler.send(JSONRegexHandler.java:23)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.utils.client.jsonutils.JSON.parseJson(JSON.java:38)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.loadManagers(Cube.java:75)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at cn.origin.cube.Cube.init(Cube.java:57)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:639)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.common.Loader.initializeMods(Loader.java:749)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:336)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.init(Minecraft.java:535)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.client.main.Main.main(Main.java:118)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+[11:01:14] [Client thread/INFO] [STDERR]: [cn.origin.cube.utils.render.advancedRender.misc.parsers.util.JSONParser:post:50]: 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+[11:01:14] [Client thread/INFO] [FML]: Injecting itemstacks
+[11:01:14] [Client thread/INFO] [FML]: Itemstack injection complete
+[11:01:15] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
+[11:01:15] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[11:01:15] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[11:01:15] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
+[11:01:16] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
+[11:01:19] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[11:01:19] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[11:01:19] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[11:01:19] [Server thread/INFO] [FML]: Applying holder lookups
+[11:01:19] [Server thread/INFO] [FML]: Holder lookups applied
+[11:01:19] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@5feccab2)
+[11:01:20] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
+[11:01:20] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@5feccab2)
+[11:01:20] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@5feccab2)
+[11:01:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[11:01:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 22%
+[11:01:22] [Server thread/INFO] [FML]: Unloading dimension -1
+[11:01:22] [Server thread/INFO] [FML]: Unloading dimension 1
+[11:01:22] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
+[11:01:25] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[11:01:25] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[11:01:25] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,cue@0.1,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42
+[11:01:25] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[11:01:25] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[11:01:25] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player669[local:E:10b6ac54] logged in with entity id 214 at (172.00032805973075, 89.0, 222.3000000119209)
+[11:01:25] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player669 joined the game
+[11:01:30] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[11:01:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[11:01:30] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 32 advancements
+[11:01:31] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[11:01:31] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[11:02:14] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[11:02:14] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[11:02:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[11:02:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[11:02:15] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player669 lost connection: Disconnected
+[11:02:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player669 left the game
+[11:02:15] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[11:02:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[11:02:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[11:02:15] [Server thread/INFO] [FML]: Unloading dimension 0
+[11:02:15] [Server thread/INFO] [FML]: Applying holder lookups
+[11:02:15] [Server thread/INFO] [FML]: Holder lookups applied
+[11:02:16] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
+[11:02:17] [Client thread/WARN] [Cue]: Saving configuration please wait...
+[11:02:17] [Client thread/WARN] [Cue]: Configuration saved!
+[11:02:17] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[11:02:17] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[11:02:17] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com

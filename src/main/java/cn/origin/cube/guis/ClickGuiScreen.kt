@@ -5,6 +5,8 @@ import cn.origin.cube.module.Category
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import cn.origin.cube.utils.render.particle.ParticleSystem
+import me.surge.animation.ColourAnimation
+import me.surge.animation.Easing
 import net.minecraft.client.gui.GuiScreen
 import net.minecraft.client.gui.ScaledResolution
 import org.lwjgl.input.Mouse
@@ -15,6 +17,8 @@ import java.awt.Color
 class ClickGuiScreen : GuiScreen() {
     val panels = arrayListOf<CategoryPanel>()
     private var particleSystem: ParticleSystem? = null
+    private val hover = ColourAnimation(Color(0, 0, 0, 0), Color(0, 0, 0, 115), 300f, false, Easing.LINEAR)
+    private val hover1 = ColourAnimation(Color(0, 0, 0, 0), ClickGui.getCurrentColor(), 300f, false, Easing.LINEAR)
 
     init {
         var x = 20.0f
@@ -51,12 +55,14 @@ class ClickGuiScreen : GuiScreen() {
         panels.forEach {
             for (moduleButton in it.modules) {
                 if (moduleButton.isHoveredButton(mouseX, mouseY)) {
+                    hover.state = true
+                    hover1.state = true
                     Render2DUtil.drawRect(
                         mouseX + 1.2f,
                         mouseY + 0.3f,
                         Cube.fontManager.CustomFont.getStringWidth(moduleButton.father.descriptions) + 5f,
                         Cube.fontManager.CustomFont.fontHeight + 0.5f,
-                        Color(0, 0, 0, 115).rgb
+                        hover.getColour().rgb
                     )
                     Render2DUtil.drawOutlineRect(
                         mouseX + 1.2,
@@ -64,7 +70,7 @@ class ClickGuiScreen : GuiScreen() {
                         Cube.fontManager.CustomFont.getStringWidth(moduleButton.father.descriptions) + 5.0,
                         Cube.fontManager.CustomFont.fontHeight + 0.5,
                         1.0f,
-                        ClickGui.getCurrentColor()
+                        hover1.getColour()
                     )
                     Cube.fontManager.CustomFont.drawStringWithShadow(
                         moduleButton.father.descriptions,
