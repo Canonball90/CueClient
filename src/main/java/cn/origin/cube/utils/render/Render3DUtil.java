@@ -27,6 +27,8 @@ public class Render3DUtil extends Tessellator {
     private static final Render3DUtil INSTANCE = new Render3DUtil();
     public static Minecraft mc = Minecraft.getMinecraft();
     public static ICamera camera = new Frustum();
+    public static Tessellator tessellator = Tessellator.getInstance();
+    public static BufferBuilder bufferBuilder = tessellator.getBuffer();
 
     public Render3DUtil() {
         super(0x200000);
@@ -453,6 +455,28 @@ public class Render3DUtil extends Tessellator {
         GlStateManager.enableTexture2D();
         GlStateManager.enableDepth();
         GlStateManager.popMatrix();
+    }
+
+    public static void drawCircle(RenderBuilder renderBuilder, Vec3d vec3d, double radius, double height, Color color) {
+        renderCircle(bufferBuilder, vec3d, radius, height, color);
+        renderBuilder.build();
+    }
+
+    public static void renderCircle(BufferBuilder bufferBuilder, Vec3d vec3d, double radius, double height, Color color) {
+        GlStateManager.disableCull();
+        GlStateManager.disableAlpha();
+        GlStateManager.shadeModel(GL_SMOOTH);
+        bufferBuilder.begin(GL_LINE_STRIP, DefaultVertexFormats.POSITION_COLOR);
+
+        for (int i = 0; i < 361; i++) {
+            bufferBuilder.pos((vec3d.x) + Math.sin(Math.toRadians(i)) * radius - Minecraft.getMinecraft().getRenderManager().viewerPosX, vec3d.y + height - Minecraft.getMinecraft().getRenderManager().viewerPosY, ((vec3d.z) + Math.cos(Math.toRadians(i)) * radius) - Minecraft.getMinecraft().getRenderManager().viewerPosZ).color((float) color.getRed() / 255, (float) color.getGreen() / 255, (float) color.getBlue() / 255, 1).endVertex();
+        }
+
+        tessellator.draw();
+
+        GlStateManager.enableCull();
+        GlStateManager.enableAlpha();
+        GlStateManager.shadeModel(GL_FLAT);
     }
 
 }

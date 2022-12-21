@@ -25,7 +25,7 @@ class CategoryPanel(
     private var dragging = false
     private var x2 = 0.0f
     private var y2 = 0.0f
-    private val hover = ColourAnimation(category.color, Color(category.color.red, category.color.green, category.color.blue, 100), 300f, false, Easing.LINEAR)
+    private val hover = ColourAnimation(category.color, Color(category.color.red, category.color.green, category.color.blue, 100), 300f, false, Easing.QUAD_IN)
 
     init {
         for (module in Cube.moduleManager!!.getModulesByCategory(this.category).sortedBy { it.name }) {

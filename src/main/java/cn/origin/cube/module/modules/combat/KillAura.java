@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.combat;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.event.events.player.UpdateWalkingPlayerEvent;
+import cn.origin.cube.event.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.interfaces.ModuleInfo;
@@ -10,9 +11,11 @@ import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.module.interfaces.Para;
+import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
+import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -61,6 +64,7 @@ public class KillAura extends Module {
     BooleanSetting rotate = registerSetting("Rotate", true);
     BooleanSetting rotateStrict = registerSetting("StrictRotate", true);
     BooleanSetting throughWalls = registerSetting("ThroughWalls", true);
+    BooleanSetting render = registerSetting("Render", true);
 
     BooleanSetting playerOnly = registerSetting("PlayerOnly", true);
     BooleanSetting weaponOnly = registerSetting("WeaponOnly", true);
@@ -80,7 +84,7 @@ public class KillAura extends Module {
                 .filter(entity -> entity != mc.player)
                 .forEach(target -> {
                     if (playerOnly.getValue()) {
-                        if (!(target instanceof EntityPlayer) ||
+                        if ((target instanceof EntityPlayer) ||
                                 target.ticksExisted >= this.ticksExisted.getValue() &&
                                         mc.player.getDistance(target) <= this.hittingRange.getValue() &&
                                         (mc.player.canEntityBeSeen(target) || !this.throughWalls.getValue() ||
@@ -124,29 +128,24 @@ public class KillAura extends Module {
     }
     //ToDo do the rendering shit
 
-//    @Override
-//    public void onRender3D(Render3DEvent event) {
-//        mc.world.loadedEntityList.stream()
-//                .filter(entity -> entity instanceof EntityLivingBase)
-//                .filter(entity -> mc.player.getDistance(entity) <= hittingRange.getValue())
-//                .filter(entity -> !Cube.friendManager.isFriend(entity.getName()))
-//                .filter(entity -> entity != mc.player)
-//                .forEach(target -> {
-//                    if (playerOnly.getValue()) {
-//                        if (!(target instanceof EntityPlayer) ||
-//                                target.ticksExisted >= this.ticksExisted.getValue() &&
-//                                        mc.player.getDistance(target) <= this.hittingRange.getValue() &&
-//                                        (mc.player.canEntityBeSeen(target) || !this.throughWalls.getValue() ||
-//                                                mc.player.getDistance(target) <= this.wallsRange.getValue()))return;
-//                    }
-//                    Render3DUtil.drawBBBox(target.getCollisionBoundingBox(), ClickGui.getCurrentColor(), 100, 5, true);
-//                });
-//        super.onRender3D(event);
-//    }
+    @Override
+    public void onRender3D(Render3DEvent event) {
+        mc.world.loadedEntityList.stream()
+                .filter(entity -> entity instanceof EntityLivingBase)
+                .filter(entity -> mc.player.getDistance(entity) <= hittingRange.getValue())
+                .filter(entity -> !Cube.friendManager.isFriend(entity.getName()))
+                .filter(entity -> entity != mc.player)
+                .forEach(entity -> {
+                    if(render.getValue() && entity instanceof EntityPlayer) {
+                        Render3DUtil.drawBoundingBox(entity.boundingBox, 2, 255, 50, 50, 150);
+                    }
+                });
+        super.onRender3D(event);
+    }
 
     public void attack(Entity entity) {
-            rotateTo(entity.posX, entity.posY, entity.posZ, mc.player, false);
-                if (hitDelay.getValue()) {
+        rotateTo(entity.posX, entity.posY, entity.posZ, mc.player, false);
+            if (hitDelay.getValue()) {
                     if(!packet.getValue()) {
                         if (mc.player.getCooledAttackStrength(0) >= 1) {
                             mc.playerController.attackEntity(mc.player, entity);

@@ -42,6 +42,7 @@ class ModuleManager {
         registerModule(KotlinAura())
         registerModule(Criticals())
         registerModule(AutoCrystal())
+        registerModule(AuraRewrite())
 
         //Function
         registerModule(MiddleClick())
