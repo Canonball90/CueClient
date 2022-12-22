@@ -4,13 +4,10 @@ import cn.origin.cube.core.CommandManager;
 import cn.origin.cube.core.EventManager;
 import cn.origin.cube.core.FontManager;
 import cn.origin.cube.core.ModuleManager;
-import cn.origin.cube.core.managers.ConfigManager;
-import cn.origin.cube.core.managers.FriendManager;
+import cn.origin.cube.core.managers.*;
 import cn.origin.cube.guis.ClickGuiScreen;
 import cn.origin.cube.guis.HudEditorScreen;
 import cn.origin.cube.guis.mainmenu.Shaders;
-import cn.origin.cube.core.managers.CapeManager;
-import cn.origin.cube.core.managers.ThreadManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -71,6 +68,18 @@ public class Cube {
         capeManager = new CapeManager();
         shaders = new Shaders();
         threadManager = new ThreadManager();
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        logger.info("AntiDump...");
+        AntiDumpManager.check();
     }
 }
 /*

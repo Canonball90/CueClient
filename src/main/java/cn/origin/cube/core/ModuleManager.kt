@@ -112,6 +112,7 @@ class ModuleManager {
         registerModule(InventoryHud())
         registerModule(CoordsHud())
         registerModule(TargetHud())
+        registerModule(SessionInfo())
 
     }
 
