@@ -357,7 +357,9 @@ public class AutoCrystal extends Module {
                 }
                 if (placeTimer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
                     placeTimer.reset();
-                    TryJiggle(getBestCrystal().getPosition());
+                    if(HoleJiggle.getValue()) {
+                        TryJiggle(getBestCrystal().getPosition());
+                    }
                     placee(q, f, offhand);
                 }
             }
