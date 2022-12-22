@@ -1,5 +1,5 @@
 # Cue
-## A Minecraft 1.12.2 Hack mod for 2b2t
+## Using this base btw https://github.com/jiyun233/CubeBase
 
 # Usage
 * Hold shift anywhere and right-click to open git Bash
