@@ -19,7 +19,6 @@
     "MixinEntityPlayer",
     "ITimer",
     "IMinecraft",
-    "MixinAbstractClientPlayer",
     "ModelCrystalMixin",
     "MixinPlayerControllerMP",
     "IEntityRenderer",

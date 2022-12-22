@@ -8,20 +8,17 @@ import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.client.CPacketUseEntity;
 
 import java.util.Objects;
-
+//ToDo fix this
 public class CritUtils {
     public static Timer timer = new Timer();
     static Minecraft mc = Minecraft.getMinecraft();
     static Criticals crit = new Criticals();
-    static PacketEvent event;
 
     public static void doCrit(){
-        CPacketUseEntity packet;
-        if (event.getPacket() instanceof CPacketUseEntity && (packet = event.getPacket()).getAction() == CPacketUseEntity.Action.ATTACK) {
+        CPacketUseEntity packet = null;
             if (!timer.passedMs(0L)) {
                 return;
             }
-            if (mc.player.onGround && !mc.gameSettings.keyBindJump.isKeyDown() && packet.getEntityFromWorld(mc.world) instanceof EntityLivingBase && !mc.player.isInWater() && !mc.player.isInLava()) {
                 switch (crit.getPackets().getValue()) {
                     case 1: {
                         mc.player.connection.sendPacket(new CPacketPlayer.Position(mc.player.posX, mc.player.posY + (double) 0.1f, mc.player.posZ, false));
@@ -54,7 +51,5 @@ public class CritUtils {
                     }
                 }
                 timer.reset();
-            }
-        }
     }
 }
