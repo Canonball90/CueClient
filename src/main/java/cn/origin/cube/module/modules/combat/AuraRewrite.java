@@ -44,7 +44,7 @@ public class AuraRewrite extends Module {
     BooleanSetting hitDelay = registerSetting("HitDelay", true);
     BooleanSetting packet = registerSetting("PacketHit", false);
     BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet);
-    IntegerSetting delay = registerSetting("Delay", 4, 0, 70).booleanVisible(packet);
+    IntegerSetting delay = registerSetting("Delay", 4, 0, 70);
     BooleanSetting randomD = registerSetting("RandomDelay", false);
     IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40).booleanVisible(randomD);
     IntegerSetting iterations = registerSetting("Iterations", 1, 1, 10);
@@ -56,7 +56,7 @@ public class AuraRewrite extends Module {
     BooleanSetting render = registerSetting("Render", true);
     ModeSetting<RenderMode> rMode = registerSetting("RenderMode", RenderMode.Circle);
     FloatSetting lineWidth = registerSetting("LineWidth", 1.5f, 0f, 5f).booleanVisible(render);
-    FloatSetting CWidth = registerSetting("Width", 1.5f, -5f, 5f).booleanVisible(render);
+    FloatSetting CWidth = registerSetting("CWidth", 1f, -5f, 5f).booleanVisible(render);
     IntegerSetting Height = registerSetting("Height", 200, 0, 500);
     IntegerSetting Width = registerSetting("Width", 200, 0, 500);
 
@@ -141,7 +141,6 @@ public class AuraRewrite extends Module {
     }
 
     static double healthBarTarget = 0, healthBar = 0;
-    float lastHealth = 0;
 
     @Override
     public void onRender3D(Render3DEvent event) {

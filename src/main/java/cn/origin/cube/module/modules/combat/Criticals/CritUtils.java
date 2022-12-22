@@ -6,9 +6,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.client.CPacketUseEntity;
-
 import java.util.Objects;
-//ToDo fix this
+
 public class CritUtils {
     public static Timer timer = new Timer();
     static Minecraft mc = Minecraft.getMinecraft();
