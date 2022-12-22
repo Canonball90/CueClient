@@ -6,6 +6,8 @@ import cn.origin.cube.guis.buttons.SettingButton
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.utils.render.Render2DUtil
+import me.surge.animation.ColourAnimation
+import me.surge.animation.Easing
 import java.awt.Color
 
 class BooleanSettingButton(
@@ -14,18 +16,17 @@ class BooleanSettingButton(
     value: BooleanSetting,
     father: ModuleButton
 ) : SettingButton<BooleanSetting>(width, height, value, father) {
+
+    private val colourAnimation = ColourAnimation(Color.WHITE,father.father.category.color, 200f, false, Easing.LINEAR)
+
     override fun drawButton(x: Float, y: Float, mouseX: Int, mouseY: Int) {
         Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 95).rgb)
+        colourAnimation.state = value.value as Boolean
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             value.name,
             x + 3,
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            if (value.value as Boolean)
-                if(ClickGui.INSTANCE.gay.value)
-                father.father.category.color.rgb
-                else
-                ClickGui.getCurrentColor().rgb
-            else Color.WHITE.rgb
+            colourAnimation.getColour().rgb
         )
         this.x = x
         this.y = y

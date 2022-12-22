@@ -13,6 +13,14 @@ public class DoubleSetting extends NumberSetting<Double> {
         this.minValue = minValue;
     }
 
+    public Double getMin(){
+        return minValue;
+    }
+
+    public Double getMax(){
+        return maxValue;
+    }
+
     public DoubleSetting booleanVisible(BooleanSetting setting) {
         return (DoubleSetting) this.visible(v -> setting.getValue());
     }

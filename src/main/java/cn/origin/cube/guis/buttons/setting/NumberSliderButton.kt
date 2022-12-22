@@ -6,6 +6,8 @@ import cn.origin.cube.guis.buttons.ModuleButton
 import cn.origin.cube.guis.buttons.SettingButton
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.render.Render2DUtil
+import me.surge.animation.ColourAnimation
+import me.surge.animation.Easing
 import java.awt.Color
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -19,6 +21,7 @@ class NumberSliderButton(width: Float, height: Float, value: Setting<*>, father:
     private lateinit var max: Number
     private var difference = 0
     private var dargging = false
+    private val slid = ColourAnimation(father.father.category.color, Color(father.father.category.color.red, father.father.category.color.green, father.father.category.color.blue, 255).darker().darker(), 150f, false, Easing.QUAD_IN)
 
     init {
         when (value) {
@@ -48,16 +51,15 @@ class NumberSliderButton(width: Float, height: Float, value: Setting<*>, father:
 
     override fun drawButton(x: Float, y: Float, mouseX: Int, mouseY: Int) {
         dragSetting(mouseX)
+
+        val percentBar: Double = ((value.value as Number).toDouble() - min.toDouble()) / (max.toDouble() - min.toDouble())
+        val tempWidth = (width - 4) * percentBar
+
         Render2DUtil.drawRect(x, y, this.width, this.height, Color(15, 15, 15, 95).rgb)
+        slid.state = dargging
         Render2DUtil.drawRect(
-            x,
-            y + 0.5f,
-            if ((value.value as Number).toDouble() <= min.toDouble()) 0.0f else width * partialMultiplier(),
-            height - 1.0f,
-            if(ClickGui.INSTANCE.gay.value)
-                father.father.category.color.rgb
-            else
-            ClickGui.getCurrentColor().rgb
+            x, y + 0.5f, if ((value.value as Number).toDouble() <= min.toDouble()) 0.0f else width * partialMultiplier(), height - 1.0f,
+                slid.getColour().rgb
         )
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             value.name,

@@ -25,6 +25,7 @@ public final class ClickGui extends Module {
     public FloatSetting brightness = registerSetting("Brightness", 1.0f, 0.0f, 1.0f).booleanVisible(rainbow);
     public BooleanSetting outline = registerSetting("Outline", false);
     public BooleanSetting override = registerSetting("Override", false);
+    public FloatSetting animationLength = registerSetting("AnimLength", 300F, 100F, 1000F);
     public BooleanSetting background = registerSetting("BackGround", false);
     public BooleanSetting gradient = registerSetting("Gradient", false).booleanVisible(background);
     public BooleanSetting particles = registerSetting("Particles", false).booleanVisible(background);//partLength

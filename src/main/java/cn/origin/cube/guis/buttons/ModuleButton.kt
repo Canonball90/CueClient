@@ -22,6 +22,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
     private var y2 = 0.0f
     private var dragging = false
     private val hover = ColourAnimation(Color(15, 15, 15,100), father.category.color, 300f, false, Easing.LINEAR)
+    private val pulse = ColourAnimation(Color.WHITE, Color.DARK_GRAY, 500f, false, Easing.LINEAR)
 
     init {
         if (father.settingList.isNotEmpty()) {
@@ -111,10 +112,11 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
             textcolourAnimation.getColour().rgb
         )
+        pulse.state = isShowSettings
         Cube.fontManager!!.IconFont.drawStringWithShadow(
             COG, (x + width) - 3 - Cube.fontManager!!.IconFont.getStringWidth(
                 COG
-            ), y + (height / 2) - (Cube.fontManager!!.IconFont.height / 4), Color.WHITE.rgb
+            ), y + (height / 2) - (Cube.fontManager!!.IconFont.height / 4), pulse.getColour().rgb
         )
         this.x = x
         this.y = y
