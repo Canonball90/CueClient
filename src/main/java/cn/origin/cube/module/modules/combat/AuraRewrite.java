@@ -172,6 +172,10 @@ public class AuraRewrite extends Module {
     public void onRender2D() {
         if (target != null) {
 
+            if(packet.getValue()){
+                Cube.fontManager.CustomFont.drawString("Attacking", 500, 500, -1);
+            }
+
             DecimalFormat dec = new DecimalFormat("#");
 
             healthBarTarget = Width.getValue() / 2 - 41 + (((140) / (target.getMaxHealth())) * (target.getHealth()));
