@@ -30,11 +30,9 @@ import java.util.Objects;
 @ModuleInfo(name = "ShaderCharms",descriptions = "",
         category = Category.VISUAL)
 public class ShaderCharms  extends Module {
-    private final IntegerSetting range = registerSetting("Range", 32, 8, 64);
     public final ModeSetting<ShaderModes> mode = registerSetting("Mode", ShaderModes.SMOKE);
     private final BooleanSetting crystals = registerSetting("Crystals", true);
     private final BooleanSetting players = registerSetting("Players", false);
-    private final BooleanSetting friends = registerSetting("Friends", true);
     private final BooleanSetting mobs = registerSetting("Mobs", false);
     private final BooleanSetting animals = registerSetting("Animals", false);
     private final BooleanSetting enderPearls = registerSetting("Ender Pearls", false);

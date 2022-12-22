@@ -49,7 +49,8 @@ public class AuraRewrite extends Module {
     BooleanSetting randomD = registerSetting("RandomDelay", false);
     IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40).booleanVisible(randomD);
     IntegerSetting iterations = registerSetting("Iterations", 1, 1, 10);
-    DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10);
+    BooleanSetting walls = registerSetting("Walls", true);
+    DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10).booleanVisible(walls);
     BooleanSetting rotate = registerSetting("Rotate", true);
     BooleanSetting rotateStrict = registerSetting("StrictRotate", true);
 
@@ -59,33 +60,24 @@ public class AuraRewrite extends Module {
     FloatSetting CWidth = registerSetting("Width", 1.5f, -5f, 5f).booleanVisible(render);
     IntegerSetting Height = registerSetting("Height", 200, 0, 500);
     IntegerSetting Width = registerSetting("Width", 200, 0, 500);
-    public boolean shouldRotate;
-    public float yaw;
-    public float pitch;
-    public boolean shouldReset;
-    public float playerPitch;
-    public float lastPlayerPitch;
-    public float playerYaw;
-    public float renderYaw;
-    public float YawOffset;
-    float rotationYaw;
-    boolean smoothRotatePitch;
-    boolean smoothRotated;
-    boolean smoothRotateYaw;
-    int addedInputYaw;
-    float smoothYaw;
-    float rotationPitch;
-    int addedOriginYaw;
-    float smoothPitch;
 
-    long killLast = new Date().getTime();
     public EntityLivingBase target = null;
+    long killLast = new Date().getTime();
+    public boolean shouldRotate;
+    boolean smoothRotatePitch;
+    boolean smoothRotateYaw;
+    boolean smoothRotated;
+    int addedOriginYaw;
+    public float pitch;
+    int addedInputYaw;
+    float smoothPitch;
+    public float yaw;
 
     @SubscribeEvent
     public void onUpdate(UpdateWalkingPlayerEvent event) {
         if(fullNullCheck()) return;
         if(target != null) {
-            if (target.getDistance(mc.player) >= range.getValue() || target.isDead || !target.isEntityAlive())
+            if (target.getDistance(mc.player) >= range.getValue() || target.isDead || !target.isEntityAlive() && (mc.player.canEntityBeSeen(target) || !this.walls.getValue() || mc.player.getDistance(target) >= this.wallsRange.getValue()))
                 target = null;
         }
         for(Entity entity : mc.world.loadedEntityList) {
