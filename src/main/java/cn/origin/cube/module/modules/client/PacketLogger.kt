@@ -2,7 +2,7 @@ package cn.origin.cube.module.modules.client
 
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.DoubleSetting
-import cn.origin.cube.event.events.client.PacketEvent
+import cn.origin.cube.core.events.client.PacketEvent
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo

@@ -1,6 +1,6 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.event.events.render.EventModelPlayerRender;
+import cn.origin.cube.core.events.render.EventModelPlayerRender;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import net.minecraftforge.fml.common.eventhandler.Event;

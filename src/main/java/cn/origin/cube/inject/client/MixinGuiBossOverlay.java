@@ -1,6 +1,6 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.event.events.render.BossOverlayEvent;
+import cn.origin.cube.core.events.render.BossOverlayEvent;
 import net.minecraft.client.gui.GuiBossOverlay;
 import net.minecraftforge.common.MinecraftForge;
 import org.spongepowered.asm.mixin.Mixin;

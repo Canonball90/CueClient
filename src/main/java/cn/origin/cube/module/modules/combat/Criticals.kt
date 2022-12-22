@@ -1,7 +1,7 @@
 package cn.origin.cube.module.modules.combat
 
-import cn.origin.cube.event.events.client.PacketEvent
-import cn.origin.cube.event.events.player.MotionEvent
+import cn.origin.cube.core.events.client.PacketEvent
+import cn.origin.cube.core.events.player.MotionEvent
 import cn.origin.cube.inject.client.ICPacketPlayer
 import cn.origin.cube.inject.client.INetworkManager
 import cn.origin.cube.module.Category

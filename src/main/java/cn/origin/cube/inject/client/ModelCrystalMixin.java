@@ -1,10 +1,8 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.event.events.render.EventModelPlayerRender;
-import cn.origin.cube.event.events.render.RenderEntityModelEvent;
+import cn.origin.cube.core.events.render.RenderEntityModelEvent;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelEnderCrystal;
-import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.Event;

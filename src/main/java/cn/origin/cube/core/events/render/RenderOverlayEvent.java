@@ -1,4 +1,4 @@
-package cn.origin.cube.event.events.render;
+package cn.origin.cube.core.events.render;
 
 import net.minecraftforge.client.event.RenderBlockOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.Cancelable;

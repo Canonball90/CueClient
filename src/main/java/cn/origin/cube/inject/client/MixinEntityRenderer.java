@@ -1,7 +1,7 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.event.events.render.HurtCameraEvent;
-import cn.origin.cube.event.events.render.RenderItemActivationEvent;
+import cn.origin.cube.core.events.render.HurtCameraEvent;
+import cn.origin.cube.core.events.render.RenderItemActivationEvent;
 import net.minecraft.client.renderer.EntityRenderer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

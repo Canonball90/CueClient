@@ -1,7 +1,7 @@
 package cn.origin.cube.module.modules.combat;
 
 import cn.origin.cube.Cube;
-import cn.origin.cube.event.events.world.Render3DEvent;
+import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.interfaces.ModuleInfo;

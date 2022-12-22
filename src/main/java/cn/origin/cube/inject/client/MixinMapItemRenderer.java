@@ -1,6 +1,6 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.event.events.render.RenderMapEvent;
+import cn.origin.cube.core.events.render.RenderMapEvent;
 import net.minecraft.client.gui.MapItemRenderer;
 import net.minecraft.world.storage.MapData;
 import net.minecraftforge.common.MinecraftForge;

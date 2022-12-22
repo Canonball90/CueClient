@@ -1,6 +1,6 @@
 package cn.origin.cube.inject.client;
 
-import cn.origin.cube.event.events.world.PlayerDamageBlockEvent;
+import cn.origin.cube.core.events.world.PlayerDamageBlockEvent;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;

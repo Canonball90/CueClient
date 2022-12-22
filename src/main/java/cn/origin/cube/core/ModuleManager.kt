@@ -1,6 +1,6 @@
 package cn.origin.cube.core
 
-import cn.origin.cube.event.events.world.Render3DEvent
+import cn.origin.cube.core.events.world.Render3DEvent
 import cn.origin.cube.module.AbstractModule
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.HudModule

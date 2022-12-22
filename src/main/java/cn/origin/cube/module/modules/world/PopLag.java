@@ -1,6 +1,6 @@
 package cn.origin.cube.module.modules.world;
 
-import cn.origin.cube.event.events.player.TotemPopEvent;
+import cn.origin.cube.core.events.player.TotemPopEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.interfaces.ModuleInfo;

@@ -3,7 +3,7 @@ package cn.origin.cube.module.modules.movement
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.settings.ModeSetting
-import cn.origin.cube.event.events.player.TravelEvent
+import cn.origin.cube.core.events.player.TravelEvent
 import cn.origin.cube.inject.client.IMinecraft
 import cn.origin.cube.inject.client.ITimer
 import cn.origin.cube.module.Category

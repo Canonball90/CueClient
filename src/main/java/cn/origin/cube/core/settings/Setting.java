@@ -1,6 +1,6 @@
 package cn.origin.cube.core.settings;
 
-import cn.origin.cube.event.events.client.SettingChangeEvent;
+import cn.origin.cube.core.events.client.SettingChangeEvent;
 import cn.origin.cube.module.AbstractModule;
 import net.minecraftforge.common.MinecraftForge;
 import org.jetbrains.annotations.NotNull;

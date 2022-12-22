@@ -1,6 +1,6 @@
-package cn.origin.cube.event.events.world;
+package cn.origin.cube.core.events.world;
 
-import cn.origin.cube.event.events.EventStage;
+import cn.origin.cube.core.events.EventStage;
 
 public class Render3DEvent
         extends EventStage {

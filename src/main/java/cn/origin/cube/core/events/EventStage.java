@@ -1,4 +1,4 @@
-package cn.origin.cube.event.events;
+package cn.origin.cube.core.events;
 
 import net.minecraftforge.fml.common.eventhandler.Event;
 

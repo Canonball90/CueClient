@@ -2,7 +2,7 @@ package cn.origin.cube.module.modules.client;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.managers.ConfigManager;
-import cn.origin.cube.event.events.player.DeathEvent;
+import cn.origin.cube.core.events.player.DeathEvent;
 import cn.origin.cube.guis.ClickGuiScreen;
 import cn.origin.cube.guis.statistics.StatScreen;
 import cn.origin.cube.module.Category;

@@ -1,10 +1,9 @@
 package cn.origin.cube.inject.client;
 
 import cn.origin.cube.Cube;
-import cn.origin.cube.event.events.client.DisplayGuiScreenEvent;
+import cn.origin.cube.core.events.client.DisplayGuiScreenEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.main.GameConfiguration;
 import net.minecraft.crash.CrashReport;
 import net.minecraftforge.common.MinecraftForge;
 import org.spongepowered.asm.mixin.Mixin;

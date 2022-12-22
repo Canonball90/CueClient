@@ -1,6 +1,6 @@
-package cn.origin.cube.event.events.client;
+package cn.origin.cube.core.events.client;
 
-import cn.origin.cube.event.events.EventStage;
+import cn.origin.cube.core.events.EventStage;
 import net.minecraft.client.gui.GuiScreen;
 
 public class DisplayGuiScreenEvent

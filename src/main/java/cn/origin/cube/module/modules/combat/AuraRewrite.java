@@ -2,8 +2,8 @@ package cn.origin.cube.module.modules.combat;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.settings.*;
-import cn.origin.cube.event.events.player.UpdateWalkingPlayerEvent;
-import cn.origin.cube.event.events.world.Render3DEvent;
+import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
+import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.module.Category;
 import cn.origin.cube.module.Module;
 import cn.origin.cube.module.interfaces.ModuleInfo;
@@ -17,7 +17,6 @@ import cn.origin.cube.utils.render.RenderUtil;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.inventory.GuiInventory;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.RenderGlobal;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityMob;
@@ -79,9 +78,6 @@ public class AuraRewrite extends Module {
         if(target != null) {
             if (target.getDistance(mc.player) >= range.getValue() || target.isDead || !target.isEntityAlive())
                 target = null;
-            if(mc.player.canEntityBeSeen(target) || !this.walls.getValue() || mc.player.getDistance(target) >= this.wallsRange.getValue()){
-                target = null;
-            }
         }
         for(Entity entity : mc.world.loadedEntityList) {
             if(entity == mc.player) continue;

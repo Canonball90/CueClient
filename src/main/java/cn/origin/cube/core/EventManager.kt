@@ -1,10 +1,10 @@
 package cn.origin.cube.core
 
 import cn.origin.cube.Cube
-import cn.origin.cube.event.events.player.DeathEvent
-import cn.origin.cube.event.events.player.TotemPopListener
-import cn.origin.cube.event.events.render.RenderOverlayEvent
-import cn.origin.cube.event.events.world.Render3DEvent
+import cn.origin.cube.core.events.player.DeathEvent
+import cn.origin.cube.core.events.player.TotemPopListener
+import cn.origin.cube.core.events.render.RenderOverlayEvent
+import cn.origin.cube.core.events.world.Render3DEvent
 import cn.origin.cube.utils.Utils
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.GlStateManager

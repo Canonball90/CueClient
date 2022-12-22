@@ -1,4 +1,4 @@
-package cn.origin.cube.event.events.player;
+package cn.origin.cube.core.events.player;
 
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.eventhandler.Event;
