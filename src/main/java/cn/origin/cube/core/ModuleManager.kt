@@ -9,6 +9,7 @@ import cn.origin.cube.module.huds.*
 import cn.origin.cube.module.modules.client.*
 import cn.origin.cube.module.modules.combat.*
 import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal
+import cn.origin.cube.module.modules.combat.Criticals.Criticals
 import cn.origin.cube.module.modules.function.*
 import cn.origin.cube.module.modules.function.scaffold.Scaffold
 import cn.origin.cube.module.modules.movement.*

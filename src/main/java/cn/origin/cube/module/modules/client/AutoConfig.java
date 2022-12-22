@@ -6,7 +6,7 @@ import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.modules.combat.AutoArmor;
 import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
 import cn.origin.cube.module.modules.combat.AutoTote;
-import cn.origin.cube.module.modules.combat.Criticals;
+import cn.origin.cube.module.modules.combat.Criticals.Criticals;
 import cn.origin.cube.module.modules.combat.Replenish;
 import cn.origin.cube.module.modules.function.AntiKnockback;
 import cn.origin.cube.module.modules.movement.NoSlow;
