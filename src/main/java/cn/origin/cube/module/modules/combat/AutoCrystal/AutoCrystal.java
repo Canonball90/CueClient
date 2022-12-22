@@ -16,6 +16,7 @@ import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
+import cn.origin.cube.utils.player.RotationUtil;
 import cn.origin.cube.utils.render.Render2DUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 
@@ -115,6 +116,13 @@ public class AutoCrystal extends Module {
     private int x = tx.getValue();
     private int y = ty.getValue();
     private static double pitch;
+    public boolean shouldRotate;
+    boolean smoothRotatePitch;
+    boolean smoothRotateYaw;
+    boolean smoothRotated;
+    int addedOriginYaw;
+    int addedInputYaw;
+    float smoothPitch;
     private static double yaw;
     private int oldSlot = -1;
     private int height = 100;
@@ -192,7 +200,7 @@ public class AutoCrystal extends Module {
                 placeSpeed.setValue(18);
                 breakSpeed.setValue(17);
             }
-            lookAtPacket(crystal.posX, crystal.posY, crystal.posZ, mc.player);
+            rotateTo(crystal.posX, crystal.posY, crystal.posZ, mc.player, false);
             if (predict.getValue()) {//ToDo make better predict
 
             }
@@ -331,7 +339,7 @@ public class AutoCrystal extends Module {
                     return;
                 }
                 EnumFacing f;
-                lookAtPacket(q.getX() + .5, q.getY() - .5, q.getZ() + .5, mc.player);
+                rotateTo(q.getX() + .5, q.getY() - .5, q.getZ() + .5, mc.player, false);
                 if (rayTrace.getValue()) {
                     RayTraceResult result = mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(q.getX() + .5, q.getY() - .5d, q.getZ() + .5));
                     if (result == null || result.sideHit == null) {
@@ -641,7 +649,7 @@ public class AutoCrystal extends Module {
                                 Minecraft.getMinecraft().player.posZ),
                         new Vec3d((double) pos.getX() + 0.5, (double) pos.getY() - 0.5, (double) pos.getZ() + 0.5));
         EnumFacing facing = result == null || result.sideHit == null ? EnumFacing.UP : result.sideHit;
-        lookAtPacket(pos.getX() + 0.5, pos.getY() - 0.5, pos.getZ() + 0.5, mc.player);
+        rotateTo(pos.getX() + 0.5, pos.getY() - 0.5, pos.getZ() + 0.5, mc.player, false);
         Minecraft.getMinecraft().player.connection
                 .sendPacket(new CPacketPlayerTryUseItemOnBlock(pos, facing, hand, 0.0f, 0.0f, 0.0f));
     }
@@ -1089,6 +1097,105 @@ public class AutoCrystal extends Module {
             case HARD:
                 return damage * 3.0F / 2.0F;
         }
+    }
+
+    public void rotateTo(Entity target) {
+        RotationUtil.faceVector(new Vec3d(target.posX, target.posY + 1, target.posZ), true);
+    }
+
+    public boolean rotateTo(final double n, final double n2, final double n3, final EntityPlayer entityPlayer, final boolean b){
+        final double[] calculateLook = EntityUtil.calculateLookAt(n, n2, n3, entityPlayer);
+        return setRotation((float) calculateLook[0], (float) calculateLook[1], b);
+    }
+
+    public boolean setRotation(float setSmoothRotationYaw, float n, final boolean b) {
+        final boolean b2 = false;
+        smoothRotatePitch = b2;
+        smoothRotateYaw = b2;
+        smoothRotated = true;
+        if (b) {
+            if (!shouldRotate) {
+                yaw = mc.player.prevRotationYaw;
+                pitch = mc.player.prevRotationPitch;
+            }
+            if (calculateDirectionDifference(setSmoothRotationYaw + 180.0f, yaw + 180.0f) > 90.0) {
+                setSmoothRotationYaw = setSmoothRotationYaw(setSmoothRotationYaw, (float) yaw);
+                smoothRotated = false;
+            }
+            if (Math.abs(n - pitch) > 90.0f) {
+                smoothRotatePitch = true;
+                smoothRotated = false;
+                smoothPitch = n;
+                if (n > pitch) {
+                    n -= (n - pitch) / 2.0f;
+                } else {
+                    n += (pitch - n) / 2.0f;
+                }
+            }
+        }
+        yaw = setSmoothRotationYaw;
+        pitch = n;
+        shouldRotate = true;
+        return !smoothRotatePitch && !smoothRotateYaw;
+    }
+
+    public float setSmoothRotationYaw(float smoothYaw, float n) {
+        smoothRotateYaw = true;
+        final int n2 = 0;
+        addedOriginYaw = n2;
+        addedInputYaw = n2;
+        while (smoothYaw + 180.0f < 0.0f) {
+            smoothYaw += 360.0f;
+            ++addedInputYaw;
+        }
+        while (smoothYaw + 180.0f > 360.0f) {
+            smoothYaw -= 360.0f;
+            --addedInputYaw;
+        }
+        while (n + 180.0f < 0.0f) {
+            n += 360.0f;
+            ++addedOriginYaw;
+        }
+        while (n + 180.0f > 360.0f) {
+            n -= 360.0f;
+            --addedOriginYaw;
+        }
+        smoothYaw += 180.0f;
+        n += 180.0f;
+        final double n3 = n - smoothYaw;
+        if (n3 >= -180.0 && n3 >= 180.0) {
+            smoothYaw -= (float) (n3 / 2.0);
+        } else {
+            smoothYaw += (float) (n3 / 2.0);
+        }
+        smoothYaw -= 180.0f;
+        if (addedInputYaw > 0) {
+            for (int i = 0; i < addedInputYaw; ++i) {
+                smoothYaw -= 360.0f;
+            }
+        } else if (addedInputYaw < 0) {
+            for (int j = 0; j > addedInputYaw; --j) {
+                smoothYaw += 360.0f;
+            }
+        }
+        return smoothYaw;
+    }
+
+    public static double calculateDirectionDifference(double n, double n2) {
+        while (n < 0.0) {
+            n += 360.0;
+        }
+        while (n > 360.0) {
+            n -= 360.0;
+        }
+        while (n2 < 0.0) {
+            n2 += 360.0;
+        }
+        while (n2 > 360.0) {
+            n2 -= 360.0;
+        }
+        final double n3 = Math.abs(n2 - n) % 360.0;
+        return (n3 > 180.0) ? (360.0 - n3) : n3;
     }
 
     public static AutoCrystal INSTANCE;
