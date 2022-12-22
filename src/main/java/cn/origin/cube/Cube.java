@@ -11,7 +11,6 @@ import cn.origin.cube.guis.HudEditorScreen;
 import cn.origin.cube.guis.mainmenu.Shaders;
 import cn.origin.cube.core.managers.CapeManager;
 import cn.origin.cube.core.managers.ThreadManager;
-import cn.origin.cube.utils.client.jsonutils.JSON;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -72,7 +71,6 @@ public class Cube {
         capeManager = new CapeManager();
         shaders = new Shaders();
         threadManager = new ThreadManager();
-        JSON.parseJson();
     }
 }
 /*

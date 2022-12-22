@@ -77,8 +77,11 @@ public class AuraRewrite extends Module {
     public void onUpdate(UpdateWalkingPlayerEvent event) {
         if(fullNullCheck()) return;
         if(target != null) {
-            if (target.getDistance(mc.player) >= range.getValue() || target.isDead || !target.isEntityAlive() && (mc.player.canEntityBeSeen(target) || !this.walls.getValue() || mc.player.getDistance(target) >= this.wallsRange.getValue()))
+            if (target.getDistance(mc.player) >= range.getValue() || target.isDead || !target.isEntityAlive())
                 target = null;
+            if(mc.player.canEntityBeSeen(target) || !this.walls.getValue() || mc.player.getDistance(target) >= this.wallsRange.getValue()){
+                target = null;
+            }
         }
         for(Entity entity : mc.world.loadedEntityList) {
             if(entity == mc.player) continue;
