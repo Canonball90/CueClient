@@ -90,6 +90,7 @@ public class AutoCrystal extends Module {
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 18 , 0 , 20);
     public BooleanSetting thinking = registerSetting("Thinking", false);
     public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
+    public BooleanSetting HoleJiggle = registerSetting("Jiggle", false);
     public BooleanSetting inhibit = registerSetting("Inhibit", false);
     public BooleanSetting outline = registerSetting("Outline", true);
     public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255);
@@ -356,6 +357,7 @@ public class AutoCrystal extends Module {
                 }
                 if (placeTimer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
                     placeTimer.reset();
+                    TryJiggle(getBestCrystal().getPosition());
                     placee(q, f, offhand);
                 }
             }
@@ -1223,6 +1225,12 @@ public class AutoCrystal extends Module {
     public enum ThreadType{
         BLOCK,
         CRYSTAL
+    }
+
+    private void TryJiggle(BlockPos pos) {
+        if (HoleJiggle.getValue())
+            if (mc.player.getDistance(pos.getX(), pos.getY(), pos.getZ()) > 5)
+                mc.getConnection().sendPacket(new CPacketPlayer.Position(Math.floor(mc.player.posX) + .5 + (mc.player.posX < pos.getX() ? .2 : -.2), mc.player.posY, Math.floor(mc.player.posZ) + .5 + (mc.player.posZ < pos.getZ() ? .2 : -.2), mc.player.onGround));
     }
 }
 
