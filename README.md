@@ -1,5 +1,6 @@
-# Cue
-## Using this base btw https://github.com/jiyun233/CubeBase
+# CueClient
+## Using this base btw 
+https://github.com/jiyun233/CubeBase
 
 # Usage
 * Hold shift anywhere and right-click to open git Bash
