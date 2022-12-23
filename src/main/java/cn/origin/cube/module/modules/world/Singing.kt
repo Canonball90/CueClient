@@ -1,10 +1,10 @@
 package cn.origin.cube.module.modules.world
 
+import cn.origin.cube.core.settings.IntegerSetting
+import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
-import cn.origin.cube.core.settings.IntegerSetting
-import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.utils.Timer
 
 @ModuleInfo(name = "Singing", descriptions = "Sing", category = Category.WORLD)
@@ -13,6 +13,34 @@ class Singing: Module() {
     var song: ModeSetting<Songs> = registerSetting("Song", Songs.HereWithMe)
     var timer: Timer = Timer()
     var messageCount = 1
+    private val naughtyFlags = arrayOf(
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    )
 
     override fun onUpdate() {
         if(song.value == Songs.HereWithMe) {
@@ -377,6 +405,166 @@ class Singing: Module() {
                     return
                 }
         }
+        if(song.value == Songs.BetweenTheBars){
+            if (messageCount == 1) {
+                mc.player.sendChatMessage("Drink up baby, stay up all night")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 2 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("With the things you could do")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 3 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("You won't but you might")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 4 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("The potential you'll be that you'll never see")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 5 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("The promises you'll only make")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 6 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("Drink up with me now")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 7 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("And forget all about the pressure of days")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 8 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("Do what I say and I'll make you okay")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 9 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("And drive them away")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 10 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("The images stuck in your head")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 11 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("People you've been before")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 12 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("That you don't want around anymore")
+                ++messageCount
+                timer.reset()
+                return
+            }
+
+            if (messageCount == 13) {
+                mc.player.sendChatMessage("That push and shove and won't bend to your will")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 14 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("I'll keep them still")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 15 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("Drink up baby, look at the stars")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 16 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("I'll kiss you again, between the bars")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 17 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("Where I'm seeing you there with your hands in the air")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 18 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("Waiting to finally be caught")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 19 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("Drink up one more time, and I'll make you mine")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 20 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("Keep you apart, deep in my heart")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 21 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("Separate from the rest, where I like you the best")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 22 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("And keep the things you forgot")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 23 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("People you've been before")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 24 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("That you don't want around anymore")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 25 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("That push and shove and won't bend to your will")
+                ++messageCount
+                timer.reset()
+                return
+            }
+            if (messageCount == 26 && timer.passedS(delay.value.toDouble())) {
+                mc.player.sendChatMessage("I'll keep them still")
+                messageCount = 0
+                ++messageCount
+                timer.reset()
+                return
+            }
+        }
     }
 
     override fun onDisable() {
@@ -386,6 +574,6 @@ class Singing: Module() {
     }
 
     enum class Songs{
-        HereWithMe, MondayToSonday
+        HereWithMe, MondayToSonday, BetweenTheBars
     }
 }
