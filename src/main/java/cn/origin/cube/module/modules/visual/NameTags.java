@@ -81,6 +81,8 @@ public class NameTags extends Module {
             GL11.glDisable((int)2929);
             GL11.glDisable((int)3553);
             GL11.glNormal3f((float)0.0f, (float)1.0f, (float)0.0f);
+            GlStateManager.enablePolygonOffset();
+            GlStateManager.doPolygonOffset(1.0f, -1500000.0f);
             GlStateManager.disableLighting();
             GlStateManager.enableBlend();
             float size = Math.min(Math.max(1.2f * (NameTags.mc.player.getDistance(e) * 0.15f), 1.25f), 6.0f) * 0.015f * sizel.getValue();
@@ -89,6 +91,9 @@ public class NameTags extends Module {
             GlStateManager.rotate((float)(-NameTags.mc.getRenderManager().playerViewY), (float)0.0f, (float)1.0f, (float)0.0f);
             GlStateManager.rotate((float)NameTags.mc.getRenderManager().playerViewX, (float)1.0f, (float)0.0f, (float)0.0f);
             GL11.glScalef((float)(-size), (float)(-size), (float)(-size));
+            GlStateManager.disableDepth();
+            GlStateManager.enableBlend();
+            GlStateManager.disableAlpha();
             int health = (int)(((EntityPlayer)e).getHealth() / ((EntityPlayer)e).getMaxHealth() * 100.0f);
             if(background.getValue()) {
                 if(gradientBackground.getValue()) {
@@ -103,6 +108,7 @@ public class NameTags extends Module {
             }else {
                 Render2DUtil.drawBorderedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue(), (int) 10 + height.getValue(), outlineWidth.getValue(),new Color(25,25,25,0).getRGB(), ClickGui.getCurrentColor().getRGB());
             }
+            GlStateManager.enableAlpha();
 //            if (healthBar.getValue()) {
 //                int length = (int) (((NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") * 2 - 1) * health));
 //                length = Math.max(2, length);
@@ -138,19 +144,20 @@ public class NameTags extends Module {
             for (ItemStack item : e.getArmorInventoryList()) {
                 if(armor.getValue()) {
                     NameTags.mc.getRenderItem().zLevel = -100.0f;
-                    mc.getRenderItem().renderItemIntoGUI(new ItemStack(item.getItem()), posX, -20);
+                    renderItem(item,posX, -20);
                     NameTags.mc.getRenderItem().zLevel = 0.0f;
                     int posY = -30;
                     Map enchantments = EnchantmentHelper.getEnchantments((ItemStack) item);
                     for (Object enchantment : enchantments.keySet()) {
                         if(enchant.getValue()) {
-                            int level = EnchantmentHelper.getEnchantmentLevel((Enchantment) enchantment, (ItemStack) item);
-                            mc.fontRenderer.drawStringWithShadow(String.valueOf(((Enchantment) enchantment).getName().substring(12).charAt(0)).toUpperCase() + level, (float) (posX + 9 - this.getcenter(((Enchantment) enchantment).getName().substring(12).charAt(0) + level)), (float) posY, -1);
+
+                            //mc.fontRenderer.drawStringWithShadow(String.valueOf(((Enchantment) enchantment).getName().substring(12).charAt(0)).toUpperCase() + level, (float) (posX + 9 - this.getcenter(((Enchantment) enchantment).getName().substring(12).charAt(0) + level)), (float) posY, -1);
                             posY -= 12;
                         }
                     }
                     posX += 17;
                 }
+
             }
             int gapples = 0;
             if (Item.getIdFromItem((Item) ((EntityPlayer) e).inventory.getCurrentItem().getItem()) == 322) {
@@ -165,7 +172,12 @@ public class NameTags extends Module {
                 mc.fontRenderer.drawStringWithShadow(String.valueOf(gapples), (float) (posX + 9 - this.getcenter(String.valueOf(gapples))), -30.0f, -1);
             }
 
-            GL11.glEnable((int)2929);
+            GlStateManager.enableDepth();
+            GlStateManager.enableLighting();
+            GlStateManager.disableBlend();
+            GlStateManager.enableLighting();
+            GlStateManager.disablePolygonOffset();
+            GlStateManager.doPolygonOffset(1.0f, 1500000.0f);
             GL11.glPopMatrix();
         }
     }
@@ -255,6 +267,30 @@ public class NameTags extends Module {
     /*
     RenderUtil.drawRect(-allWidth+2, 2, (allWidth - (allWidth * (1 - healthP)) * 2)-1, 1, Colors.RED.getRGB());
      */
+
+    private void renderItem(final ItemStack stack, final int x, final int y) {
+        GL11.glPushMatrix();
+        GL11.glDepthMask(true);
+        GlStateManager.clear(256);
+        GlStateManager.disableDepth();
+        GlStateManager.enableDepth();
+        RenderHelper.enableStandardItemLighting();
+        mc.getRenderItem().zLevel = -100.0f;
+        GlStateManager.scale(1.0f, 1.0f, 0.01f);
+        mc.getRenderItem().renderItemAndEffectIntoGUI(stack, x, y / 2 - 12);
+        mc.getRenderItem().renderItemOverlays(mc.fontRenderer, stack, x, y / 2 - 12);
+        mc.getRenderItem().zLevel = 0.0f;
+        GlStateManager.scale(1.0f, 1.0f, 1.0f);
+        RenderHelper.disableStandardItemLighting();
+        GlStateManager.enableAlpha();
+        GlStateManager.disableBlend();
+        GlStateManager.disableLighting();
+        GlStateManager.scale(0.5, 0.5, 0.5);
+        GlStateManager.disableDepth();
+        GlStateManager.enableDepth();
+        GlStateManager.scale(2.0f, 2.0f, 2.0f);
+        GL11.glPopMatrix();
+    }
 
     public static void drawFilledCircle(int x, int y, double radius, int color, int start, int stop) {
         glColor4f(((color >> 16) & 0xff) / 255F, ((color >> 8) & 0xff) / 255F, (color & 0xff) / 255F, ((color >> 24) & 0xff) / 255F);

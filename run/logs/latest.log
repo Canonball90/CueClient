@@ -1,47 +1,47 @@
-[00:00:27] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[00:00:27] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[00:00:27] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[00:00:27] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
-[00:00:27] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
-[00:00:27] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
-[00:00:27] [main/ERROR] [FML]: Full: C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
-[00:00:27] [main/ERROR] [FML]: Trimmed: c:/users/canon/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
-[00:00:27] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[00:00:27] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
-[00:00:28] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
-[00:00:28] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
-[00:00:28] [main/INFO] [FML]: Found a command line coremod : cn.origin.cube.inject.ForgeCoreModsLoader
-[00:00:28] [main/INFO] [FML]: Ignoring missing certificate for coremod Cube (cn.origin.cube.inject.ForgeCoreModsLoader), as this is probably a dev workspace
-[00:00:29] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/canon/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
-[00:00:29] [main/INFO] [mixin]: Compatibility level set to JAVA_8
-[00:00:29] [main/ERROR] [mixin]: Mixin config mixins.cube.json does not specify "minVersion" property
-[00:00:29] [main/INFO] [Cue]: searge
-[00:00:29] [main/INFO] [FML]: Searching C:\Users\canon\Documents\GitHub\CueClient\run\.\mods for mods
-[00:00:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[00:00:29] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[00:00:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[00:00:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[00:00:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[00:00:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[00:00:36] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
-[00:00:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[00:00:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[00:00:36] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[00:00:36] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@70211e49
-[00:00:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[00:00:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[00:00:37] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[00:00:38] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[00:00:40] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player310
-[00:00:47] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[00:00:47] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
-[00:00:48] [Client thread/INFO] [FML]: -- System Details --
+[12:00:41] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[12:00:41] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[12:00:41] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[12:00:41] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
+[12:00:41] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
+[12:00:41] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[12:00:41] [main/ERROR] [FML]: Full: C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[12:00:41] [main/ERROR] [FML]: Trimmed: c:/users/canon/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[12:00:42] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[12:00:42] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[12:00:42] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[12:00:42] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[12:00:42] [main/INFO] [FML]: Found a command line coremod : cn.origin.cube.inject.ForgeCoreModsLoader
+[12:00:42] [main/INFO] [FML]: Ignoring missing certificate for coremod Cube (cn.origin.cube.inject.ForgeCoreModsLoader), as this is probably a dev workspace
+[12:00:43] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/canon/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
+[12:00:43] [main/INFO] [mixin]: Compatibility level set to JAVA_8
+[12:00:43] [main/ERROR] [mixin]: Mixin config mixins.cube.json does not specify "minVersion" property
+[12:00:43] [main/INFO] [Cue]: searge
+[12:00:43] [main/INFO] [FML]: Searching C:\Users\canon\Documents\GitHub\CueClient\run\.\mods for mods
+[12:00:43] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[12:00:43] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[12:00:43] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[12:00:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[12:00:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[12:00:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[12:00:50] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[12:00:50] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[12:00:50] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[12:00:50] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[12:00:50] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@70211e49
+[12:00:50] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[12:00:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[12:00:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[12:00:52] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[12:00:55] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player323
+[12:01:01] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[12:01:01] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[12:01:02] [Client thread/INFO] [FML]: -- System Details --
 Details:
 	Minecraft Version: 1.12.2
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_202, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 637541568 bytes (608 MB) / 859308032 bytes (819 MB) up to 7621050368 bytes (7268 MB)
+	Memory: 685526336 bytes (653 MB) / 904921088 bytes (863 MB) up to 7621050368 bytes (7268 MB)
 	JVM Flags: 0 total; 
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
@@ -49,12 +49,12 @@ Details:
 Cube (unknown)
   
 	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 457.51' Renderer: 'GeForce GTX 1050 Ti/PCIe/SSE2'
-[00:00:48] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
-[00:00:48] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
-[00:00:48] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
-[00:00:48] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
-[00:00:49] [Client thread/INFO] [FML]: Searching C:\Users\canon\Documents\GitHub\CueClient\run\.\mods for mods
-[00:00:50] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[12:01:02] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
+[12:01:02] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[12:01:02] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[12:01:02] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
+[12:01:03] [Client thread/INFO] [FML]: Searching C:\Users\canon\Documents\GitHub\CueClient\run\.\mods for mods
+[12:01:03] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -83,7 +83,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[00:00:50] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.7.10\d70d7d2c56371f7aa18f32e984e3e2e998fe9081\kotlin-stdlib-jdk8-1.7.10.jar - probably a corrupt zip
+[12:01:04] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.7.10\d70d7d2c56371f7aa18f32e984e3e2e998fe9081\kotlin-stdlib-jdk8-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -116,7 +116,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:50] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk8-1.7.10.jar failed to read properly, it will be ignored
+[12:01:04] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk8-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -149,7 +149,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:50] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[12:01:04] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -178,7 +178,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[00:00:50] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar - probably a corrupt zip
+[12:01:04] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -211,7 +211,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:50] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk7-1.7.10.jar failed to read properly, it will be ignored
+[12:01:04] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-jdk7-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -244,7 +244,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:50] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[12:01:04] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -273,7 +273,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[00:00:50] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar - probably a corrupt zip
+[12:01:04] [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -306,7 +306,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:50] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-1.7.10.jar failed to read properly, it will be ignored
+[12:01:04] [Client thread/WARN] [FML]: Zip file kotlin-stdlib-1.7.10.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -339,7 +339,8 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[12:01:04] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 134719300 nanos
+[12:01:05] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -368,7 +369,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[00:00:51] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\6.2\a9690730f92cc79eeadc20e400ebb41eccce10b1\asm-util-6.2.jar - probably a corrupt zip
+[12:01:05] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\6.2\a9690730f92cc79eeadc20e400ebb41eccce10b1\asm-util-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -401,7 +402,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Client thread/WARN] [FML]: Zip file asm-util-6.2.jar failed to read properly, it will be ignored
+[12:01:05] [Client thread/WARN] [FML]: Zip file asm-util-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -434,7 +435,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[12:01:05] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -463,7 +464,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[00:00:51] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\6.2\c7d9a90d221cbb977848d2c777eb3aa7637e89df\asm-analysis-6.2.jar - probably a corrupt zip
+[12:01:05] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\6.2\c7d9a90d221cbb977848d2c777eb3aa7637e89df\asm-analysis-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -496,7 +497,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Client thread/WARN] [FML]: Zip file asm-analysis-6.2.jar failed to read properly, it will be ignored
+[12:01:05] [Client thread/WARN] [FML]: Zip file asm-analysis-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -529,7 +530,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[12:01:05] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -558,7 +559,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[00:00:51] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\6.2\61570e046111559f38d4e0e580c005f75988c0a6\asm-tree-6.2.jar - probably a corrupt zip
+[12:01:05] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\6.2\61570e046111559f38d4e0e580c005f75988c0a6\asm-tree-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -591,7 +592,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Client thread/WARN] [FML]: Zip file asm-tree-6.2.jar failed to read properly, it will be ignored
+[12:01:05] [Client thread/WARN] [FML]: Zip file asm-tree-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -624,7 +625,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Client thread/ERROR] [FML]: Unable to read a class file correctly
+[12:01:05] [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
@@ -653,7 +654,7 @@ java.lang.IllegalArgumentException: null
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
 	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
 	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-[00:00:51] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\6.2\1b6c4ff09ce03f3052429139c2a68e295cae6604\asm-6.2.jar - probably a corrupt zip
+[12:01:05] [Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar C:\Users\canon\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\6.2\1b6c4ff09ce03f3052429139c2a68e295cae6604\asm-6.2.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -686,7 +687,7 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Client thread/WARN] [FML]: Zip file asm-6.2.jar failed to read properly, it will be ignored
+[12:01:05] [Client thread/WARN] [FML]: Zip file asm-6.2.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
@@ -719,728 +720,100 @@ Caused by: java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:57) ~[ASMModParser.class:?]
 	... 23 more
-[00:00:51] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 237445000 nanos
-[00:00:51] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
-[00:00:52] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at CLIENT
-[00:00:52] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at SERVER
-[00:00:53] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Cue
-[00:00:53] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[00:00:53] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
-[00:00:53] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[00:00:53] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
-[00:00:53] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[00:00:53] [Client thread/INFO] [Cue]: Begin loading Cue
-[00:00:53] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[00:00:53] [Client thread/INFO] [FML]: Applying holder lookups
-[00:00:53] [Client thread/INFO] [FML]: Holder lookups applied
-[00:00:53] [Client thread/INFO] [FML]: Applying holder lookups
-[00:00:53] [Client thread/INFO] [FML]: Holder lookups applied
-[00:00:53] [Client thread/INFO] [FML]: Applying holder lookups
-[00:00:53] [Client thread/INFO] [FML]: Holder lookups applied
-[00:00:53] [Client thread/INFO] [FML]: Applying holder lookups
-[00:00:53] [Client thread/INFO] [FML]: Holder lookups applied
-[00:00:53] [Client thread/INFO] [FML]: Injecting itemstacks
-[00:00:53] [Client thread/INFO] [FML]: Itemstack injection complete
-[00:00:54] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: AHEAD Target: null
-[00:01:02] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
-[00:01:02] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
-[00:01:02] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[00:01:02] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
-[00:01:02] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
-[00:01:29] [Client thread/INFO] [FML]: Max texture size: 16384
-[00:01:39] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
-[00:01:41] [Client thread/INFO] [FML]: Applying holder lookups
-[00:01:41] [Client thread/INFO] [FML]: Holder lookups applied
-[00:01:41] [Client thread/INFO] [Cue]: Loading Cue...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [Cue]: AntiDump...
-[00:01:44] [Client thread/INFO] [FML]: Injecting itemstacks
-[00:01:44] [Client thread/INFO] [FML]: Itemstack injection complete
-[00:01:44] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
-[00:01:44] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[00:01:45] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
-[00:01:45] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
-[00:01:45] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
-[00:01:50] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
-[00:01:50] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
-[00:01:50] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
-[00:01:50] [Server thread/INFO] [FML]: Applying holder lookups
-[00:01:50] [Server thread/INFO] [FML]: Holder lookups applied
-[00:01:51] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@2d8a171a)
-[00:01:52] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
-[00:01:52] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@2d8a171a)
-[00:01:52] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@2d8a171a)
-[00:01:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
-[00:01:53] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 13%
-[00:01:54] [Server thread/INFO] [FML]: Unloading dimension -1
-[00:01:54] [Server thread/INFO] [FML]: Unloading dimension 1
-[00:01:54] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
-[00:01:56] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
-[00:01:56] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
-[00:01:56] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,cue@0.1,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42
-[00:01:56] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
-[00:01:56] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
-[00:01:56] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player310[local:E:394c73df] logged in with entity id 199 at (194.5727638451293, 81.0, 220.7301453773494)
-[00:01:56] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player310 joined the game
-[00:01:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player310 has made the advancement [Cover Me With Diamonds]
-[00:01:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player310 has made the advancement [Ice Bucket Challenge]
-[00:01:58] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[00:01:58] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[00:01:59] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Player310 has made the advancement [Cover Me With Diamonds]
-[00:01:59] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Player310 has made the advancement [Ice Bucket Challenge]
-[00:01:59] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 47 advancements
-[00:02:00] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[00:02:00] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityStatus@326c2926
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@2bfee030
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@6c7386c4
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@49a53990
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1a531c9b
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@46f08081
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@36456b3d
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@56ccaddc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@54f9d45a
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@16cfb2cc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@b4e2fab
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@38dfd153
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@229e9916
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@49ac065b
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@33655bb2
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@757641c4
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@23763055
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@a4174be
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@13e0168f
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@545f1d56
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@46397b10
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSpawnMob@475c03ed
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@549b31e7
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityProperties@7882338f
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@756e2674
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@528a005f
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5f9307e0
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@36e449d6
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@32bd84f8
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@30b7e208
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@775c4ff9
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@6362123d
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3da6d0ed
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@328ec2f3
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@273860dc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@54387dfc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@5f92ee2e
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@1b4f3675
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7f159b40
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6855cec3
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@20febe79
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@42e0d88d
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@117c940a
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@57997330
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@24102cc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@46a186b9
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@330896a3
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@2f946301
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@2549435d
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@6f979d03
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@185da3dc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@14dd47bd
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7be1bdd0
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@284d482a
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@5dfb5dbc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@23e51911
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@559c3f80
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@17523101
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@10c398ea
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@1b653672
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@2f316aa1
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@296d8c7f
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@25e55570
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@17012118
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@33c1253b
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@760a4948
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@794bdc2c
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@675c3bfc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5d0e22d1
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@796a7031
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5ee7798c
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@58e23a77
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@74568310
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5e178e53
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3bd9b704
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@72a1138a
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@32af40cd
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@502825dd
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@263fd94b
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5cf8a345
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1499393f
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@58ef0bc
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5da384c7
-[00:03:00] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4458f6bd
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@19d57fc8
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6bac675e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2ae85350
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2906b5ae
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1b9fb479
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1301b6c3
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7b9b1520
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@67ac6438
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@17628c8
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1fdf218b
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3cce1545
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@38472b40
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@84764e8
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6ef2df12
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@225a9bb4
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@23c6a994
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@1015f920
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6867be7f
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1e160ffc
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@80a9fa3
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3769bb7b
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@62a87faf
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4cefe5e9
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@10448c50
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6a0c4f40
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4bf810a9
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@788b6492
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4c1941df
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@44676153
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4f115c2e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6c9d1eaa
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6a8cad5f
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@151e24a4
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@50abfa05
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@54c7d6f4
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5bae6f66
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3f714bb3
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3005e58a
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5a1fe508
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@72626472
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@47fb855e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@58cd119e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7d5f882a
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1cff2207
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7b585b3
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@37c4353a
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@36dbe530
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@53d106f6
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@78628922
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6e990ef1
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7028477
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketDestroyEntities@5c3fc4d7
-[00:03:01] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Position@7ffc8dc0
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSpawnMob@30787deb
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@16b01393
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityProperties@5020c0e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSpawnMob@27b97905
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@54ddcf3c
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityProperties@426772bf
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@57906481
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityProperties@3b0d5e27
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@193d255
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@7818aa52
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityProperties@2cf87dbc
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7d55e262
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@62cb96e7
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5f3cfad6
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@30c67910
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6252db98
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5c90059b
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@64c2be95
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@674f45e4
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1335cc8e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4fd5afae
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3e9286d7
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@236f8484
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1e837ddb
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7cc9097a
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@56c78c0a
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@95369f2
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@c3bb0a6
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@380dfa82
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@52c08655
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@40ce6906
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@11215f39
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@46af6e75
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@100bbadb
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@23be6785
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@387d2c5c
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@59c31e0
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@480c8eea
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@185e4a21
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@49908aba
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@2d67a159
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@13011c1
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@6b554c84
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@265dce0e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@36a0cef5
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@371f7ff9
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@766f34f2
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3e8ab98f
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@eed0fcd
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4241495e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4d063d40
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@262bb3ae
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@405e43c1
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@89de92d
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@740d3943
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@fc042af
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3db248dd
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5a811ac7
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@475be7f5
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4a83108b
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@65d85da6
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@375d24f8
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2f2119a9
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@7df4438e
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5a6614fb
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@44291ab
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@23093cdb
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7c3ee307
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1615f1b7
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@64af517
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6ccfeee1
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@67e20ea4
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5ec3c3a6
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@ff06724
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1cdb28dd
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6bbb92cc
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2b25a2ee
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@27e039e9
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@62b87008
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@55a2a361
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@531649e9
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@759f0d13
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@54060b98
-[00:03:01] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@14ff03d2
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@75c749a5
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@78bd359b
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1c03abdf
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@708eca1e
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3fcb3fcb
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2e4bc444
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@2f97df01
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@29cf3ed7
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4f9c7942
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3f05ed11
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@2efb5227
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@7e12f8a9
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5268c840
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4215ca79
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@360bc276
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5f35a3ae
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4b0b5ac0
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@27a107da
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4fd1692a
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3d8b9bad
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2cc71b86
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3774613
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@472bf76e
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@261c5ad5
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@32936ebb
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@bede124
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1365e7b0
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@576bcdfb
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7ea4971b
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1aa4bd2a
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@264091a9
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@2f4d848f
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@750bd232
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4af97c54
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6816717b
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2b3cf90a
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@8d341d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@197e384
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5a51c764
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@16e9818d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7f2d6291
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@41982533
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@15a6a083
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@4f99ae53
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5bb464db
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@5b857323
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7b076268
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@79eeb06d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@1049137
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7168e65f
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityStatus@313cde38
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3d5d6daa
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@18f5ce1f
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@2e998940
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@79835fb5
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@2f654d12
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1956fbd7
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7b67b234
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@18fa341a
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1df2f7ca
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@33542fe0
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@75e4ddac
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3cf77dee
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@36b1811d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@24889304
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@77523384
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@704d288d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@4acef6f0
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2a3e5c1e
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4c1694ce
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@5506d481
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@6842d1a7
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@30c4ae1d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@488cfc2f
-[00:03:02] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Position@7995112c
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@2b4d9b63
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@55fca844
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@405d40a0
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketKeepAlive@6f9fb100
-[00:03:02] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketKeepAlive@25e6b54
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@28cea913
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@18408ac6
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@3232812e
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@20b731d9
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@7dec82ed
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6166312c
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@477bf7df
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5edb3f10
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@47b935cc
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@17068346
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@f5b4b76
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@87fc632
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6e695a4
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@25d93a8d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@708cc5bb
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@6b4d3ce
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityMetadata@34cd2d09
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@582c744f
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4e9bd3ec
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@6e114352
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@33e98efc
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@8dc0ac2
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@18c8ac86
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@7c27671e
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3c69808
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6b2408a8
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@365535d6
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@710dab95
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@463c6b64
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@d165a43
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@12f235b2
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@e3f757a
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@2b7d5892
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1486dbfc
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@17da237b
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@62bb105f
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@23c37d52
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1b81bed
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@47bf215a
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7dbce81a
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@45ad3312
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@40b3f39
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@3a807b13
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketBlockChange@2066b861
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityStatus@cff2adc
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@51503e8d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@68319f57
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@7d819780
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@85deb26
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@58a908f6
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3c06ff93
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4dca4204
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2aa99440
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3ad7c75b
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@31a64df5
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2e63f3a7
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@480e69bf
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4ce792fa
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4f2db776
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7ee28bff
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@459a560d
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@359a6c06
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@172efbc4
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@7df937ad
-[00:03:02] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6a442c21
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@c589733
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6cc8bda7
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5838abcc
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@13d6b1ce
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5bff5d88
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@72f3e6d5
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6f88558c
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@4976d172
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6844d6c9
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5ec505a
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@2865415e
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@5767e861
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@19db8eda
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7ed2633b
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7c3fb20e
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@14736908
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@511b8802
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3c3df2a1
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3d9388ea
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@32a78d79
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@3f7158b7
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6c8a0d02
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@4d7f0ca1
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@433d8c32
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@763cc002
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@4ae231da
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@7f4d2623
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@503e79e4
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@40928f31
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@1ba50a18
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@d4f4b71
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2e9df265
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7aa20b80
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@49643b06
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3e87e598
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7fc826f7
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@155ccc85
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7d886923
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@7ca2f82f
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@42e396d2
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@31a852ef
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@fd7f488
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@64df16dd
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3a544992
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@49984b1d
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@795b8512
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@65ae0d1a
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@7daec0e4
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@76e5acef
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@53b3d434
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4660d585
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4dc2844d
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@169bcbce
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5bc4af5d
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1bc8955d
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@42f18a85
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@afcfcae
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@743c14eb
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2b81154c
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@65ea171b
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@89e9e84
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1c115830
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3f19158b
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@afe9fbc
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@76e84ad9
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@602e4cec
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@17ecb82f
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6911c611
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5d9be768
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@4fc0991b
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3d9f6d0c
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5ad915e0
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@587b0974
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@13b85b21
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5509a357
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@476dca03
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@475d5b33
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@16ed61aa
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@ee67b3b
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@27f28536
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@adbd638
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@77c606f8
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4a448498
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@79ac63d3
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@2d1210c8
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6a243254
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@42a1bcc
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1e825261
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@232b9529
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@68d6b58a
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3c763727
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@306b7b92
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4f96226b
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1231b4f6
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@1f736698
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@74af390f
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@ad4c88b
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@155d4b23
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@119eb8b6
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1cf49ccb
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@30489f4e
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4f33ce37
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2b8c946f
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@13265711
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@67e008d4
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@36733069
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7993e524
-[00:03:03] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Position@603c3b4b
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@582cabd8
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3fedaea1
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1032214d
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@766e5caa
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4b215bd4
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@19eb7cb7
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@18521e8e
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1c5d9a22
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5d638d86
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1faf4c59
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@1781974c
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@677d9314
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@26332dc0
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@431b60db
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@583bb403
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@53557923
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6cb703a4
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@74b2bb51
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@712c9268
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@948710f
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5db6f9a1
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@3cbfa975
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@2995c358
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@631f1f6c
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@98e895f
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@48bb7d1a
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@4f33e856
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketDestroyEntities@54cc6aa3
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@2975c514
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3a352e8d
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6a1410c5
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@5d3ae656
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5a60d580
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@4932d907
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3ea7adc
-[00:03:03] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@96824a1
-[00:03:04] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@55f82cd9
-[00:03:04] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@add2d80
-[00:03:04] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@5ab18a9d
-[00:03:04] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1234e046
-[00:03:04] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Position@7b352801
-[00:03:04] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6be883d
-[00:03:05] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@65ec0447
-[00:03:05] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@33df8f05
-[00:03:05] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6dc7fe8
-[00:03:05] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@7451f06e
-[00:03:05] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@719a1c9f
-[00:03:05] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3e72020e
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@5b340917
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@209d409f
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@1c2cef7
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@2f8eceb3
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@548916e4
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1e5a2d52
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@978fd18
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@505a51d2
-[00:03:06] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4cf8430b
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@387c77b
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@4dd96a2e
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@4f0f6686
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@41618477
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7ce02f3f
-[00:03:07] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@2a785a3a
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7a6eb297
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@4ee1d00a
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3eeb79d
-[00:03:07] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@7e0ae908
-[00:03:07] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@5b0d80ea
-[00:03:08] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@71ff0654
-[00:03:08] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@5a6a1ea3
-[00:03:08] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@315ef9e1
-[00:03:08] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityStatus@47faf208
-[00:03:08] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6e110156
-[00:03:08] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock@84d40cf
-[00:03:08] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSoundEffect@67d56766
-[00:03:08] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketUseEntity@608c6276
-[00:03:08] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSpawnObject@21820b8c
-[00:03:08] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSpawnObject@31f8c706
-[00:03:08] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketUseEntity@5731b45d
-[00:03:09] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSoundEffect@57057bde
-[00:03:09] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketUseEntity@5da4371e
-[00:03:09] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSpawnObject@1b27c80f
-[00:03:09] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketUseEntity@3f8d5f5d
-[00:03:09] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSoundEffect@2a486e8c
-[00:03:09] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketUseEntity@3c110508
-[00:03:09] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSpawnObject@5dff5c34
-[00:03:09] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketUseEntity@66d8dd8b
-[00:03:09] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSoundEffect@215807de
-[00:03:09] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketUseEntity@1a381a89
-[00:03:09] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketDestroyEntities@49ad44a
-[00:03:09] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@6dcff65b
-[00:03:10] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4a76092a
-[00:03:10] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@2bf1914d
-[00:03:10] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@799b38fd
-[00:03:10] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketDestroyEntities@6b7474bb
-[00:03:10] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Position@4f9ad924
-[00:03:10] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@11b11fa6
-[00:03:10] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@36ed8f24
-[00:03:10] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@7b97bc9a
-[00:03:10] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@169115d4
-[00:03:10] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5e887a11
-[00:03:11] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@47dd1249
-[00:03:11] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@1d932139
-[00:03:11] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityStatus@3b2b8ea
-[00:03:11] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@1ef7027f
-[00:03:11] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@311704b2
-[00:03:11] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@35897140
-[00:03:11] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketDestroyEntities@23eaeaf3
-[00:03:11] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@5b8312e6
-[00:03:11] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@1b5b74d
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@528f00b
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@c935688
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketDestroyEntities@72ee352b
-[00:03:12] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@18ff1da6
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@627e4f7
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@44cdf490
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@52fcdd97
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketTimeUpdate@5138ed8e
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@6881bb02
-[00:03:12] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@4343bbf6
-[00:03:13] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketSpawnMob@7767c66c
-[00:03:13] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@61a50193
-[00:03:13] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@419ef0e
-[00:03:13] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@5eca014f
-[00:03:13] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@5adb7870
-[00:03:13] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Position@1d1d3c52
-[00:03:13] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@13c681e1
-[00:03:13] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@5aa6b393
-[00:03:13] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@110c5656
-[00:03:13] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Rotation@31beff63
-[00:03:13] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@1095b4ff
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@377be685
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@58aee1d2
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@2b63b277
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityStatus@166cc9a8
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityStatus@7e4b4a2e
-[00:03:14] [Netty Server IO #1/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.client.CPacketPlayer$Position@514cc6df
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@51c49444
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityTeleport@67026401
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove@1753c0c0
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@336de23e
-[00:03:14] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@467e36a3
-[00:03:15] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketDestroyEntities@32287001
-[00:03:15] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@3bf4e344
-[00:03:15] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]Entity_net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove@67d49a16
-[00:03:15] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Cue]net.minecraft.network.play.server.SPacketEntityHeadLook@50a86361
-[00:04:41] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player310 has made the advancement [Monster Hunter]
-[00:04:41] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Player310 has made the advancement [Monster Hunter]
-[00:04:41] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 57 advancements
-[00:06:04] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 57 advancements
-[00:06:48] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 57 advancements
-[00:07:01] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 57 advancements
-[00:07:08] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[00:07:08] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[00:07:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
-[00:07:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
-[00:07:09] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player310 lost connection: Disconnected
-[00:07:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player310 left the game
-[00:07:09] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
-[00:07:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
-[00:07:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[00:07:09] [Server thread/INFO] [FML]: Unloading dimension 0
-[00:07:09] [Server thread/INFO] [FML]: Applying holder lookups
-[00:07:09] [Server thread/INFO] [FML]: Holder lookups applied
-[00:07:10] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
-[00:07:10] [Client thread/WARN] [Cue]: Saving configuration please wait...
-[00:07:10] [Client thread/WARN] [Cue]: Configuration saved!
-[00:07:10] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
-[00:07:10] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
-[00:07:11] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
+[12:01:05] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
+[12:01:06] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at CLIENT
+[12:01:06] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, cue] at SERVER
+[12:01:07] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Cue
+[12:01:07] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[12:01:07] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
+[12:01:07] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[12:01:07] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[12:01:07] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[12:01:07] [Client thread/INFO] [Cue]: Begin loading Cue
+[12:01:07] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[12:01:07] [Client thread/INFO] [FML]: Applying holder lookups
+[12:01:07] [Client thread/INFO] [FML]: Holder lookups applied
+[12:01:07] [Client thread/INFO] [FML]: Applying holder lookups
+[12:01:07] [Client thread/INFO] [FML]: Holder lookups applied
+[12:01:07] [Client thread/INFO] [FML]: Applying holder lookups
+[12:01:07] [Client thread/INFO] [FML]: Holder lookups applied
+[12:01:07] [Client thread/INFO] [FML]: Applying holder lookups
+[12:01:07] [Client thread/INFO] [FML]: Holder lookups applied
+[12:01:07] [Client thread/INFO] [FML]: Injecting itemstacks
+[12:01:07] [Client thread/INFO] [FML]: Itemstack injection complete
+[12:01:08] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: AHEAD Target: null
+[12:01:14] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[12:01:15] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[12:01:15] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[12:01:15] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[12:01:15] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[12:01:36] [Client thread/INFO] [FML]: Max texture size: 16384
+[12:01:45] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
+[12:01:47] [Client thread/INFO] [FML]: Applying holder lookups
+[12:01:47] [Client thread/INFO] [FML]: Holder lookups applied
+[12:01:47] [Client thread/INFO] [Cue]: Loading Cue...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [Cue]: AntiDump...
+[12:01:50] [Client thread/INFO] [FML]: Injecting itemstacks
+[12:01:50] [Client thread/INFO] [FML]: Itemstack injection complete
+[12:01:50] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
+[12:01:50] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[12:01:50] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[12:01:50] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
+[12:01:51] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
+[12:01:56] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
+[12:01:59] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[12:01:59] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[12:01:59] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[12:02:00] [Server thread/INFO] [FML]: Applying holder lookups
+[12:02:00] [Server thread/INFO] [FML]: Holder lookups applied
+[12:02:00] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@37ab4568)
+[12:02:01] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
+[12:02:01] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@37ab4568)
+[12:02:01] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@37ab4568)
+[12:02:01] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[12:02:02] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 18%
+[12:02:04] [Server thread/INFO] [FML]: Unloading dimension -1
+[12:02:04] [Server thread/INFO] [FML]: Unloading dimension 1
+[12:02:04] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
+[12:02:06] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[12:02:06] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[12:02:06] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,cue@0.1,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42
+[12:02:06] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[12:02:06] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[12:02:06] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player323[local:E:bed957b5] logged in with entity id 217 at (193.58292750699542, 82.0, 221.3637633524485)
+[12:02:06] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player323 joined the game
+[12:02:06] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player323 has made the advancement [Cover Me With Diamonds]
+[12:02:07] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[12:02:08] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[12:02:08] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Player323 has made the advancement [Cover Me With Diamonds]
+[12:02:08] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 49 advancements
+[12:02:09] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[12:02:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[12:02:42] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[12:02:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[12:02:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[12:02:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[12:02:42] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player323 lost connection: Disconnected
+[12:02:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player323 left the game
+[12:02:42] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[12:02:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[12:02:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[12:02:43] [Server thread/INFO] [FML]: Unloading dimension 0
+[12:02:43] [Server thread/INFO] [FML]: Applying holder lookups
+[12:02:43] [Server thread/INFO] [FML]: Holder lookups applied
+[12:02:43] [Client thread/INFO] [Cue]: MainMenuShaders Disabled.
+[12:02:44] [Client thread/WARN] [Cue]: Saving configuration please wait...
+[12:02:44] [Client thread/WARN] [Cue]: Configuration saved!
+[12:02:44] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[12:02:44] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[12:02:44] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
