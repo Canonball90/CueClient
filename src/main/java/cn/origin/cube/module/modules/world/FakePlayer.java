@@ -57,7 +57,10 @@ public class FakePlayer extends Module {
 
     @Override
     public void onEnable() {
-        if (fullNullCheck()) return;
+        if (fullNullCheck()) {
+            disable();
+            return;
+        }
         if (fakePlayer == null) {
             fakePlayer = new EntityOtherPlayerMP(mc.world, new GameProfile(mc.player.getUniqueID(), "CutePerson"));
             fakePlayer.setPositionAndRotation(mc.player.posX, mc.player.posY, mc.player.posZ, mc.player.cameraYaw, mc.player.cameraPitch);
