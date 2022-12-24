@@ -33,9 +33,7 @@ class AutoTote : Module() {
         @SubscribeEvent
         fun onTick(event: ClientTickEvent?) {
             if (fullNullCheck()) return
-            if (stacked.value) {
-                StackedTotemUtil.doStack()
-            } else {
+            if(!stacked.value) {
                 if (mc.currentScreen is GuiContainer && mc.currentScreen !is GuiInventory) return
                 val totemslot = InventoryUtil.getItemSlot(Items.TOTEM_OF_UNDYING)
                 if (mc.player.heldItemOffhand.item !== Items.TOTEM_OF_UNDYING && totemslot != -1) {
@@ -47,10 +45,29 @@ class AutoTote : Module() {
                         mc.player
                     )
                 }
-                    mc.playerController.windowClick(mc.player.inventoryContainer.windowId, 45, 0, ClickType.PICKUP, mc.player)
-                    mc.playerController.windowClick(mc.player.inventoryContainer.windowId, totemslot, 0, ClickType.PICKUP, mc.player)
-                    mc.playerController.updateController()
+                mc.playerController.windowClick(
+                    mc.player.inventoryContainer.windowId,
+                    45,
+                    0,
+                    ClickType.PICKUP,
+                    mc.player
+                )
+                mc.playerController.windowClick(
+                    mc.player.inventoryContainer.windowId,
+                    totemslot,
+                    0,
+                    ClickType.PICKUP,
+                    mc.player
+                )
+                mc.playerController.updateController()
             }
+        super.onUpdate()
+    }
+
+    override fun onUpdate() {
+        if(stacked.value){
+            StackedTotemUtil.doStack()
+        }
         super.onUpdate()
     }
 
