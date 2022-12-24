@@ -93,4 +93,26 @@ public class InventoryUtil {
         }
         return slot;
     }
+
+    public static int findWindowItem(Item item, int minimum, int maximum) {
+        for (int i = minimum; i <= maximum; i++) {
+            ItemStack stack = mc.player.inventoryContainer.getSlot(i).getStack();
+            if (stack.getItem() == item) {
+                return i;
+            }
+        }
+
+        return - 1;
+    }
+
+    public static int findWindowItem(Item item, int count, int minimum, int maximum) {
+        for (int i = minimum; i <= maximum; i++) {
+            ItemStack stack = mc.player.inventoryContainer.getSlot(i).getStack();
+            if (stack.getItem() == item && stack.getCount() >= count) {
+                return i;
+            }
+        }
+
+        return - 1;
+    }
 }

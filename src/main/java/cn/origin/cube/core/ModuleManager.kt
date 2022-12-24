@@ -6,6 +6,7 @@ import cn.origin.cube.module.Category
 import cn.origin.cube.module.HudModule
 import cn.origin.cube.module.Module
 import cn.origin.cube.module.huds.*
+import cn.origin.cube.module.modules.combat.AutoTotem.AutoTote
 import cn.origin.cube.module.modules.client.*
 import cn.origin.cube.module.modules.combat.*
 import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal

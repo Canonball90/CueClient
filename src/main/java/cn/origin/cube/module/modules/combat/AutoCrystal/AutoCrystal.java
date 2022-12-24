@@ -80,8 +80,10 @@ public class AutoCrystal extends Module {
     public BooleanSetting autoTimerl = registerSetting("Manual-Timer", false);
     public BooleanSetting rayTrace = registerSetting("Ray-trace", false);
     public BooleanSetting predict = registerSetting("Predict", false);
+    public BooleanSetting wallCheck = registerSetting("WallCheck", false);
     public IntegerSetting BlastHealth = registerSetting("BlastHealth", 17 , 0 , 20);
     public BooleanSetting AutoMineHole = registerSetting("AutoHoleMine", false);
+    public BooleanSetting NoKick = registerSetting("AntiKick", false);
     public BooleanSetting ArmorCheck = registerSetting("ArmorCheck", false);
     public IntegerSetting ArmorRate = registerSetting("ArmorRate", 18 , 0 , 100).booleanVisible(ArmorCheck);
     public BooleanSetting swing = registerSetting("Swing", true);
@@ -292,6 +294,9 @@ public class AutoCrystal extends Module {
                     if (b >= 169) {
                         continue;
                     }
+                    if(wallCheck.getValue() && !canSeePos(blockPos)){
+                        continue;
+                    }
                     double d = calculateDamage1(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, entity);
                     if (d < minDamage.getValue()) {
                         continue;
@@ -323,9 +328,7 @@ public class AutoCrystal extends Module {
                 if (!offhand && mc.player.inventory.currentItem != crystalSlot) {
                     if (switchToCrystal.getValue()) {
                         if (silent.getValue()) {
-                            if (InventoryUtil.findItemInHotbar(Items.END_CRYSTAL) != -1) {
-                                InventoryUtil.switchToHotbarSlot(crystalSlot, true);
-                            }
+                            mc.player.connection.sendPacket(new CPacketHeldItemChange(crystalSlot));
                         } else {
                             InventoryUtil.switchToHotbarSlot(crystalSlot, false);
                         }
@@ -333,9 +336,6 @@ public class AutoCrystal extends Module {
                             resetRotation();
                         }
                         switchCooldown = true;
-                    }
-                    if (silent.getValue()) {
-                        InventoryUtil.switchToHotbarSlot(oldSlot, false);
                     }
                     return;
                 }
@@ -458,6 +458,17 @@ public class AutoCrystal extends Module {
 
         }
     }
+
+    private boolean canSeePos(BlockPos pos) {
+        return (mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(pos.getX(), pos.getY(), pos.getZ()), false, true, false) == null);
+    }
+
+    @SubscribeEvent
+    public void onPacketSend(PacketEvent.Send event) {
+        if (NoKick.getValue() && event.getPacket() instanceof net.minecraft.network.play.client.CPacketAnimation)
+            event.setCanceled(true);
+    }
+
 
     @SubscribeEvent
     public void onPacketRecieve(PacketEvent.Receive event){
