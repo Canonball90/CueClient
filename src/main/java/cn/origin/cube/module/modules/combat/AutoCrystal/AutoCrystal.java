@@ -294,7 +294,7 @@ public class AutoCrystal extends Module {
                     if (b >= 169) {
                         continue;
                     }
-                    if(wallCheck.getValue() && !canSeePos(blockPos)){
+                    if(wallCheck.getValue() && !Utils.INSTANCE.canSeePos(blockPos)){
                         continue;
                     }
                     double d = calculateDamage1(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, entity);
@@ -373,7 +373,7 @@ public class AutoCrystal extends Module {
                         minePos = blockPos.offset(facing);
                     }
                 }
-                if (isInHole((EntityPlayer) renderEnt) && canMine && minePos != null && mc.getConnection() != null) {
+                if (Utils.INSTANCE.isInHole((EntityPlayer) renderEnt) && canMine && minePos != null && mc.getConnection() != null) {
                     mc.player.swingArm(EnumHand.MAIN_HAND);
                     if (HoleMiningTimer.passed(breakSpeed.getValue())) {
                         mc.player.connection.sendPacket(new CPacketPlayerDigging(CPacketPlayerDigging.Action.START_DESTROY_BLOCK, minePos, EnumFacing.DOWN));
@@ -384,46 +384,6 @@ public class AutoCrystal extends Module {
             }
         } catch (Exception ignored) {
         }
-    }
-
-    public static boolean isInHole(final EntityPlayer entity) {
-        return isBlockValid(new BlockPos(entity.posX, entity.posY, entity.posZ));
-    }
-
-    public static boolean isBlockValid(final BlockPos blockPos) {
-        return isBedrockHole(blockPos) || isObbyHole(blockPos) || isBothHole(blockPos);
-    }
-
-    public static boolean isBothHole(final BlockPos blockPos) {
-        final BlockPos[] array = new BlockPos[]{blockPos.north(), blockPos.south(), blockPos.east(), blockPos.west(), blockPos.down()};
-        for (final BlockPos pos : array) {
-            final IBlockState touchingState = mc.world.getBlockState(pos);
-            if (touchingState.getBlock() == Blocks.AIR || (touchingState.getBlock() != Blocks.BEDROCK && touchingState.getBlock() != Blocks.OBSIDIAN)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public static boolean isObbyHole(final BlockPos blockPos) {
-        final BlockPos[] array = new BlockPos[]{blockPos.north(), blockPos.south(), blockPos.east(), blockPos.west(), blockPos.down()};
-        for (final BlockPos pos : array) {
-            final IBlockState touchingState = mc.world.getBlockState(pos);
-            if (touchingState.getBlock() == Blocks.AIR || touchingState.getBlock() != Blocks.OBSIDIAN) {
-                return false;
-            }
-        }
-        return true;
-    }
-    public static boolean isBedrockHole(final BlockPos blockPos) {
-        final BlockPos[] array = new BlockPos[]{blockPos.north(), blockPos.south(), blockPos.east(), blockPos.west(), blockPos.down()};
-        for (final BlockPos pos : array) {
-            final IBlockState touchingState = mc.world.getBlockState(pos);
-            if (touchingState.getBlock() == Blocks.AIR || touchingState.getBlock() != Blocks.BEDROCK) {
-                return false;
-            }
-        }
-        return true;
     }
 
     public void ReSync(){
@@ -457,10 +417,6 @@ public class AutoCrystal extends Module {
         }else{
 
         }
-    }
-
-    private boolean canSeePos(BlockPos pos) {
-        return (mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(pos.getX(), pos.getY(), pos.getZ()), false, true, false) == null);
     }
 
     @SubscribeEvent
@@ -553,7 +509,7 @@ public class AutoCrystal extends Module {
                         continue;
                     }
 
-                    if (target instanceof EntityPlayer && !players.getValue() || isPassiveMob(target) && !passives.getValue() || isNeutralMob(target) && !passives.getValue() || isHostileMob(target) && !mobs.getValue()) {
+                    if (target instanceof EntityPlayer && !players.getValue() || Utils.INSTANCE.isPassiveMob(target) && !passives.getValue() || Utils.INSTANCE.isNeutralMob(target) && !passives.getValue() || Utils.INSTANCE.isHostileMob(target) && !mobs.getValue()) {
                         continue;
                     }
 
@@ -566,7 +522,7 @@ public class AutoCrystal extends Module {
                     double targetDamage = getDamageFromExplosion(target, entity.getPositionVector(), false);
                     double safetyIndex = 1;
 
-                    if (canTakeDamage()) {
+                    if (Utils.INSTANCE.canTakeDamage()) {
 
                         double health = mc.player.getHealth();
 
@@ -602,31 +558,6 @@ public class AutoCrystal extends Module {
         return unsafeEntities <= 0;
     }
 
-    public static boolean isPassiveMob(Entity entity) {
-
-        if (entity instanceof EntityWolf) {
-            return !((EntityWolf) entity).isAngry();
-        }
-
-        if (entity instanceof EntityIronGolem) {
-            return ((EntityIronGolem) entity).getRevengeTarget() == null;
-        }
-
-        return entity instanceof EntityAgeable || entity instanceof EntityAmbientCreature || entity instanceof EntitySquid;
-    }
-
-    public static boolean isVehicleMob(Entity entity) {
-        return entity instanceof EntityBoat || entity instanceof EntityMinecart;
-    }
-
-    public static boolean isHostileMob(Entity entity) {
-        return (entity.isCreatureType(EnumCreatureType.MONSTER, false) && !isNeutralMob(entity)) || entity instanceof EntitySpider;
-    }
-
-    public static boolean isNeutralMob(Entity entity) {
-        return entity instanceof EntityPigZombie && !((EntityPigZombie) entity).isAngry() || entity instanceof EntityWolf && !((EntityWolf) entity).isAngry() || entity instanceof EntityEnderman && ((EntityEnderman) entity).isScreaming();
-    }
-
     public boolean canFacePlace(EntityLivingBase target) {
         float healthTarget = target.getHealth() + target.getAbsorptionAmount();
         if (healthTarget <= BlastHealth.getValue()) {
@@ -643,10 +574,6 @@ public class AutoCrystal extends Module {
             }
         }
         return false;
-    }
-
-    public static boolean canTakeDamage() {
-        return !mc.player.capabilities.isCreativeMode;
     }
 
     public void placeCrystalOnBlock(BlockPos pos, EnumHand hand) {
@@ -708,13 +635,9 @@ public class AutoCrystal extends Module {
         Gui.drawScaledCustomSizeModalRect(width, height, 8, 8, 8, 8, 37, 37, 64, 64);
     }
 
-    public BlockPos getPlayerPos() {
-        return new BlockPos(Math.floor(mc.player.posX), Math.floor(mc.player.posY), Math.floor(mc.player.posZ));
-    }
-
     private List<BlockPos> findCrystalBlocks() {
         NonNullList<BlockPos> positions = NonNullList.create();
-        positions.addAll(getSphere(getPlayerPos(), (float) placeRange.getValue(), (int) placeRange.getValue(), false, true, 0).stream().filter(this::ableToPlace).collect(Collectors.toList()));
+        positions.addAll(getSphere(Utils.INSTANCE.getPlayerPos(), (float) placeRange.getValue(), (int) placeRange.getValue(), false, true, 0).stream().filter(this::ableToPlace).collect(Collectors.toList()));
         return positions;
     }
 
