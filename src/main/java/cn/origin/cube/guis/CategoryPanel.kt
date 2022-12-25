@@ -29,7 +29,7 @@ class CategoryPanel(
     private val hover = ColourAnimation(category.color, category.color.darker().darker(), 300f, false, Easing.QUAD_IN)
     private val one = ColourAnimation(Color(0,0,0,0),Color.WHITE, 500f, false, Easing.QUAD_IN)
     private val two = ColourAnimation(Color(0,0,0,0),Color.WHITE, 500f, false, Easing.QUAD_IN)
-    val expanded = Animation({ 300F }, true, { Easing.LINEAR })
+    val expanded = Animation({ 800F }, true, { Easing.LINEAR })
 
     init {
         for (module in Cube.moduleManager!!.getModulesByCategory(this.category).sortedBy { it.name }) {

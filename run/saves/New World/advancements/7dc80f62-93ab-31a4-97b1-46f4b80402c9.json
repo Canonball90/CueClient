@@ -167,6 +167,15 @@
     },
     "done": true
   },
+  "minecraft:story/shiny_gear": {
+    "criteria": {
+      "diamond_leggings": "2022-12-25 00:58:11 -0500",
+      "diamond_helmet": "2022-12-25 00:58:11 -0500",
+      "diamond_chestplate": "2022-12-25 00:58:10 -0500",
+      "diamond_boots": "2022-12-25 00:58:11 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/painting": {
     "criteria": {
       "has_wool": "2022-12-09 22:00:34 -0500"
