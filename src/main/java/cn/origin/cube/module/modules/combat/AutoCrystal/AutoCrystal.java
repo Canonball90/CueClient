@@ -20,6 +20,8 @@ import cn.origin.cube.utils.player.RotationUtil;
 import cn.origin.cube.utils.render.Render2DUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 
+import me.surge.animation.ColourAnimation;
+import me.surge.animation.Easing;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -99,6 +101,7 @@ public class AutoCrystal extends Module {
     public BooleanSetting targetHud = registerSetting("Target Hud", false);
     public IntegerSetting tx = registerSetting("Alpha", 150, 0, 1000);
     public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000);
+    private ColourAnimation fade = new ColourAnimation(new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), 170), new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), 0), 200F, false, Easing.LINEAR);
     private final Map<Integer, Long> attackedCrystals = new ConcurrentHashMap<>();
     private final List<BlockPos> placementPackets = new ArrayList<>();
     private final List<Integer> explosionPackets = new ArrayList<>();
@@ -604,7 +607,9 @@ public class AutoCrystal extends Module {
     @Override
     public void onRender3D(Render3DEvent event){
         if(render != null || renderEnt != null){
-            Render3DUtil.drawBlockBox(render, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), outline.getValue(), 3);
+            fade.setState(render == null);
+            Render3DUtil.drawBlockBox(render, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), 140), outline.getValue(), 3);
+
             if(AutoMineHole.getValue() && blockPos != null){
                 Render3DUtil.drawBlockBox(blockPos, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), outline.getValue(), 3);
             }

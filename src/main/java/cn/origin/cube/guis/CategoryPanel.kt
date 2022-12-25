@@ -5,6 +5,7 @@ import cn.origin.cube.guis.buttons.ModuleButton
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.render.Render2DUtil
+import me.surge.animation.Animation
 import me.surge.animation.ColourAnimation
 import me.surge.animation.Easing
 import java.awt.Color
@@ -26,6 +27,9 @@ class CategoryPanel(
     private var x2 = 0.0f
     private var y2 = 0.0f
     private val hover = ColourAnimation(category.color, category.color.darker().darker(), 300f, false, Easing.QUAD_IN)
+    private val one = ColourAnimation(Color(0,0,0,0),Color.WHITE, 500f, false, Easing.QUAD_IN)
+    private val two = ColourAnimation(Color(0,0,0,0),Color.WHITE, 500f, false, Easing.QUAD_IN)
+    val expanded = Animation({ 300F }, true, { Easing.LINEAR })
 
     init {
         for (module in Cube.moduleManager!!.getModulesByCategory(this.category).sortedBy { it.name }) {
@@ -40,31 +44,38 @@ class CategoryPanel(
         }
         hover.state = isHoveredCategoryTab(mouseX,mouseY)
         Render2DUtil.drawRect(x-1, y, width+2, height, hover.getColour().rgb)
+
         Cube.fontManager!!.IconFont.drawStringWithShadow(
             category.icon,
             x + 3,
             y + (height / 2) - (Cube.fontManager!!.IconFont.height / 4),
             Color.WHITE.rgb
         )
+
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
             category.getName(),
             x + 5 + Cube.fontManager!!.IconFont.getStringWidth(category.icon),
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
             Color.WHITE.rgb
         )
+
         if(isShowModules) {
+            one.state = true
+            two.state = false
             Cube.fontManager!!.IconFont.drawStringWithShadow(
                 "I",
                 x + width - 15,
                 y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-                Color.WHITE.rgb
+                one.getColour().rgb
             )
         }else{
+            one.state = false
+            two.state = true
             Cube.fontManager!!.IconFont.drawStringWithShadow(
                 "G",
                 x + width - 15,
                 y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-                Color.WHITE.rgb
+                two.getColour().rgb
             )
         }
         if (opening)
@@ -90,7 +101,7 @@ class CategoryPanel(
         var calcYPos = this.y + this.height
         for (moduleButton in modules) {
             moduleButton.drawButton(this.x, calcYPos, mouseX, mouseY)
-            calcYPos += moduleButton.height
+            calcYPos += moduleButton.height * expanded.getAnimationFactor().toFloat()
             if (moduleButton.isShowSettings && moduleButton.settings.isNotEmpty()) {
                 var buttonX: Double = (moduleButton.x + moduleButton.height).toDouble()
                 for (settingButton in moduleButton.settings.filter { it.value.isVisible }) {
@@ -114,8 +125,8 @@ class CategoryPanel(
 
     }
 
-    fun clikc(){
-        if(ClickGui.INSTANCE.gay.value) category.color.rgb else ClickGui.getCurrentColor().rgb
+    fun clikc():Color{
+        return if(ClickGui.INSTANCE.gay.value) category.color else ClickGui.getCurrentColor()
     }
 
     fun mouseClicked(mouseX: Int, mouseY: Int, mouseButton: Int) {
@@ -124,7 +135,15 @@ class CategoryPanel(
             this.y2 = this.y - mouseY
             this.dragging = true
         }
-        modules.forEach { it.mouseClicked(mouseX, mouseY, mouseButton) }
+
+        if (isHoveredCategoryTab(mouseX, mouseY) && mouseButton == 1) {
+            expanded.state = !expanded.state
+            return
+        }
+
+        if(expanded.getAnimationFactor() > 0) {
+            modules.forEach { it.mouseClicked(mouseX, mouseY, mouseButton) }
+        }
     }
 
     fun mouseReleased(mouseX: Int, mouseY: Int, mouseButton: Int) {
@@ -134,7 +153,9 @@ class CategoryPanel(
         if (mouseButton == 1 && this.isHoveredCategoryTab(mouseX, mouseY)) {
             this.isShowModules = !this.isShowModules
         }
-        modules.forEach { it.mouseReleased(mouseX, mouseY, mouseButton) }
+        if (expanded.getAnimationFactor() > 0) {
+            modules.forEach { it.mouseReleased(mouseX, mouseY, mouseButton) }
+        }
     }
 
     private fun isHoveredCategoryTab(mouseX: Int, mouseY: Int): Boolean {
@@ -142,7 +163,9 @@ class CategoryPanel(
     }
 
     fun keyTyped(typedChar: Char, keyCode: Int) {
-        modules.forEach { it.keyTyped(typedChar, keyCode) }
+        if (expanded.getAnimationFactor() > 0) {
+            modules.forEach { it.keyTyped(typedChar, keyCode) }
+        }
     }
 
     fun isOpening(): Boolean {

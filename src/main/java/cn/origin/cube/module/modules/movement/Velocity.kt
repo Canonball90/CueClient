@@ -1,12 +1,13 @@
 package cn.origin.cube.module.modules.movement
 
 import cn.origin.cube.core.events.client.PacketEvent
+import cn.origin.cube.core.events.player.EntityCollisionEvent
+import cn.origin.cube.core.settings.BooleanSetting
+import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.inject.client.ISPacketExplosion
 import cn.origin.cube.module.Category
 import cn.origin.cube.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
-import cn.origin.cube.core.settings.BooleanSetting
-import cn.origin.cube.core.settings.FloatSetting
 import net.minecraft.network.Packet
 import net.minecraft.network.play.server.SPacketEntityVelocity
 import net.minecraft.network.play.server.SPacketExplosion
@@ -48,6 +49,13 @@ class Velocity : Module() {
                 }
             }
         }
+    }
+
+    @SubscribeEvent
+    fun onPushy(event: EntityCollisionEvent){
+        event.x = event.x * 0
+        event.y = 0.0
+        event.z = event.z * 0
     }
 
     override fun getHudInfo(): String? {

@@ -52,6 +52,7 @@ public class AuraRewrite extends Module {
     DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10).booleanVisible(walls);
     BooleanSetting rotate = registerSetting("Rotate", true);
     BooleanSetting rotateStrict = registerSetting("StrictRotate", true);
+    BooleanSetting betterCrit = registerSetting("BetterCrit", false);
 
     BooleanSetting render = registerSetting("Render", true);
     ModeSetting<RenderMode> rMode = registerSetting("RenderMode", RenderMode.Circle);
@@ -209,6 +210,9 @@ public class AuraRewrite extends Module {
     public void attack(Entity entity) {
         rotateTo(entity.posX, entity.posY, entity.posZ, mc.player, false);
         if (hitDelay.getValue()) {
+            if(betterCrit.getValue()){
+                mc.gameSettings.keyBindSneak.pressed = true;
+            }
             if(!packet.getValue()) {
                 if (mc.player.getCooledAttackStrength(0) >= 1) {
                     mc.playerController.attackEntity(mc.player, entity);
@@ -218,10 +222,19 @@ public class AuraRewrite extends Module {
                 mc.playerController.connection.sendPacket(new CPacketUseEntity(entity));
                 if (swimArm.getValue()) mc.player.swingArm(EnumHand.MAIN_HAND);
             }
+            if(betterCrit.getValue()){
+                mc.gameSettings.keyBindSneak.pressed = true;
+            }
+        }
+        if(betterCrit.getValue()){
+            mc.gameSettings.keyBindSneak.pressed = true;
         }
         if (!hitDelay.getValue()) {
             mc.playerController.attackEntity(mc.player, entity);
             mc.player.swingArm(EnumHand.MAIN_HAND);
+        }
+        if(betterCrit.getValue()){
+            mc.gameSettings.keyBindSneak.pressed = true;
         }
     }
 

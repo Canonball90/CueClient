@@ -266,7 +266,7 @@ public class NameTags extends Module {
     }
     /*
     RenderUtil.drawRect(-allWidth+2, 2, (allWidth - (allWidth * (1 - healthP)) * 2)-1, 1, Colors.RED.getRGB());
-     */
+    */
 
     private void renderItem(final ItemStack stack, final int x, final int y) {
         GL11.glPushMatrix();

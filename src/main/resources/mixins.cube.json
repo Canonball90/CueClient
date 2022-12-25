@@ -27,7 +27,8 @@
     "MixinRenderer",
     "MixinEntityLivingBase",
     "MixinBlock",
-    "MixinFontRenderer"
+    "MixinFontRenderer",
+    "MixinEntity"
   ],
   "mixins": [
     "MixinNetworkManager"
