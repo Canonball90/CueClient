@@ -4,11 +4,10 @@ import cn.origin.cube.Cube
 import cn.origin.cube.core.settings.*
 import cn.origin.cube.guis.CategoryPanel
 import cn.origin.cube.guis.buttons.setting.*
-import cn.origin.cube.module.AbstractModule
+import cn.origin.cube.core.module.AbstractModule
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.COG
 import cn.origin.cube.utils.render.Render2DUtil
-import me.surge.animation.Animation
 import me.surge.animation.ColourAnimation
 import me.surge.animation.Easing
 import java.awt.Color

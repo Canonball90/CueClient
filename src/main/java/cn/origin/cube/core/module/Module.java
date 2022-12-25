@@ -1,4 +1,4 @@
-package cn.origin.cube.module;
+package cn.origin.cube.core.module;
 
 import cn.origin.cube.core.settings.BindSetting;
 import cn.origin.cube.core.settings.BooleanSetting;

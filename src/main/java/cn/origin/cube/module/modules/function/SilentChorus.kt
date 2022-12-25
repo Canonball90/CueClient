@@ -1,7 +1,7 @@
 package cn.origin.cube.module.modules.function
 
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.module.interfaces.Para
 import cn.origin.cube.utils.player.InventoryUtil
@@ -15,7 +15,7 @@ import net.minecraft.util.EnumHand
 @ModuleInfo(name = "SilentChorus",
     descriptions = "SilentChorus",
     category = Category.FUNCTION)
-class SilentChorus:Module() {
+class SilentChorus: Module() {
     var oldSlot = 0
 
     override fun onEnable() {

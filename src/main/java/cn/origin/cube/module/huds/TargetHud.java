@@ -1,18 +1,15 @@
 package cn.origin.cube.module.huds;
 
 import cn.origin.cube.Cube;
-import cn.origin.cube.module.Category;
-import cn.origin.cube.module.HudModule;
+import cn.origin.cube.core.module.Category;
+import cn.origin.cube.core.module.HudModule;
 import cn.origin.cube.module.interfaces.HudModuleInfo;
-import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
 import cn.origin.cube.core.settings.IntegerSetting;
-import cn.origin.cube.utils.render.Render2DUtil;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.inventory.GuiInventory;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 

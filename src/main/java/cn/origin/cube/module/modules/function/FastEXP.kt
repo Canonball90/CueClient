@@ -1,7 +1,7 @@
 package cn.origin.cube.module.modules.function
 
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import net.minecraft.init.Items
 
@@ -9,7 +9,7 @@ import net.minecraft.init.Items
 @ModuleInfo(name = "FastEXP",
     descriptions = "Fast exp asf",
     category = Category.FUNCTION)
-class FastEXP:Module() {
+class FastEXP: Module() {
 
     override fun onUpdate() {
         if (mc.world == null || mc.player == null) return

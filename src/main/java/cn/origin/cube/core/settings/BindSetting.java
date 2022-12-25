@@ -1,6 +1,6 @@
 package cn.origin.cube.core.settings;
 
-import cn.origin.cube.module.AbstractModule;
+import cn.origin.cube.core.module.AbstractModule;
 
 public class BindSetting extends Setting<BindSetting.KeyBind> {
     public BindSetting(String name, KeyBind value, AbstractModule father) {

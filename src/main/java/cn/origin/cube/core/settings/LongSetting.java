@@ -1,6 +1,6 @@
 package cn.origin.cube.core.settings;
 
-import cn.origin.cube.module.AbstractModule;
+import cn.origin.cube.core.module.AbstractModule;
 
 public class LongSetting extends NumberSetting<Long> {
     public Long maxValue;

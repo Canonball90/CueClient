@@ -7,8 +7,8 @@ import cn.origin.cube.core.settings.IntegerSetting
 import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.inject.client.ICPacketPlayer
 import cn.origin.cube.inject.client.INetworkManager
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import net.minecraft.entity.EntityLivingBase
 import net.minecraft.network.play.client.CPacketPlayer

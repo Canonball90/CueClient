@@ -1,6 +1,6 @@
 package cn.origin.cube.core.settings;
 
-import cn.origin.cube.module.AbstractModule;
+import cn.origin.cube.core.module.AbstractModule;
 
 public class BooleanSetting extends Setting<Boolean>{
     public BooleanSetting(String name, Boolean value, AbstractModule father) {

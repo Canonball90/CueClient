@@ -1,7 +1,7 @@
 package cn.origin.cube.module.modules.movement
 
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.settings.ModeSetting
@@ -12,7 +12,7 @@ import net.minecraft.network.play.client.CPacketPlayer
 @ModuleInfo(name = "Step",
     descriptions = "Step up blocks easier",
     category = Category.MOVEMENT)
-class Step:Module() {
+class Step: Module() {
 
     val mode: ModeSetting<Stepmode> = registerSetting("Mode", Stepmode.Normal)
     val heighty: FloatSetting = registerSetting("Height", 1f, 1f, 6f)

@@ -9,7 +9,7 @@ Caused by: java.lang.NullPointerException
 	at cn.origin.cube.guis.console.GuiConsole.init(GuiConsole.java:51)
 	at cn.origin.cube.guis.console.GuiConsole.<init>(GuiConsole.java:41)
 	at cn.origin.cube.module.modules.client.Console.onEnable(Console.java:14)
-	at cn.origin.cube.module.AbstractModule.enable(AbstractModule.java:77)
+	at cn.origin.cube.core.module.AbstractModule.enable(AbstractModule.java:77)
 	at cn.origin.cube.managers.ConfigManager.loadModule(ConfigManager.kt:152)
 	at cn.origin.cube.managers.ConfigManager.initModules(ConfigManager.kt:33)
 	at cn.origin.cube.managers.ConfigManager.<init>(ConfigManager.kt:18)

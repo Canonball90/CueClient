@@ -1,15 +1,15 @@
 package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.core.events.client.PacketEvent
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import net.minecraft.network.Packet
 import net.minecraft.network.play.server.SPacketPlayerPosLook
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 
 @ModuleInfo(name = "NoRotate", descriptions = "Dangerous to use might desync you.", category = Category.FUNCTION)
-class NoRotate:Module() {
+class NoRotate: Module() {
 
     private var cancelPackets = true
     private var timerReset = false

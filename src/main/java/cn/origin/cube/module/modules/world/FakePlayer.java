@@ -2,8 +2,8 @@ package cn.origin.cube.module.modules.world;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.events.client.PacketEvent;
-import cn.origin.cube.module.Category;
-import cn.origin.cube.module.Module;
+import cn.origin.cube.core.module.Category;
+import cn.origin.cube.core.module.Module;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;

@@ -1,18 +1,14 @@
 package cn.origin.cube.guis.csgoGui.gui;
 
 import cn.origin.cube.Cube;
-import cn.origin.cube.guis.csgoGui.utils.Quad;
-import cn.origin.cube.guis.csgoGui.utils.SkeetUtils;
-import cn.origin.cube.module.AbstractModule;
-import cn.origin.cube.module.Category;
-import cn.origin.cube.module.Module;
+import cn.origin.cube.core.module.AbstractModule;
+import cn.origin.cube.core.module.Category;
+import cn.origin.cube.core.module.Module;
 import cn.origin.cube.utils.render.Render2DUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.input.Keyboard;
-import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 import java.io.IOException;

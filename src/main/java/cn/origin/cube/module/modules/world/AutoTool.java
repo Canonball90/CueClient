@@ -1,6 +1,6 @@
 package cn.origin.cube.module.modules.world;
 
-import cn.origin.cube.module.Module;
+import cn.origin.cube.core.module.Module;
 import cn.origin.cube.module.modules.combat.KillAura;
 import cn.origin.cube.core.settings.BooleanSetting;
 import net.minecraft.block.Block;

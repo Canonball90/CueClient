@@ -3,8 +3,8 @@ package cn.origin.cube.module.modules.client
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.DoubleSetting
 import cn.origin.cube.core.events.client.PacketEvent
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.module.interfaces.Para
 import cn.origin.cube.utils.Timer

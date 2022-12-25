@@ -2,7 +2,7 @@ package cn.origin.cube.core.managers
 
 import cn.origin.cube.Cube
 import cn.origin.cube.core.settings.*
-import cn.origin.cube.module.AbstractModule
+import cn.origin.cube.core.module.AbstractModule
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject

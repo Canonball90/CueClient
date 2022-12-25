@@ -6,8 +6,8 @@ import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.core.events.player.TravelEvent
 import cn.origin.cube.inject.client.IMinecraft
 import cn.origin.cube.inject.client.ITimer
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.module.interfaces.Para
 import cn.origin.cube.utils.Utils
@@ -29,7 +29,7 @@ import kotlin.math.sin
 @ModuleInfo(name = "ElytraFly",
     descriptions = "ElytraFly",
     category = Category.MOVEMENT)
-class ElytraFly:Module() {
+class ElytraFly: Module() {
 
     private val mode: ModeSetting<Mode> = registerSetting("Mode", Mode.CONTROL)
 

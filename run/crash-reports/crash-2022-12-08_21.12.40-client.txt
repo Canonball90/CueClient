@@ -6,8 +6,8 @@ Description: There was a severe problem during mod loading that has caused the g
 
 net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Cue (cue)
 Caused by: java.lang.IllegalStateException: No Annotation on class cn.origin.cube.module.modules.function.EntityDuper!
-	at cn.origin.cube.module.Module.getAnnotation(Module.java:26)
-	at cn.origin.cube.module.Module.<init>(Module.java:11)
+	at cn.origin.cube.core.module.Module.getAnnotation(Module.java:26)
+	at cn.origin.cube.core.module.Module.<init>(Module.java:11)
 	at cn.origin.cube.module.modules.function.EntityDuper.<init>(EntityDuper.java:15)
 	at cn.origin.cube.module.ModuleManager.<init>(ModuleManager.kt:51)
 	at cn.origin.cube.Cube.loadManagers(Cube.java:65)

@@ -1,7 +1,7 @@
 package cn.origin.cube.module.modules.visual
 
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.settings.ModeSetting
@@ -9,7 +9,7 @@ import net.minecraft.init.MobEffects
 import net.minecraft.potion.PotionEffect
 
 @ModuleInfo(name = "FullBright", descriptions = "Always light", category = Category.VISUAL)
-class FullBright:Module() {
+class FullBright: Module() {
 
     var modeSetting: ModeSetting<*> = registerSetting("Mode", mode.GAMMA)
     var gamma: FloatSetting = registerSetting("Gamma", 800f, -10f, 1000f).modeOrVisible(modeSetting, mode.GAMMA, mode.BOTH)

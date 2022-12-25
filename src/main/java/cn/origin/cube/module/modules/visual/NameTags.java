@@ -1,8 +1,8 @@
 package cn.origin.cube.module.modules.visual;
 
 import cn.origin.cube.Cube;
-import cn.origin.cube.module.Category;
-import cn.origin.cube.module.Module;
+import cn.origin.cube.core.module.Category;
+import cn.origin.cube.core.module.Module;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.BooleanSetting;

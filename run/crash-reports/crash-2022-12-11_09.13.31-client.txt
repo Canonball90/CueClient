@@ -10,7 +10,7 @@ Caused by: java.lang.NullPointerException
 	at cn.origin.cube.utils.client.ChatUtil.sendColoredMessage(ChatUtil.java:56)
 	at cn.origin.cube.utils.client.ChatUtil.sendMessage(ChatUtil.java:61)
 	at cn.origin.cube.module.modules.client.Test.onEnable(Test.kt:13)
-	at cn.origin.cube.module.AbstractModule.enable(AbstractModule.java:78)
+	at cn.origin.cube.core.module.AbstractModule.enable(AbstractModule.java:78)
 	at cn.origin.cube.managers.ConfigManager.loadModule(ConfigManager.kt:152)
 	at cn.origin.cube.managers.ConfigManager.initModules(ConfigManager.kt:33)
 	at cn.origin.cube.managers.ConfigManager.<init>(ConfigManager.kt:18)

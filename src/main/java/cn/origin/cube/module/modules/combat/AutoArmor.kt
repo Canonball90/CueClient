@@ -1,8 +1,8 @@
 package cn.origin.cube.module.modules.combat
 
 import cn.origin.cube.core.settings.DoubleSetting
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.utils.Timer
 import net.minecraft.client.gui.inventory.GuiContainer
@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent
 @ModuleInfo(name = "AutoArmor",
     descriptions = "AutoArmor",
     category = Category.COMBAT)
-class AutoArmor:Module() {
+class AutoArmor: Module() {
     var delay: DoubleSetting = registerSetting("Delay", 100.0, 100.0, 1000.0)
 
     private val timer = Timer()

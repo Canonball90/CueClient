@@ -2,14 +2,13 @@ package cn.origin.cube.guis
 
 import cn.origin.cube.Cube
 import cn.origin.cube.guis.buttons.ModuleButton
-import cn.origin.cube.module.Category
+import cn.origin.cube.core.module.Category
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.Animation
 import me.surge.animation.ColourAnimation
 import me.surge.animation.Easing
 import java.awt.Color
-import java.util.*
 
 class CategoryPanel(
     var x: Float,

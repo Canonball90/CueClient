@@ -1,7 +1,7 @@
 package cn.origin.cube.guis.csgoGui.gui;
 
 
-import cn.origin.cube.module.AbstractModule;
+import cn.origin.cube.core.module.AbstractModule;
 import cn.origin.cube.core.settings.Setting;
 
 public class Comp {

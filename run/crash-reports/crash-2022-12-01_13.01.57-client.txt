@@ -7,7 +7,7 @@ Description: There was a severe problem during mod loading that has caused the g
 net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Cue (cue)
 Caused by: java.lang.IllegalArgumentException: Method public boolean cn.origin.cube.module.modules.visual.TotemPopChams.onPacketReceive(net.minecraft.network.Packet) has @SubscribeEvent annotation, but takes a argument that is not an Event interface net.minecraft.network.Packet
 	at net.minecraftforge.fml.common.eventhandler.EventBus.register(EventBus.java:109)
-	at cn.origin.cube.module.AbstractModule.enable(AbstractModule.java:76)
+	at cn.origin.cube.core.module.AbstractModule.enable(AbstractModule.java:76)
 	at cn.origin.cube.managers.ConfigManager.loadModule(ConfigManager.kt:152)
 	at cn.origin.cube.managers.ConfigManager.initModules(ConfigManager.kt:33)
 	at cn.origin.cube.managers.ConfigManager.<init>(ConfigManager.kt:18)

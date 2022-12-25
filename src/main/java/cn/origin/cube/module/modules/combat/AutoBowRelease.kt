@@ -1,7 +1,7 @@
 package cn.origin.cube.module.modules.combat
 
-import cn.origin.cube.module.Category
-import cn.origin.cube.module.Module
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.IntegerSetting
 import net.minecraft.init.Items
@@ -12,7 +12,7 @@ import net.minecraft.util.math.BlockPos
 @ModuleInfo(name = "AutoBowRelease",
     descriptions = "AutoBowRelease",
     category = Category.COMBAT)
-class AutoBowRelease:Module() {
+class AutoBowRelease: Module() {
 
     private val ticks: IntegerSetting = registerSetting("Ticks", 3, 0, 20)
 

@@ -3,7 +3,7 @@ package cn.origin.cube.command.commands
 import cn.origin.cube.Cube
 import cn.origin.cube.command.Command
 import cn.origin.cube.module.interfaces.CommandInfo
-import cn.origin.cube.module.AbstractModule
+import cn.origin.cube.core.module.AbstractModule
 import cn.origin.cube.core.settings.BindSetting
 import cn.origin.cube.utils.client.ChatUtil
 import org.lwjgl.input.Keyboard

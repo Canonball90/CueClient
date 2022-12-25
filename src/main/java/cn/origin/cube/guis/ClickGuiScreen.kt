@@ -1,7 +1,7 @@
 package cn.origin.cube.guis
 
 import cn.origin.cube.Cube
-import cn.origin.cube.module.Category
+import cn.origin.cube.core.module.Category
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import cn.origin.cube.utils.render.particle.ParticleSystem
@@ -10,7 +10,6 @@ import me.surge.animation.Easing
 import net.minecraft.client.gui.GuiScreen
 import net.minecraft.client.gui.ScaledResolution
 import org.lwjgl.input.Mouse
-import org.lwjgl.opengl.GL11
 import java.awt.Color
 
 
