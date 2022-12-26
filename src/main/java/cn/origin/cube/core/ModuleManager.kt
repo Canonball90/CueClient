@@ -50,7 +50,6 @@ class ModuleManager {
         registerModule(MiddleClick())
         registerModule(FakeKick())
         registerModule(NoRotate())
-        // registerModule(AntiKnockback())
         registerModule(FastEXP())
         registerModule(NoFall())
         registerModule(Scaffold())

@@ -2,9 +2,12 @@ package cn.origin.cube.module.modules.combat.AutoCrystal;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.events.client.PacketEvent;
+import cn.origin.cube.core.events.player.RenderRotationsEvent;
+import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
@@ -56,6 +59,7 @@ public class AutoCrystal extends Module {
 
     public BooleanSetting switchToCrystal = registerSetting("Switch", false);
     public BooleanSetting silent = registerSetting("Silent", false).booleanVisible(switchToCrystal);
+    public ModeSetting<SmartRange> placeBreakRange = registerSetting("SmartRange", SmartRange.None);
     public BooleanSetting multiThread = registerSetting("MultiThread", false);
     public BooleanSetting ak47 = registerSetting("Machine Gun", false);
     public BooleanSetting players = registerSetting("Players", false);
@@ -65,6 +69,9 @@ public class AutoCrystal extends Module {
     public BooleanSetting explode = registerSetting("Break", false);
     public BooleanSetting packetPlace = registerSetting("PacketPlace", false).booleanVisible(place);
     public BooleanSetting packetExplode = registerSetting("PacketExplode", false).booleanVisible(explode);
+    public BooleanSetting ncpRange = registerSetting("NcpRange", false);
+    public BooleanSetting smartBreakTrace = registerSetting("smartBreakTrace", false);
+    public BooleanSetting negativeBreakTrace = registerSetting("negativeBreakTrace", false);
     public IntegerSetting placeRange = registerSetting("PlaceRange", 5, 0, 6);
     public IntegerSetting breakRange = registerSetting("BreakRange", 5, 0, 6);
     public IntegerSetting minDamage = registerSetting("MinimumDmg", 4, 0, 20);
@@ -73,6 +80,8 @@ public class AutoCrystal extends Module {
     public BooleanSetting silentAntiWeakness = registerSetting("Silent", false).booleanVisible(antiWeakness);
     public BooleanSetting multiPlace = registerSetting("Multi-Place", false);
     public BooleanSetting rotate = registerSetting("Rotate", false);
+    public BooleanSetting stopWhenEating = registerSetting( "StopWhenEating", false);
+    public BooleanSetting stopWhenMining = registerSetting("StopWhenMining", false);
     public BooleanSetting logic = registerSetting("Logic", false);
     public BooleanSetting placeBreak = registerSetting("PlaceBreak", false).booleanVisible(logic);
     public BooleanSetting breakPlace = registerSetting("BreakPlace", false).booleanVisible(logic).booleanDisVisible(placeBreak);
@@ -90,10 +99,18 @@ public class AutoCrystal extends Module {
     public ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main).booleanVisible(swing);
     public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 17 , 0 , 20);
     public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 18 , 0 , 20);
+    public IntegerSetting negativeTicks = registerSetting("negativeTicks",  0, 0, 20);
+    public IntegerSetting smartTicks = registerSetting("negativeTicks",  0, 0, 20);
+    public FloatSetting breakTrace = registerSetting("breakTrace",3.0f, 0.0f, 6.0f);
     public BooleanSetting thinking = registerSetting("Thinking", false);
     public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
     public BooleanSetting HoleJiggle = registerSetting("Jiggle", false);
     public BooleanSetting inhibit = registerSetting("Inhibit", false);
+    public BooleanSetting forceBypass = registerSetting("ForceBypass", false);
+    public IntegerSetting bypassRotationTime = registerSetting("bypassRotationTime",  500, 0, 1000).booleanVisible(forceBypass);
+    public FloatSetting rbYaw = registerSetting("RbYaw",180.0f, 0.0f, 180.0f).booleanVisible(forceBypass);
+    public FloatSetting rbPitch = registerSetting("RbPitch", 90.0f, 0.0f, 90.0f).booleanVisible(forceBypass);
+    public BooleanSetting rayTraceBypass = registerSetting("RTBypass", false);
     public BooleanSetting outline = registerSetting("Outline", true);
     public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255);
     public BooleanSetting targetHud = registerSetting("Target Hud", false);
@@ -101,6 +118,7 @@ public class AutoCrystal extends Module {
     public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000);
     private ColourAnimation fade = new ColourAnimation(new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), 170), new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), 0), 200F, false, Easing.LINEAR);
     private final Map<Integer, Long> attackedCrystals = new ConcurrentHashMap<>();
+    public final HelperRange rangeHelper = new HelperRange(this);
     private final List<BlockPos> placementPackets = new ArrayList<>();
     private final List<Integer> explosionPackets = new ArrayList<>();
     private final List<Integer> deadCrystals = new ArrayList<>();
@@ -108,6 +126,7 @@ public class AutoCrystal extends Module {
     private static boolean togglePitch = false;
     private static boolean cancelingCrystals;
     private static boolean isSpoofingAngles;
+    private Timer bypassTimer = new Timer();
     private static boolean autoTimeractive;
     private boolean switchCooldown = false;
     private Timer breakTimer = new Timer();
@@ -121,6 +140,7 @@ public class AutoCrystal extends Module {
     private int y = ty.getValue();
     private static double pitch;
     public boolean shouldRotate;
+    private BlockPos bypassPos;
     boolean smoothRotatePitch;
     boolean smoothRotateYaw;
     boolean smoothRotated;
@@ -135,6 +155,7 @@ public class AutoCrystal extends Module {
     public BlockPos render;
     private int newSlot;
     private int breaks;
+    private Rotation rotateAngles;
 
     public static boolean isCancelingCrystals() {
         return cancelingCrystals;
@@ -143,6 +164,7 @@ public class AutoCrystal extends Module {
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent event) {
         if(fullNullCheck())return;
+        if(stopWhenEating.getValue() && isEating() || stopWhenMining.getValue() && isMining()) return;
         doLogic();
     }
 
@@ -395,7 +417,24 @@ public class AutoCrystal extends Module {
         mc.player.setSneaking(false);
     }
 
+    @SubscribeEvent
+    public void onRenderRotations(RenderRotationsEvent event) {
+        if (rotate.getValue()) {
+            if (isEnabled() && (renderEnt != null || render != null)) {
+                if (rotateAngles != null) {
+                    event.setCanceled(true);
+
+                    event.setYaw(rotateAngles.getYaw());
+                    event.setPitch(rotateAngles.getPitch());
+                }
+            }
+        }
+    }
+
     public void placee(BlockPos q, EnumFacing f, Boolean offhand) {
+        if(rayTraceBypass.getValue() && forceBypass.getValue()){
+            setBypassPos(q);
+        }
         if (packetPlace.getValue()) {
             mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
         } else {
@@ -577,6 +616,24 @@ public class AutoCrystal extends Module {
         return false;
     }
 
+    public boolean isOutsideBreakRange(double x, double y, double z,AutoCrystal module) {
+        switch (placeBreakRange.getValue()){
+            case All:
+                return !module.rangeHelper.isCrystalInRange(x, y, z, module.smartTicks.getValue()) && !module.rangeHelper.isCrystalInRange(x, y, z, 0);
+            case None:
+                return false;
+            case Normal:
+                return  !module.rangeHelper.isCrystalInRange(x, y, z, 0);
+            case Extrapolated:
+                return  !module.rangeHelper.isCrystalInRange(x, y, z, module.smartTicks.getValue());
+        }
+        return !module.rangeHelper.isCrystalInRange(x, y, z, module.smartTicks.getValue()) && !module.rangeHelper.isCrystalInRange(x, y, z, 0);
+    }
+
+    public boolean isOutsideBreakRange(BlockPos pos, AutoCrystal module) {
+        return isOutsideBreakRange(pos.getX() + 0.5f, pos.getY() + 1, pos.getZ() + 0.5f, module );
+    }
+
     public void placeCrystalOnBlock(BlockPos pos, EnumHand hand) {
         if(multiThread.getValue()){
             Threads threads = new Threads(ThreadType.BLOCK);
@@ -663,11 +720,43 @@ public class AutoCrystal extends Module {
         return circleblocks;
     }
 
+    public boolean isEating() {
+        ItemStack stack = mc.player.getActiveItemStack();
+        return mc.player.isHandActive()
+                && !stack.isEmpty()
+                && stack.getItem().getItemUseAction(stack) == EnumAction.EAT;
+    }
+
+    public boolean isMining() {
+        return mc.playerController.getIsHittingBlock();
+    }
+
     public boolean isDesynced() {
         if (mc.isSingleplayer()) {
             return false;
         }
         return explosionPackets.size() > 40 || placementPackets.size() > 40;
+    }
+
+    @SubscribeEvent
+    public void onMotion(UpdateWalkingPlayerEvent event){
+        if (rayTraceBypass.getValue()
+                && forceBypass.getValue()) {
+            BlockPos bypassPos = getBypassPos();
+            if (bypassPos != null) {
+                float[] rotations =
+                        RotationUtil.getLegitRotations(RotationUtil.getEyesPos());
+                float pitch =
+                        rotations[1] == 0.0f && rbYaw.getValue() != 0.0f
+                                ? 0.0f
+                                : rotations[1] < 0.0f
+                                ? rotations[1] + rbPitch.getValue()
+                                : rotations[1] - rbPitch.getValue();
+
+                mc.player.rotationYaw =((rotations[0] + rbYaw.getValue()) % 360);
+                mc.player.rotationPitch =(pitch);
+            }
+        }
     }
 
 //    public float calculateDamage(double posX, double posY, double posZ, Entity entity) {
@@ -769,6 +858,21 @@ public class AutoCrystal extends Module {
             return EnumHand.OFF_HAND;
         }
         return EnumHand.MAIN_HAND;
+    }
+
+    public BlockPos getBypassPos() {
+        if (bypassTimer.passedMs(bypassRotationTime.getValue())
+                || !forceBypass.getValue()
+                || !rayTraceBypass.getValue()) {
+            bypassPos = null;
+        }
+
+        return bypassPos;
+    }
+
+    public void setBypassPos(BlockPos pos) {
+        bypassTimer.reset();
+        this.bypassPos = pos;
     }
 
     private void Thinking() {
@@ -1164,6 +1268,13 @@ public class AutoCrystal extends Module {
     public enum ThreadType{
         BLOCK,
         CRYSTAL
+    }
+
+    public enum SmartRange {
+        None,
+        Normal,
+        All,
+        Extrapolated
     }
 
     private void TryJiggle(BlockPos pos) {

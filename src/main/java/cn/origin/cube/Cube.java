@@ -37,6 +37,7 @@ public class Cube {
     public static CapeManager capeManager = null;
     public static Shaders shaders;
     public static ThreadManager threadManager;
+    public static PositionManager positionManager;
 
     public static String commandPrefix = ".";
 
@@ -68,6 +69,7 @@ public class Cube {
         capeManager = new CapeManager();
         shaders = new Shaders();
         threadManager = new ThreadManager();
+        positionManager = new PositionManager();
         logger.info("AntiDump...");
         logger.info("AntiDump...");
         logger.info("AntiDump...");

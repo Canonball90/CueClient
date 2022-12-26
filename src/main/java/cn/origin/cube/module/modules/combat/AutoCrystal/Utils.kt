@@ -106,5 +106,13 @@ object Utils {
         )
     }
 
+    @JvmStatic
+    fun distanceSq(x: Double, y: Double, z: Double, x1: Double, y1: Double, z1: Double): Double {
+        val xDist = x - x1
+        val yDist = y - y1
+        val zDist = z - z1
+        return xDist * xDist + yDist * yDist + zDist * zDist
+    }
+
 
 }
