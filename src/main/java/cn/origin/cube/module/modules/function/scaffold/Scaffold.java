@@ -1,5 +1,7 @@
 package cn.origin.cube.module.modules.function.scaffold;
 
+import cn.origin.cube.core.events.player.TravelEvent;
+import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
 import cn.origin.cube.module.interfaces.ModuleInfo;
@@ -16,6 +18,7 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,10 +43,15 @@ public class Scaffold extends Module {
     private boolean packet = false;
     Timer time = new Timer();
 
-    @Override
-    public void onUpdate() {
+    @SubscribeEvent
+    public void onUpdate(TravelEvent event) {
         super.onUpdate();
         this.pos = new BlockPos(this.mc.player.posX, this.mc.player.posY - 1.0, this.mc.player.posZ);
+        if(isAir(this.pos)){
+            mc.player.setSneaking(true);
+        }else{
+            mc.player.setSneaking(false);
+        }
         if (this.isAir(this.pos)) {//ToDo add , this.mc.player.isSneaking() later
             BlockUtil.placeBlock(this.pos, EnumHand.MAIN_HAND, this.rotate.getValue(), this.packet);
             this.blocksToRender.add(new ScaffoldBlock(BlockUtil.posToVec3d(this.pos)));
