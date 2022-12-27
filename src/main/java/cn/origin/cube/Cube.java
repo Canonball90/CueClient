@@ -24,7 +24,7 @@ public class Cube {
 
     public static final String MOD_NAME = "Cue";
 
-    public static final String MOD_VERSION = "0.1";
+    public static final String MOD_VERSION = "1.73";
     public static final Logger logger = LogManager.getLogger("Cue");
     public static EventManager eventManager = null;
     public static FontManager fontManager = null;

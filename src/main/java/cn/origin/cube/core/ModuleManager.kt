@@ -33,6 +33,7 @@ class ModuleManager {
         registerModule(SkeetSkeet())
         registerModule(Stats())
         registerModule(PacketLogger())
+        registerModule(NewClickGui())
 
         //Combat
         registerModule(Surround())
