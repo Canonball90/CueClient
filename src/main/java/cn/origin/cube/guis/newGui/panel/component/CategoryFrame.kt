@@ -1,8 +1,10 @@
 package cn.origin.cube.guis.newGui.panel.component
 
 import cn.origin.cube.Cube
+import cn.origin.cube.core.module.AbstractModule.mc
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.guis.newGui.panel.component.button.ModuleButton
+import cn.origin.cube.module.huds.WaterMark
 import cn.origin.cube.module.modules.client.NewClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.Animation
@@ -29,6 +31,9 @@ class CategoryFrame(
     private val one = ColourAnimation(Color(0,0,0,0), Color.WHITE, 500f, false, Easing.QUAD_IN)
     private val two = ColourAnimation(Color(0,0,0,0), Color.WHITE, 500f, false, Easing.QUAD_IN)
     val expanded = Animation({ 800F }, true, { Easing.LINEAR })
+    var colorOffset: Double =
+        Math.abs(System.currentTimeMillis() / 20.0) / 50 + 50 / (mc.fontRenderer.FONT_HEIGHT + width * 14f + 50.0)
+    var color = getGradientOffset1(Color(0x001762FF), Color(0x0081FF), colorOffset, 255)
 
     init {
         for (module in Cube.moduleManager!!.getModulesByCategory(this.category).sortedBy { it.name }) {
@@ -104,6 +109,20 @@ class CategoryFrame(
 
     fun getCenter():Float{
         return width / 2
+    }
+
+    fun getGradientOffset1(color1: Color, color2: Color, offset: Double, alpha: Int): Color? {
+        var offset = offset
+        if (offset > 1) {
+            val left = offset % 1
+            val off = offset.toInt()
+            offset = if (off % 2 == 0) left else 1 - left
+        }
+        val inverse_percent = 1 - offset
+        val redPart = (color1.red * inverse_percent + color2.red * offset).toInt()
+        val greenPart = (color1.green * inverse_percent + color2.green * offset).toInt()
+        val bluePart = (color1.blue * inverse_percent + color2.blue * offset).toInt()
+        return Color(redPart, greenPart, bluePart, alpha)
     }
 
     fun mouseClicked(mouseX: Int, mouseY: Int, mouseButton: Int) {

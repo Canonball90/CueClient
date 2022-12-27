@@ -43,8 +43,8 @@ public class Scaffold extends Module {
     private boolean packet = false;
     Timer time = new Timer();
 
-    @SubscribeEvent
-    public void onUpdate(TravelEvent event) {
+    @Override
+    public void onUpdate() {
         super.onUpdate();
         this.pos = new BlockPos(this.mc.player.posX, this.mc.player.posY - 1.0, this.mc.player.posZ);
         if(isAir(this.pos)){

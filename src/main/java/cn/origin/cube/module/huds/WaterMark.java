@@ -3,11 +3,13 @@ package cn.origin.cube.module.huds;
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.HudModule;
+import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.module.interfaces.HudModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.ModeSetting;
+import cn.origin.cube.module.modules.client.NewClickGui;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.opengl.GL11;
 
@@ -18,6 +20,20 @@ public class WaterMark extends HudModule {
     public FloatSetting Scala = registerSetting("Size", 1.0f, 0.0f, 10.0f);
     public ModeSetting<nfd> mode = registerSetting("Mode", nfd.Word);
     public BooleanSetting version = registerSetting("Version", false);
+
+    public IntegerSetting red = registerSetting("Red", 25, 0, 255);
+    public IntegerSetting green = registerSetting("Green", 115, 0, 255);
+    public IntegerSetting blue = registerSetting("Blue", 255, 0, 255);
+
+    public IntegerSetting red1 = registerSetting("Red1", 25, 0, 255);
+    public IntegerSetting green1 = registerSetting("Green1", 115, 0, 255);
+    public IntegerSetting blue1 = registerSetting("Blue1", 255, 0, 255);
+
+    public static WaterMark INSTANCE;
+
+    public WaterMark() {
+        INSTANCE = this;
+    }
 
     @Override
     public void onRender2D() {
@@ -53,7 +69,7 @@ public class WaterMark extends HudModule {
 
             Minecraft mc = Minecraft.getMinecraft();
             double colorOffset = (Math.abs(((System.currentTimeMillis()) / 20D)) / 50) + (50 / (mc.fontRenderer.FONT_HEIGHT + i * 14f + 50D));
-            Color color = getGradientOffset1(new Color(0xFFFFFF), new Color(0x0081FF), colorOffset, 255);
+            Color color = getGradientOffset1(getCurrentColor(), getCurrentColor1(), colorOffset, 255);
 
             Cube.fontManager.CustomFont.drawString(str, (int) updateX, (int) y, color.hashCode());
             updateX += Cube.fontManager.CustomFont.getStringWidth(str);
@@ -72,6 +88,14 @@ public class WaterMark extends HudModule {
         final int greenPart = (int) (color1.getGreen() * inverse_percent + color2.getGreen() * offset);
         final int bluePart = (int) (color1.getBlue() * inverse_percent + color2.getBlue() * offset);
         return new Color(redPart, greenPart, bluePart, alpha);
+    }
+
+    public static Color getCurrentColor() {
+        return new Color(INSTANCE.red.getValue(), INSTANCE.green.getValue(), INSTANCE.blue.getValue());
+    }
+
+    public static Color getCurrentColor1() {
+        return new Color(INSTANCE.red1.getValue(), INSTANCE.green1.getValue(), INSTANCE.blue1.getValue());
     }
 
     public enum nfd{
