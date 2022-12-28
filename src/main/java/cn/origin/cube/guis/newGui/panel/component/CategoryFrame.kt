@@ -5,6 +5,7 @@ import cn.origin.cube.core.module.AbstractModule.mc
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.guis.newGui.panel.component.button.ModuleButton
 import cn.origin.cube.module.huds.WaterMark
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.module.modules.client.NewClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.Animation
@@ -30,7 +31,7 @@ class CategoryFrame(
     private val hover = ColourAnimation(Color(33,33,33), Color(33,33,33).darker().darker(), 300f, false, Easing.QUAD_IN)
     private val one = ColourAnimation(Color(0,0,0,0), Color.WHITE, 500f, false, Easing.QUAD_IN)
     private val two = ColourAnimation(Color(0,0,0,0), Color.WHITE, 500f, false, Easing.QUAD_IN)
-    val expanded = Animation({ 800F }, true, { Easing.LINEAR })
+    val expanded = Animation({ 1500F }, true, { Easing.LINEAR })
     var colorOffset: Double =
         Math.abs(System.currentTimeMillis() / 20.0) / 50 + 50 / (mc.fontRenderer.FONT_HEIGHT + width * 14f + 50.0)
     var color = getGradientOffset1(Color(0x001762FF), Color(0x0081FF), colorOffset, 255)
@@ -48,7 +49,7 @@ class CategoryFrame(
         }
         hover.state = isHoveredCategoryTab(mouseX,mouseY)
         Render2DUtil.drawRect(x, y, width, height, hover.getColour().rgb)
-        Render2DUtil.drawLine(x.toDouble(),y.toDouble() + height.toDouble() - 1,x.toDouble() + width.toDouble(),y.toDouble() + height.toDouble() - 1, 2F, NewClickGui.getCurrentColor())
+        Render2DUtil.drawLine(x.toDouble(),y.toDouble() + height.toDouble() - 1,x.toDouble() + width.toDouble(),y.toDouble() + height.toDouble() - 1, 2F, Colors.getClickGuiColor())
 
         Cube.fontManager!!.IconFont.drawStringWithShadow(
             category.icon,
@@ -100,7 +101,7 @@ class CategoryFrame(
                     buttonX,
                     calcYPos.toDouble(),
                     0.75f,
-                    NewClickGui.getCurrentColor()
+                    Colors.getClickGuiColor()
                 )
             }
         }

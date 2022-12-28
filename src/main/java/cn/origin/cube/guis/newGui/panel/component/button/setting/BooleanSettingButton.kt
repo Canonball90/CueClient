@@ -5,6 +5,7 @@ import cn.origin.cube.guis.newGui.panel.component.button.ModuleButton
 import cn.origin.cube.guis.newGui.panel.component.button.SettingButton
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.core.settings.BooleanSetting
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.module.modules.client.NewClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.ColourAnimation
@@ -18,7 +19,7 @@ class BooleanSettingButton(
     father: ModuleButton
 ) : SettingButton<BooleanSetting>(width, height, value, father) {
 
-    private val colourAnimation = ColourAnimation(Color.WHITE,NewClickGui.getCurrentColor(), 200f, false, Easing.LINEAR)
+    private val colourAnimation = ColourAnimation(Color.WHITE, Colors.getClickGuiColor(), 200f, false, Easing.LINEAR)
 
     override fun drawButton(x: Float, y: Float, mouseX: Int, mouseY: Int) {
         Render2DUtil.drawRect(x, y, this.width, this.height, Color(80, 80, 80).rgb)

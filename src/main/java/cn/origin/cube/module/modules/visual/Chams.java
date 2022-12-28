@@ -10,6 +10,7 @@ import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.opengl.GL11;
 
@@ -29,7 +30,7 @@ public class Chams extends Module {
 
     @SubscribeEvent
     public void onPlayerModel(final EventModelPlayerRender event) {
-        final Color c = ClickGui.getCurrentColor();
+        final Color c = Colors.getGlobalColor();
         if (pulse.getValue()) {
             if (event.type == 0) {
                 GL11.glPushMatrix();

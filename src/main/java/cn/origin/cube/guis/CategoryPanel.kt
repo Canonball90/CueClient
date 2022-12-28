@@ -3,7 +3,6 @@ package cn.origin.cube.guis
 import cn.origin.cube.Cube
 import cn.origin.cube.guis.buttons.ModuleButton
 import cn.origin.cube.core.module.Category
-import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.Animation
 import me.surge.animation.ColourAnimation
@@ -114,18 +113,11 @@ class CategoryPanel(
                     buttonX,
                     calcYPos.toDouble(),
                     0.75f,
-                    if(ClickGui.INSTANCE.gay.value)
-                        moduleButton.father.category.color
-                            else
-                    ClickGui.getCurrentColor()
+                    moduleButton.father.category.color
                 )
             }
         }
 
-    }
-
-    fun clikc():Color{
-        return if(ClickGui.INSTANCE.gay.value) category.color else ClickGui.getCurrentColor()
     }
 
     fun mouseClicked(mouseX: Int, mouseY: Int, mouseButton: Int) {

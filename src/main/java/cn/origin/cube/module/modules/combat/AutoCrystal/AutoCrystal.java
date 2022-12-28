@@ -11,6 +11,7 @@ import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.module.modules.combat.KillAura;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
@@ -663,7 +664,7 @@ public class AutoCrystal extends Module {
     public void onRender3D(Render3DEvent event){
         if(render != null || renderEnt != null){
             fade.setState(render == null);
-            Render3DUtil.drawBlockBox(render, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), 140), outline.getValue(), 3);
+            Render3DUtil.drawBlockBox(render, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(), Colors.getGlobalColor().getBlue(), 140), outline.getValue(), 3);
 
             if(AutoMineHole.getValue() && blockPos != null){
                 Render3DUtil.drawBlockBox(blockPos, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), outline.getValue(), 3);

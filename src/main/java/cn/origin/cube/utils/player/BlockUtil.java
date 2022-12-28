@@ -331,4 +331,13 @@ public class BlockUtil {
     private static IBlockState getState(BlockPos pos) {
         return mc.world.getBlockState(pos);
     }
+
+    public static BlockPos getPlayerPos() {
+        return new BlockPos(Math.floor(mc.player.posX), Math.floor(mc.player.posY), Math.floor(mc.player.posZ));
+    }
+
+    public static BlockPos getPlayerPos(double pY) {
+        return new BlockPos(Math.floor(mc.player.posX), Math.floor(mc.player.posY + pY), Math.floor(mc.player.posZ));
+    }
+
 }

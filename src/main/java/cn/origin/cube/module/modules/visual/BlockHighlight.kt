@@ -8,6 +8,7 @@ import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.settings.IntegerSetting
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.render.Render3DUtil
 import net.minecraft.block.material.Material
 import net.minecraft.client.Minecraft
@@ -36,9 +37,9 @@ class BlockHighlight: Module() {
             Render3DUtil.drawBlockBox(
                 blockpos,
                 Color(
-                    ClickGui.getCurrentColor().red,
-                    ClickGui.getCurrentColor().green,
-                    ClickGui.getCurrentColor().blue,
+                    Colors.getGlobalColor().red,
+                    Colors.getGlobalColor().green,
+                    Colors.getGlobalColor().blue,
                     if (full.value) alpha.value else 0
                 ),
                 outline.value,

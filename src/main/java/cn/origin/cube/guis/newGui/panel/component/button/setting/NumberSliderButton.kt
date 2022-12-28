@@ -5,6 +5,7 @@ import cn.origin.cube.core.settings.*
 import cn.origin.cube.guis.newGui.panel.component.button.ModuleButton
 import cn.origin.cube.guis.newGui.panel.component.button.SettingButton
 import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.module.modules.client.NewClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.ColourAnimation
@@ -22,7 +23,7 @@ class NumberSliderButton(width: Float, height: Float, value: Setting<*>, father:
     private lateinit var max: Number
     private var difference = 0
     private var dargging = false
-    private val slid = ColourAnimation(NewClickGui.getCurrentColor(), NewClickGui.getCurrentColor().darker(), 150f, false, Easing.QUAD_IN)
+    private val slid = ColourAnimation(Colors.getClickGuiColor(), Colors.getClickGuiColor().darker(), 150f, false, Easing.QUAD_IN)
 
     init {
         when (value) {

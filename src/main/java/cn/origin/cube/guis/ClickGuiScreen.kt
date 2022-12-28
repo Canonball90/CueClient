@@ -3,6 +3,7 @@ package cn.origin.cube.guis
 import cn.origin.cube.Cube
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.render.Render2DUtil
 import cn.origin.cube.utils.render.particle.ParticleSystem
 import me.surge.animation.ColourAnimation
@@ -17,7 +18,7 @@ class ClickGuiScreen : GuiScreen() {
     val panels = arrayListOf<CategoryPanel>()
     private var particleSystem: ParticleSystem? = null
     private val hover = ColourAnimation(Color(0, 0, 0, 0), Color(0, 0, 0, 115), 300f, false, Easing.LINEAR)
-    private val hover1 = ColourAnimation(Color(0, 0, 0, 0), ClickGui.getCurrentColor(), 300f, false, Easing.LINEAR)
+    private val hover1 = ColourAnimation(Color(0, 0, 0, 0), Colors.getClickGuiColor(), 300f, false, Easing.LINEAR)
 
     init {
         var x = 20.0f

@@ -3,11 +3,14 @@ package cn.origin.cube.module.modules.visual;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.player.BlockUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
+import cn.origin.cube.utils.render.RenderBuilder;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 
@@ -29,41 +32,41 @@ public class HoleESP extends Module {
     private final FloatSetting pulseMin = registerSetting("Pulse Min", 1.0f, -5.0f, 5).booleanVisible(pulse);
     private final FloatSetting pulseSpeed = registerSetting("Pulse Speed", 4.0f, 0.0f, 5.0f).booleanVisible(pulse);
     private final FloatSetting rollingWidth = registerSetting("Pulse W", 8.0f, 0.0f, 20.0f).booleanVisible(pulse);
+    private final FloatSetting height = registerSetting("height", 1.0f, -5.0f, 5.0f);
+    private final ModeSetting<RenderBuilder.Box> mode = registerSetting("Mode", RenderBuilder.Box.GLOW);
 
-    public BooleanSetting obsidianBox = registerSetting("Obsidian Box", false);
-    public BooleanSetting obsidianBox1 = registerSetting("Obsidian Box Full", false);
-    public BooleanSetting obsidianOutline = registerSetting("Obsidian Outline", false);
-    public FloatSetting obsidianOutlineWidth = registerSetting("Obsidian Outline Width", 1.0f, 0.0f, 5.0f).booleanVisible(obsidianOutline);
+    public FloatSetting obsidianOutlineWidth = registerSetting("Obsidian Outline Width", 1.0f, 0.0f, 5.0f);
 
-    public BooleanSetting bedrockBox = registerSetting("Bedrock Box", false);
-    public BooleanSetting bedrockBox1 = registerSetting("Bedrock Box Full", false);
-    public BooleanSetting bedrockOutline = registerSetting("Bedrock Outline", false);
-    public FloatSetting bedrockOutlineWidth = registerSetting("Bedrock Outline Width", 1.0f, 0.0f, 5.0f).booleanVisible(bedrockOutline);
+    public FloatSetting bedrockOutlineWidth = registerSetting("Bedrock Outline Width", 1.0f, 0.0f, 5.0f);
 
 
     @Override
     public void onRender3D(Render3DEvent event){
-        if (!obsidianHoles.isEmpty())
-            if(pulse.getValue()) {
-                obsidianHoles.forEach(pos -> Render3DUtil.drawBox(pos, new Color(255, 0, 0, 90), getRolledHeight(4), true, false, 0));
-                obsidianHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, obsidianBox.getValue(), obsidianOutline.getValue(), new Color(255,0,0, 120), new Color(255,0,0, 150), obsidianOutlineWidth.getValue()));
-                if(obsidianBox1.getValue()) {
-                    obsidianHoles.forEach(pos -> Render3DUtil.drawBlockBox(pos, new Color(255, 0, 0, 0), true, 2));
-                }
-            }else{
-                obsidianHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, obsidianBox.getValue(), obsidianOutline.getValue(), new Color(255,0,0, 120), new Color(255,0,0, 150), obsidianOutlineWidth.getValue()));
-            }
+        if (!obsidianHoles.isEmpty()){
+                obsidianHoles.forEach(pos -> Render3DUtil.drawBox(new RenderBuilder()
+                        .position(pos)
+                        .color(new Color(Colors.getHoleColorOb().getRGB()))
+                        .box(mode.getValue())
+                        .setup()
+                        .line(obsidianOutlineWidth.getValue())
+                        .depth(true)
+                        .height((pulse.getValue() ? getRolledHeight(4) : height.getValue()))
+                        .blend()
+                        .texture()
+                ));
+        }
         if (!bedrockHoles.isEmpty())
-            if(pulse.getValue()){
-                bedrockHoles.forEach(pos -> Render3DUtil.drawBox(pos, new Color(0,255,0, 90), getRolledHeight(4), true, false, 0));
-                bedrockHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, bedrockBox.getValue(), bedrockOutline.getValue(), new Color(0, 255, 0, 120), new Color(0, 255, 0, 150), bedrockOutlineWidth.getValue()));
-                if(bedrockBox1.getValue()){
-                    bedrockHoles.forEach(pos -> Render3DUtil.drawBlockBox(pos, new Color(0, 255, 0, 0), true, 2));
-
-                }
-            }else {
-                bedrockHoles.forEach(pos -> Render3DUtil.drawBoxESPFlat(pos, bedrockBox.getValue(), bedrockOutline.getValue(), new Color(0, 255, 0, 120), new Color(0, 255, 0, 150), bedrockOutlineWidth.getValue()));
-            }
+                bedrockHoles.forEach(pos -> Render3DUtil.drawBox(new RenderBuilder()
+                        .position(pos)
+                        .color(new Color(Colors.getHoleColorBr().getRGB()))
+                        .box(mode.getValue())
+                        .setup()
+                        .line(bedrockOutlineWidth.getValue())
+                        .depth(true)
+                        .height((pulse.getValue() ? getRolledHeight(4) : height.getValue()))
+                        .blend()
+                        .texture()
+                ));
         if (!obsidianHoles.isEmpty())
             obsidianHoles.clear();
         if (!bedrockHoles.isEmpty())

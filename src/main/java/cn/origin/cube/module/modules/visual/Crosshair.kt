@@ -6,6 +6,7 @@ import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.render.Render2DUtil
 import net.minecraft.client.gui.ScaledResolution
 import net.minecraftforge.client.GuiIngameForge
@@ -44,28 +45,28 @@ class Crosshair: Module() {
                 height - partWidth.value / 2.0f,
                 width - gap.value - length.value - (if (this.isMoving()) 2.0f else 0.0f) + length.value,
                 height - partWidth.value / 2.0f + partWidth.value,
-                ClickGui.getCurrentColor().rgb
+                Colors.getGlobalColor().rgb
             )
             Render2DUtil.drawRect1(
                 width + gap.value + if (this.isMoving()) 2 else 0,
                 height - partWidth.value / 2.0f,
                 width + gap.value + (if (this.isMoving()) 2 else 0) + length.value,
                 height - partWidth.value / 2.0f + partWidth.value,
-                ClickGui.getCurrentColor().rgb
+                Colors.getGlobalColor().rgb
             )
             Render2DUtil.drawRect1(
                 width - partWidth.value / 2.0f,
                 height - gap.value - length.value - if (this.isMoving()) 2 else 0,
                 width - partWidth.value / 2.0f + partWidth.value,
                 height - gap.value - length.value - (if (this.isMoving()) 2 else 0) + length.value,
-                ClickGui.getCurrentColor().rgb
+                Colors.getGlobalColor().rgb
             )
             Render2DUtil.drawRect1(
                 width - partWidth.value / 2.0f,
                 height + gap.value + if (this.isMoving()) 2 else 0,
                 width - partWidth.value / 2.0f + partWidth.value,
                 height + gap.value + (if (this.isMoving()) 2 else 0) + length.value,
-                ClickGui.getCurrentColor().rgb
+                Colors.getGlobalColor().rgb
             )
             if (attackIndicator.value && mc.player.getCooledAttackStrength(0.0f) < 1.0f) {
                 Render2DUtil.drawRect1(
@@ -73,7 +74,7 @@ class Crosshair: Module() {
                     height + gap.value + length.value + (if (this.isMoving()) 2 else 0) + 2.0f,
                     width - 10.0f + mc.player.getCooledAttackStrength(0.0f) * 20.0f,
                     height + gap.value + length.value + (if (this.isMoving()) 2 else 0) + 2.0f + 2.0f,
-                    ClickGui.getCurrentColor().rgb
+                    Colors.getGlobalColor().rgb
                 )
             }
         }

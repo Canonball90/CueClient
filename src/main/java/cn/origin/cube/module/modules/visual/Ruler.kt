@@ -5,6 +5,7 @@ import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
 import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.client.ChatUtil
 import cn.origin.cube.utils.render.Render3DUtil
 import net.minecraft.init.Blocks
@@ -46,7 +47,7 @@ class Ruler: Module() {
     override fun onRender3D(event: Render3DEvent?) {
         if (fullNullCheck()) return;
         if (rulerBlock == null) return;
-        Render3DUtil.drawBlockBox(rulerBlock, ClickGui.getCurrentColor(), true, 3F)
+        Render3DUtil.drawBlockBox(rulerBlock, Colors.getGlobalColor(), true, 3F)
         super.onRender3D(event)
     }
 }

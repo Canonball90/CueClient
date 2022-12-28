@@ -8,6 +8,7 @@ import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.BooleanSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -51,7 +52,7 @@ public class PacketMine extends Module {
     public void onRender3D(Render3DEvent event) {
         if (fullNullCheck()) return;
         if (currentBlock != null) {
-            Render3DUtil.drawBlockBox(currentBlock, ClickGui.getCurrentColor(), true, 3);
+            Render3DUtil.drawBlockBox(currentBlock, Colors.getGlobalColor(), true, 3);
         }
     }
 }

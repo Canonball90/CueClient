@@ -6,6 +6,7 @@ import cn.origin.cube.guis.CategoryPanel
 import cn.origin.cube.guis.buttons.setting.*
 import cn.origin.cube.core.module.AbstractModule
 import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.COG
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.ColourAnimation
@@ -75,7 +76,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
                 (father.name + " X:" + father.x).toString() + " Y:" + father.y,
                 father.x,
                 father.y - Cube.fontManager.CustomFont.fontHeight,
-                ClickGui.getCurrentColor().rgb
+                Colors.getClickGuiColor().rgb
             )
             Render2DUtil.drawRect(
                 father.x - 1,
@@ -90,19 +91,19 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
                 (father.width + 1).toDouble(),
                 (father.height + 1).toDouble(),
                 1F,
-                ClickGui.getCurrentColor()
+                Colors.getClickGuiColor()
             )
         }
         if(ClickGui.INSTANCE.outline.value) {
             Render2DUtil.drawBorderedRect(x.toDouble(), y.toDouble() - 1,x + this.width.toDouble(),y + this.height.toDouble(),
-                1.0, Color(15, 15, 15, 125).rgb, ClickGui.getCurrentColor().rgb)
+                1.0, Color(15, 15, 15, 125).rgb, Colors.getClickGuiColor().rgb)
         }else{
             colourAnimation.state = father.isEnabled
             Render2DUtil.drawGradientHRect(x,y, x+width,y+height, hover.getColour().rgb, colourAnimation.getColour().rgb)
         }
 
         if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {
-            Render2DUtil.drawLine(x.toDouble(),y+this.height.toDouble(),x + this.width.toDouble(),y+this.height.toDouble(),3F, if(ClickGui.INSTANCE.gay.value) father.category.color else ClickGui.getCurrentColor())
+            Render2DUtil.drawLine(x.toDouble(),y+this.height.toDouble(),x + this.width.toDouble(),y+this.height.toDouble(),3F,father.category.color)
         }
         textcolourAnimation.state = father.isEnabled
         Cube.fontManager!!.CustomFont.drawStringWithShadow(

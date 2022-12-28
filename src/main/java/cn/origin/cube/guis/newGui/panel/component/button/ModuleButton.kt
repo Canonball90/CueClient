@@ -7,6 +7,7 @@ import cn.origin.cube.guis.newGui.panel.component.Button
 import cn.origin.cube.guis.newGui.panel.component.CategoryFrame
 import cn.origin.cube.guis.newGui.panel.component.button.setting.*
 import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.module.modules.client.NewClickGui
 import cn.origin.cube.utils.COG
 import cn.origin.cube.utils.render.Render2DUtil
@@ -66,8 +67,8 @@ class ModuleButton(width: Float, height: Float, panel: CategoryFrame, val father
         }
     }
 
-    private val colourAnimation = ColourAnimation(Color(30, 30, 30),NewClickGui.getCurrentColor(), 200f, false, Easing.LINEAR)
-    private val textcolourAnimation = ColourAnimation(Color.WHITE, NewClickGui.getCurrentColor(), 200f, false, Easing.LINEAR)
+    private val colourAnimation = ColourAnimation(Color(30, 30, 30), Colors.getClickGuiColor(), 200f, false, Easing.LINEAR)
+    private val textcolourAnimation = ColourAnimation(Color.WHITE, Colors.getClickGuiColor(), 200f, false, Easing.LINEAR)
 
     override fun drawButton(x: Float, y: Float, mouseX: Int, mouseY: Int) {
         hover.state = isHoveredButton(mouseX,mouseY)

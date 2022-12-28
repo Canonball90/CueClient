@@ -5,6 +5,7 @@ import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.guis.newGui.panel.component.button.ModuleButton
 import cn.origin.cube.guis.newGui.panel.component.button.SettingButton
 import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.module.modules.client.NewClickGui
 import cn.origin.cube.utils.render.Render2DUtil
 import java.awt.Color
@@ -36,7 +37,7 @@ class ModeSettingButton(
             (value as ModeSetting<*>).valueAsString,
             x + width - 3 - Cube.fontManager!!.CustomFont.getStringWidth(value.valueAsString),
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
-            NewClickGui.getCurrentColor().rgb
+            Colors.getClickGuiColor().rgb
         )
 //        Render2DUtil.drawRect(
 //            father.x + if (animation) 0f else father.width - distance.toFloat(),

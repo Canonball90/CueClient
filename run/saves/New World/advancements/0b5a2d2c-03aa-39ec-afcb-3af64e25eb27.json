@@ -47,6 +47,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/dispenser": {
+    "criteria": {
+      "has_bow": "2022-12-27 09:41:55 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/leather_chestplate": {
     "criteria": {
       "has_leather": "2022-12-26 13:53:14 -0500"
@@ -121,7 +127,8 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "savanna": "2022-12-12 19:13:54 -0500"
+      "savanna": "2022-12-12 19:13:54 -0500",
+      "plains": "2022-12-27 09:43:22 -0500"
     },
     "done": false
   },

@@ -34,6 +34,7 @@ class ModuleManager {
         registerModule(Stats())
         registerModule(PacketLogger())
         registerModule(NewClickGui())
+        registerModule(Colors())
 
         //Combat
         registerModule(Surround())
@@ -46,6 +47,7 @@ class ModuleManager {
         registerModule(Criticals())
         registerModule(AutoCrystal())
         registerModule(AuraRewrite())
+        registerModule(BowBomb())
 
         //Function
         registerModule(MiddleClick())
@@ -72,6 +74,7 @@ class ModuleManager {
         registerModule(ElytraFly())
         registerModule(ConstFly())
         registerModule(Speed())
+        registerModule(PhaseWalk())
 
         //Visual
         registerModule(FullBright())
@@ -90,6 +93,7 @@ class ModuleManager {
         registerModule(ChunkBorders())
         registerModule(Animations())
         registerModule(XRay())
+        registerModule(NewChunks())
 
         //World
         registerModule(FakePlayer())
