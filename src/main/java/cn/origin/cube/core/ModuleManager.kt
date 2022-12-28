@@ -62,6 +62,8 @@ class ModuleManager {
         registerModule(ChorusLag())
         registerModule(SilentChorus())
         registerModule(BoatPlace())
+        registerModule(BaritoneClick())
+        registerModule(NocomMaster())
 
         //Movement
         registerModule(Velocity())

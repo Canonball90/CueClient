@@ -105,7 +105,7 @@ public class NameTags extends Module {
 
             }else if(roundedOutline.getValue()){
                 drawRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16) + width.getValue(), (int) 10 + height.getValue(), new Color(25, 25, 25, 150).getRGB(), radius.getValue().intValue());
-                drawOutlineRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16) + width.getValue(), (int) 10 + height.getValue(), ClickGui.getCurrentColor().getRGB(),radius.getValue().intValue(), mc.player.getDistance(e), size);
+                drawOutlineRoundedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16) + width.getValue(), (int) 10 + height.getValue(), Colors.getGlobalColor().getRGB(),radius.getValue().intValue(), mc.player.getDistance(e), size);
             }else {
                 Render2DUtil.drawBorderedRect((int) (-NameTags.mc.fontRenderer.getStringWidth(e.getName() + " " + health + "%") / 2 - 2) - width.getValue(), (int) -2 - height.getValue(), (int) (NameTags.mc.fontRenderer.getStringWidth(e.getName()) / 2 + 16)  + width.getValue(), (int) 10 + height.getValue(), outlineWidth.getValue(),new Color(25,25,25,0).getRGB(), Colors.getGlobalColor().getRGB());
             }

@@ -80,7 +80,7 @@ dependencies {
         exclude module: 'kotlin-stdlib-common'
         exclude module: 'annotations'
     }
-
+    //compile(files('noincludelib/baritone.jar'))
     jarDepend("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version") {
         exclude module: 'kotlin-stdlib-common'
         exclude module: 'annotations'
@@ -111,6 +111,10 @@ processResources {
                 'mcversion': project.mcVersion,
                 'modVersion': project.modVersion
     }
+//
+//    exclude 'baritone/**' //lmao
+//    exclude 'mixins.baritone.json'
+//    exclude 'mixins.baritone.refmap.json'
 
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'

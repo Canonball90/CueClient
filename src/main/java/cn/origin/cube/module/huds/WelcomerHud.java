@@ -6,6 +6,7 @@ import cn.origin.cube.core.module.HudModule;
 import cn.origin.cube.module.interfaces.HudModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.FloatSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import org.lwjgl.opengl.GL11;
 
 @HudModuleInfo(name = "Welcomer", x = 10, y = 500, descriptions = "Show hack name", category = Category.HUD)
@@ -18,7 +19,7 @@ public class WelcomerHud extends HudModule {
         GL11.glPushMatrix();
         GL11.glTranslated(this.x, (float) this.y, 0);
         GL11.glScaled((double) this.Scala.getValue(), (double) this.Scala.getValue(), 0.0);
-        Cube.fontManager.CustomFont.drawString("welcome to CueClient, " + mc.player.getName(), 0, 0, ClickGui.getCurrentColor().getRGB());
+        Cube.fontManager.CustomFont.drawString("welcome to CueClient, " + mc.player.getName(), 0, 0, Colors.getGlobalColor().getRGB());
         GL11.glPopMatrix();
         this.width = (int) ((float) Cube.fontManager.CustomFont.getStringWidth("CueClient") * this.Scala.getValue());
         this.height = (int) ((float) Cube.fontManager.CustomFont.getHeight() * this.Scala.getValue());

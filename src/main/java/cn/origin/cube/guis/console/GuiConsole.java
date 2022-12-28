@@ -8,6 +8,7 @@ import javax.annotation.Nullable;
 import cn.origin.cube.Cube;
 import cn.origin.cube.command.Command;
 import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.client.ChatUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -74,7 +75,7 @@ public class GuiConsole extends GuiScreen implements ITabCompleter
     public void updateScreen()
     {
         this.inputField.updateCursorCounter();
-        this.inputField.setTextColor(ClickGui.getCurrentColor().getRGB());
+        this.inputField.setTextColor(Colors.getGlobalColor().getRGB());
     }
 
     protected void keyTyped(char typedChar, int keyCode) throws IOException

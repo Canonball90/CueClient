@@ -7,6 +7,7 @@ import cn.origin.cube.core.module.HudModule;
 import cn.origin.cube.module.interfaces.HudModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.ModeSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import net.minecraft.client.Minecraft;
 
 import java.awt.*;
@@ -37,10 +38,10 @@ public class ModuleArrayList extends HudModule {
                         c = module.category.getColor();
                     }
                     if(colorSetting.getValue().equals(colorMode.Fade)){
-                        c = ClickGui.getCurrentColor();
+                        c = Colors.getGlobalColor();
                     }
                     else{
-                        c = ClickGui.getCurrentColor();
+                        c = Colors.getGlobalColor();
                     }
                     if(colorSetting.getValue().equals(colorMode.Static) || colorSetting.getValue().equals(colorMode.CategoryC)) {
                         if(colorSetting.getValue().equals(colorMode.Static)) {

@@ -108,7 +108,6 @@ class KotlinAura: Module() {
 
     override fun onRender3D(event: Render3DEvent?) {
         if(placePos != null){
-            Render3DUtil.drawBlockBox(placePos, ClickGui.getCurrentColor(), true, 2F)
         }
         super.onRender3D(event)
     }

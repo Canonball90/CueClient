@@ -10,6 +10,7 @@ import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.render.RenderUtil;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -155,7 +156,7 @@ public class SuperheroFX extends Module {
             this.pos = pos;
             this.markedToRemove = false;
             if (!randomColor.getValue()) {
-                this.color = ClickGui.getCurrentColor().getRGB();
+                this.color = Colors.getGlobalColor().getRGB();
             } else {
                 this.color = Color.getHSBColor(rand.nextFloat(), 1.0F, 0.9F).getRGB();
             }

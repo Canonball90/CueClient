@@ -9,6 +9,7 @@ import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.ModeSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.module.modules.client.NewClickGui;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.opengl.GL11;
@@ -44,14 +45,14 @@ public class WaterMark extends HudModule {
             drawFadeString("CueClient", 0, 0);
         }
         if(mode.getValue().equals(nfd.Logo)) {
-            Cube.fontManager.IconFont.drawString("t", 0, 0, ClickGui.getCurrentColor().getRGB());
+            Cube.fontManager.IconFont.drawString("t", 0, 0, Colors.getGlobalColor().getRGB());
         }
         GL11.glPopMatrix();
         GL11.glPushMatrix();
         GL11.glTranslated(this.x, (float) this.y, 0);
         GL11.glScaled((double) 1, (double) 1, 0.0);
         if(version.getValue()) {
-            Cube.fontManager.CustomFont.drawString("ver:" + Cube.MOD_VERSION, 0 + width, 0 + height - 1, ClickGui.getCurrentColor().getRGB());
+            Cube.fontManager.CustomFont.drawString("ver:" + Cube.MOD_VERSION, 0 + width, 0 + height - 1, Colors.getGlobalColor().getRGB());
         }
         GL11.glPopMatrix();
         this.width = (int) ((float) Cube.fontManager.CustomFont.getStringWidth("CueClient") * this.Scala.getValue());

@@ -9,6 +9,7 @@ import cn.origin.cube.core.module.Module;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.RotationUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
@@ -156,14 +157,15 @@ public class AuraRewrite extends Module {
             }
             if(rMode.getValue().equals(RenderMode.Box)) {
                 AxisAlignedBB box = target.getRenderBoundingBox().offset(-mc.getRenderManager().viewerPosX, -mc.getRenderManager().viewerPosY, -mc.getRenderManager().viewerPosZ);
-                Render3DUtil.prepareGL();
-                GL11.glLineWidth(lineWidth.getValue());
-                int r = (int) ((target.hurtTime > 0 ? 255 : ClickGui.getCurrentColor().getRed())  / 255f);
-                int g = (int) ((target.hurtTime > 0 ? 0 : ClickGui.getCurrentColor().getGreen())  / 255f);
-                int b = (int) ((target.hurtTime > 0 ? 0 : ClickGui.getCurrentColor().getBlue())  / 255f);
-                Render3DUtil.drawBoundingBox(box, lineWidth.getValue(), r, g,b,100);
-                Render3DUtil.drawBBBox(box, ClickGui.getCurrentColor(), 170, lineWidth.getValue(), false);
-                RenderUtil.release();
+                Render3DUtil.drawBox(new RenderBuilder()
+                        .position(box)
+                        .color(new Color(Colors.getGlobalColor().getRGB()))
+                        .box(RenderBuilder.Box.FILL)
+                        .setup()
+                        .depth(true)
+                        .height(lineWidth.getValue())
+                        .blend()
+                        .texture());
             }
         }
     }

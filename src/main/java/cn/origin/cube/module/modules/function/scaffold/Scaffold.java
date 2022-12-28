@@ -9,6 +9,7 @@ import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.BlockUtil;
@@ -57,8 +58,8 @@ public class Scaffold extends Module {
             this.blocksToRender.add(new ScaffoldBlock(BlockUtil.posToVec3d(this.pos)));
         }
         if(render.getValue()){
-            Render3DUtil.drawBoxOutline(pos, ClickGui.getCurrentColor(), 2);
-            Render3DUtil.drawBox(pos, ClickGui.getCurrentColor(), 0, false, false, 255);
+            Render3DUtil.drawBoxOutline(pos, Colors.getGlobalColor(), 2);
+            Render3DUtil.drawBox(pos, Colors.getGlobalColor(), 0, false, false, 255);
         }
         if (this.swing.getValue().booleanValue()) {
             this.mc.player.isSwingInProgress = false;

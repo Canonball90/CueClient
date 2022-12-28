@@ -1,6 +1,7 @@
 package cn.origin.cube.utils.render.particle;
 
 import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.render.ColorUtil;
 import cn.origin.cube.utils.render.Render2DUtil;
 import org.lwjgl.input.Mouse;
@@ -65,7 +66,7 @@ public class Particle
                 this.acceleration.setY(this.acceleration.getY() + deltaYToMouse * 0.0015f);
             }
         }
-        Render2DUtil.drawRect1(this.pos.x, this.pos.y, this.pos.x + this.size, this.pos.y + this.size, changeAlpha(ColorUtil.toRGBA(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), this.alpha));
+        Render2DUtil.drawRect1(this.pos.x, this.pos.y, this.pos.x + this.size, this.pos.y + this.size, changeAlpha(ColorUtil.toRGBA(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue()), this.alpha));
     }
 
     public Vector2f getPos() {

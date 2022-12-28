@@ -6,6 +6,7 @@ import cn.origin.cube.core.module.HudModule;
 import cn.origin.cube.module.interfaces.HudModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.core.settings.FloatSetting;
+import cn.origin.cube.module.modules.client.Colors;
 import org.lwjgl.opengl.GL11;
 
 @HudModuleInfo(name = "Coords", x = 114, y = 114, descriptions = "Show hack name", category = Category.HUD)
@@ -31,7 +32,7 @@ public class CoordsHud extends HudModule {
                         (int) mc.player.posX / 8, (int) mc.player.posY / 8, (int) mc.player.posZ / 8);
                 break;
         }
-        Cube.fontManager.CustomFont.drawString(coords, 0, 0, ClickGui.getCurrentColor().getRGB());
+        Cube.fontManager.CustomFont.drawString(coords, 0, 0, Colors.getGlobalColor().getRGB());
         GL11.glPopMatrix();
         this.width = (int) ((float) Cube.fontManager.CustomFont.getStringWidth("CueClient") * this.Scala.getValue());
         this.height = (int) ((float) Cube.fontManager.CustomFont.getHeight() * this.Scala.getValue());

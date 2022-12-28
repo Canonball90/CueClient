@@ -4,6 +4,7 @@ import javax.vecmath.Tuple2f;
 import javax.vecmath.Vector2f;
 
 import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.render.ColorUtil;
 import cn.origin.cube.utils.render.Render2DUtil;
 import net.minecraft.client.gui.ScaledResolution;
@@ -52,7 +53,7 @@ public final class ParticleSystem
                     if (diff < distance) {
                         final int lineAlpha = (int)map(diff, distance, 0.0, 0.0, 127.0);
                         if (lineAlpha > 8) {
-                            Render2DUtil.drawLine(particle.getPos().x + particle.getSize() / 2.0f, particle.getPos().y + particle.getSize() / 2.0f, otherParticle.getPos().x + otherParticle.getSize() / 2.0f, otherParticle.getPos().y + otherParticle.getSize() / 2.0f, 1.0f, Particle.changeAlpha(ColorUtil.toRGBA(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), lineAlpha));
+                            Render2DUtil.drawLine(particle.getPos().x + particle.getSize() / 2.0f, particle.getPos().y + particle.getSize() / 2.0f, otherParticle.getPos().x + otherParticle.getSize() / 2.0f, otherParticle.getPos().y + otherParticle.getSize() / 2.0f, 1.0f, Particle.changeAlpha(ColorUtil.toRGBA(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue()), lineAlpha));
                         }
                     }
                 }

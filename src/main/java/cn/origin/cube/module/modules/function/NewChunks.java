@@ -8,6 +8,7 @@ import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.render.Render3DUtil;
 import cn.origin.cube.utils.render.RenderBuilder;
 import io.netty.util.internal.ConcurrentSet;
@@ -53,6 +54,6 @@ public class NewChunks extends Module {
     }
 
     private Color getPrimaryAlphaColor(int alpha) {
-        return new Color(ClickGui.getCurrentColor().getRed(), ClickGui.getCurrentColor().getGreen(), ClickGui.getCurrentColor().getBlue(), alpha);
+        return new Color(Colors.getGlobalColor().getRed(), Colors.getGlobalColor().getGreen(), Colors.getGlobalColor().getBlue(), alpha);
     }
 }

@@ -17,9 +17,6 @@ import java.awt.*;
 public final class ClickGui extends Module {
     public BooleanSetting rainbow = registerSetting("Rainbow", false);
     public BooleanSetting gay = registerSetting("Gay", false);
-    public IntegerSetting red = registerSetting("Red", 25, 0, 255).booleanDisVisible(rainbow);
-    public IntegerSetting green = registerSetting("Green", 115, 0, 255).booleanDisVisible(rainbow);
-    public IntegerSetting blue = registerSetting("Blue", 255, 0, 255).booleanDisVisible(rainbow);
     public FloatSetting speed = registerSetting("RainbowSpeed", 1.0f, 0.1f, 10.0f).booleanVisible(rainbow);
     public FloatSetting saturation = registerSetting("Saturation", 0.65f, 0.0f, 1.0f).booleanVisible(rainbow);
     public FloatSetting brightness = registerSetting("Brightness", 1.0f, 0.0f, 1.0f).booleanVisible(rainbow);
@@ -57,7 +54,4 @@ public final class ClickGui extends Module {
         return new Color(Color.HSBtoRGB(hue, INSTANCE.saturation.getValue(), INSTANCE.brightness.getValue()));
     }
 
-    public static Color getCurrentColor() {
-        return INSTANCE.rainbow.getValue() ? getRainbow() : new Color(INSTANCE.red.getValue(), INSTANCE.green.getValue(), INSTANCE.blue.getValue());
-    }
 }

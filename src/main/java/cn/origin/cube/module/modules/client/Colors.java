@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.client;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.interfaces.Para;
@@ -21,18 +22,19 @@ public class Colors extends Module {
     public IntegerSetting ClickGuired = registerSetting("Click Red", 25, 0, 255);
     public IntegerSetting ClickGuigreen = registerSetting("Click Green", 115, 0, 255);
     public IntegerSetting ClickGuiblue = registerSetting("Click Blue", 255, 0, 255);
+    public BooleanSetting spacer = registerSetting("",false);
 
     //HoleEsp
     public IntegerSetting HoleEspredOb = registerSetting("Hole Red", 25, 0, 255);
     public IntegerSetting HoleEspgreenOb = registerSetting("Hole Green", 115, 0, 255);
     public IntegerSetting HoleEspblueOb = registerSetting("Hole Blue", 255, 0, 255);
     public IntegerSetting HoleEspalphaOb = registerSetting("Hole Alpha", 255, 0, 255);
-
+    public BooleanSetting spacer1 = registerSetting("",false);
     public IntegerSetting HoleEspredBr = registerSetting("Hole Red-S", 25, 0, 255);
     public IntegerSetting HoleEspgreenBr = registerSetting("Hole Green-S", 115, 0, 255);
     public IntegerSetting HoleEspblueBr = registerSetting("Hole Blue-S", 255, 0, 255);
     public IntegerSetting HoleEspalphaBr = registerSetting("Hole Alpha-S", 255, 0, 255);
-
+    public BooleanSetting spacer2 = registerSetting("",false);
     //Literally everything else
     public IntegerSetting Everyred = registerSetting("Global Red", 25, 0, 255);
     public IntegerSetting Everygreen = registerSetting("Global Green", 115, 0, 255);

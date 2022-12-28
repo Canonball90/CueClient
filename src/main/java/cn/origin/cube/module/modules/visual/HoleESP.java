@@ -45,7 +45,7 @@ public class HoleESP extends Module {
         if (!obsidianHoles.isEmpty()){
                 obsidianHoles.forEach(pos -> Render3DUtil.drawBox(new RenderBuilder()
                         .position(pos)
-                        .color(new Color(Colors.getHoleColorOb().getRGB()))
+                        .color(new Color(Colors.getHoleColorOb().getRed(),Colors.getHoleColorOb().getGreen(),Colors.getHoleColorOb().getBlue(), 150))
                         .box(mode.getValue())
                         .setup()
                         .line(obsidianOutlineWidth.getValue())
@@ -58,7 +58,7 @@ public class HoleESP extends Module {
         if (!bedrockHoles.isEmpty())
                 bedrockHoles.forEach(pos -> Render3DUtil.drawBox(new RenderBuilder()
                         .position(pos)
-                        .color(new Color(Colors.getHoleColorBr().getRGB()))
+                        .color(new Color(Colors.getHoleColorBr().getRed(),Colors.getHoleColorBr().getGreen(),Colors.getHoleColorBr().getBlue(), 150))
                         .box(mode.getValue())
                         .setup()
                         .line(bedrockOutlineWidth.getValue())

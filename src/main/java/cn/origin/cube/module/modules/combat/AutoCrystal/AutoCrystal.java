@@ -117,7 +117,6 @@ public class AutoCrystal extends Module {
     public BooleanSetting targetHud = registerSetting("Target Hud", false);
     public IntegerSetting tx = registerSetting("Alpha", 150, 0, 1000);
     public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000);
-    private ColourAnimation fade = new ColourAnimation(new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), 170), new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue(), 0), 200F, false, Easing.LINEAR);
     private final Map<Integer, Long> attackedCrystals = new ConcurrentHashMap<>();
     public final HelperRange rangeHelper = new HelperRange(this);
     private final List<BlockPos> placementPackets = new ArrayList<>();
@@ -663,11 +662,10 @@ public class AutoCrystal extends Module {
     @Override
     public void onRender3D(Render3DEvent event){
         if(render != null || renderEnt != null){
-            fade.setState(render == null);
             Render3DUtil.drawBlockBox(render, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(), Colors.getGlobalColor().getBlue(), 140), outline.getValue(), 3);
 
             if(AutoMineHole.getValue() && blockPos != null){
-                Render3DUtil.drawBlockBox(blockPos, new Color(ClickGui.getCurrentColor().getRed(),ClickGui.getCurrentColor().getGreen(),ClickGui.getCurrentColor().getBlue()), outline.getValue(), 3);
+                Render3DUtil.drawBlockBox(blockPos, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue()), outline.getValue(), 3);
             }
         }
     }
@@ -678,12 +676,12 @@ public class AutoCrystal extends Module {
     public void onRender2D() {
         if(targetHud.getValue()) {
             if ((mc.player.getHeldItemMainhand().getItem() == Items.END_CRYSTAL || mc.player.getHeldItemOffhand().getItem() == Items.END_CRYSTAL)) {
-                Render2DUtil.drawBorderedRect(tx.getValue(), ty.getValue(), tx.getValue() + width, ty.getValue() + height, 1, new Color(35, 35, 35, 150).getRGB(), ClickGui.getCurrentColor().getRGB());
+                Render2DUtil.drawBorderedRect(tx.getValue(), ty.getValue(), tx.getValue() + width, ty.getValue() + height, 1, new Color(35, 35, 35, 150).getRGB(), Colors.getGlobalColor().getRGB());
                 if(renderEnt != null) {
                     drawHead((mc.getConnection()).getPlayerInfo(renderEnt.getUniqueID()).getLocationSkin(), tx.getValue() + 5, ty.getValue() + 10);
                 }
-                Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : renderEnt.getName(), tx.getValue() + 43, ty.getValue() + 10, ClickGui.getCurrentColor().getRGB(), true);
-                Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : "" + renderEnt.getDistance(mc.player), tx.getValue() + 43, ty.getValue() + 20, ClickGui.getCurrentColor().getRGB(), true);
+                Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : renderEnt.getName(), tx.getValue() + 43, ty.getValue() + 10, Colors.getGlobalColor().getRGB(), true);
+                Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : "" + renderEnt.getDistance(mc.player), tx.getValue() + 43, ty.getValue() + 20, Colors.getGlobalColor().getRGB(), true);
                 Render2DUtil.drawGradientHRect(tx.getValue() + 5, ty.getValue() + 55, tx.getValue() + 140, ty.getValue() + 67 - (7), new Color(255, 0, 0).getRGB(), new Color(0, 255, 0).getRGB());
             }
         }

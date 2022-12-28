@@ -77,7 +77,7 @@ public class Chams extends Module {
     @SubscribeEvent
     public void onCrystalModel(final RenderEntityModelEvent event) {
         if (fullNullCheck()) return;
-        final Color c = new Color(ClickGui.getCurrentColor().getRGB());
+        final Color c = new Color(Colors.getGlobalColor().getRGB());
         if (event.type == 0) {
             GL11.glPushMatrix();
             GL11.glEnable(32823);
