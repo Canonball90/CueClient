@@ -10,6 +10,7 @@ import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.module.modules.client.Colors;
+import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
 import cn.origin.cube.utils.client.event.event.ParallelListener;
 import cn.origin.cube.utils.client.event.event.Priority;
 import cn.origin.cube.utils.player.EntityUtil;
@@ -62,6 +63,7 @@ public class AuraRewrite extends Module {
     BooleanSetting hitDelay = registerSetting("HitDelay", true);
     BooleanSetting packet = registerSetting("PacketHit", false);
     BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet);
+    ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main);
     IntegerSetting delay = registerSetting("Delay", 4, 0, 70);
     BooleanSetting randomD = registerSetting("RandomDelay", false);
     IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40).booleanVisible(randomD);
@@ -241,11 +243,11 @@ public class AuraRewrite extends Module {
             if(!packet.getValue()) {
                 if (mc.player.getCooledAttackStrength(0) >= 1) {
                     mc.playerController.attackEntity(mc.player, entity);
-                    mc.player.swingArm(EnumHand.MAIN_HAND);
+                    mc.player.swingArm(getHandToBreak());
                 }
             }else{
                 mc.playerController.connection.sendPacket(new CPacketUseEntity(entity));
-                if (swimArm.getValue()) mc.player.swingArm(EnumHand.MAIN_HAND);
+                if (swimArm.getValue()) mc.player.swingArm(getHandToBreak());
             }
             if(betterCrit.getValue()){
                 mc.gameSettings.keyBindSneak.pressed = true;
@@ -256,7 +258,7 @@ public class AuraRewrite extends Module {
         }
         if (!hitDelay.getValue()) {
             mc.playerController.attackEntity(mc.player, entity);
-            mc.player.swingArm(EnumHand.MAIN_HAND);
+            mc.player.swingArm(getHandToBreak());
         }
         if(betterCrit.getValue()){
             mc.gameSettings.keyBindSneak.pressed = true;
@@ -378,7 +380,20 @@ public class AuraRewrite extends Module {
         resetRotation();
     }
 
+    private EnumHand getHandToBreak() {
+        if (breakHand.getValue().equals(AutoCrystal.Mode.Offhand)) {
+            return EnumHand.OFF_HAND;
+        }else if(breakHand.getValue().equals(AutoCrystal.Mode.Both)){
+            return EnumHand.OFF_HAND;
+        }
+        return EnumHand.MAIN_HAND;
+    }
+
     public enum RenderMode{
         Circle,Box
+    }
+
+    public enum Mode{
+        Offhand,Main,Both
     }
 }

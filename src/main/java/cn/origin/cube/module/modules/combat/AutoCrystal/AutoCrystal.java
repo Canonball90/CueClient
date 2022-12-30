@@ -467,6 +467,7 @@ public class AutoCrystal extends Module {
         }else{
 
         }
+        mc.playerController.updateController();
     }
 
     @SubscribeEvent
