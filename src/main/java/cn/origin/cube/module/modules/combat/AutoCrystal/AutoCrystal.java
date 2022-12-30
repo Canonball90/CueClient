@@ -17,6 +17,7 @@ import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.utils.Timer;
+import cn.origin.cube.utils.ai.AI;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.client.event.event.ParallelListener;
 import cn.origin.cube.utils.client.event.event.Priority;
@@ -155,10 +156,10 @@ public class AutoCrystal extends Module {
     private int height = 100;
     public Entity renderEnt;
     private int width = 200;
-    public BlockPos render;
     private int newSlot;
     private int breaks;
     private Rotation rotateAngles;
+    static AI.HalqPos render = new AI.HalqPos(BlockPos.ORIGIN, 0);
 
     public static boolean isCancelingCrystals() {
         return cancelingCrystals;
@@ -169,6 +170,12 @@ public class AutoCrystal extends Module {
         if(fullNullCheck())return;
         if(stopWhenEating.getValue() && isEating() || stopWhenMining.getValue() && isMining()) return;
         doLogic();
+    }
+
+    @Override
+    public void onEnable() {
+        render = new AI.HalqPos(BlockPos.ORIGIN, 0);
+        super.onEnable();
     }
 
     public void doLogic(){
@@ -308,7 +315,7 @@ public class AutoCrystal extends Module {
             }
             entities.addAll(mc.world.loadedEntityList.stream().filter(entity -> EntityUtil.isLiving(entity) && (EntityUtil.isPassive(entity) ? passives.getValue() : mobs.getValue())).collect(Collectors.toList()));
 
-            BlockPos q = null;
+            BlockPos q = render.getBlockPos();
             double damage = .5;
             for (Entity entity : entities) {
                 if (entity == mc.player || ((EntityLivingBase) entity).getHealth() <= 0) {
@@ -347,7 +354,7 @@ public class AutoCrystal extends Module {
                 }
                 return;
             }
-            render = q;
+            render.getBlockPos().equals(q);
             //ToDo Work on Silent switch
             final int oldSlot = KillAura.mc.player.inventory.currentItem;
             if (place.getValue()) {
@@ -665,7 +672,7 @@ public class AutoCrystal extends Module {
     @Override
     public void onRender3D(Render3DEvent event){
         if(render != null || renderEnt != null){
-            Render3DUtil.drawBlockBox(render, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(), Colors.getGlobalColor().getBlue(), 140), outline.getValue(), 3);
+            Render3DUtil.drawBlockBox(render.getBlockPos(), new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(), Colors.getGlobalColor().getBlue(), 140), outline.getValue(), 3);
 
             if(AutoMineHole.getValue() && blockPos != null){
                 Render3DUtil.drawBlockBox(blockPos, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue()), outline.getValue(), 3);
@@ -1298,8 +1305,8 @@ final class Threads extends Thread {
     @Override
     public void run() {
         if (this.type == AutoCrystal.ThreadType.BLOCK) {
-            bestBlock = AutoCrystal.INSTANCE.render;
-            AutoCrystal.INSTANCE.render = bestBlock;
+            bestBlock = AutoCrystal.INSTANCE.render.getBlockPos();
+            AutoCrystal.INSTANCE.render.getBlockPos().equals(bestBlock);
         } else if (this.type ==AutoCrystal.ThreadType.CRYSTAL) {
             bestCrystal = AutoCrystal.INSTANCE.getBestCrystal();
             AutoCrystal.INSTANCE.renderEnt = bestCrystal;

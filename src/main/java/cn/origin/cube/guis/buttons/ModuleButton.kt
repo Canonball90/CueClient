@@ -1,16 +1,17 @@
 package cn.origin.cube.guis.buttons
 
 import cn.origin.cube.Cube
+import cn.origin.cube.core.module.AbstractModule
 import cn.origin.cube.core.settings.*
 import cn.origin.cube.guis.CategoryPanel
 import cn.origin.cube.guis.buttons.setting.*
-import cn.origin.cube.core.module.AbstractModule
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.COG
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.ColourAnimation
 import me.surge.animation.Easing
+import net.minecraft.client.renderer.GlStateManager
 import java.awt.Color
 
 class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father: AbstractModule) :
@@ -23,8 +24,10 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
     private var dragging = false
     private val hover = ColourAnimation(Color(15, 15, 15,100), father.category.color, 300f, false, Easing.LINEAR)
     private val pulse = ColourAnimation(Color.WHITE, Color.DARK_GRAY, 500f, false, Easing.LINEAR)
+    private var progress = 0F
 
     init {
+        this.progress = 0F;
         if (father.settingList.isNotEmpty()) {
             for (setting in father.settingList) {
                 if (setting is BooleanSetting) {
@@ -113,11 +116,21 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             textcolourAnimation.getColour().rgb
         )
         pulse.state = isShowSettings
+
+        GlStateManager.pushMatrix();
+        GlStateManager.enableBlend();
         Cube.fontManager!!.IconFont.drawStringWithShadow(
             COG, (x + width) - 3 - Cube.fontManager!!.IconFont.getStringWidth(
                 COG
             ), y + (height / 2) - (Cube.fontManager!!.IconFont.height / 4), pulse.getColour().rgb
         )
+        GlStateManager.rotate(calculateRotation(this.progress), 0.0f, 0.0f, 1.0f)
+        GlStateManager.disableBlend();
+        GlStateManager.popMatrix();
+
+        if(isShowSettings){
+            progress = progress.inc()
+        }
         this.x = x
         this.y = y
     }
@@ -185,4 +198,16 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             settings.forEach { it.keyTyped(typedChar, keyCode) }
         }
     }
+
+    fun calculateRotation(var0: Float): Float {
+        var var0 = var0
+        if (360.0f.also { var0 %= it } >= 180.0f) {
+            var0 -= 360.0f
+        }
+        if (var0 < -180.0f) {
+            var0 += 360.0f
+        }
+        return var0
+    }
+
 }
