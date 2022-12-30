@@ -11,6 +11,8 @@ import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.module.interfaces.Para;
+import cn.origin.cube.utils.client.event.event.ParallelListener;
+import cn.origin.cube.utils.client.event.event.Priority;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
@@ -18,6 +20,8 @@ import cn.origin.cube.utils.render.Render3DUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityFireball;
+import net.minecraft.entity.projectile.EntityShulkerBullet;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
@@ -29,6 +33,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import java.util.Date;
 
 @Para(para = Para.ParaMode.Light)
+@ParallelListener(priority = Priority.HIGHEST)
 @ModuleInfo(name = "KillAura", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class KillAura extends Module {
     long killLast = new Date().getTime();
@@ -61,6 +66,7 @@ public class KillAura extends Module {
     BooleanSetting packet = registerSetting("PacketHit", false);
     BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet);
     BooleanSetting rotate = registerSetting("Rotate", true);
+    BooleanSetting projectiles = registerSetting("Projectiles", true);
     BooleanSetting rotateStrict = registerSetting("StrictRotate", true);
     BooleanSetting throughWalls = registerSetting("ThroughWalls", true);
     BooleanSetting render = registerSetting("Render", true);
@@ -88,6 +94,11 @@ public class KillAura extends Module {
                                         mc.player.getDistance(target) <= this.hittingRange.getValue() &&
                                         (mc.player.canEntityBeSeen(target) || !this.throughWalls.getValue() ||
                                                 mc.player.getDistance(target) <= this.wallsRange.getValue()))return;
+                    }
+                    if(projectiles.getValue()){
+                        if (isProjectile(target)) {
+                            return;
+                        }
                     }
                     if (switchWeapon.getValue()) {
                         int currentSlot;
@@ -159,6 +170,10 @@ public class KillAura extends Module {
                     mc.playerController.attackEntity(mc.player, entity);
                     mc.player.swingArm(EnumHand.MAIN_HAND);
                 }
+    }
+
+    public boolean isProjectile(Entity entity){
+        return (entity instanceof EntityShulkerBullet || entity instanceof EntityFireball);
     }
 
     public void rotateTo(Entity target) {

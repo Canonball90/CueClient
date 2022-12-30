@@ -34,6 +34,7 @@ public class Scaffold extends Module {
     BooleanSetting Switch = registerSetting("Switch", true);
     BooleanSetting Tower = registerSetting("Tower", true);
     BooleanSetting NCP = registerSetting("NCP", true).booleanVisible(Tower);
+    BooleanSetting NCPJumo = registerSetting("NCPJump", true).booleanVisible(Tower);
     BooleanSetting center = registerSetting("Center", true);
     DoubleSetting speed = registerSetting("Speed", 0.7, 0.0, 1.0);
     DoubleSetting upSpeed = registerSetting("Up-Speed", 0.41999998688697815D, 0.0, 1.0).booleanVisible(Tower);
@@ -43,6 +44,7 @@ public class Scaffold extends Module {
     private BlockPos pos;
     private boolean packet = false;
     Timer time = new Timer();
+    private final Timer towerTimer = new Timer();
 
     @Override
     public void onUpdate() {
@@ -81,13 +83,20 @@ public class Scaffold extends Module {
             }
         }
         if (NCP.getValue()) {
-            double blockBelow = -2.0D;
-            if (mc.gameSettings.keyBindJump.isPressed()) {
-                mc.player.jump();
-                mc.player.motionY = 0.41999998688697815D;
-            }
-            if (mc.player.motionY < 0.1D && !(mc.world.getBlockState((new BlockPos(mc.player.posX, mc.player.posY, mc.player.posZ)).add(0.0D, blockBelow, 0.0D)).getBlock() instanceof net.minecraft.block.BlockAir)) {
-                mc.player.motionY = -10.0D;
+            if (mc.gameSettings.keyBindJump.isKeyDown()) {
+                if (NCPJumo.getValue()) {
+                    mc.player.jump();
+                } else {
+                    mc.player.motionY = 0.2;
+                }
+
+                mc.player.motionX *= 0.3;
+                mc.player.motionZ *= 0.3;
+
+                if (towerTimer.passed(1200L)) {
+                    towerTimer.reset();
+                    mc.player.motionY = -0.28;
+                }
             }
         }else {
             if (mc.gameSettings.keyBindJump.isKeyDown() && mc.player.moveForward == 0.0F && mc.player.moveStrafing == 0.0F && Tower.getValue() && !mc.player.isPotionActive(MobEffects.JUMP_BOOST)) {

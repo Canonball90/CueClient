@@ -18,6 +18,8 @@ import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.utils.Timer;
 import cn.origin.cube.utils.client.MathUtil;
+import cn.origin.cube.utils.client.event.event.ParallelListener;
+import cn.origin.cube.utils.client.event.event.Priority;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
@@ -55,6 +57,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 @Para(para = Para.ParaMode.Full)
+@ParallelListener(priority = Priority.HIGHEST)
 @ModuleInfo(name = "AutoCrystal", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class AutoCrystal extends Module {
 

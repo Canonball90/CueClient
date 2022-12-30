@@ -10,6 +10,8 @@ import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.module.modules.client.Colors;
+import cn.origin.cube.utils.client.event.event.ParallelListener;
+import cn.origin.cube.utils.client.event.event.Priority;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.RotationUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
@@ -24,6 +26,8 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityFireball;
+import net.minecraft.entity.projectile.EntityShulkerBullet;
 import net.minecraft.network.play.client.CPacketUseEntity;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -36,8 +40,21 @@ import java.text.DecimalFormat;
 import java.util.Date;
 
 @Para(para = Para.ParaMode.Light)
+@ParallelListener(priority = Priority.HIGH)
 @ModuleInfo(name = "AuraRewrite", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class AuraRewrite extends Module {
+
+    public EntityLivingBase target = null;
+    long killLast = new Date().getTime();
+    public boolean shouldRotate;
+    boolean smoothRotatePitch;
+    boolean smoothRotateYaw;
+    boolean smoothRotated;
+    int addedOriginYaw;
+    public float pitch;
+    int addedInputYaw;
+    float smoothPitch;
+    public float yaw;
     DoubleSetting range = registerSetting("Range", 4.0, 1, 6);
     BooleanSetting players = registerSetting("Players", true);
     BooleanSetting animals = registerSetting("Animals", true);
@@ -54,6 +71,7 @@ public class AuraRewrite extends Module {
     BooleanSetting rotate = registerSetting("Rotate", true);
     BooleanSetting rotateStrict = registerSetting("StrictRotate", true);
     BooleanSetting betterCrit = registerSetting("BetterCrit", false);
+    BooleanSetting projectiles = registerSetting("Projectiles", true);
 
     BooleanSetting render = registerSetting("Render", true);
     ModeSetting<RenderMode> rMode = registerSetting("RenderMode", RenderMode.Circle);
@@ -61,18 +79,6 @@ public class AuraRewrite extends Module {
     FloatSetting CWidth = registerSetting("CWidth", 1f, -5f, 5f).booleanVisible(render);
     IntegerSetting Height = registerSetting("Height", 200, 0, 500);
     IntegerSetting Width = registerSetting("Width", 200, 0, 500);
-
-    public EntityLivingBase target = null;
-    long killLast = new Date().getTime();
-    public boolean shouldRotate;
-    boolean smoothRotatePitch;
-    boolean smoothRotateYaw;
-    boolean smoothRotated;
-    int addedOriginYaw;
-    public float pitch;
-    int addedInputYaw;
-    float smoothPitch;
-    public float yaw;
 
     @SubscribeEvent
     public void onUpdate(UpdateWalkingPlayerEvent event) {
@@ -105,6 +111,23 @@ public class AuraRewrite extends Module {
                     }
                     if (entity instanceof EntityAnimal && animals.getValue()) {
                         target = (EntityLivingBase) entity;
+                        final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
+                        if (new Date().getTime() >= this.killLast + delay) {
+                            this.killLast = new Date().getTime();
+                            if (rotate.getValue()) {
+                                if(rotateStrict.getValue()) {
+                                    rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                }else{
+                                    rotateTo(target);
+                                }
+                            }
+                            for (int i = 0; i < this.iterations.getValue(); ++i) {
+                                attack(target);
+                            }
+                        }
+                    }
+                    if(isProjectile(entity) && projectiles.getValue()){
+                        target = (EntityLivingBase)entity;
                         final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
                         if (new Date().getTime() >= this.killLast + delay) {
                             this.killLast = new Date().getTime();
@@ -242,6 +265,10 @@ public class AuraRewrite extends Module {
 
     public void rotateTo(Entity target) {
         RotationUtil.faceVector(new Vec3d(target.posX, target.posY + 1, target.posZ), true);
+    }
+
+    public boolean isProjectile(Entity entity){
+        return (entity instanceof EntityShulkerBullet || entity instanceof EntityFireball);
     }
 
     public boolean rotateTo(final double n, final double n2, final double n3, final EntityPlayer entityPlayer, final boolean b){
