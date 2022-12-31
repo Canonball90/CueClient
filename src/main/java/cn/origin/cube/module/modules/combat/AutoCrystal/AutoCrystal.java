@@ -95,11 +95,6 @@ public class AutoCrystal extends Module {
     public BooleanSetting rayTrace = registerSetting("Ray-trace", false);
     public BooleanSetting predict = registerSetting("Predict", false);
     public BooleanSetting wallCheck = registerSetting("WallCheck", false);
-    public IntegerSetting BlastHealth = registerSetting("BlastHealth", 17 , 0 , 20);
-    public BooleanSetting AutoMineHole = registerSetting("AutoHoleMine", false);
-    public BooleanSetting NoKick = registerSetting("AntiKick", false);
-    public BooleanSetting ArmorCheck = registerSetting("ArmorCheck", false);
-    public IntegerSetting ArmorRate = registerSetting("ArmorRate", 18 , 0 , 100).booleanVisible(ArmorCheck);
     public BooleanSetting swing = registerSetting("Swing", true);
     public ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main).booleanVisible(swing);
     public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 17 , 0 , 20);
@@ -109,7 +104,6 @@ public class AutoCrystal extends Module {
     public FloatSetting breakTrace = registerSetting("breakTrace",3.0f, 0.0f, 6.0f);
     public BooleanSetting thinking = registerSetting("Thinking", false);
     public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
-    public BooleanSetting HoleJiggle = registerSetting("Jiggle", false);
     public BooleanSetting inhibit = registerSetting("Inhibit", false);
     public BooleanSetting forceBypass = registerSetting("ForceBypass", false);
     public IntegerSetting bypassRotationTime = registerSetting("bypassRotationTime",  500, 0, 1000).booleanVisible(forceBypass);
@@ -390,29 +384,7 @@ public class AutoCrystal extends Module {
                 }
                 if (placeTimer.getPassedTimeMs() / 50 >= 20 - placeSpeed.getValue()) {
                     placeTimer.reset();
-                    if(HoleJiggle.getValue()) {
-                        TryJiggle(getBestCrystal().getPosition());
-                    }
                     placee(q, f, offhand);
-                }
-            }
-            if (AutoMineHole.getValue()) {
-                BlockPos minePos = null;
-                blockPos = new BlockPos(renderEnt.posX, renderEnt.posY, renderEnt.posZ);
-                for (EnumFacing facing : EnumFacing.HORIZONTALS) {
-                    IBlockState touchingState = mc.world.getBlockState(blockPos.offset(facing));
-                    if (touchingState.getBlock() == Blocks.OBSIDIAN) {
-                        canMine = true;
-                        minePos = blockPos.offset(facing);
-                    }
-                }
-                if (Utils.INSTANCE.isInHole((EntityPlayer) renderEnt) && canMine && minePos != null && mc.getConnection() != null) {
-                    mc.player.swingArm(EnumHand.MAIN_HAND);
-                    if (HoleMiningTimer.passed(breakSpeed.getValue())) {
-                        mc.player.connection.sendPacket(new CPacketPlayerDigging(CPacketPlayerDigging.Action.START_DESTROY_BLOCK, minePos, EnumFacing.DOWN));
-                        mc.player.connection.sendPacket(new CPacketPlayerDigging(CPacketPlayerDigging.Action.STOP_DESTROY_BLOCK, minePos, EnumFacing.DOWN));
-                        HoleMiningTimer.reset();
-                    }
                 }
             }
         } catch (Exception ignored) {
@@ -469,13 +441,6 @@ public class AutoCrystal extends Module {
         }
         mc.playerController.updateController();
     }
-
-    @SubscribeEvent
-    public void onPacketSend(PacketEvent.Send event) {
-        if (NoKick.getValue() && event.getPacket() instanceof net.minecraft.network.play.client.CPacketAnimation)
-            event.setCanceled(true);
-    }
-
 
     @SubscribeEvent
     public void onPacketRecieve(PacketEvent.Receive event){
@@ -609,23 +574,23 @@ public class AutoCrystal extends Module {
         return unsafeEntities <= 0;
     }
 
-    public boolean canFacePlace(EntityLivingBase target) {
-        float healthTarget = target.getHealth() + target.getAbsorptionAmount();
-        if (healthTarget <= BlastHealth.getValue()) {
-            return true;
-        } else if (ArmorCheck.getValue()) {
-            for (ItemStack itemStack : target.getArmorInventoryList()) {
-                if (itemStack.isEmpty()) {
-                    continue;
-                }
-                float dmg = ((float) itemStack.getMaxDamage() - (float) itemStack.getItemDamage()) / (float) itemStack.getMaxDamage();
-                if (dmg <= ArmorRate.getValue() / 100f) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
+//    public boolean canFacePlace(EntityLivingBase target) {
+//        float healthTarget = target.getHealth() + target.getAbsorptionAmount();
+//        if (healthTarget <= BlastHealth.getValue()) {
+//            return true;
+//        } else if (ArmorCheck.getValue()) {
+//            for (ItemStack itemStack : target.getArmorInventoryList()) {
+//                if (itemStack.isEmpty()) {
+//                    continue;
+//                }
+//                float dmg = ((float) itemStack.getMaxDamage() - (float) itemStack.getItemDamage()) / (float) itemStack.getMaxDamage();
+//                if (dmg <= ArmorRate.getValue() / 100f) {
+//                    return true;
+//                }
+//            }
+//        }
+//        return false;
+//    }
 
     public boolean isOutsideBreakRange(double x, double y, double z,AutoCrystal module) {
         switch (placeBreakRange.getValue()){
@@ -674,10 +639,6 @@ public class AutoCrystal extends Module {
     public void onRender3D(Render3DEvent event){
         if(render != null || renderEnt != null){
             Render3DUtil.drawBlockBox(render.getBlockPos(), new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(), Colors.getGlobalColor().getBlue(), 140), outline.getValue(), 3);
-
-            if(AutoMineHole.getValue() && blockPos != null){
-                Render3DUtil.drawBlockBox(blockPos, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue()), outline.getValue(), 3);
-            }
         }
     }
 
@@ -1288,7 +1249,6 @@ public class AutoCrystal extends Module {
     }
 
     private void TryJiggle(BlockPos pos) {
-        if (HoleJiggle.getValue())
             if (mc.player.getDistance(pos.getX(), pos.getY(), pos.getZ()) > 5)
                 mc.getConnection().sendPacket(new CPacketPlayer.Position(Math.floor(mc.player.posX) + .5 + (mc.player.posX < pos.getX() ? .2 : -.2), mc.player.posY, Math.floor(mc.player.posZ) + .5 + (mc.player.posZ < pos.getZ() ? .2 : -.2), mc.player.onGround));
     }
