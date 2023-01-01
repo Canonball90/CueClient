@@ -1,4 +1,4 @@
-package cn.origin.cube.guis.console;
+package cn.origin.cube.guis.otheruis.console;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.command.Command;
-import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.utils.client.ChatUtil;
 import org.apache.logging.log4j.LogManager;

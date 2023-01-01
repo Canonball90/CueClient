@@ -4,7 +4,7 @@ import cn.origin.cube.core.events.client.PacketEvent
 import cn.origin.cube.inject.client.ISPacketExplosion
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
-import cn.origin.cube.module.interfaces.ModuleInfo
+import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.FloatSetting
 import net.minecraft.network.Packet

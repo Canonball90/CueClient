@@ -3,12 +3,12 @@ package cn.origin.cube.module.modules.function;
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
-import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.IntegerSetting;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import cn.origin.cube.module.interfaces.Para;
+import cn.origin.cube.core.module.interfaces.Para;
 import cn.origin.cube.utils.client.ChatUtil;
 import net.minecraft.init.Items;
 import net.minecraft.network.Packet;

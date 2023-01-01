@@ -4,13 +4,11 @@ import cn.origin.cube.Cube;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.HudModule;
 import cn.origin.cube.core.settings.IntegerSetting;
-import cn.origin.cube.module.interfaces.HudModuleInfo;
-import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.core.module.interfaces.HudModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.module.modules.client.Colors;
-import cn.origin.cube.module.modules.client.NewClickGui;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.opengl.GL11;
 

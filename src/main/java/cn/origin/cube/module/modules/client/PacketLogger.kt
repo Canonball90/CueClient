@@ -5,11 +5,10 @@ import cn.origin.cube.core.settings.DoubleSetting
 import cn.origin.cube.core.events.client.PacketEvent
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
-import cn.origin.cube.module.interfaces.ModuleInfo
-import cn.origin.cube.module.interfaces.Para
+import cn.origin.cube.core.module.interfaces.ModuleInfo
+import cn.origin.cube.core.module.interfaces.Para
 import cn.origin.cube.utils.Timer
 import cn.origin.cube.utils.client.ChatUtil
-import cn.origin.cube.utils.client.event.event.Listener
 import net.minecraft.network.Packet
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 

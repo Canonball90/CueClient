@@ -7,7 +7,7 @@ import cn.origin.cube.core.managers.ModuleManager;
 import cn.origin.cube.core.managers.*;
 import cn.origin.cube.guis.HudEditorScreen;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
-import cn.origin.cube.guis.mainmenu.Shaders;
+import cn.origin.cube.guis.otheruis.mainmenu.Shaders;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

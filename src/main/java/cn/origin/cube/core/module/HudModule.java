@@ -1,7 +1,7 @@
 package cn.origin.cube.core.module;
 
 import cn.origin.cube.core.settings.BindSetting;
-import cn.origin.cube.module.interfaces.HudModuleInfo;
+import cn.origin.cube.core.module.interfaces.HudModuleInfo;
 
 public class HudModule extends AbstractModule {
     public HudModule() {

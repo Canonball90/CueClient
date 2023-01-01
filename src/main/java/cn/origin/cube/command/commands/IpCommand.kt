@@ -1,7 +1,7 @@
 package cn.origin.cube.command.commands
 
 import cn.origin.cube.command.Command
-import cn.origin.cube.module.interfaces.CommandInfo
+import cn.origin.cube.core.module.interfaces.CommandInfo
 import cn.origin.cube.utils.client.ChatUtil
 import net.minecraft.client.Minecraft
 import java.awt.Toolkit

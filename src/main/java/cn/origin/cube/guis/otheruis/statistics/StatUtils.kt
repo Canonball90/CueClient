@@ -1,4 +1,4 @@
-package cn.origin.cube.guis.statistics
+package cn.origin.cube.guis.otheruis.statistics
 
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.Gui

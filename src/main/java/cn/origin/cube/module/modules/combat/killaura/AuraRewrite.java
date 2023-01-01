@@ -1,4 +1,4 @@
-package cn.origin.cube.module.modules.combat;
+package cn.origin.cube.module.modules.combat.killaura;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.settings.*;
@@ -6,9 +6,8 @@ import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
-import cn.origin.cube.module.interfaces.ModuleInfo;
-import cn.origin.cube.module.interfaces.Para;
-import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.core.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
 import cn.origin.cube.utils.client.event.event.ParallelListener;
@@ -17,7 +16,6 @@ import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.RotationUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 import cn.origin.cube.utils.render.RenderBuilder;
-import cn.origin.cube.utils.render.RenderUtil;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.inventory.GuiInventory;
 import net.minecraft.client.renderer.GlStateManager;
@@ -34,7 +32,6 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 import java.text.DecimalFormat;
@@ -47,14 +44,7 @@ public class AuraRewrite extends Module {
 
     public EntityLivingBase target = null;
     long killLast = new Date().getTime();
-    public boolean shouldRotate;
-    boolean smoothRotatePitch;
-    boolean smoothRotateYaw;
-    boolean smoothRotated;
-    int addedOriginYaw;
     public float pitch;
-    int addedInputYaw;
-    float smoothPitch;
     public float yaw;
     DoubleSetting range = registerSetting("Range", 4.0, 1, 6);
     BooleanSetting players = registerSetting("Players", true);
@@ -101,9 +91,9 @@ public class AuraRewrite extends Module {
                             this.killLast = new Date().getTime();
                             if (rotate.getValue()) {
                                 if(rotateStrict.getValue()) {
-                                    rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                    Rotate.rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
                                 }else{
-                                    rotateTo(target);
+                                    Rotate.rotateTo(target);
                                 }
                             }
                             for (int i = 0; i < this.iterations.getValue(); ++i) {
@@ -118,9 +108,9 @@ public class AuraRewrite extends Module {
                             this.killLast = new Date().getTime();
                             if (rotate.getValue()) {
                                 if(rotateStrict.getValue()) {
-                                    rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                    Rotate.rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
                                 }else{
-                                    rotateTo(target);
+                                    Rotate.rotateTo(target);
                                 }
                             }
                             for (int i = 0; i < this.iterations.getValue(); ++i) {
@@ -128,16 +118,16 @@ public class AuraRewrite extends Module {
                             }
                         }
                     }
-                    if(isProjectile(entity) && projectiles.getValue()){
+                    if(utils.isProjectile(entity) && projectiles.getValue()){
                         target = (EntityLivingBase)entity;
                         final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
                         if (new Date().getTime() >= this.killLast + delay) {
                             this.killLast = new Date().getTime();
                             if (rotate.getValue()) {
                                 if(rotateStrict.getValue()) {
-                                    rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                    Rotate.rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
                                 }else{
-                                    rotateTo(target);
+                                    Rotate.rotateTo(target);
                                 }
                             }
                             for (int i = 0; i < this.iterations.getValue(); ++i) {
@@ -152,9 +142,9 @@ public class AuraRewrite extends Module {
                             this.killLast = new Date().getTime();
                             if (rotate.getValue()) {
                                 if(rotateStrict.getValue()) {
-                                    rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                    Rotate.rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
                                 }else{
-                                    rotateTo(target);
+                                    Rotate.rotateTo(target);
                                 }
                             }
                             for (int i = 0; i < this.iterations.getValue(); ++i) {
@@ -235,7 +225,7 @@ public class AuraRewrite extends Module {
         }
     }
     public void attack(Entity entity) {
-        rotateTo(entity.posX, entity.posY, entity.posZ, mc.player, false);
+        Rotate.rotateTo(entity.posX, entity.posY, entity.posZ, mc.player, false);
         if (hitDelay.getValue()) {
             if(betterCrit.getValue()){
                 mc.gameSettings.keyBindSneak.pressed = true;
@@ -265,125 +255,17 @@ public class AuraRewrite extends Module {
         }
     }
 
-    public void rotateTo(Entity target) {
-        RotationUtil.faceVector(new Vec3d(target.posX, target.posY + 1, target.posZ), true);
-    }
-
-    public boolean isProjectile(Entity entity){
-        return (entity instanceof EntityShulkerBullet || entity instanceof EntityFireball);
-    }
-
-    public boolean rotateTo(final double n, final double n2, final double n3, final EntityPlayer entityPlayer, final boolean b){
-        final double[] calculateLook = EntityUtil.calculateLookAt(n, n2, n3, entityPlayer);
-        return setRotation((float) calculateLook[0], (float) calculateLook[1], b);
-    }
-
-    public boolean setRotation(float setSmoothRotationYaw, float n, final boolean b) {
-        final boolean b2 = false;
-        smoothRotatePitch = b2;
-        smoothRotateYaw = b2;
-        smoothRotated = true;
-        if (b) {
-            if (!shouldRotate) {
-                yaw = mc.player.prevRotationYaw;
-                pitch = mc.player.prevRotationPitch;
-            }
-            if (calculateDirectionDifference(setSmoothRotationYaw + 180.0f, yaw + 180.0f) > 90.0) {
-                setSmoothRotationYaw = setSmoothRotationYaw(setSmoothRotationYaw, yaw);
-                smoothRotated = false;
-            }
-            if (Math.abs(n - pitch) > 90.0f) {
-                smoothRotatePitch = true;
-                smoothRotated = false;
-                smoothPitch = n;
-                if (n > pitch) {
-                    n -= (n - pitch) / 2.0f;
-                } else {
-                    n += (pitch - n) / 2.0f;
-                }
-            }
-        }
-        yaw = setSmoothRotationYaw;
-        pitch = n;
-        shouldRotate = true;
-        return !smoothRotatePitch && !smoothRotateYaw;
-    }
-
-    public float setSmoothRotationYaw(float smoothYaw, float n) {
-        smoothRotateYaw = true;
-        final int n2 = 0;
-        addedOriginYaw = n2;
-        addedInputYaw = n2;
-        while (smoothYaw + 180.0f < 0.0f) {
-            smoothYaw += 360.0f;
-            ++addedInputYaw;
-        }
-        while (smoothYaw + 180.0f > 360.0f) {
-            smoothYaw -= 360.0f;
-            --addedInputYaw;
-        }
-        while (n + 180.0f < 0.0f) {
-            n += 360.0f;
-            ++addedOriginYaw;
-        }
-        while (n + 180.0f > 360.0f) {
-            n -= 360.0f;
-            --addedOriginYaw;
-        }
-        smoothYaw += 180.0f;
-        n += 180.0f;
-        final double n3 = n - smoothYaw;
-        if (n3 >= -180.0 && n3 >= 180.0) {
-            smoothYaw -= (float) (n3 / 2.0);
-        } else {
-            smoothYaw += (float) (n3 / 2.0);
-        }
-        smoothYaw -= 180.0f;
-        if (addedInputYaw > 0) {
-            for (int i = 0; i < addedInputYaw; ++i) {
-                smoothYaw -= 360.0f;
-            }
-        } else if (addedInputYaw < 0) {
-            for (int j = 0; j > addedInputYaw; --j) {
-                smoothYaw += 360.0f;
-            }
-        }
-        return smoothYaw;
-    }
-
-    public static double calculateDirectionDifference(double n, double n2) {
-        while (n < 0.0) {
-            n += 360.0;
-        }
-        while (n > 360.0) {
-            n -= 360.0;
-        }
-        while (n2 < 0.0) {
-            n2 += 360.0;
-        }
-        while (n2 > 360.0) {
-            n2 -= 360.0;
-        }
-        final double n3 = Math.abs(n2 - n) % 360.0;
-        return (n3 > 180.0) ? (360.0 - n3) : n3;
-    }
-
-    private void resetRotation() {
-        yaw = mc.player.rotationYaw;
-        pitch = mc.player.rotationPitch;
-    }
-
     @Override
     public void onDisable() {
         if(target != null)
             target = null;
-        resetRotation();
+        Rotate.resetRotation();
     }
 
     private EnumHand getHandToBreak() {
-        if (breakHand.getValue().equals(AutoCrystal.Mode.Offhand)) {
+        if (breakHand.getValue().equals(Mode.Offhand)) {
             return EnumHand.OFF_HAND;
-        }else if(breakHand.getValue().equals(AutoCrystal.Mode.Both)){
+        }else if(breakHand.getValue().equals(Mode.Both)){
             return EnumHand.OFF_HAND;
         }
         return EnumHand.MAIN_HAND;

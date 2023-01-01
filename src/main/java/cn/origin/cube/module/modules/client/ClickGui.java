@@ -5,7 +5,7 @@ import cn.origin.cube.core.managers.ConfigManager;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
-import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.IntegerSetting;

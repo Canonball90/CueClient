@@ -1,4 +1,4 @@
-package cn.origin.cube.module.interfaces;
+package cn.origin.cube.core.module.interfaces;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

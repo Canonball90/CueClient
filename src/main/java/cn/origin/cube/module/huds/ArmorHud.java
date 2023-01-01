@@ -2,7 +2,7 @@ package cn.origin.cube.module.huds;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.HudModule;
-import cn.origin.cube.module.interfaces.HudModuleInfo;
+import cn.origin.cube.core.module.interfaces.HudModuleInfo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;

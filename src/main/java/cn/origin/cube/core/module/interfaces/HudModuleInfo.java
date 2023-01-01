@@ -1,4 +1,4 @@
-package cn.origin.cube.module.interfaces;
+package cn.origin.cube.core.module.interfaces;
 
 import cn.origin.cube.core.module.Category;
 
@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ModuleInfo {
+public @interface HudModuleInfo {
     String name();
 
     String descriptions();
@@ -16,4 +16,12 @@ public @interface ModuleInfo {
     int defaultKeyBind() default 0;
 
     boolean defaultEnable() default false;
+
+    float x();
+
+    float y();
+
+    float width() default 0.0f;
+
+    float height() default 0.0f;
 }

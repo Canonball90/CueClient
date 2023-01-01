@@ -1,4 +1,4 @@
-package cn.origin.cube.guis.mainmenu;
+package cn.origin.cube.guis.otheruis.mainmenu;
 
 import cn.origin.cube.Cube;
 

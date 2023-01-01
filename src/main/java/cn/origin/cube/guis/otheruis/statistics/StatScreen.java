@@ -1,4 +1,4 @@
-package cn.origin.cube.guis.statistics;
+package cn.origin.cube.guis.otheruis.statistics;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.utils.render.Render2DUtil;

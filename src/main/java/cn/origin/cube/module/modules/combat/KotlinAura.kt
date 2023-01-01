@@ -3,14 +3,12 @@ package cn.origin.cube.module.modules.combat
 import cn.origin.cube.core.events.world.Render3DEvent
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
-import cn.origin.cube.module.interfaces.ModuleInfo
-import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.utils.client.MathUtil
 import cn.origin.cube.utils.player.BlockUtil
 import cn.origin.cube.utils.player.EntityUtil
-import cn.origin.cube.utils.render.Render3DUtil
 import net.minecraft.entity.item.EntityEnderCrystal
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.init.Items

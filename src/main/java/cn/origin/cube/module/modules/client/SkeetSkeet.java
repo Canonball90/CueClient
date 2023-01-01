@@ -5,7 +5,7 @@ import cn.origin.cube.core.managers.ConfigManager;
 import cn.origin.cube.guis.csgoGui.gui.SkeetGUI;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
-import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.module.interfaces.ModuleInfo;
 
 @ModuleInfo(name = "SkeetGui", descriptions = "", category = Category.CLIENT)
 public class SkeetSkeet extends Module {

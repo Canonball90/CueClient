@@ -3,13 +3,11 @@ package cn.origin.cube.module.modules.combat.AutoCrystal;
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.events.player.RenderRotationsEvent;
-import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
-import cn.origin.cube.core.settings.FloatSetting;
-import cn.origin.cube.module.interfaces.ModuleInfo;
-import cn.origin.cube.module.interfaces.Para;
+import cn.origin.cube.core.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.module.modules.combat.KillAura;
 import cn.origin.cube.core.settings.BooleanSetting;
@@ -25,13 +23,11 @@ import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
 import cn.origin.cube.utils.player.ai.AIUtils;
 import cn.origin.cube.utils.player.ai.CrystalUtils;
-import cn.origin.cube.utils.render.Render2DUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.item.*;
@@ -46,7 +42,6 @@ import net.minecraft.util.math.*;
 import net.minecraft.world.*;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 import java.util.*;
@@ -102,7 +97,6 @@ public class AutoCrystal extends Module {
     //Render
     public BooleanSetting outline = registerSetting("Outline", true).modeVisible(page, Page.Render);
     public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255).modeVisible(page, Page.Render);
-    public BooleanSetting targetHud = registerSetting("Target Hud", false).modeVisible(page, Page.Render);
     public IntegerSetting tx = registerSetting("Alpha", 150, 0, 1000).modeVisible(page, Page.Render);
     public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000).modeVisible(page, Page.Render);
 
@@ -131,7 +125,6 @@ public class AutoCrystal extends Module {
     private static boolean cancelingCrystals;
     private static boolean isSpoofingAngles;
     private Timer bypassTimer = new Timer();
-    private static boolean autoTimeractive;
     private boolean switchCooldown = false;
     private Timer breakTimer = new Timer();
     private Timer placeTimer = new Timer();
@@ -159,10 +152,6 @@ public class AutoCrystal extends Module {
     private int newSlot;
     private int breaks;
     private Rotation rotateAngles;
-
-    public static boolean isCancelingCrystals() {
-        return cancelingCrystals;
-    }
 
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent event) {
@@ -329,12 +318,12 @@ public class AutoCrystal extends Module {
                     if(wallCheck.getValue() && !Utils.INSTANCE.canSeePos(blockPos)){
                         continue;
                     }
-                    double d = calculateDamage1(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, entity);
+                    double d = calculateDamage(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, entity);
                     if (d < minDamage.getValue()) {
                         continue;
                     }
                     if (d > damage) {
-                        double self = calculateDamage1(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, mc.player);
+                        double self = calculateDamage(blockPos.getX() + .5, blockPos.getY() + 1, blockPos.getZ() + .5, mc.player);
                         if ((self > d && !(d < ((EntityLivingBase) entity).getHealth())) || self - .5 > mc.player.getHealth()) {
                             continue;
                         }
@@ -626,30 +615,6 @@ public class AutoCrystal extends Module {
         }
     }
 
-    //ToDo add more to this
-
-    @Override
-    public void onRender2D() {
-        if(targetHud.getValue()) {
-            if ((mc.player.getHeldItemMainhand().getItem() == Items.END_CRYSTAL || mc.player.getHeldItemOffhand().getItem() == Items.END_CRYSTAL)) {
-                Render2DUtil.drawBorderedRect(tx.getValue(), ty.getValue(), tx.getValue() + width, ty.getValue() + height, 1, new Color(35, 35, 35, 150).getRGB(), Colors.getGlobalColor().getRGB());
-                if(renderEnt != null) {
-                    drawHead((mc.getConnection()).getPlayerInfo(renderEnt.getUniqueID()).getLocationSkin(), tx.getValue() + 5, ty.getValue() + 10);
-                }
-                Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : renderEnt.getName(), tx.getValue() + 43, ty.getValue() + 10, Colors.getGlobalColor().getRGB(), true);
-                Cube.fontManager.CustomFont.drawString((renderEnt == null) ? "None" : "" + renderEnt.getDistance(mc.player), tx.getValue() + 43, ty.getValue() + 20, Colors.getGlobalColor().getRGB(), true);
-                Render2DUtil.drawGradientHRect(tx.getValue() + 5, ty.getValue() + 55, tx.getValue() + 140, ty.getValue() + 67 - (7), new Color(255, 0, 0).getRGB(), new Color(0, 255, 0).getRGB());
-            }
-        }
-        super.onRender2D();
-    }
-
-    public void drawHead(ResourceLocation skin, int width, int height) {
-        GL11.glColor4f(1, 1, 1, 1);
-        mc.getTextureManager().bindTexture(skin);
-        Gui.drawScaledCustomSizeModalRect(width, height, 8, 8, 8, 8, 37, 37, 64, 64);
-    }
-
     private List<BlockPos> findCrystalBlocks() {
         NonNullList<BlockPos> positions = NonNullList.create();
         positions.addAll(getSphere(Utils.INSTANCE.getPlayerPos(), (float) placeRange.getValue(), (int) placeRange.getValue(), false, true, 0).stream().filter(this::ableToPlace).collect(Collectors.toList()));
@@ -693,21 +658,7 @@ public class AutoCrystal extends Module {
         return explosionPackets.size() > 40 || placementPackets.size() > 40;
     }
 
-//    public float calculateDamage(double posX, double posY, double posZ, Entity entity) {
-//        float doubleExplosionSize = 6.0F * 2.0F;
-//        double distancedsize = entity.getDistance(posX, posY, posZ) / (double) doubleExplosionSize;
-//        Vec3d vec3d = new Vec3d(posX, posY, posZ);
-//        double blockDensity = (double) entity.world.getBlockDensity(vec3d, entity.getEntityBoundingBox());
-//        double v = (1.0D - distancedsize) * blockDensity;
-//        float damage = (float) ((int) ((v * v + v) / 2.0D * 9.0D * (double) doubleExplosionSize + 1.0D));
-//        double finald = 1;
-//        if (entity instanceof EntityLivingBase) {
-//            finald = getBlastReduction((EntityLivingBase) entity, getDamageMultiplied(damage), new Explosion(mc.world, null, posX, posY, posZ, 6F, false, true));
-//        }
-//        return (float) finald;
-//    }
-
-    public float calculateDamage1(double posX, double posY, double posZ, Entity entity) {
+    public float calculateDamage(double posX, double posY, double posZ, Entity entity) {
         Vec3d offset = new Vec3d(entity.posX, entity.posY, entity.posZ);
         return calculateDamage(posX, posY, posZ, entity, offset);
     }
@@ -766,7 +717,7 @@ public class AutoCrystal extends Module {
     }
 
     public float calculateDamage(EntityEnderCrystal crystal, Entity entity) {
-        return calculateDamage1(crystal.posX, crystal.posY, crystal.posZ, entity);
+        return calculateDamage(crystal.posX, crystal.posY, crystal.posZ, entity);
     }
 
     private void setYawAndPitch(float yaw1, float pitch1) {
@@ -792,11 +743,6 @@ public class AutoCrystal extends Module {
             return EnumHand.OFF_HAND;
         }
         return EnumHand.MAIN_HAND;
-    }
-
-    public void setBypassPos(BlockPos pos) {
-        bypassTimer.reset();
-        this.bypassPos = pos;
     }
 
     private void Thinking() {
@@ -851,10 +797,6 @@ public class AutoCrystal extends Module {
 
         return Math.max(damage, 0);
     }
-
-    public void LOGIC(){
-    }
-
 
     public static double getBlockDensity(boolean blockDestruction, Vec3d vector, AxisAlignedBB bb) {
 

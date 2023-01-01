@@ -1,12 +1,9 @@
 package cn.origin.cube.module.modules.function.scaffold;
 
-import cn.origin.cube.core.events.player.TravelEvent;
-import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
-import cn.origin.cube.module.interfaces.ModuleInfo;
-import cn.origin.cube.module.interfaces.Para;
-import cn.origin.cube.module.modules.client.ClickGui;
+import cn.origin.cube.core.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.module.interfaces.Para;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.module.modules.client.Colors;
@@ -19,7 +16,6 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.ArrayList;
 import java.util.List;

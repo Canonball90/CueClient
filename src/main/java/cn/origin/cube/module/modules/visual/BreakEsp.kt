@@ -5,9 +5,8 @@ import cn.origin.cube.core.events.world.Render3DEvent
 import cn.origin.cube.inject.client.IRenderGlobal
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
-import cn.origin.cube.module.interfaces.ModuleInfo
-import cn.origin.cube.module.interfaces.Para
-import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.core.module.interfaces.ModuleInfo
+import cn.origin.cube.core.module.interfaces.Para
 import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.render.Render3DUtil
 import net.minecraft.client.renderer.DestroyBlockProgress

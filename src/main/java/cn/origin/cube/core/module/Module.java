@@ -2,7 +2,7 @@ package cn.origin.cube.core.module;
 
 import cn.origin.cube.core.settings.BindSetting;
 import cn.origin.cube.core.settings.BooleanSetting;
-import cn.origin.cube.module.interfaces.ModuleInfo;
+import cn.origin.cube.core.module.interfaces.ModuleInfo;
 
 public class Module extends AbstractModule {
 

@@ -1,6 +1,6 @@
 package cn.origin.cube.command;
 
-import cn.origin.cube.module.interfaces.CommandInfo;
+import cn.origin.cube.core.module.interfaces.CommandInfo;
 
 public abstract class Command {
     public final String name;
