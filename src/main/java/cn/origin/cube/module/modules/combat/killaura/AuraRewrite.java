@@ -273,7 +273,7 @@ public class AuraRewrite extends Module {
 
     @Override
     public void onEnable(){
-        SwitchUtils.l();
+        SwitchUtils.oldSwitch();
     }
 
     private EnumHand getHandToBreak() {

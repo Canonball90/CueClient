@@ -14,7 +14,7 @@ object SwitchUtils {
     var oldSlot = 0
 
     @JvmStatic
-    fun l(){
+    fun oldSwitch(){
         oldSlot = Module.mc.player.inventory.currentItem
     }
 
