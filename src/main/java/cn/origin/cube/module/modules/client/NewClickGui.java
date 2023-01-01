@@ -7,7 +7,7 @@ import cn.origin.cube.core.module.Module;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
-import cn.origin.cube.guis.ClickGuiScreen;
+import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.guis.newGui.panel.NewGui;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import org.lwjgl.input.Keyboard;

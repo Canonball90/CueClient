@@ -7,12 +7,15 @@ import cn.origin.cube.guis.gui.CategoryPanel
 import cn.origin.cube.guis.gui.buttons.setting.*
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.module.modules.client.Colors
-import cn.origin.cube.utils.COG
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.ColourAnimation
 import me.surge.animation.Easing
+import net.minecraft.client.Minecraft
+import net.minecraft.client.gui.Gui
 import net.minecraft.client.renderer.GlStateManager
+import net.minecraft.util.ResourceLocation
 import java.awt.Color
+
 
 class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father: AbstractModule) :
     Button(width, height, panel) {
@@ -115,24 +118,37 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             y + (height / 2) - (Cube.fontManager!!.CustomFont.height / 4),
             textcolourAnimation.getColour().rgb
         )
-        pulse.state = isShowSettings
 
-        GlStateManager.pushMatrix();
-        GlStateManager.enableBlend();
-        Cube.fontManager!!.IconFont.drawStringWithShadow(
-            COG, (x + width) - 3 - Cube.fontManager!!.IconFont.getStringWidth(
-                COG
-            ), y + (height / 2) - (Cube.fontManager!!.IconFont.height / 4), pulse.getColour().rgb
-        )
-        GlStateManager.rotate(calculateRotation(this.progress), 0.0f, 0.0f, 1.0f)
-        GlStateManager.disableBlend();
-        GlStateManager.popMatrix();
+        pulse.state = isShowSettings
+        GlStateManager.pushMatrix()
+        GlStateManager.enableBlend()
+        Minecraft.getMinecraft().getTextureManager().bindTexture(ResourceLocation("assets/fonts/gear.png"));
+        GlStateManager.translate(x + width - 6.7f, y + 7.7f - 0.3f, 0.0f)
+        GlStateManager.rotate(calculateRotation(progress), 0.0f, 0.0f, 1.0f)
+        drawModalRect(-5, -5, 0.0f, 0.0f, 10, 10, 10, 10, 10.0f, 10.0f)
+        GlStateManager.disableBlend()
+        GlStateManager.popMatrix()
 
         if(isShowSettings){
             progress = progress.inc()
         }
         this.x = x
         this.y = y
+    }
+
+    fun drawModalRect(
+        var0: Int,
+        var1: Int,
+        var2: Float,
+        var3: Float,
+        var4: Int,
+        var5: Int,
+        var6: Int,
+        var7: Int,
+        var8: Float,
+        var9: Float
+    ) {
+        Gui.drawScaledCustomSizeModalRect(var0, var1, var2, var3, var4, var5, var6, var7, var8, var9)
     }
 
     override fun mouseClicked(mouseX: Int, mouseY: Int, mouseButton: Int) {
