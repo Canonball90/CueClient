@@ -2,6 +2,7 @@ package cn.origin.cube.utils.player;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.play.client.CPacketPlayer;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
@@ -26,4 +27,21 @@ public class RotationUtil {
         float pitch = (float) (-Math.toDegrees(Math.atan2(diffY, diffXZ)));
         return new float[]{RotationUtil.mc.player.rotationYaw + MathHelper.wrapDegrees(yaw - RotationUtil.mc.player.rotationYaw), RotationUtil.mc.player.rotationPitch + MathHelper.wrapDegrees(pitch - RotationUtil.mc.player.rotationPitch)};
     }
+
+    public static double normalizeAngle(double angle) {
+        angle %= 360.0;
+
+        if (angle >= 180.0) angle -= 360.0;
+        if (angle < -180.0) angle += 360.0;
+
+        return angle;
+    }
+
+    public static float[] getRotationToPos(BlockPos pos) {
+        double lengthXZ = Math.hypot(pos.getX(), pos.getZ());
+        double yaw = normalizeAngle(Math.toDegrees(Math.atan2(pos.getZ(), pos.getX())) - 90.0);
+        double pitch = normalizeAngle(Math.toDegrees(-Math.atan2(pos.getY(), lengthXZ)));
+        return new float[] {(float) yaw, (float) pitch};
+    }
+
 }

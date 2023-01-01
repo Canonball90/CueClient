@@ -48,6 +48,7 @@ class ModuleManager {
         registerModule(AutoCrystal())
         registerModule(AuraRewrite())
         registerModule(BowBomb())
+        registerModule(cn.origin.cube.module.modules.combat.newAutoCrystal.AutoCrystal())
 
         //Function
         registerModule(MiddleClick())
