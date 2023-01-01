@@ -1,4 +1,4 @@
-package cn.origin.cube.font
+package cn.origin.cube.utils.font
 
 import cn.origin.cube.utils.gl.GlStateUtils
 import cn.origin.cube.utils.render.ColorUtils

@@ -1,6 +1,6 @@
-package cn.origin.cube.font
+package cn.origin.cube.utils.font
 
-import cn.origin.cube.font.texture.MipmapTexture
+import cn.origin.cube.utils.font.texture.MipmapTexture
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.GlStateManager
 import net.minecraft.client.renderer.texture.TextureUtil

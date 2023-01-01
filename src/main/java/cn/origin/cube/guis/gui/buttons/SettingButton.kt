@@ -1,4 +1,4 @@
-package cn.origin.cube.guis.buttons
+package cn.origin.cube.guis.gui.buttons
 
 import cn.origin.cube.core.settings.Setting
 

@@ -1,6 +1,6 @@
-package cn.origin.cube.guis.buttons
+package cn.origin.cube.guis.gui.buttons
 
-import cn.origin.cube.guis.CategoryPanel
+import cn.origin.cube.guis.gui.CategoryPanel
 import net.minecraft.client.Minecraft
 
 abstract class Button(

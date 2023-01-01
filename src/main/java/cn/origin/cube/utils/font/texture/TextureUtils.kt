@@ -1,4 +1,4 @@
-package cn.origin.cube.font.texture
+package cn.origin.cube.utils.font.texture
 
 import net.minecraft.client.renderer.GLAllocation
 import org.lwjgl.opengl.GL11.GL_TEXTURE_2D

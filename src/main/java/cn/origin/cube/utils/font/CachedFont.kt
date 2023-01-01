@@ -1,4 +1,4 @@
-package cn.origin.cube.font
+package cn.origin.cube.utils.font
 
 import org.lwjgl.opengl.GL11.glDeleteLists
 

@@ -1,7 +1,7 @@
-package cn.origin.cube.guis
+package cn.origin.cube.guis.gui
 
 import cn.origin.cube.Cube
-import cn.origin.cube.guis.buttons.ModuleButton
+import cn.origin.cube.guis.gui.buttons.ModuleButton
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.Animation

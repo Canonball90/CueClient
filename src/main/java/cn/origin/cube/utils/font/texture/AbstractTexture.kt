@@ -1,4 +1,4 @@
-package cn.origin.cube.font.texture
+package cn.origin.cube.utils.font.texture
 
 import net.minecraft.client.renderer.GlStateManager
 import net.minecraft.client.renderer.texture.TextureUtil

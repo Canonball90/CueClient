@@ -2,6 +2,7 @@ package cn.origin.cube.guis
 
 import cn.origin.cube.Cube
 import cn.origin.cube.core.module.Category
+import cn.origin.cube.guis.gui.CategoryPanel
 import cn.origin.cube.module.modules.client.HudEditor
 import cn.origin.cube.utils.render.Render2DUtil
 import net.minecraft.client.gui.GuiScreen

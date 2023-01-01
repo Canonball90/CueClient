@@ -1,4 +1,4 @@
-package cn.origin.cube.guis
+package cn.origin.cube.guis.gui
 
 import cn.origin.cube.Cube
 import cn.origin.cube.core.module.Category

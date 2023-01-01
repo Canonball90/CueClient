@@ -1,6 +1,6 @@
-package cn.origin.cube.font.texture
+package cn.origin.cube.utils.font.texture
 
-import cn.origin.cube.font.texture.TextureUtils.scaleDownPretty
+import cn.origin.cube.utils.font.texture.TextureUtils.scaleDownPretty
 import org.lwjgl.opengl.GL11.GL_TEXTURE_2D
 import org.lwjgl.opengl.GL11.glTexParameteri
 import org.lwjgl.opengl.GL12.*

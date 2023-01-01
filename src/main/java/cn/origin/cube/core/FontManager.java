@@ -1,7 +1,7 @@
 package cn.origin.cube.core;
 
 import cn.origin.cube.Cube;
-import cn.origin.cube.font.MinecraftFontRenderer;
+import cn.origin.cube.utils.font.MinecraftFontRenderer;
 
 import java.awt.*;
 import java.io.IOException;

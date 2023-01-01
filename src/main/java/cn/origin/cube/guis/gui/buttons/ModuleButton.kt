@@ -1,10 +1,10 @@
-package cn.origin.cube.guis.buttons
+package cn.origin.cube.guis.gui.buttons
 
 import cn.origin.cube.Cube
 import cn.origin.cube.core.module.AbstractModule
 import cn.origin.cube.core.settings.*
-import cn.origin.cube.guis.CategoryPanel
-import cn.origin.cube.guis.buttons.setting.*
+import cn.origin.cube.guis.gui.CategoryPanel
+import cn.origin.cube.guis.gui.buttons.setting.*
 import cn.origin.cube.module.modules.client.ClickGui
 import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.COG

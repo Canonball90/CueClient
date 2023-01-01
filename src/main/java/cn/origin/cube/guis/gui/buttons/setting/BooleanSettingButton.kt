@@ -1,9 +1,8 @@
-package cn.origin.cube.guis.buttons.setting
+package cn.origin.cube.guis.gui.buttons.setting
 
 import cn.origin.cube.Cube
-import cn.origin.cube.guis.buttons.ModuleButton
-import cn.origin.cube.guis.buttons.SettingButton
-import cn.origin.cube.module.modules.client.ClickGui
+import cn.origin.cube.guis.gui.buttons.ModuleButton
+import cn.origin.cube.guis.gui.buttons.SettingButton
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.utils.render.Render2DUtil
 import me.surge.animation.ColourAnimation
