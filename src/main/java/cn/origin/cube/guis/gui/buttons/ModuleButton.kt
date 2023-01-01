@@ -28,6 +28,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
     private val hover = ColourAnimation(Color(15, 15, 15,100), father.category.color, 300f, false, Easing.LINEAR)
     private val pulse = ColourAnimation(Color.WHITE, Color.DARK_GRAY, 500f, false, Easing.LINEAR)
     private var progress = 0F
+    private var strem: ResourceLocation = ResourceLocation("assets/fonts/gear.png")
 
     init {
         this.progress = 0F;
@@ -122,7 +123,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
         pulse.state = isShowSettings
         GlStateManager.pushMatrix()
         GlStateManager.enableBlend()
-        Minecraft.getMinecraft().getTextureManager().bindTexture(ResourceLocation("assets/fonts/gear.png"));
+        Minecraft.getMinecraft().textureManager.bindTexture(strem);
         GlStateManager.translate(x + width - 6.7f, y + 7.7f - 0.3f, 0.0f)
         GlStateManager.rotate(calculateRotation(progress), 0.0f, 0.0f, 1.0f)
         drawModalRect(-5, -5, 0.0f, 0.0f, 10, 10, 10, 10, 10.0f, 10.0f)
