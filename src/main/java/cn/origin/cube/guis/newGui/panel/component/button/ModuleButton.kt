@@ -77,6 +77,9 @@ class ModuleButton(width: Float, height: Float, panel: CategoryFrame, val father
         Render2DUtil.drawRect(x,y,width,height,hover.getColour().rgb)
         Render2DUtil.drawLine(x + width - 5,y + 2,x+width-5,y+height - 2, 5F, colourAnimation.getColour().rgb)
 
+        if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {
+            Render2DUtil.drawLine(x.toDouble(),y+this.height.toDouble(),x + this.width.toDouble(),y+this.height.toDouble(),3F, Color(33,33,33))
+        }
 
         textcolourAnimation.state = father.isEnabled
         Cube.fontManager!!.CustomFont.drawStringWithShadow(
