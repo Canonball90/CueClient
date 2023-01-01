@@ -13,6 +13,7 @@ import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
 import cn.origin.cube.utils.client.event.event.ParallelListener;
 import cn.origin.cube.utils.client.event.event.Priority;
 import cn.origin.cube.utils.player.EntityUtil;
+import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 import cn.origin.cube.utils.render.RenderBuilder;
@@ -27,6 +28,10 @@ import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.entity.projectile.EntityShulkerBullet;
+import net.minecraft.init.Items;
+import net.minecraft.network.Packet;
+import net.minecraft.network.play.client.CPacketHeldItemChange;
+import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.network.play.client.CPacketUseEntity;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -64,6 +69,7 @@ public class AuraRewrite extends Module {
     BooleanSetting rotateStrict = registerSetting("StrictRotate", true);
     BooleanSetting betterCrit = registerSetting("BetterCrit", false);
     BooleanSetting projectiles = registerSetting("Projectiles", true);
+    BooleanSetting silent = registerSetting("Silent", true);
 
     BooleanSetting render = registerSetting("Render", true);
     ModeSetting<RenderMode> rMode = registerSetting("RenderMode", RenderMode.Circle);
@@ -78,6 +84,9 @@ public class AuraRewrite extends Module {
         if(target != null) {
             if (target.getDistance(mc.player) >= range.getValue() || target.isDead || !target.isEntityAlive())
                 target = null;
+        }
+        if(silent.getValue()){
+            SwitchUtils.silent();
         }
         for(Entity entity : mc.world.loadedEntityList) {
             if(entity == mc.player) continue;
@@ -260,6 +269,11 @@ public class AuraRewrite extends Module {
         if(target != null)
             target = null;
         Rotate.resetRotation();
+    }
+
+    @Override
+    public void onEnable(){
+        SwitchUtils.l();
     }
 
     private EnumHand getHandToBreak() {
