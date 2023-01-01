@@ -9,6 +9,7 @@ import cn.origin.cube.module.interfaces.ModuleInfo
 import cn.origin.cube.module.interfaces.Para
 import cn.origin.cube.utils.Timer
 import cn.origin.cube.utils.client.ChatUtil
+import cn.origin.cube.utils.client.event.event.Listener
 import net.minecraft.network.Packet
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 

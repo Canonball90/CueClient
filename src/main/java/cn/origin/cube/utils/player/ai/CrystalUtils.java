@@ -1,4 +1,4 @@
-package cn.origin.cube.utils.ai;
+package cn.origin.cube.utils.player.ai;
 
 import cn.origin.cube.utils.player.BlockInteractionHelper;
 import cn.origin.cube.utils.player.EntityUtil;

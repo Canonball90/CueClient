@@ -41,7 +41,6 @@ public class AutoConfig extends Module {
             AutoCrystal.INSTANCE.explode.setValue(true);
             AutoCrystal.INSTANCE.placeRange.setValue(5);
             AutoCrystal.INSTANCE.minDamage.setValue(6);
-            AutoCrystal.INSTANCE.selfDamage.setValue(12);
             AutoCrystal.INSTANCE.antiWeakness.setValue(false);
             AutoCrystal.INSTANCE.multiPlace.setValue(false);
             AutoCrystal.INSTANCE.rotate.setValue(true);
@@ -49,7 +48,6 @@ public class AutoConfig extends Module {
             AutoCrystal.INSTANCE.rayTrace.setValue(false);
             AutoCrystal.INSTANCE.breakSpeed.setValue(10);
             AutoCrystal.INSTANCE.placeSpeed.setValue(10);
-            AutoCrystal.INSTANCE.thinking.setValue(true);
             AutoCrystal.INSTANCE.cancelCrystal.setValue(false);
 
             //AutoArmor

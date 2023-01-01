@@ -75,7 +75,7 @@ public class HelperRange{
     }
 
     public boolean isCrystalOutsideNegativeRange(BlockPos pos) {
-        int negativeTicks = module.negativeTicks.getValue();
+        int negativeTicks = 6;
         if (negativeTicks == 0) {
             return false;
         }
@@ -122,7 +122,7 @@ public class HelperRange{
             double breakerX, double breakerY, double breakerZ) {
         return distanceSq(crystalX, crystalY, crystalZ,
                 breakerX, breakerY, breakerZ)
-                < MathUtil.square(module.breakTrace.getValue())
+                < MathUtil.square(7)
                 || mc.world.rayTraceBlocks(
                 new Vec3d(breakerX, breakerY
                         + mc.player.getEyeHeight(), breakerZ),

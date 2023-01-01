@@ -1,4 +1,4 @@
-package cn.origin.cube.core
+package cn.origin.cube.core.managers
 
 import cn.origin.cube.core.events.world.Render3DEvent
 import cn.origin.cube.core.module.AbstractModule

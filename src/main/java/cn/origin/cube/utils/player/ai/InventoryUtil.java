@@ -1,4 +1,4 @@
-package cn.origin.cube.utils.ai;
+package cn.origin.cube.utils.player.ai;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

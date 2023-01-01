@@ -1,4 +1,4 @@
-package cn.origin.cube.utils.ai;
+package cn.origin.cube.utils.player.ai;
 
 public class Vec2i {
     public int x, y;

@@ -10,25 +10,24 @@ import cn.origin.cube.core.module.Module;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.interfaces.Para;
-import cn.origin.cube.module.modules.client.ClickGui;
 import cn.origin.cube.module.modules.client.Colors;
 import cn.origin.cube.module.modules.combat.KillAura;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.utils.Timer;
-import cn.origin.cube.utils.ai.AI;
+import cn.origin.cube.utils.player.ai.AI;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.client.event.event.ParallelListener;
 import cn.origin.cube.utils.client.event.event.Priority;
 import cn.origin.cube.utils.player.EntityUtil;
 import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.RotationUtil;
+import cn.origin.cube.utils.player.ai.AIUtils;
+import cn.origin.cube.utils.player.ai.CrystalUtils;
 import cn.origin.cube.utils.render.Render2DUtil;
 import cn.origin.cube.utils.render.Render3DUtil;
 
-import me.surge.animation.ColourAnimation;
-import me.surge.animation.Easing;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -62,63 +61,70 @@ import java.util.stream.Collectors;
 @ModuleInfo(name = "AutoCrystal", descriptions = "Auto attack entity", category = Category.COMBAT)
 public class AutoCrystal extends Module {
 
-    public BooleanSetting switchToCrystal = registerSetting("Switch", false);
-    public BooleanSetting silent = registerSetting("Silent", false).booleanVisible(switchToCrystal);
-    public ModeSetting<SmartRange> placeBreakRange = registerSetting("SmartRange", SmartRange.None);
-    public BooleanSetting multiThread = registerSetting("MultiThread", false);
-    public BooleanSetting ak47 = registerSetting("Machine Gun", false);
-    public BooleanSetting players = registerSetting("Players", false);
-    public BooleanSetting mobs = registerSetting("Hostiles", false);
-    public BooleanSetting passives = registerSetting("Passives", false);
-    public BooleanSetting place = registerSetting("Place", false);
-    public BooleanSetting explode = registerSetting("Break", false);
-    public BooleanSetting packetPlace = registerSetting("PacketPlace", false).booleanVisible(place);
-    public BooleanSetting packetExplode = registerSetting("PacketExplode", false).booleanVisible(explode);
-    public BooleanSetting ncpRange = registerSetting("NcpRange", false);
-    public BooleanSetting smartBreakTrace = registerSetting("smartBreakTrace", false);
-    public BooleanSetting negativeBreakTrace = registerSetting("negativeBreakTrace", false);
-    public IntegerSetting placeRange = registerSetting("PlaceRange", 5, 0, 6);
-    public IntegerSetting breakRange = registerSetting("BreakRange", 5, 0, 6);
-    public IntegerSetting minDamage = registerSetting("MinimumDmg", 4, 0, 20);
-    public IntegerSetting selfDamage = registerSetting("SelfDamage", 10, 0, 20);
-    public BooleanSetting antiWeakness = registerSetting("AntiWeakness", false);
-    public BooleanSetting silentAntiWeakness = registerSetting("Silent", false).booleanVisible(antiWeakness);
-    public BooleanSetting multiPlace = registerSetting("Multi-Place", false);
-    public BooleanSetting rotate = registerSetting("Rotate", false);
-    public BooleanSetting stopWhenEating = registerSetting( "StopWhenEating", false);
-    public BooleanSetting stopWhenMining = registerSetting("StopWhenMining", false);
-    public BooleanSetting logic = registerSetting("Logic", false);
-    public BooleanSetting placeBreak = registerSetting("PlaceBreak", false).booleanVisible(logic);
-    public BooleanSetting breakPlace = registerSetting("BreakPlace", false).booleanVisible(logic).booleanDisVisible(placeBreak);
-    public BooleanSetting highPing = registerSetting("High Ping", false);
-    public BooleanSetting autoTimerl = registerSetting("Manual-Timer", false);
-    public BooleanSetting rayTrace = registerSetting("Ray-trace", false);
-    public BooleanSetting predict = registerSetting("Predict", false);
-    public BooleanSetting wallCheck = registerSetting("WallCheck", false);
-    public BooleanSetting swing = registerSetting("Swing", true);
-    public ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main).booleanVisible(swing);
-    public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 17 , 0 , 20);
-    public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 18 , 0 , 20);
-    public IntegerSetting negativeTicks = registerSetting("negativeTicks",  0, 0, 20);
-    public IntegerSetting smartTicks = registerSetting("negativeTicks",  0, 0, 20);
-    public FloatSetting breakTrace = registerSetting("breakTrace",3.0f, 0.0f, 6.0f);
-    public BooleanSetting thinking = registerSetting("Thinking", false);
-    public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
-    public BooleanSetting inhibit = registerSetting("Inhibit", false);
-    public BooleanSetting forceBypass = registerSetting("ForceBypass", false);
-    public IntegerSetting bypassRotationTime = registerSetting("bypassRotationTime",  500, 0, 1000).booleanVisible(forceBypass);
-    public FloatSetting rbYaw = registerSetting("RbYaw",180.0f, 0.0f, 180.0f).booleanVisible(forceBypass);
-    public FloatSetting rbPitch = registerSetting("RbPitch", 90.0f, 0.0f, 90.0f).booleanVisible(forceBypass);
-    public BooleanSetting rayTraceBypass = registerSetting("RTBypass", false);
-    public BooleanSetting outline = registerSetting("Outline", true);
-    public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255);
-    public BooleanSetting targetHud = registerSetting("Target Hud", false);
-    public IntegerSetting tx = registerSetting("Alpha", 150, 0, 1000);
-    public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000);
+    public enum Page{
+        PlaceAnBreak, AntiCheat, Render, Other
+    }
+
+    public ModeSetting<Page> page = registerSetting("Page", Page.PlaceAnBreak);
+
+    //Place & Break
+    public ModeSetting<SmartRange> placeBreakRange = registerSetting("SmartRange", SmartRange.None).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting ak47 = registerSetting("Machine Gun", false).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting place = registerSetting("Place", false).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting explode = registerSetting("Break", false).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting packetPlace = registerSetting("PacketPlace", false).booleanVisible(place).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting packetExplode = registerSetting("PacketExplode", false).booleanVisible(explode).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting smartBreakTrace = registerSetting("smartBreakTrace", false).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting negativeBreakTrace = registerSetting("negativeBreakTrace", false).modeVisible(page, Page.PlaceAnBreak);
+    public IntegerSetting placeRange = registerSetting("PlaceRange", 5, 0, 6).modeVisible(page, Page.PlaceAnBreak);
+    public IntegerSetting breakRange = registerSetting("BreakRange", 5, 0, 6).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting antiWeakness = registerSetting("AntiWeakness", false).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting silentAntiWeakness = registerSetting("Silent", false).booleanVisible(antiWeakness).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting multiPlace = registerSetting("Multi-Place", false).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting logic = registerSetting("Logic", false).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting placeBreak = registerSetting("PlaceBreak", false).booleanVisible(logic).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting breakPlace = registerSetting("BreakPlace", false).booleanVisible(logic).booleanDisVisible(placeBreak).modeVisible(page, Page.PlaceAnBreak);
+    public BooleanSetting swing = registerSetting("Swing", true).modeVisible(page, Page.PlaceAnBreak);
+    public ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main).booleanVisible(swing).modeVisible(page, Page.PlaceAnBreak);
+    public IntegerSetting breakSpeed = registerSetting("BreakSpeed", 17 , 0 , 20).modeVisible(page, Page.PlaceAnBreak);
+    public IntegerSetting placeSpeed = registerSetting("PlaceSpeed", 18 , 0 , 20).modeVisible(page, Page.PlaceAnBreak);
+
+    //AntiCheat
+    public BooleanSetting ncpRange = registerSetting("NcpRange", false).modeVisible(page, Page.AntiCheat);
+    public BooleanSetting rotate = registerSetting("Rotate", false).modeVisible(page, Page.AntiCheat);
+    public BooleanSetting highPing = registerSetting("High Ping", false).modeVisible(page, Page.AntiCheat);
+    public BooleanSetting autoTimerl = registerSetting("Manual-Timer", false).modeVisible(page, Page.AntiCheat);
+    public BooleanSetting rayTrace = registerSetting("Ray-trace", false).modeVisible(page, Page.AntiCheat);
+    public BooleanSetting predict = registerSetting("Predict", false).modeVisible(page, Page.AntiCheat);
+    public BooleanSetting wallCheck = registerSetting("WallCheck", false).modeVisible(page, Page.AntiCheat);
+    public BooleanSetting inhibit = registerSetting("Inhibit", false).modeVisible(page, Page.AntiCheat);
+
+    //Render
+    public BooleanSetting outline = registerSetting("Outline", true).modeVisible(page, Page.Render);
+    public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255).modeVisible(page, Page.Render);
+    public BooleanSetting targetHud = registerSetting("Target Hud", false).modeVisible(page, Page.Render);
+    public IntegerSetting tx = registerSetting("Alpha", 150, 0, 1000).modeVisible(page, Page.Render);
+    public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000).modeVisible(page, Page.Render);
+
+    //Other
+    public BooleanSetting switchToCrystal = registerSetting("Switch", false).modeVisible(page, Page.Other);
+    public BooleanSetting silent = registerSetting("Silent", false).booleanVisible(switchToCrystal).modeVisible(page, Page.Other);
+    public BooleanSetting multiThread = registerSetting("MultiThread", false).modeVisible(page, Page.Other);
+    public BooleanSetting players = registerSetting("Players", false).modeVisible(page, Page.Other);
+    public BooleanSetting mobs = registerSetting("Hostiles", false).modeVisible(page, Page.Other);
+    public BooleanSetting passives = registerSetting("Passives", false).modeVisible(page, Page.Other);
+    public BooleanSetting antiSuicide = registerSetting("Check", true).modeVisible(page, Page.Other);
+    public IntegerSetting minDamage = registerSetting("MinimumDmg", 4, 0, 20).modeVisible(page, Page.Other);
+    public IntegerSetting setSelfDamage = registerSetting("SelfDamage", 10, 0, 20).modeVisible(page, Page.Other);
+    public BooleanSetting stopWhenEating = registerSetting( "StopWhenEating", false).modeVisible(page, Page.Other);
+    public BooleanSetting stopWhenMining = registerSetting("StopWhenMining", false).modeVisible(page, Page.Other);
+    public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", false).modeVisible(page, Page.Other);
+    public BooleanSetting check = registerSetting("Check", true).modeVisible(page, Page.Other);
     private final Map<Integer, Long> attackedCrystals = new ConcurrentHashMap<>();
     public final HelperRange rangeHelper = new HelperRange(this);
     private final List<BlockPos> placementPackets = new ArrayList<>();
     private final List<Integer> explosionPackets = new ArrayList<>();
+    static AI.HalqPos render = new AI.HalqPos(BlockPos.ORIGIN, 0);
     private final List<Integer> deadCrystals = new ArrayList<>();
     private Timer HoleMiningTimer = new Timer();
     private static boolean togglePitch = false;
@@ -153,7 +159,6 @@ public class AutoCrystal extends Module {
     private int newSlot;
     private int breaks;
     private Rotation rotateAngles;
-    static AI.HalqPos render = new AI.HalqPos(BlockPos.ORIGIN, 0);
 
     public static boolean isCancelingCrystals() {
         return cancelingCrystals;
@@ -188,7 +193,7 @@ public class AutoCrystal extends Module {
                 .map(entity -> (EntityEnderCrystal) entity)
                 .min(Comparator.comparing(c -> mc.player.getDistance(c)))
                 .orElse(null);
-        if (explode.getValue() && crystal != null && mc.player.getDistance(crystal) <= breakRange.getValue() && mc.player.getHealth() >= selfDamage.getValue()) {
+        if (explode.getValue() && crystal != null && mc.player.getDistance(crystal) <= breakRange.getValue() && mc.player.getHealth() >= setSelfDamage.getValue()) {
             if (antiWeakness.getValue() && mc.player.isPotionActive(MobEffects.WEAKNESS)) {
                 if(!silentAntiWeakness.getValue()) {
                     if (!isAttacking) {
@@ -414,9 +419,6 @@ public class AutoCrystal extends Module {
     }
 
     public void placee(BlockPos q, EnumFacing f, Boolean offhand) {
-        if(rayTraceBypass.getValue() && forceBypass.getValue()){
-            setBypassPos(q);
-        }
         if (packetPlace.getValue()) {
             mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
         } else {
@@ -592,24 +594,6 @@ public class AutoCrystal extends Module {
 //        return false;
 //    }
 
-    public boolean isOutsideBreakRange(double x, double y, double z,AutoCrystal module) {
-        switch (placeBreakRange.getValue()){
-            case All:
-                return !module.rangeHelper.isCrystalInRange(x, y, z, module.smartTicks.getValue()) && !module.rangeHelper.isCrystalInRange(x, y, z, 0);
-            case None:
-                return false;
-            case Normal:
-                return  !module.rangeHelper.isCrystalInRange(x, y, z, 0);
-            case Extrapolated:
-                return  !module.rangeHelper.isCrystalInRange(x, y, z, module.smartTicks.getValue());
-        }
-        return !module.rangeHelper.isCrystalInRange(x, y, z, module.smartTicks.getValue()) && !module.rangeHelper.isCrystalInRange(x, y, z, 0);
-    }
-
-    public boolean isOutsideBreakRange(BlockPos pos, AutoCrystal module) {
-        return isOutsideBreakRange(pos.getX() + 0.5f, pos.getY() + 1, pos.getZ() + 0.5f, module );
-    }
-
     public void placeCrystalOnBlock(BlockPos pos, EnumHand hand) {
         if(multiThread.getValue()){
             Threads threads = new Threads(ThreadType.BLOCK);
@@ -707,27 +691,6 @@ public class AutoCrystal extends Module {
             return false;
         }
         return explosionPackets.size() > 40 || placementPackets.size() > 40;
-    }
-
-    @SubscribeEvent
-    public void onMotion(UpdateWalkingPlayerEvent event){
-        if (rayTraceBypass.getValue()
-                && forceBypass.getValue()) {
-            BlockPos bypassPos = getBypassPos();
-            if (bypassPos != null) {
-                float[] rotations =
-                        RotationUtil.getLegitRotations(RotationUtil.getEyesPos());
-                float pitch =
-                        rotations[1] == 0.0f && rbYaw.getValue() != 0.0f
-                                ? 0.0f
-                                : rotations[1] < 0.0f
-                                ? rotations[1] + rbPitch.getValue()
-                                : rotations[1] - rbPitch.getValue();
-
-                mc.player.rotationYaw =((rotations[0] + rbYaw.getValue()) % 360);
-                mc.player.rotationPitch =(pitch);
-            }
-        }
     }
 
 //    public float calculateDamage(double posX, double posY, double posZ, Entity entity) {
@@ -831,16 +794,6 @@ public class AutoCrystal extends Module {
         return EnumHand.MAIN_HAND;
     }
 
-    public BlockPos getBypassPos() {
-        if (bypassTimer.passedMs(bypassRotationTime.getValue())
-                || !forceBypass.getValue()
-                || !rayTraceBypass.getValue()) {
-            bypassPos = null;
-        }
-
-        return bypassPos;
-    }
-
     public void setBypassPos(BlockPos pos) {
         bypassTimer.reset();
         this.bypassPos = pos;
@@ -857,7 +810,6 @@ public class AutoCrystal extends Module {
 
     public void CancelingCrystals() {
         if(cancelCrystal.getValue()) {
-            this.thinking.setValue(true);
             mc.world.removeAllEntities();
             mc.world.getLoadedEntityList();
             this.timer.reset();
@@ -1214,6 +1166,22 @@ public class AutoCrystal extends Module {
         return (n3 > 180.0) ? (360.0 - n3) : n3;
     }
 
+    public AI.HalqPos placeCalculateAI() {
+        AI.HalqPos posToReturn = new AI.HalqPos(BlockPos.ORIGIN, 0.5f);
+        for (BlockPos pos : AIUtils.getSphere(placeRange.getValue())) {
+            float targetDamage = CrystalUtils.calculateDamage(mc.world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, renderEnt, true);
+            float selfDamage = CrystalUtils.calculateDamage(mc.world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, mc.player, true);
+            if (CrystalUtils.canPlaceCrystal(pos, check.getValue(), true, multiPlace.getValue(), false)) {
+                if (mc.player.getDistance(pos.getX() + 0.5f, pos.getY() + 1.0f, pos.getZ() + 0.5f) > MathUtil.square(placeRange.getValue())) continue;
+                if (selfDamage > setSelfDamage.getValue()) continue;
+                if (targetDamage < minDamage.getValue()) continue;
+                if (antiSuicide.getValue()) if (selfDamage < 2F) continue;
+                if (targetDamage > posToReturn.getTargetDamage()) posToReturn = new AI.HalqPos(pos, targetDamage);
+            }
+        }
+        return posToReturn;
+    }
+
     public static AutoCrystal INSTANCE;
 
     public AutoCrystal() {
@@ -1248,10 +1216,6 @@ public class AutoCrystal extends Module {
         Extrapolated
     }
 
-    private void TryJiggle(BlockPos pos) {
-            if (mc.player.getDistance(pos.getX(), pos.getY(), pos.getZ()) > 5)
-                mc.getConnection().sendPacket(new CPacketPlayer.Position(Math.floor(mc.player.posX) + .5 + (mc.player.posX < pos.getX() ? .2 : -.2), mc.player.posY, Math.floor(mc.player.posZ) + .5 + (mc.player.posZ < pos.getZ() ? .2 : -.2), mc.player.onGround));
-    }
 }
 
 

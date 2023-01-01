@@ -1,4 +1,4 @@
-package cn.origin.cube.utils.ai;
+package cn.origin.cube.utils.player.ai;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;

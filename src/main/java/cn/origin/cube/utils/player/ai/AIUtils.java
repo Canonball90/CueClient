@@ -1,4 +1,4 @@
-package cn.origin.cube.utils.ai;
+package cn.origin.cube.utils.player.ai;
 
 import net.minecraft.entity.item.EntityEnderCrystal;
 import net.minecraft.init.Blocks;
@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import java.util.ArrayList;
 import java.util.List;
 
-import static cn.origin.cube.utils.ai.AI.mc;
+import static cn.origin.cube.utils.player.ai.AI.mc;
 
 public class AIUtils {
 

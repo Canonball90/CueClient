@@ -1,4 +1,4 @@
-package cn.origin.cube.core
+package cn.origin.cube.core.managers
 
 import cn.origin.cube.Cube
 import cn.origin.cube.command.Command

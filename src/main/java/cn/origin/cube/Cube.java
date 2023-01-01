@@ -1,13 +1,14 @@
 package cn.origin.cube;
 
-import cn.origin.cube.core.CommandManager;
-import cn.origin.cube.core.EventManager;
-import cn.origin.cube.core.FontManager;
-import cn.origin.cube.core.ModuleManager;
+import cn.origin.cube.core.managers.CommandManager;
+import cn.origin.cube.core.managers.EventManager;
+import cn.origin.cube.core.managers.FontManager;
+import cn.origin.cube.core.managers.ModuleManager;
 import cn.origin.cube.core.managers.*;
 import cn.origin.cube.guis.HudEditorScreen;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.guis.mainmenu.Shaders;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -39,6 +40,7 @@ public class Cube {
     public static Shaders shaders;
     public static ThreadManager threadManager;
     public static PositionManager positionManager;
+    public static cn.origin.cube.utils.client.event.event.EventManager eventManager1;
 
     public static String commandPrefix = ".";
 
@@ -53,6 +55,7 @@ public class Cube {
         try {
             logger.info("Loading Cue...");
             loadManagers();
+            MinecraftForge.EVENT_BUS.register(eventManager1);
         } catch (IOException | FontFormatException e) {
             throw new RuntimeException(e);
         }
@@ -66,31 +69,14 @@ public class Cube {
         clickGui = new ClickGuiScreen();
         hudEditor = new HudEditorScreen();
         configManager = new ConfigManager();
+        trackerManager = new TrackerManager();
         commandManager = new CommandManager();
         capeManager = new CapeManager();
         shaders = new Shaders();
         threadManager = new ThreadManager();
         positionManager = new PositionManager();
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
-        logger.info("AntiDump...");
+        eventManager1 = new cn.origin.cube.utils.client.event.event.EventManager();
         logger.info("AntiDump...");
         AntiDumpManager.check();
-        trackerManager = new TrackerManager();
     }
 }
-/*
-//    "MixinGuiConnecting",
-//    "MixinGuiDisconnected",
-//    "MixinGuiScreenAddServer",
-//    "MixinGuiScreenServerList",
-//    "MixinNetworkManagerChInit",
-//    "MixinGuiMultiplayer"
- */
