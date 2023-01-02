@@ -9,3 +9,7 @@ https://github.com/jiyun233/CubeBase
 * Clone this repo
 * Open your intellij new project form Existing Sources
 * Wating gradle Sink
+
+## TODO
+* click gui
+* modules
