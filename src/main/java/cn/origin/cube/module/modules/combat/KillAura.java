@@ -165,11 +165,11 @@ public class KillAura extends Module {
                         mc.playerController.connection.sendPacket(new CPacketUseEntity(entity));
                         if (swimArm.getValue()) mc.player.swingArm(EnumHand.MAIN_HAND);
                     }
-                }
-                if (!hitDelay.getValue()) {
-                    mc.playerController.attackEntity(mc.player, entity);
-                    mc.player.swingArm(EnumHand.MAIN_HAND);
-                }
+            }
+            if (!hitDelay.getValue()) {
+                mc.playerController.attackEntity(mc.player, entity);
+                mc.player.swingArm(EnumHand.MAIN_HAND);
+            }
     }
 
     public boolean isProjectile(Entity entity){
