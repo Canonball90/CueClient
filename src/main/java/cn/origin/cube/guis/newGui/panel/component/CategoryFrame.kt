@@ -92,7 +92,7 @@ class CategoryFrame(
                 var buttonX: Double = (moduleButton.x + moduleButton.height).toDouble()
                 for (settingButton in moduleButton.settings.filter { it.value.isVisible }) {
                     settingButton.drawButton(x + (this.width - settingButton.width) / 2, calcYPos, mouseX, mouseY)
-                    calcYPos += settingButton.height
+                    calcYPos += settingButton.height * expanded.getAnimationFactor().toFloat()
                     buttonX = (x + (this.width - settingButton.width) / 2).toDouble()
                 }
                 Render2DUtil.drawLine(

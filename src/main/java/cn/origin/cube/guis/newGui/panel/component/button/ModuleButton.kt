@@ -11,6 +11,7 @@ import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.module.modules.client.NewClickGui
 import cn.origin.cube.utils.COG
 import cn.origin.cube.utils.render.Render2DUtil
+import me.surge.animation.Animation
 import me.surge.animation.ColourAnimation
 import me.surge.animation.Easing
 import java.awt.Color
@@ -25,6 +26,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryFrame, val father
     private var dragging = false
     private val hover = ColourAnimation(Color(54, 54, 54), Color(54, 54, 54).darker(), 300f, false, Easing.LINEAR)
     private val pulse = ColourAnimation(Color.WHITE, Color.DARK_GRAY, 500f, false, Easing.LINEAR)
+    val expanded = Animation({ 1500F }, true, { Easing.LINEAR })
 
     init {
         if (father.settingList.isNotEmpty()) {
@@ -94,12 +96,18 @@ class ModuleButton(width: Float, height: Float, panel: CategoryFrame, val father
 
     override fun mouseClicked(mouseX: Int, mouseY: Int, mouseButton: Int) {
         if (settings.isNotEmpty()) {
-            settings.forEach { it.mouseClicked(mouseX, mouseY, mouseButton) }
+            if(expanded.getAnimationFactor() > 0) {
+                settings.forEach { it.mouseClicked(mouseX, mouseY, mouseButton) }
+            }
         }
         if (mouseButton == 0 && this.isHoveredHUD(mouseX, mouseY)) {
             this.x2 = this.father.x - mouseX
             this.y2 = this.father.y - mouseY
             this.dragging = true
+            return
+        }
+        if (isHoveredButton(mouseX, mouseY) && mouseButton == 1) {
+            expanded.state = !expanded.state
             return
         }
         if (!isHoveredButton(mouseX, mouseY)) {
@@ -146,13 +154,17 @@ class ModuleButton(width: Float, height: Float, panel: CategoryFrame, val father
             this.dragging = false
         }
         if (settings.isNotEmpty()) {
-            settings.forEach { it.mouseReleased(mouseX, mouseY, mouseButton) }
+            if (expanded.getAnimationFactor() > 0) {
+                settings.forEach { it.mouseReleased(mouseX, mouseY, mouseButton) }
+            }
         }
     }
 
     override fun keyTyped(typedChar: Char, keyCode: Int) {
         if (settings.isNotEmpty()) {
-            settings.forEach { it.keyTyped(typedChar, keyCode) }
+            if (expanded.getAnimationFactor() > 0) {
+                settings.forEach { it.keyTyped(typedChar, keyCode) }
+            }
         }
     }
 }
