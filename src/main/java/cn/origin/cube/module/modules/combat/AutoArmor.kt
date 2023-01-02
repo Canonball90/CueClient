@@ -66,9 +66,9 @@ class AutoArmor: Module() {
         }
     }
 
-    public var INSTANCE: AutoArmor? = null
+    var INSTANCE: AutoArmor? = null
 
-    public fun AutoArmor() {
+    fun AutoArmor() {
         INSTANCE = this
     }
 }

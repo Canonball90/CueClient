@@ -36,7 +36,7 @@ class KotlinAura: Module() {
     private val onlySelfCrystal: BooleanSetting = registerSetting("onlySelf", true)
 
     @SubscribeEvent
-    public fun onTick(event: TickEvent.ClientTickEvent) {
+    fun onTick(event: TickEvent.ClientTickEvent) {
         if(fullNullCheck()) return
         target = EntityUtil.getTarget(targetRange.value)
         doPlace()

@@ -87,7 +87,7 @@ class Criticals: Module() {
         ), null)
     }
 
-    public enum class model{
+    enum class model{
         PACKET,UPDATED_NCP,MINIS,NEW
     }
 }
