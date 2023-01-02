@@ -51,32 +51,39 @@ public class AuraRewrite extends Module {
     long killLast = new Date().getTime();
     public float pitch;
     public float yaw;
-    DoubleSetting range = registerSetting("Range", 4.0, 1, 6);
-    BooleanSetting players = registerSetting("Players", true);
-    BooleanSetting animals = registerSetting("Animals", true);
-    BooleanSetting mobs = registerSetting("Mobs", true);
-    BooleanSetting hitDelay = registerSetting("HitDelay", true);
-    BooleanSetting packet = registerSetting("PacketHit", false);
-    BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet);
-    ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main);
-    IntegerSetting delay = registerSetting("Delay", 4, 0, 70);
-    BooleanSetting randomD = registerSetting("RandomDelay", false);
-    IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40).booleanVisible(randomD);
-    IntegerSetting iterations = registerSetting("Iterations", 1, 1, 10);
-    BooleanSetting walls = registerSetting("Walls", true);
-    DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10).booleanVisible(walls);
-    BooleanSetting rotate = registerSetting("Rotate", true);
-    BooleanSetting rotateStrict = registerSetting("StrictRotate", true);
-    BooleanSetting betterCrit = registerSetting("BetterCrit", false);
-    BooleanSetting projectiles = registerSetting("Projectiles", true);
-    BooleanSetting silent = registerSetting("Silent", true);
 
-    BooleanSetting render = registerSetting("Render", true);
-    ModeSetting<RenderMode> rMode = registerSetting("RenderMode", RenderMode.Circle);
-    FloatSetting lineWidth = registerSetting("LineWidth", 1.5f, 0f, 5f).booleanVisible(render);
-    FloatSetting CWidth = registerSetting("CWidth", 1f, -5f, 5f).booleanVisible(render);
-    IntegerSetting Height = registerSetting("Height", 200, 0, 500);
-    IntegerSetting Width = registerSetting("Width", 200, 0, 500);
+    public enum Page{Target,AntiCheat,Render}
+
+    ModeSetting<Page> page = registerSetting("Page", Page.Target);
+    //Target
+    DoubleSetting range = registerSetting("Range", 4.0, 1, 6).modeVisible(page, Page.Target);
+    BooleanSetting players = registerSetting("Players", true).modeVisible(page, Page.Target);
+    BooleanSetting animals = registerSetting("Animals", true).modeVisible(page, Page.Target);
+    BooleanSetting mobs = registerSetting("Mobs", true).modeVisible(page, Page.Target);
+    //AntiCheat
+    BooleanSetting hitDelay = registerSetting("HitDelay", true).modeVisible(page, Page.AntiCheat);
+    BooleanSetting packet = registerSetting("PacketHit", false).modeVisible(page, Page.AntiCheat);
+    BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet).modeVisible(page, Page.AntiCheat);
+    ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main).modeVisible(page, Page.AntiCheat);
+    IntegerSetting delay = registerSetting("Delay", 4, 0, 70).modeVisible(page, Page.AntiCheat);
+    BooleanSetting randomD = registerSetting("RandomDelay", false).modeVisible(page, Page.AntiCheat);
+    IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40).booleanVisible(randomD).modeVisible(page, Page.AntiCheat);
+    IntegerSetting iterations = registerSetting("Iterations", 1, 1, 10).modeVisible(page, Page.AntiCheat);
+    BooleanSetting walls = registerSetting("Walls", true).modeVisible(page, Page.AntiCheat);
+    DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10).booleanVisible(walls).modeVisible(page, Page.AntiCheat);
+    BooleanSetting rotate = registerSetting("Rotate", true).modeVisible(page, Page.AntiCheat);
+    BooleanSetting rotateStrict = registerSetting("StrictRotate", true).modeVisible(page, Page.AntiCheat);
+    BooleanSetting betterCrit = registerSetting("BetterCrit", false).modeVisible(page, Page.AntiCheat);
+    BooleanSetting projectiles = registerSetting("Projectiles", true).modeVisible(page, Page.AntiCheat);
+    BooleanSetting silent = registerSetting("Silent", true).modeVisible(page, Page.AntiCheat);
+
+    //Render
+    BooleanSetting render = registerSetting("Render", true).modeVisible(page, Page.Render);
+    ModeSetting<RenderMode> rMode = registerSetting("RenderMode", RenderMode.Circle).modeVisible(page, Page.Render);
+    FloatSetting lineWidth = registerSetting("LineWidth", 1.5f, 0f, 5f).booleanVisible(render).modeVisible(page, Page.Render);
+    FloatSetting CWidth = registerSetting("CWidth", 1f, -5f, 5f).booleanVisible(render).modeVisible(page, Page.Render);
+    IntegerSetting Height = registerSetting("Height", 200, 0, 500).modeVisible(page, Page.Render);
+    IntegerSetting Width = registerSetting("Width", 200, 0, 500).modeVisible(page, Page.Render);
 
     @SubscribeEvent
     public void onUpdate(UpdateWalkingPlayerEvent event) {
@@ -87,6 +94,9 @@ public class AuraRewrite extends Module {
         }
         if(silent.getValue()){
             SwitchUtils.silent();
+            if(target == null){
+                SwitchUtils.oldSwitch();
+            }
         }
         for(Entity entity : mc.world.loadedEntityList) {
             if(entity == mc.player) continue;
