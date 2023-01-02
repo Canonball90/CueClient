@@ -98,6 +98,7 @@ class ModuleManager {
         registerModule(Animations())
         registerModule(XRay())
         registerModule(NewChunks())
+        registerModule(ChorusViewer())
 
         //World
         registerModule(FakePlayer())

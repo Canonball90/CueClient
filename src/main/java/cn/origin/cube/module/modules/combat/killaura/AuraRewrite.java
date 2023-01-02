@@ -52,38 +52,36 @@ public class AuraRewrite extends Module {
     public float pitch;
     public float yaw;
 
-    public enum Page{Target,AntiCheat,Render}
-
-    ModeSetting<Page> page = registerSetting("Page", Page.Target);
+    ModeSetting<Modes.Page> page = registerSetting("Page", Modes.Page.Target);
     //Target
-    DoubleSetting range = registerSetting("Range", 4.0, 1, 6).modeVisible(page, Page.Target);
-    BooleanSetting players = registerSetting("Players", true).modeVisible(page, Page.Target);
-    BooleanSetting animals = registerSetting("Animals", true).modeVisible(page, Page.Target);
-    BooleanSetting mobs = registerSetting("Mobs", true).modeVisible(page, Page.Target);
+    DoubleSetting range = registerSetting("Range", 4.0, 1, 6).modeVisible(page, Modes.Page.Target);
+    BooleanSetting players = registerSetting("Players", true).modeVisible(page, Modes.Page.Target);
+    BooleanSetting animals = registerSetting("Animals", true).modeVisible(page, Modes.Page.Target);
+    BooleanSetting mobs = registerSetting("Mobs", true).modeVisible(page, Modes.Page.Target);
     //AntiCheat
-    BooleanSetting hitDelay = registerSetting("HitDelay", true).modeVisible(page, Page.AntiCheat);
-    BooleanSetting packet = registerSetting("PacketHit", false).modeVisible(page, Page.AntiCheat);
-    BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet).modeVisible(page, Page.AntiCheat);
-    ModeSetting<Mode> breakHand = registerSetting("SwingHand", Mode.Main).modeVisible(page, Page.AntiCheat);
-    IntegerSetting delay = registerSetting("Delay", 4, 0, 70).modeVisible(page, Page.AntiCheat);
-    BooleanSetting randomD = registerSetting("RandomDelay", false).modeVisible(page, Page.AntiCheat);
-    IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40).booleanVisible(randomD).modeVisible(page, Page.AntiCheat);
-    IntegerSetting iterations = registerSetting("Iterations", 1, 1, 10).modeVisible(page, Page.AntiCheat);
-    BooleanSetting walls = registerSetting("Walls", true).modeVisible(page, Page.AntiCheat);
-    DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10).booleanVisible(walls).modeVisible(page, Page.AntiCheat);
-    BooleanSetting rotate = registerSetting("Rotate", true).modeVisible(page, Page.AntiCheat);
-    BooleanSetting rotateStrict = registerSetting("StrictRotate", true).modeVisible(page, Page.AntiCheat);
-    BooleanSetting betterCrit = registerSetting("BetterCrit", false).modeVisible(page, Page.AntiCheat);
-    BooleanSetting projectiles = registerSetting("Projectiles", true).modeVisible(page, Page.AntiCheat);
-    BooleanSetting silent = registerSetting("Silent", true).modeVisible(page, Page.AntiCheat);
+    BooleanSetting hitDelay = registerSetting("HitDelay", true).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting packet = registerSetting("PacketHit", false).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting swimArm = registerSetting("SwimArm", true).booleanVisible(packet).modeVisible(page, Modes.Page.AntiCheat);
+    ModeSetting<Modes.Mode> breakHand = registerSetting("SwingHand", Modes.Mode.Main).modeVisible(page, Modes.Page.AntiCheat);
+    IntegerSetting delay = registerSetting("Delay", 4, 0, 70).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting randomD = registerSetting("RandomDelay", false).modeVisible(page, Modes.Page.AntiCheat);
+    IntegerSetting randomDelay = registerSetting("Random Delay", 4, 0, 40).booleanVisible(randomD).modeVisible(page, Modes.Page.AntiCheat);
+    IntegerSetting iterations = registerSetting("Iterations", 1, 1, 10).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting walls = registerSetting("Walls", true).modeVisible(page, Modes.Page.AntiCheat);
+    DoubleSetting wallsRange = registerSetting("Wall Range", 3.5, 1, 10).booleanVisible(walls).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting rotate = registerSetting("Rotate", true).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting rotateStrict = registerSetting("StrictRotate", true).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting betterCrit = registerSetting("BetterCrit", false).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting projectiles = registerSetting("Projectiles", true).modeVisible(page, Modes.Page.AntiCheat);
+    BooleanSetting silent = registerSetting("Silent", true).modeVisible(page, Modes.Page.AntiCheat);
 
     //Render
-    BooleanSetting render = registerSetting("Render", true).modeVisible(page, Page.Render);
-    ModeSetting<RenderMode> rMode = registerSetting("RenderMode", RenderMode.Circle).modeVisible(page, Page.Render);
-    FloatSetting lineWidth = registerSetting("LineWidth", 1.5f, 0f, 5f).booleanVisible(render).modeVisible(page, Page.Render);
-    FloatSetting CWidth = registerSetting("CWidth", 1f, -5f, 5f).booleanVisible(render).modeVisible(page, Page.Render);
-    IntegerSetting Height = registerSetting("Height", 200, 0, 500).modeVisible(page, Page.Render);
-    IntegerSetting Width = registerSetting("Width", 200, 0, 500).modeVisible(page, Page.Render);
+    BooleanSetting render = registerSetting("Render", true).modeVisible(page, Modes.Page.Render);
+    ModeSetting<Modes.RenderMode> rMode = registerSetting("RenderMode", Modes.RenderMode.Circle).modeVisible(page, Modes.Page.Render);
+    FloatSetting lineWidth = registerSetting("LineWidth", 1.5f, 0f, 5f).booleanVisible(render).modeVisible(page, Modes.Page.Render);
+    FloatSetting CWidth = registerSetting("CWidth", 1f, -5f, 5f).booleanVisible(render).modeVisible(page, Modes.Page.Render);
+    IntegerSetting Height = registerSetting("Height", 200, 0, 500).modeVisible(page, Modes.Page.Render);
+    IntegerSetting Width = registerSetting("Width", 200, 0, 500).modeVisible(page, Modes.Page.Render);
 
     @SubscribeEvent
     public void onUpdate(UpdateWalkingPlayerEvent event) {
@@ -176,12 +174,10 @@ public class AuraRewrite extends Module {
         }
     }
 
-    static double healthBarTarget = 0, healthBar = 0;
-
     @Override
     public void onRender3D(Render3DEvent event) {
         if(target != null && render.getValue()) {
-            if(rMode.getValue().equals(RenderMode.Circle)) {
+            if(rMode.getValue().equals(Modes.RenderMode.Circle)) {
                 Render3DUtil.drawCircle(new RenderBuilder()
                         .setup()
                         .line(lineWidth.getValue())
@@ -189,7 +185,7 @@ public class AuraRewrite extends Module {
                         .blend()
                         .texture(), EntityUtil.getInterpolatedPosition(target, 1), target.width - CWidth.getValue(), target.height * (0.5 * (Math.sin((mc.player.ticksExisted * 3.5) * (Math.PI / 180)) + 1)), new Color(255, 50, 50));
             }
-            if(rMode.getValue().equals(RenderMode.Box)) {
+            if(rMode.getValue().equals(Modes.RenderMode.Box)) {
                 AxisAlignedBB box = target.getRenderBoundingBox().offset(-mc.getRenderManager().viewerPosX, -mc.getRenderManager().viewerPosY, -mc.getRenderManager().viewerPosZ);
                 Render3DUtil.drawBox(new RenderBuilder()
                         .position(box)
@@ -214,13 +210,13 @@ public class AuraRewrite extends Module {
 
             DecimalFormat dec = new DecimalFormat("#");
 
-            healthBarTarget = Width.getValue() / 2 - 41 + (((140) / (target.getMaxHealth())) * (target.getHealth()));
+            utils.healthBarTarget = Width.getValue() / 2 - 41 + (((140) / (target.getMaxHealth())) * (target.getHealth()));
             double HealthBarSpeed = 5;
 
-            if (healthBar > healthBarTarget) {
-                healthBar = ((healthBar) - ((healthBar - healthBarTarget) / HealthBarSpeed));
-            } else if (healthBar < healthBarTarget) {
-                healthBar = ((healthBar) + ((healthBarTarget - healthBar) / HealthBarSpeed));
+            if (utils.healthBar > utils.healthBarTarget) {
+                utils.healthBar = ((utils.healthBar) - ((utils.healthBar - utils.healthBarTarget) / HealthBarSpeed));
+            } else if (utils.healthBar < utils.healthBarTarget) {
+                utils.healthBar = ((utils.healthBar) + ((utils.healthBarTarget - utils.healthBar) / HealthBarSpeed));
             }
             int color = (target.getHealth() / target.getMaxHealth() > 0.66f) ? 0xff00ff00 : (target.getHealth() / target.getMaxHealth() > 0.33f) ? 0xffff9900 : 0xffff0000;
 
@@ -235,12 +231,12 @@ public class AuraRewrite extends Module {
 
             Gui.drawRect(Width.getValue() / 2 - 110, Height.getValue() / 2 + 100, Width.getValue() / 2 + 110, Height.getValue() / 2 + 170, 0xff36393f);
             Gui.drawRect(Width.getValue() / 2 - 41, Height.getValue() / 2 + 100 + 54, Width.getValue() / 2 + 100, Height.getValue() / 2 + 96 + 45, 0xff202225);
-            Gui.drawRect(Width.getValue() / 2 - 41, Height.getValue() / 2 + 100 + 54, (int) healthBar, Height.getValue() / 2 + 96 + 45, color);
+            Gui.drawRect(Width.getValue() / 2 - 41, Height.getValue() / 2 + 100 + 54, (int) utils.healthBar, Height.getValue() / 2 + 96 + 45, color);
             GlStateManager.color(1, 1, 1);
             GuiInventory.drawEntityOnScreen(Width.getValue() / 2 - 75, Height.getValue() / 2 + 165, 25, 1f, 1f, target);
             Cube.fontManager.CustomFont.drawString(target.getName(), Width.getValue() / 2 - 40, Height.getValue() / 2 + 110, -1);
             Cube.fontManager.CustomFont.drawString("HP: ", Width.getValue() / 2 - 40, Height.getValue() / 2 + 125, -1);
-            Cube.fontManager.CustomFont.drawString("搂c鉂�: 搂f" + dec.format(target.getHealth()), Width.getValue() / 2 - 40 + Cube.fontManager.CustomFont.getStringWidth("HP: "), Height.getValue() / 2 + 125, color);
+            Cube.fontManager.CustomFont.drawString("" + dec.format(target.getHealth()), Width.getValue() / 2 - 40 + Cube.fontManager.CustomFont.getStringWidth("HP: "), Height.getValue() / 2 + 125, color);
         }
     }
     public void attack(Entity entity) {
@@ -287,19 +283,11 @@ public class AuraRewrite extends Module {
     }
 
     private EnumHand getHandToBreak() {
-        if (breakHand.getValue().equals(Mode.Offhand)) {
+        if (breakHand.getValue().equals(Modes.Mode.Offhand)) {
             return EnumHand.OFF_HAND;
-        }else if(breakHand.getValue().equals(Mode.Both)){
+        }else if(breakHand.getValue().equals(Modes.Mode.Both)){
             return EnumHand.OFF_HAND;
         }
         return EnumHand.MAIN_HAND;
-    }
-
-    public enum RenderMode{
-        Circle,Box
-    }
-
-    public enum Mode{
-        Offhand,Main,Both
     }
 }

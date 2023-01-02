@@ -6,6 +6,8 @@ import net.minecraft.entity.projectile.EntityShulkerBullet;
 
 public class utils {
 
+    public static double healthBarTarget = 0, healthBar = 0;
+
     public static boolean isProjectile(Entity entity){
         return (entity instanceof EntityShulkerBullet || entity instanceof EntityFireball);
     }

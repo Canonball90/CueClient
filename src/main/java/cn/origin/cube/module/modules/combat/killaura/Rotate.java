@@ -10,10 +10,10 @@ import static cn.origin.cube.core.module.AbstractModule.mc;
 
 public class Rotate {
 
-    public static boolean shouldRotate;
     public static boolean smoothRotatePitch;
     public static boolean smoothRotateYaw;
     public static boolean smoothRotated;
+    public static boolean shouldRotate;
     public static int addedOriginYaw;
     public static int addedInputYaw;
     public static float smoothPitch;
