@@ -30,7 +30,7 @@ public class PacketMine extends Module {
     ModeSetting<Page> page = registerSetting("Page", Page.Mine);
 
     ModeSetting<Swap> swap = registerSetting("Swap", Swap.Normal);
-    ModeSetting<Mode> mode = registerSetting("Swap", Mode.InstantMine);
+    ModeSetting<Mode> mode = registerSetting("Mode", Mode.InstantMine);
     BooleanSetting oppositeFaceHit = registerSetting("OppositeFaceHit", false);
     BooleanSetting spamPackets = registerSetting("SpamPackets", false);
     BooleanSetting antiNeededBlocks = registerSetting("NoNeededBlocks", false);
