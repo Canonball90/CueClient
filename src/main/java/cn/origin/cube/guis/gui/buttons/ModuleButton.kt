@@ -28,7 +28,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
     private val hover = ColourAnimation(Color(15, 15, 15,100), father.category.color, 300f, false, Easing.LINEAR)
     private val pulse = ColourAnimation(Color.WHITE, Color.DARK_GRAY, 500f, false, Easing.LINEAR)
     private var progress = 0F
-    private var strem: ResourceLocation = ResourceLocation("assets/fonts/gear.png")
+    private var strem: ResourceLocation = ResourceLocation("resources/assets/fonts/gear.png")
 
     init {
         this.progress = 0F;

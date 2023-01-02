@@ -2,6 +2,8 @@ package cn.origin.cube.module.modules.combat.Criticals;
 
 import cn.origin.cube.utils.Timer;
 import net.minecraft.client.Minecraft;
+import net.minecraft.init.Items;
+import net.minecraft.init.MobEffects;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.client.CPacketUseEntity;
 import java.util.Objects;
@@ -48,5 +50,24 @@ public class CritUtils {
                 }
             }
             timer.reset();
+    }
+
+    public static boolean canCrit(Boolean onlyWeapon) {
+        return (!mc.player.isInWeb && !mc.player.isOnLadder() && !mc.player.isRiding() &&
+                !mc.player.isPotionActive(MobEffects.BLINDNESS) && !mc.player.isInWater() && !mc.player.isInLava()
+                && (!onlyWeapon || (isHoldingWeapon())));
+    }
+
+    public static boolean isHoldingWeapon() {
+        return mc.player.getHeldItemMainhand().getItem() == Items.DIAMOND_SWORD
+                || mc.player.getHeldItemMainhand().getItem() == Items.IRON_SWORD ||
+                mc.player.getHeldItemMainhand().getItem() == Items.GOLDEN_SWORD ||
+                mc.player.getHeldItemMainhand().getItem() == Items.STONE_SWORD ||
+                mc.player.getHeldItemMainhand().getItem() == Items.WOODEN_SWORD ||
+                mc.player.getHeldItemMainhand().getItem() == Items.DIAMOND_AXE ||
+                mc.player.getHeldItemMainhand().getItem() == Items.IRON_SWORD ||
+                mc.player.getHeldItemMainhand().getItem() == Items.GOLDEN_AXE ||
+                mc.player.getHeldItemMainhand().getItem() == Items.STONE_AXE ||
+                mc.player.getHeldItemMainhand().getItem() == Items.WOODEN_AXE;
     }
 }
