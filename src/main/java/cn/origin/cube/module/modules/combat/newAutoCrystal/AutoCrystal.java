@@ -37,11 +37,13 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.*;
 import net.minecraft.network.play.server.SPacketSoundEffect;
+import net.minecraft.network.play.server.SPacketSpawnObject;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.GameType;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -98,6 +100,9 @@ public class AutoCrystal extends Module {
     public BooleanSetting multiPlace = registerSetting("Multi-Place",  false).modeVisible(page, Page.PlaceBreak);
     public IntegerSetting setSelfDamage = registerSetting("SelfDamage", 10, 0, 20).modeVisible(page, Page.PlaceBreak);
     public BooleanSetting wallCheck = registerSetting("WallCheck", false).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting sync = registerSetting("Sync", false).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting predict = registerSetting("Predict", false).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting inhibit = registerSetting("Inhibit", false).modeVisible(page, Page.PlaceBreak);
 
     //Other
     public BooleanSetting switchToCrystal = registerSetting("Switch", false).modeVisible(page, Page.Other);
@@ -128,6 +133,7 @@ public class AutoCrystal extends Module {
     private static boolean cancelingCrystals;
     private static boolean Isthinking;
     private static boolean isSpoofingAngles;
+    private final ArrayList<Integer> blacklist = new ArrayList();
     private static double pitch;
     public boolean shouldRotate;
     private BlockPos bypassPos;
@@ -302,6 +308,9 @@ public class AutoCrystal extends Module {
                         mc.player.inventory.currentItem = newSlot;
                         switchCooldown = true;
                     }
+            }
+            if (!this.blacklist.contains(crystal.entityId) && !this.inhibit.getValue()) {
+                return;
             }
             rotateTo(crystal.posX, crystal.posY, crystal.posZ, mc.player, false);
             if (breakTimer.getPassedTimeMs() / 50 >= 20 - breakSpeed.getValue()) {
@@ -945,6 +954,41 @@ public class AutoCrystal extends Module {
         if(render == null) return;
         if(render != null && renderPos.getValue()){
             Render3DUtil.drawBlockBox(render, new Color(Colors.getGlobalColor().getRed(), Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue(), 130), true, 2F);
+        }
+    }
+
+    @SubscribeEvent
+    public void onPacketSend(PacketEvent.Send event) {
+        CPacketUseEntity packet;
+        if (event.getPacket() instanceof CPacketUseEntity && this.sync.getValue() && (packet = (CPacketUseEntity)event.getPacket()).getEntityFromWorld((World)mc.world) instanceof EntityEnderCrystal) {
+            Objects.requireNonNull(packet.getEntityFromWorld((World)AutoCrystal.mc.world)).setDead();
+            mc.world.removeEntityFromWorld(packet.entityId);
+        }
+    }
+
+    @SubscribeEvent
+    public void onPredict(PacketEvent.Receive event) {
+        if (event.getPacket() instanceof SPacketSpawnObject && this.predict.getValue() && this.explode.getValue()) {
+            SPacketSpawnObject packet = (SPacketSpawnObject)event.getPacket();
+            if (packet.getType() != 51) {
+                return;
+            }
+            if (this.renderEnt == null) {
+                return;
+            }
+            EntityEnderCrystal crystal = new EntityEnderCrystal((World)mc.world, packet.getX(), packet.getY(), packet.getZ());
+            if (this.blacklist.contains(packet.getEntityID()) && this.inhibit.getValue()) {
+                return;
+            }
+            CPacketUseEntity crystalPacket = new CPacketUseEntity();
+            crystalPacket.entityId = packet.getEntityID();
+            crystalPacket.action = CPacketUseEntity.Action.ATTACK;
+            mc.player.connection.sendPacket((Packet)crystalPacket);
+            if (mc.playerController.getCurrentGameType() != GameType.SPECTATOR) {
+                mc.player.resetCooldown();
+            }
+            mc.player.swingArm(EnumHand.MAIN_HAND);
+            this.blacklist.add(packet.getEntityID());
         }
     }
 
