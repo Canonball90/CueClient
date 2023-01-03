@@ -229,6 +229,7 @@ public class AutoCrystal extends Module {
                     }
                 }
             }
+
             if (damage == .5) {
                 render = null;
                 renderEnt = null;
@@ -309,9 +310,12 @@ public class AutoCrystal extends Module {
                         switchCooldown = true;
                     }
             }
-            if (!this.blacklist.contains(crystal.entityId) && !this.inhibit.getValue()) {
-                return;
+            for (final Entity entity : new ArrayList<Entity>(mc.world.loadedEntityList)) {
+                if (this.blacklist.contains(crystal.entityId) && this.inhibit.getValue()) {
+                    continue;
+                }
             }
+            this.blacklist.add(crystal.entityId);
             rotateTo(crystal.posX, crystal.posY, crystal.posZ, mc.player, false);
             if (breakTimer.getPassedTimeMs() / 50 >= 20 - breakSpeed.getValue()) {
                 breakTimer.reset();
@@ -958,17 +962,23 @@ public class AutoCrystal extends Module {
     }
 
     @SubscribeEvent
-    public void onPacketSend(PacketEvent.Send event) {
-        CPacketUseEntity packet;
-        if (event.getPacket() instanceof CPacketUseEntity && this.sync.getValue() && (packet = (CPacketUseEntity)event.getPacket()).getEntityFromWorld((World)mc.world) instanceof EntityEnderCrystal) {
-            Objects.requireNonNull(packet.getEntityFromWorld((World)AutoCrystal.mc.world)).setDead();
-            mc.world.removeEntityFromWorld(packet.entityId);
+    public void onPacketReceive(PacketEvent.Receive event) {
+        if (event.getPacket() instanceof SPacketSoundEffect && this.sync.getValue()) {
+            final SPacketSoundEffect packet = (SPacketSoundEffect)event.getPacket();
+            if (packet.getCategory() == SoundCategory.BLOCKS && packet.getSound() == SoundEvents.ENTITY_GENERIC_EXPLODE) {
+                for (final Entity entity : new ArrayList<Entity>(mc.world.loadedEntityList)) {
+                    if (entity instanceof EntityEnderCrystal && entity.getDistanceSq(packet.getX(), packet.getY(), packet.getZ()) <= 36.0) {
+                        entity.setDead();
+                    }
+                }
+            }
         }
     }
 
+
     @SubscribeEvent
     public void onPredict(PacketEvent.Receive event) {
-        if (event.getPacket() instanceof SPacketSpawnObject && this.predict.getValue() && this.explode.getValue()) {
+        if (event.getPacket() instanceof SPacketSpawnObject && this.predict.getValue()) {
             SPacketSpawnObject packet = (SPacketSpawnObject)event.getPacket();
             if (packet.getType() != 51) {
                 return;
