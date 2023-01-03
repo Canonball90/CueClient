@@ -63,9 +63,11 @@ import net.minecraft.util.math.*;
 import net.minecraft.world.Explosion;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import java.awt.*;
 import java.util.*;
 
 import java.util.Comparator;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -75,31 +77,44 @@ import java.util.stream.Collectors;
 public class AutoCrystal extends Module {
 
 
-    public BooleanSetting switchToCrystal = registerSetting("Switch", false);
-    public BooleanSetting players = registerSetting("Players",  false);
-    public BooleanSetting mobs = registerSetting("Hostiles",  false);
-    public BooleanSetting passives = registerSetting("Passives",  false);
-    public BooleanSetting place = registerSetting("Place",  false);
-    public BooleanSetting explode = registerSetting("Break",  false);
-    public BooleanSetting packetPlace = registerSetting("PacketPlace",  false);
-    public BooleanSetting packetExplode = registerSetting("PacketBreak",  false);
-    public IntegerSetting breakSpeed = registerSetting("BreakSpeed",  20, 0, 20).booleanVisible(explode);
-    public IntegerSetting placeSpeed = registerSetting("PlaceSpeed",  20, 0, 20).booleanVisible(place);
-    public IntegerSetting range = registerSetting("Range",  5, 0, 6);
-    public IntegerSetting minDamage = registerSetting("MinimumDmg",  4, 0, 20);
-    public IntegerSetting selfDamage = registerSetting("SelfDamage",  10, 0, 20);
-    public BooleanSetting antiWeakness = registerSetting("AntiWeakness",  false);
-    public BooleanSetting multiPlace = registerSetting("Multi-Place",  false);
-    public BooleanSetting rotate = registerSetting("Rotate",  false);
-    public BooleanSetting autoTimer = registerSetting("Manual-Timer",  false);
-    public BooleanSetting rayTrace = registerSetting("Ray-trace",  false);
-    public ModeSetting<bHand> breakHand = registerSetting("Swing",  bHand.Mainhand);
-    public IntegerSetting setSelfDamage = registerSetting("SelfDamage", 10, 0, 20);
-    public BooleanSetting wallCheck = registerSetting("WallCheck", false);
-    public ModeSetting<logic> loogic = registerSetting("Logic", logic.BreakPlace);
-    public BooleanSetting thinking = registerSetting("Thinking",  false);
-    public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true);
+    public ModeSetting<Page> page = registerSetting("Page", Page.PlaceBreak);
+    //Target
+    public IntegerSetting range = registerSetting("Range",  5, 0, 6).modeVisible(page, Page.Target);
+    public BooleanSetting players = registerSetting("Players",  false).modeVisible(page, Page.Target);
+    public BooleanSetting mobs = registerSetting("Hostiles",  false).modeVisible(page, Page.Target);
+    public BooleanSetting passives = registerSetting("Passives",  false).modeVisible(page, Page.Target);
+    public IntegerSetting minDamage = registerSetting("MinimumDmg",  4, 0, 20).modeVisible(page, Page.Target);
+    public IntegerSetting selfDamage = registerSetting("SelfDamage",  10, 0, 20).modeVisible(page, Page.Target);
+
+    //PlaceAndBreak
+    public ModeSetting<logic> loogic = registerSetting("Logic", logic.BreakPlace).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting place = registerSetting("Place",  false).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting explode = registerSetting("Break",  false).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting packetPlace = registerSetting("PacketPlace",  false).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting packetExplode = registerSetting("PacketBreak",  false).modeVisible(page, Page.PlaceBreak);
+    public IntegerSetting breakSpeed = registerSetting("BreakSpeed",  20, 0, 20).booleanVisible(explode).modeVisible(page, Page.PlaceBreak);
+    public IntegerSetting placeSpeed = registerSetting("PlaceSpeed",  20, 0, 20).booleanVisible(place).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting antiWeakness = registerSetting("AntiWeakness",  false).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting multiPlace = registerSetting("Multi-Place",  false).modeVisible(page, Page.PlaceBreak);
+    public IntegerSetting setSelfDamage = registerSetting("SelfDamage", 10, 0, 20).modeVisible(page, Page.PlaceBreak);
+    public BooleanSetting wallCheck = registerSetting("WallCheck", false).modeVisible(page, Page.PlaceBreak);
+
+    //Other
+    public BooleanSetting switchToCrystal = registerSetting("Switch", false).modeVisible(page, Page.Other);
+    public BooleanSetting rotate = registerSetting("Rotate",  false).modeVisible(page, Page.Other);
+    public BooleanSetting autoTimer = registerSetting("Manual-Timer",  false).modeVisible(page, Page.Other);
+    public BooleanSetting rayTrace = registerSetting("Ray-trace",  false).modeVisible(page, Page.Other);
+    public ModeSetting<bHand> breakHand = registerSetting("Swing",  bHand.Mainhand).modeVisible(page, Page.Other);
+    public BooleanSetting thinking = registerSetting("Thinking",  false).modeVisible(page, Page.Other);
+    public BooleanSetting cancelCrystal = registerSetting("Cancel Crystal", true).modeVisible(page, Page.Other);
+
+    //Render
+    public BooleanSetting renderPos = registerSetting("Render", true).modeVisible(page, Page.Render);
+    public BooleanSetting fade = registerSetting("Fade", false).modeVisible(page, Page.Render);
+    public BooleanSetting slide = registerSetting("Slide", false).modeVisible(page, Page.Render);
+
     private BlockPos render;
+
     private Entity renderEnt;
     private long systemTime = -1;
     private static boolean togglePitch = false;
@@ -331,6 +346,7 @@ public class AutoCrystal extends Module {
 
     public void placee(BlockPos q, EnumFacing f, Boolean offhand) {
         if (packetPlace.getValue()) {
+            rotateTo(q.getX() + 0.5, q.getY() - 0.5, q.getZ() + 0.5, mc.player, false);
             mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(q, f, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND, 0, 0, 0));
         } else {
             placeCrystalOnBlock(q, offhand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
@@ -457,7 +473,7 @@ public class AutoCrystal extends Module {
         cancelingCrystals = true;
         Isthinking = true;
     }
-    //unlocked spoofing of angles
+
     private void resetRotation() {
         if (isSpoofingAngles) {
             yaw = mc.player.rotationYaw;
@@ -924,11 +940,23 @@ public class AutoCrystal extends Module {
         return positions;
     }
 
+    @Override
+    public void onRender3D(Render3DEvent event){
+        if(render == null) return;
+        if(render != null && renderPos.getValue()){
+            Render3DUtil.drawBlockBox(render, new Color(Colors.getGlobalColor().getRed(), Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue(), 130), true, 2F);
+        }
+    }
+
     public enum logic{
         PlaceBreak,BreakPlace
     }
 
     public enum bHand{
         Offhand,Mainhand
+    }
+
+    public enum Page{
+        PlaceBreak,Other,Target,Render
     }
 }

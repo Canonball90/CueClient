@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
+import org.jetbrains.annotations.Contract;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -79,4 +80,33 @@ public class MathUtil {
         return bd.doubleValue();
     }
 
+    @Contract(pure = true)
+    public static int multiply(int Num1, int Num2){
+        return Num1*Num2;
+    }
+
+    @Contract(pure = true)
+    public static double multiply(double Num1, double Num2){
+        return Num1*Num2;
+    }
+
+    @Contract(pure = true)
+    public static int divide(int Num1, int Num2){
+        return Num1/Num2;
+    }
+
+    @Contract(pure = true)
+    public static double divide(double Num1, double Num2){
+        return Num1/Num2;
+    }
+
+    @Contract(pure = true)
+    public static int add(int Num1, int Num2){
+        return Num1+Num2;
+    }
+
+    @Contract(pure = true)
+    public static double add(double Num1, double Num2){
+        return Num1+Num2;
+    }
 }

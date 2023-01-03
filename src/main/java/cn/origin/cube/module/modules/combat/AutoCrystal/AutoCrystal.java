@@ -97,8 +97,6 @@ public class AutoCrystal extends Module {
     //Render
     public BooleanSetting outline = registerSetting("Outline", true).modeVisible(page, Page.Render);
     public IntegerSetting alpha = registerSetting("Alpha", 150, 0, 255).modeVisible(page, Page.Render);
-    public IntegerSetting tx = registerSetting("Alpha", 150, 0, 1000).modeVisible(page, Page.Render);
-    public IntegerSetting ty = registerSetting("Alpha", 150, 0, 1000).modeVisible(page, Page.Render);
 
     //Other
     public BooleanSetting switchToCrystal = registerSetting("Switch", false).modeVisible(page, Page.Other);
@@ -118,7 +116,7 @@ public class AutoCrystal extends Module {
     public final HelperRange rangeHelper = new HelperRange(this);
     private final List<BlockPos> placementPackets = new ArrayList<>();
     private final List<Integer> explosionPackets = new ArrayList<>();
-    static AI.HalqPos render = new AI.HalqPos(BlockPos.ORIGIN, 0);
+    static BlockPos render;
     private final List<Integer> deadCrystals = new ArrayList<>();
     private Timer HoleMiningTimer = new Timer();
     private static boolean togglePitch = false;
@@ -132,11 +130,9 @@ public class AutoCrystal extends Module {
     private String arrayListEntityName;
     private static boolean Isthinking;
     private Timer timer = new Timer();
-    private static boolean canMine;
-    private int x = tx.getValue();
-    private int y = ty.getValue();
     private static double pitch;
     public boolean shouldRotate;
+    //Todo make this bypass better cause it no bypass
     private BlockPos bypassPos;
     boolean smoothRotatePitch;
     boolean smoothRotateYaw;
@@ -162,7 +158,6 @@ public class AutoCrystal extends Module {
 
     @Override
     public void onEnable() {
-        render = new AI.HalqPos(BlockPos.ORIGIN, 0);
         super.onEnable();
     }
 
@@ -303,7 +298,7 @@ public class AutoCrystal extends Module {
             }
             entities.addAll(mc.world.loadedEntityList.stream().filter(entity -> EntityUtil.isLiving(entity) && (EntityUtil.isPassive(entity) ? passives.getValue() : mobs.getValue())).collect(Collectors.toList()));
 
-            BlockPos q = render.getBlockPos();
+            BlockPos q = render;
             double damage = .5;
             for (Entity entity : entities) {
                 if (entity == mc.player || ((EntityLivingBase) entity).getHealth() <= 0) {
@@ -342,7 +337,7 @@ public class AutoCrystal extends Module {
                 }
                 return;
             }
-            render.getBlockPos().equals(q);
+            render = q;
             //ToDo Work on Silent switch
             final int oldSlot = KillAura.mc.player.inventory.currentItem;
             if (place.getValue()) {
@@ -430,7 +425,6 @@ public class AutoCrystal extends Module {
         }else{
 
         }
-        mc.playerController.updateController();
     }
 
     @SubscribeEvent
@@ -611,7 +605,7 @@ public class AutoCrystal extends Module {
     @Override
     public void onRender3D(Render3DEvent event){
         if(render != null || renderEnt != null){
-            Render3DUtil.drawBlockBox(render.getBlockPos(), new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(), Colors.getGlobalColor().getBlue(), 140), outline.getValue(), 3);
+            Render3DUtil.drawBlockBox(render, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(), Colors.getGlobalColor().getBlue(), 140), outline.getValue(), 3);
         }
     }
 
@@ -1172,8 +1166,8 @@ final class Threads extends Thread {
     @Override
     public void run() {
         if (this.type == AutoCrystal.ThreadType.BLOCK) {
-            bestBlock = AutoCrystal.INSTANCE.render.getBlockPos();
-            AutoCrystal.INSTANCE.render.getBlockPos().equals(bestBlock);
+            bestBlock = AutoCrystal.INSTANCE.render;
+            AutoCrystal.INSTANCE.render = bestBlock;
         } else if (this.type ==AutoCrystal.ThreadType.CRYSTAL) {
             bestCrystal = AutoCrystal.INSTANCE.getBestCrystal();
             AutoCrystal.INSTANCE.renderEnt = bestCrystal;
