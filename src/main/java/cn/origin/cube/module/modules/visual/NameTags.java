@@ -75,7 +75,7 @@ public class NameTags extends Module {
         for (Entity e : NameTags.mc.world.loadedEntityList) {
             if (!(e instanceof EntityPlayer) || e == NameTags.mc.player) continue;
             double x = e.lastTickPosX + (e.posX - e.lastTickPosX) * (double)event.getPartialTicks() - NameTags.mc.getRenderManager().viewerPosX;
-            double y = e.lastTickPosY + (e.posY - e.lastTickPosY) * (double)event.getPartialTicks() - NameTags.mc.getRenderManager().viewerPosY - yOffset.getValue() + (sneak.getValue() ? sneakHeight.getValue() : 0);
+            double y = e.lastTickPosY + (e.posY - e.lastTickPosY) * (double)event.getPartialTicks() - NameTags.mc.getRenderManager().viewerPosY - yOffset.getValue() + (sneak.getValue() && e.isSneaking() ? sneakHeight.getValue() : 0);
             double z = e.lastTickPosZ + (e.posZ - e.lastTickPosZ) * (double)event.getPartialTicks() - NameTags.mc.getRenderManager().viewerPosZ;
             GL11.glPushMatrix();
             GL11.glDisable((int)2929);
