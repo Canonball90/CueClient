@@ -45,6 +45,7 @@ public class PhaseWalk extends Module {
 
     @Override
     public void onUpdate() {
+        if(fullNullCheck()) toggle();
         ++this.delay;
         int loops = (int) Math.floor(2);
         double motionY = 0.0;
@@ -112,6 +113,7 @@ public class PhaseWalk extends Module {
 
     @Override
     public void onEnable() {
+        if(fullNullCheck()) toggle();
         mc.player.rotationPitch = pitch.getValue();
         if(!silent.getValue()) {
             mc.playerController.connection.sendPacket(new CPacketPlayerTryUseItem(EnumHand.MAIN_HAND));
