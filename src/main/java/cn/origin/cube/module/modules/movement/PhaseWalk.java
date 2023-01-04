@@ -10,16 +10,20 @@ import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.BlockUtil;
+import cn.origin.cube.utils.player.InventoryUtil;
 import cn.origin.cube.utils.player.MovementUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.ItemEnderPearl;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketEntityAction;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.lwjgl.input.Mouse;
 
 @ModuleInfo(name = "PhaseWalk", descriptions = "", category = Category.MOVEMENT)
 public class PhaseWalk extends Module {
@@ -33,6 +37,7 @@ public class PhaseWalk extends Module {
     BooleanSetting phaseCheck = registerSetting("PhaseCheck", true);
     BooleanSetting downOnShift = registerSetting("DownOnShift", true);
     BooleanSetting antiKick = registerSetting("AntiKick", true);
+    BooleanSetting silent = registerSetting("Silent", false);
     BooleanSetting stopMotion = registerSetting("StopMotion", true);
     IntegerSetting stopMotionDelay = registerSetting("StopMotionDelay", 5, 0, 20).booleanVisible(stopMotion);
     boolean doAntiKick = false;
@@ -43,37 +48,37 @@ public class PhaseWalk extends Module {
         ++this.delay;
         int loops = (int) Math.floor(2);
         double motionY = 0.0;
-        if ((PhaseWalk.mc.gameSettings.keyBindForward.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindRight.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindLeft.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindBack.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) && (this.phaseCheck.getValue() && !this.eChestCheck() && !PhaseWalk.mc.world.getBlockState(BlockUtil.getPlayerPos()).getBlock().equals((Object)Blocks.AIR) || !PhaseWalk.mc.world.getBlockState(BlockUtil.getPlayerPos().up()).getBlock().equals((Object)Blocks.AIR))) {
+        if ((mc.gameSettings.keyBindForward.isKeyDown() || mc.gameSettings.keyBindRight.isKeyDown() || mc.gameSettings.keyBindLeft.isKeyDown() || mc.gameSettings.keyBindBack.isKeyDown() || mc.gameSettings.keyBindSneak.isKeyDown()) && (this.phaseCheck.getValue() && !this.eChestCheck() && !mc.world.getBlockState(BlockUtil.getPlayerPos()).getBlock().equals((Object)Blocks.AIR) || !mc.world.getBlockState(BlockUtil.getPlayerPos().up()).getBlock().equals((Object)Blocks.AIR))) {
             double[] dirSpeed;
-            if (PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isPressed() && PhaseWalk.mc.player.isSneaking()) {
+            if (mc.player.collidedVertically && mc.gameSettings.keyBindSneak.isPressed() && mc.player.isSneaking()) {
                 dirSpeed = this.getMotion(this.phaseSpeed.getValue() / 100.0);
-                if (this.downOnShift.getValue() && PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) {
-                    PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY - 0.0424, PhaseWalk.mc.player.posZ + dirSpeed[1], PhaseWalk.mc.player.rotationYaw, PhaseWalk.mc.player.rotationPitch, false));
+                if (this.downOnShift.getValue() && mc.player.collidedVertically && mc.gameSettings.keyBindSneak.isKeyDown()) {
+                    mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(mc.player.posX + dirSpeed[0], mc.player.posY - 0.0424, mc.player.posZ + dirSpeed[1], mc.player.rotationYaw, mc.player.rotationPitch, false));
                 } else {
-                    PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY, PhaseWalk.mc.player.posZ + dirSpeed[1], PhaseWalk.mc.player.rotationYaw, PhaseWalk.mc.player.rotationPitch, false));
+                    mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(mc.player.posX + dirSpeed[0], mc.player.posY, mc.player.posZ + dirSpeed[1], mc.player.rotationYaw, mc.player.rotationPitch, false));
                 }
-                PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX, -1337.0, PhaseWalk.mc.player.posZ, PhaseWalk.mc.player.rotationYaw * -5.0f, PhaseWalk.mc.player.rotationPitch * -5.0f, true));
+                mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(mc.player.posX, -1337.0, mc.player.posZ, mc.player.rotationYaw * -5.0f, mc.player.rotationPitch * -5.0f, true));
                 if (this.fallPacket.getValue()) {
-                    PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)PhaseWalk.mc.player, CPacketEntityAction.Action.STOP_RIDING_JUMP));
+                    mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)mc.player, CPacketEntityAction.Action.STOP_RIDING_JUMP));
                 }
-                if (this.downOnShift.getValue() && PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) {
-                    PhaseWalk.mc.player.setPosition(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY - 0.0424, PhaseWalk.mc.player.posZ + dirSpeed[1]);
+                if (this.downOnShift.getValue() && mc.player.collidedVertically && mc.gameSettings.keyBindSneak.isKeyDown()) {
+                    mc.player.setPosition(mc.player.posX + dirSpeed[0], mc.player.posY - 0.0424, mc.player.posZ + dirSpeed[1]);
                 } else {
-                    PhaseWalk.mc.player.setPosition(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY, PhaseWalk.mc.player.posZ + dirSpeed[1]);
+                    mc.player.setPosition(mc.player.posX + dirSpeed[0], mc.player.posY, mc.player.posZ + dirSpeed[1]);
                 }
-                PhaseWalk.mc.player.motionZ = 0.0;
-                PhaseWalk.mc.player.motionY = 0.0;
-                PhaseWalk.mc.player.motionX = 0.0;
-                PhaseWalk.mc.player.noClip = true;
+                mc.player.motionZ = 0.0;
+                mc.player.motionY = 0.0;
+                mc.player.motionX = 0.0;
+                mc.player.noClip = true;
             }
-            if (PhaseWalk.mc.player.collidedHorizontally && this.stopMotion.getValue() ? this.delay >= this.stopMotionDelay.getValue() : PhaseWalk.mc.player.collidedHorizontally) {
+            if (mc.player.collidedHorizontally && this.stopMotion.getValue() ? this.delay >= this.stopMotionDelay.getValue() : mc.player.collidedHorizontally) {
                 dirSpeed = this.getMotion(this.phaseSpeed.getValue() / 100.0);
-                if (this.downOnShift.getValue() && PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) {
-                    PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY - 0.1, PhaseWalk.mc.player.posZ + dirSpeed[1], PhaseWalk.mc.player.rotationYaw, PhaseWalk.mc.player.rotationPitch, false));
+                if (this.downOnShift.getValue() && mc.player.collidedVertically && mc.gameSettings.keyBindSneak.isKeyDown()) {
+                    mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(mc.player.posX + dirSpeed[0], mc.player.posY - 0.1, mc.player.posZ + dirSpeed[1], mc.player.rotationYaw, mc.player.rotationPitch, false));
                 } else {
-                    PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY, PhaseWalk.mc.player.posZ + dirSpeed[1], PhaseWalk.mc.player.rotationYaw, PhaseWalk.mc.player.rotationPitch, false));
+                    mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(mc.player.posX + dirSpeed[0], mc.player.posY, mc.player.posZ + dirSpeed[1], mc.player.rotationYaw, mc.player.rotationPitch, false));
                 }
-                PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX, -1337.0, PhaseWalk.mc.player.posZ, PhaseWalk.mc.player.rotationYaw * -5.0f, PhaseWalk.mc.player.rotationPitch * -5.0f, true));
+                mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(mc.player.posX, -1337.0, mc.player.posZ, mc.player.rotationYaw * -5.0f, mc.player.rotationPitch * -5.0f, true));
                 doAntiKick = antiKick.getValue()
                         && mc.player.ticksExisted % 40 == 0
                         && !isPhased()
@@ -85,22 +90,22 @@ public class PhaseWalk extends Module {
                     motionY = -0.04;
                 }
                 if (this.fallPacket.getValue()) {
-                    PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)PhaseWalk.mc.player, CPacketEntityAction.Action.STOP_RIDING_JUMP));
+                    mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)mc.player, CPacketEntityAction.Action.STOP_RIDING_JUMP));
                 }
-                if (this.downOnShift.getValue() && PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) {
-                    PhaseWalk.mc.player.setPosition(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY - 0.1, PhaseWalk.mc.player.posZ + dirSpeed[1]);
+                if (this.downOnShift.getValue() && mc.player.collidedVertically && mc.gameSettings.keyBindSneak.isKeyDown()) {
+                    mc.player.setPosition(mc.player.posX + dirSpeed[0], mc.player.posY - 0.1, mc.player.posZ + dirSpeed[1]);
                 } else {
-                    PhaseWalk.mc.player.setPosition(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY, PhaseWalk.mc.player.posZ + dirSpeed[1]);
+                    mc.player.setPosition(mc.player.posX + dirSpeed[0], mc.player.posY, mc.player.posZ + dirSpeed[1]);
                 }
-                PhaseWalk.mc.player.motionZ = 0.0;
-                PhaseWalk.mc.player.motionY = 0.0;
-                PhaseWalk.mc.player.motionX = 0.0;
-                PhaseWalk.mc.player.noClip = true;
+                mc.player.motionZ = 0.0;
+                mc.player.motionY = 0.0;
+                mc.player.motionX = 0.0;
+                mc.player.noClip = true;
                 this.delay = 0;
             } else if (this.instantWalk.getValue()) {
                 double[] dir = MathUtil.directionSpeed(this.instantWalkSpeed.getValue() / 100.0);
-                PhaseWalk.mc.player.motionX = dir[0];
-                PhaseWalk.mc.player.motionZ = dir[1];
+                mc.player.motionX = dir[0];
+                mc.player.motionZ = dir[1];
             }
         }
     }
@@ -108,14 +113,29 @@ public class PhaseWalk extends Module {
     @Override
     public void onEnable() {
         mc.player.rotationPitch = pitch.getValue();
-        mc.playerController.connection.sendPacket(new CPacketPlayerTryUseItem(EnumHand.MAIN_HAND));
-        mc.playerController.processRightClick(mc.player, mc.world, EnumHand.MAIN_HAND);
+        if(!silent.getValue()) {
+            mc.playerController.connection.sendPacket(new CPacketPlayerTryUseItem(EnumHand.MAIN_HAND));
+            mc.playerController.processRightClick(mc.player, mc.world, EnumHand.MAIN_HAND);
+        }else {
+            int oldSlot = mc.player.inventory.currentItem;
+            int p = InventoryUtil.findHotbarItem(ItemEnderPearl.class);
+            if (p == -1) {
+                return;
+            }
+            InventoryUtil.switchToHotbarSlot(p, false);
+            try {
+                mc.playerController.processRightClick(mc.player, mc.world, (mc.player.getHeldItemOffhand().item == Items.ENDER_PEARL) ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
+                mc.playerController.connection.sendPacket(new CPacketPlayerTryUseItem((mc.player.getHeldItemOffhand().item == Items.ENDER_PEARL) ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND));
+            } catch (Exception ignored) {
+            }
+            InventoryUtil.switchToHotbarSlot(oldSlot, false);
+        }
     }
 
     private double[] getMotion(double speed) {
-        float moveForward = PhaseWalk.mc.player.movementInput.moveForward;
-        float moveStrafe = PhaseWalk.mc.player.movementInput.moveStrafe;
-        float rotationYaw = PhaseWalk.mc.player.prevRotationYaw + (PhaseWalk.mc.player.rotationYaw - PhaseWalk.mc.player.prevRotationYaw) * mc.getRenderPartialTicks();
+        float moveForward = mc.player.movementInput.moveForward;
+        float moveStrafe = mc.player.movementInput.moveStrafe;
+        float rotationYaw = mc.player.prevRotationYaw + (mc.player.rotationYaw - mc.player.prevRotationYaw) * mc.getRenderPartialTicks();
         if (moveForward != 0.0f) {
             if (moveStrafe > 0.0f) {
                 rotationYaw += (float)(moveForward > 0.0f ? -45 : 45);
@@ -136,9 +156,7 @@ public class PhaseWalk extends Module {
 
     @SubscribeEvent
     public void onRightClickBlockEvent (ProcessRightClickBlockEvent event) {
-        if (fullNullCheck()) {
-            return;
-        }
+        if (fullNullCheck())return;
         if(pearlBypass.getValue()) {
             if (mc.player.inventory.getStackInSlot(mc.player.inventory.currentItem).getItem() == Items.ENDER_PEARL) {
                 mc.player.connection.sendPacket((Packet) new CPacketPlayerTryUseItem(event.hand));
@@ -153,11 +171,11 @@ public class PhaseWalk extends Module {
 
     @Override
     public void onDisable() {
-        PhaseWalk.mc.player.noClip = false;
+        mc.player.noClip = false;
     }
 
     private boolean eChestCheck() {
-        String loc = String.valueOf(PhaseWalk.mc.player.posY);
+        String loc = String.valueOf(mc.player.posY);
         String deciaml = loc.split("\\.")[1];
         return deciaml.equals("875");
     }
