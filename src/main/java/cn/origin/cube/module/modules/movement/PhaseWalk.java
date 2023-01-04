@@ -1,5 +1,6 @@
 package cn.origin.cube.module.modules.movement;
 
+import cn.origin.cube.core.events.player.ProcessRightClickBlockEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
 import cn.origin.cube.core.settings.BooleanSetting;
@@ -10,15 +11,19 @@ import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.BlockUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketEntityAction;
 import net.minecraft.network.play.client.CPacketPlayer;
+import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @ModuleInfo(name = "PhaseWalk", descriptions = "", category = Category.MOVEMENT)
 public class PhaseWalk extends Module {
 
     BooleanSetting fallPacket = registerSetting("FallPacket", true);
     BooleanSetting instantWalk = registerSetting("InstantWalk", true);
+    BooleanSetting pearlBypass = registerSetting("PearlBypass", true);
     DoubleSetting instantWalkSpeed = registerSetting("InstantWalkSpeed", 18.0, 10.0, 19.0);
     DoubleSetting phaseSpeed = registerSetting("PhaseSpeed", 4.24, 1.0, 7.0);
     BooleanSetting phaseCheck = registerSetting("PhaseCheck", true);
@@ -106,6 +111,19 @@ public class PhaseWalk extends Module {
         double posX = (double)moveForward * speed * -Math.sin(Math.toRadians(rotationYaw)) + (double)moveStrafe * speed * Math.cos(Math.toRadians(rotationYaw));
         double posZ = (double)moveForward * speed * Math.cos(Math.toRadians(rotationYaw)) - (double)moveStrafe * speed * -Math.sin(Math.toRadians(rotationYaw));
         return new double[]{posX, posZ};
+    }
+
+    @SubscribeEvent
+    public void onRightClickBlockEvent (ProcessRightClickBlockEvent event) {
+        if (fullNullCheck()) {
+            return;
+        }
+        if(pearlBypass.getValue()) {
+            if (mc.player.inventory.getStackInSlot(mc.player.inventory.currentItem).getItem() == Items.ENDER_PEARL) {
+                mc.player.connection.sendPacket((Packet) new CPacketPlayerTryUseItem(event.hand));
+                event.setCanceled(true);
+            }
+        }
     }
 
     @Override
