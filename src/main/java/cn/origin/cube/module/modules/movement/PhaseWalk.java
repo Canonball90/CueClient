@@ -10,6 +10,7 @@ import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.player.BlockUtil;
+import cn.origin.cube.utils.player.MovementUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -25,19 +26,23 @@ public class PhaseWalk extends Module {
 
     BooleanSetting fallPacket = registerSetting("FallPacket", true);
     BooleanSetting instantWalk = registerSetting("InstantWalk", true);
+    DoubleSetting instantWalkSpeed = registerSetting("InstantWalkSpeed", 18.0, 10.0, 19.0).booleanVisible(instantWalk);
     BooleanSetting pearlBypass = registerSetting("PearlBypass", true);
     FloatSetting pitch = registerSetting("Pitch", 45F, -90F, 90F).booleanVisible(pearlBypass);
-    DoubleSetting instantWalkSpeed = registerSetting("InstantWalkSpeed", 18.0, 10.0, 19.0);
     DoubleSetting phaseSpeed = registerSetting("PhaseSpeed", 4.24, 1.0, 7.0);
     BooleanSetting phaseCheck = registerSetting("PhaseCheck", true);
     BooleanSetting downOnShift = registerSetting("DownOnShift", true);
+    BooleanSetting antiKick = registerSetting("AntiKick", true);
     BooleanSetting stopMotion = registerSetting("StopMotion", true);
-    IntegerSetting stopMotionDelay = registerSetting("StopMotionDelay", 5, 0, 20);
+    IntegerSetting stopMotionDelay = registerSetting("StopMotionDelay", 5, 0, 20).booleanVisible(stopMotion);
+    boolean doAntiKick = false;
     int delay = 0;
 
     @Override
     public void onUpdate() {
         ++this.delay;
+        int loops = (int) Math.floor(2);
+        double motionY = 0.0;
         if ((PhaseWalk.mc.gameSettings.keyBindForward.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindRight.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindLeft.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindBack.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) && (this.phaseCheck.getValue() && !this.eChestCheck() && !PhaseWalk.mc.world.getBlockState(BlockUtil.getPlayerPos()).getBlock().equals((Object)Blocks.AIR) || !PhaseWalk.mc.world.getBlockState(BlockUtil.getPlayerPos().up()).getBlock().equals((Object)Blocks.AIR))) {
             double[] dirSpeed;
             if (PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isPressed() && PhaseWalk.mc.player.isSneaking()) {
@@ -69,6 +74,16 @@ public class PhaseWalk extends Module {
                     PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY, PhaseWalk.mc.player.posZ + dirSpeed[1], PhaseWalk.mc.player.rotationYaw, PhaseWalk.mc.player.rotationPitch, false));
                 }
                 PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX, -1337.0, PhaseWalk.mc.player.posZ, PhaseWalk.mc.player.rotationYaw * -5.0f, PhaseWalk.mc.player.rotationPitch * -5.0f, true));
+                doAntiKick = antiKick.getValue()
+                        && mc.player.ticksExisted % 40 == 0
+                        && !isPhased()
+                        && !mc.world.collidesWithAnyBlock(mc.player.getEntityBoundingBox())
+                        && !MovementUtils.isMoving(mc.player);
+
+                if (doAntiKick) {
+                    loops = 1;
+                    motionY = -0.04;
+                }
                 if (this.fallPacket.getValue()) {
                     PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)PhaseWalk.mc.player, CPacketEntityAction.Action.STOP_RIDING_JUMP));
                 }
@@ -130,6 +145,10 @@ public class PhaseWalk extends Module {
                 event.setCanceled(true);
             }
         }
+    }
+
+    private boolean isPhased() {
+        return !mc.world.getCollisionBoxes(mc.player, mc.player.getEntityBoundingBox().expand(-0.0625, -0.0625, -0.0625)).isEmpty();
     }
 
     @Override
