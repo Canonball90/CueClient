@@ -5,6 +5,7 @@ import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
+import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.utils.client.MathUtil;
@@ -16,6 +17,7 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketEntityAction;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
+import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @ModuleInfo(name = "PhaseWalk", descriptions = "", category = Category.MOVEMENT)
@@ -24,6 +26,7 @@ public class PhaseWalk extends Module {
     BooleanSetting fallPacket = registerSetting("FallPacket", true);
     BooleanSetting instantWalk = registerSetting("InstantWalk", true);
     BooleanSetting pearlBypass = registerSetting("PearlBypass", true);
+    FloatSetting pitch = registerSetting("Pitch", 45F, -90F, 90F).booleanVisible(pearlBypass);
     DoubleSetting instantWalkSpeed = registerSetting("InstantWalkSpeed", 18.0, 10.0, 19.0);
     DoubleSetting phaseSpeed = registerSetting("PhaseSpeed", 4.24, 1.0, 7.0);
     BooleanSetting phaseCheck = registerSetting("PhaseCheck", true);
@@ -89,6 +92,9 @@ public class PhaseWalk extends Module {
 
     @Override
     public void onEnable() {
+        mc.player.rotationPitch = pitch.getValue();
+        mc.playerController.connection.sendPacket(new CPacketPlayerTryUseItem(EnumHand.MAIN_HAND));
+        mc.playerController.processRightClick(mc.player, mc.world, EnumHand.MAIN_HAND);
     }
 
     private double[] getMotion(double speed) {
