@@ -109,6 +109,8 @@ public class PhaseWalk extends Module {
                 mc.player.motionZ = dir[1];
             }
         }
+
+        if(!isPhased()) toggle();
     }
 
     @Override

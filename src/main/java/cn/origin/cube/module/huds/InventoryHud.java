@@ -13,6 +13,8 @@ import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 
+import static org.lwjgl.opengl.GL11.*;
+
 @HudModuleInfo(name = "Inventory", descriptions = "Show all enable module", category = Category.HUD, y = 200, x = 100)
 public class InventoryHud extends HudModule {
 
@@ -25,6 +27,7 @@ public class InventoryHud extends HudModule {
         GL11.glTranslated(this.x, (float) this.y, 0);
         GL11.glScaled((double) this.Scala.getValue(), (double) this.Scala.getValue(), 0.0);
         RenderHelper.enableGUIStandardItemLighting();
+        glEnable(GL_DEPTH_TEST);
         Render2DUtil.drawRect1(x - 2, y - 2, x - 1, y + 58, new Color(64,41,213).getRGB());
         Render2DUtil.drawRect1(x + 177, y - 1, x + 178, y+ 57, new Color(64,41,213, 255).getRGB());
         Render2DUtil.drawRect1(x + 177, y - 2, x + 178, y + 58, new Color(64,41,213, 255).getRGB());
@@ -40,6 +43,7 @@ public class InventoryHud extends HudModule {
             Minecraft.getMinecraft().getRenderItem().renderItemOverlayIntoGUI(Minecraft.getMinecraft().fontRenderer, item_stack, item_position_x, item_position_y, null);
         }
         Minecraft.getMinecraft().getRenderItem().zLevel = - 5.0f;
+        glDisable(GL_DEPTH_TEST);
         RenderHelper.disableStandardItemLighting();
         GL11.glPopMatrix();
         this.width = (int) ((float) Cube.fontManager.CustomFont.getStringWidth("CueClient") * this.Scala.getValue());
