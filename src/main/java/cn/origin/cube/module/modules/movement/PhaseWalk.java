@@ -35,10 +35,8 @@ public class PhaseWalk extends Module {
     BooleanSetting antiKick = registerSetting("AntiKick", true);
     BooleanSetting stopMotion = registerSetting("StopMotion", true);
     IntegerSetting stopMotionDelay = registerSetting("StopMotionDelay", 5, 0, 20).booleanVisible(stopMotion);
-    BooleanSetting fly = registerSetting("Fly", false);
     boolean doAntiKick = false;
     int delay = 0;
-    int c;
 
     @Override
     public void onUpdate() {
@@ -105,22 +103,10 @@ public class PhaseWalk extends Module {
                 PhaseWalk.mc.player.motionZ = dir[1];
             }
         }
-
-        if(fly.getValue()){
-            mc.player.onGround = true;
-            mc.player.motionY = 0;
-            if (c > 40) {
-                mc.player.posY -= 0.032;
-                c = 0;
-            } else c ++;
-            if (mc.player.ticksExisted % 3 != 0)
-                mc.player.setPosition(mc.player.posX, mc.player.posY += 1.0e-9, mc.player.posZ);
-        }
     }
 
     @Override
     public void onEnable() {
-        c = 0;
         mc.player.rotationPitch = pitch.getValue();
         mc.playerController.connection.sendPacket(new CPacketPlayerTryUseItem(EnumHand.MAIN_HAND));
         mc.playerController.processRightClick(mc.player, mc.world, EnumHand.MAIN_HAND);
