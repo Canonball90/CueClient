@@ -15,6 +15,7 @@ import cn.origin.cube.module.modules.combat.killaura.AuraRewrite
 import cn.origin.cube.module.modules.function.*
 import cn.origin.cube.module.modules.function.scaffold.Scaffold
 import cn.origin.cube.module.modules.movement.*
+import cn.origin.cube.module.modules.movement.Phase.PhaseWalk
 import cn.origin.cube.module.modules.visual.*
 import cn.origin.cube.module.modules.world.*
 

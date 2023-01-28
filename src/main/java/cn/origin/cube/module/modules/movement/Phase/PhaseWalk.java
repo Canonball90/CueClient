@@ -1,4 +1,4 @@
-package cn.origin.cube.module.modules.movement;
+package cn.origin.cube.module.modules.movement.Phase;
 
 import cn.origin.cube.core.events.player.ProcessRightClickBlockEvent;
 import cn.origin.cube.core.module.Category;
@@ -38,17 +38,17 @@ public class PhaseWalk extends Module {
     BooleanSetting blockFly = registerSetting("BlockFly", false);
     boolean doAntiKick = false;
     int delay = 0;
-    int c;
+    static int c;
 
     @Override
     public void onUpdate() {
         ++this.delay;
         int loops = (int) Math.floor(2);
         double motionY = 0.0;
-        if ((PhaseWalk.mc.gameSettings.keyBindForward.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindRight.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindLeft.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindBack.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) && (this.phaseCheck.getValue() && !this.eChestCheck() && !PhaseWalk.mc.world.getBlockState(BlockUtil.getPlayerPos()).getBlock().equals((Object)Blocks.AIR) || !PhaseWalk.mc.world.getBlockState(BlockUtil.getPlayerPos().up()).getBlock().equals((Object)Blocks.AIR))) {
+        if ((PhaseWalk.mc.gameSettings.keyBindForward.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindRight.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindLeft.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindBack.isKeyDown() || PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) && (this.phaseCheck.getValue() && !PhaseUtils.eChestCheck() && !PhaseWalk.mc.world.getBlockState(BlockUtil.getPlayerPos()).getBlock().equals((Object)Blocks.AIR) || !PhaseWalk.mc.world.getBlockState(BlockUtil.getPlayerPos().up()).getBlock().equals((Object)Blocks.AIR))) {
             double[] dirSpeed;
             if (PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isPressed() && PhaseWalk.mc.player.isSneaking()) {
-                dirSpeed = this.getMotion(this.phaseSpeed.getValue() / 100.0);
+                dirSpeed = PhaseUtils.getMotion(this.phaseSpeed.getValue() / 100.0);
                 if (this.downOnShift.getValue() && PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) {
                     PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY - 0.0424, PhaseWalk.mc.player.posZ + dirSpeed[1], PhaseWalk.mc.player.rotationYaw, PhaseWalk.mc.player.rotationPitch, false));
                 } else {
@@ -69,7 +69,7 @@ public class PhaseWalk extends Module {
                 PhaseWalk.mc.player.noClip = true;
             }
             if (PhaseWalk.mc.player.collidedHorizontally && this.stopMotion.getValue() ? this.delay >= this.stopMotionDelay.getValue() : PhaseWalk.mc.player.collidedHorizontally) {
-                dirSpeed = this.getMotion(this.phaseSpeed.getValue() / 100.0);
+                dirSpeed = PhaseUtils.getMotion(this.phaseSpeed.getValue() / 100.0);
                 if (this.downOnShift.getValue() && PhaseWalk.mc.player.collidedVertically && PhaseWalk.mc.gameSettings.keyBindSneak.isKeyDown()) {
                     PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX + dirSpeed[0], PhaseWalk.mc.player.posY - 0.1, PhaseWalk.mc.player.posZ + dirSpeed[1], PhaseWalk.mc.player.rotationYaw, PhaseWalk.mc.player.rotationPitch, false));
                 } else {
@@ -78,7 +78,7 @@ public class PhaseWalk extends Module {
                 PhaseWalk.mc.player.connection.sendPacket((Packet)new CPacketPlayer.PositionRotation(PhaseWalk.mc.player.posX, -1337.0, PhaseWalk.mc.player.posZ, PhaseWalk.mc.player.rotationYaw * -5.0f, PhaseWalk.mc.player.rotationPitch * -5.0f, true));
                 doAntiKick = antiKick.getValue()
                         && mc.player.ticksExisted % 40 == 0
-                        && !isPhased()
+                        && !PhaseUtils.isPhased()
                         && !mc.world.collidesWithAnyBlock(mc.player.getEntityBoundingBox())
                         && !MovementUtils.isMoving(mc.player);
 
@@ -107,14 +107,7 @@ public class PhaseWalk extends Module {
         }
 
         if(blockFly.getValue()){
-            mc.player.onGround = true;
-            mc.player.motionY = 0;
-            if (c > 40) {
-                mc.player.posY -= 0.032;
-                c = 0;
-            } else c ++;
-            if (mc.player.ticksExisted % 3 != 0)
-                mc.player.setPosition(mc.player.posX, mc.player.posY += 1.0e-9, mc.player.posZ);
+            PhaseUtils.doFly();
         }
     }
 
@@ -125,28 +118,6 @@ public class PhaseWalk extends Module {
         mc.player.rotationPitch = pitch.getValue();
         mc.playerController.connection.sendPacket(new CPacketPlayerTryUseItem(EnumHand.MAIN_HAND));
         mc.playerController.processRightClick(mc.player, mc.world, EnumHand.MAIN_HAND);
-    }
-
-    private double[] getMotion(double speed) {
-        float moveForward = PhaseWalk.mc.player.movementInput.moveForward;
-        float moveStrafe = PhaseWalk.mc.player.movementInput.moveStrafe;
-        float rotationYaw = PhaseWalk.mc.player.prevRotationYaw + (PhaseWalk.mc.player.rotationYaw - PhaseWalk.mc.player.prevRotationYaw) * mc.getRenderPartialTicks();
-        if (moveForward != 0.0f) {
-            if (moveStrafe > 0.0f) {
-                rotationYaw += (float)(moveForward > 0.0f ? -45 : 45);
-            } else if (moveStrafe < 0.0f) {
-                rotationYaw += (float)(moveForward > 0.0f ? 45 : -45);
-            }
-            moveStrafe = 0.0f;
-            if (moveForward > 0.0f) {
-                moveForward = 1.0f;
-            } else if (moveForward < 0.0f) {
-                moveForward = -1.0f;
-            }
-        }
-        double posX = (double)moveForward * speed * -Math.sin(Math.toRadians(rotationYaw)) + (double)moveStrafe * speed * Math.cos(Math.toRadians(rotationYaw));
-        double posZ = (double)moveForward * speed * Math.cos(Math.toRadians(rotationYaw)) - (double)moveStrafe * speed * -Math.sin(Math.toRadians(rotationYaw));
-        return new double[]{posX, posZ};
     }
 
     @SubscribeEvent
@@ -162,18 +133,9 @@ public class PhaseWalk extends Module {
         }
     }
 
-    private boolean isPhased() {
-        return !mc.world.getCollisionBoxes(mc.player, mc.player.getEntityBoundingBox().expand(-0.0625, -0.0625, -0.0625)).isEmpty();
-    }
-
     @Override
     public void onDisable() {
         PhaseWalk.mc.player.noClip = false;
     }
 
-    private boolean eChestCheck() {
-        String loc = String.valueOf(PhaseWalk.mc.player.posY);
-        String deciaml = loc.split("\\.")[1];
-        return deciaml.equals("875");
-    }
 }
