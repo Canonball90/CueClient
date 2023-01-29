@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.function;
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.utils.client.ChatUtil;
 import net.minecraft.network.play.server.SPacketBlockChange;
@@ -10,7 +11,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.text.DecimalFormat;
-
+@Constant(constant = false)
 @ModuleInfo(name = "NocomMatser", descriptions = "", category = Category.FUNCTION)
 public class NocomMaster extends Module {
 

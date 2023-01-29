@@ -4,6 +4,7 @@ import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
@@ -18,7 +19,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
 import java.util.Set;
-
+@Constant(constant = false)
 @ModuleInfo(name = "NewChunks", descriptions = "", category = Category.VISUAL)
 public class NewChunks extends Module {
 

@@ -2,10 +2,12 @@ package cn.origin.cube.module.modules.world
 
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.IntegerSetting
 import cn.origin.cube.utils.Timer
 
+@Constant(constant = false)
 @ModuleInfo(name = "AutoRacist", descriptions = "", category = Category.WORLD)
 class AutoRacist: Module() {
     val delay: IntegerSetting = registerSetting("Delay", 3, 0, 5);

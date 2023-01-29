@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.combat;
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
@@ -20,7 +21,7 @@ import net.minecraft.network.play.client.CPacketPlayerDigging;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
+@Constant(constant = false)
 @ModuleInfo(name = "BowBomb", descriptions = "BowBomb", category = Category.COMBAT)
 public class BowBomb extends Module {
 

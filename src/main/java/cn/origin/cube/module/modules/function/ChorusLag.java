@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.function;
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.IntegerSetting;
 import java.util.LinkedList;
@@ -17,7 +18,7 @@ import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Light)
 @ModuleInfo(name = "ChorusLag",
         descriptions = "ChorusLag",

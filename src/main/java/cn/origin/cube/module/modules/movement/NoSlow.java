@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.movement;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.utils.player.MovementUtils;
@@ -24,7 +25,7 @@ import net.minecraftforge.client.event.InputUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.input.Keyboard;
-
+@Constant(constant = false)
 @ModuleInfo(name = "NoSlow", descriptions = "NoSlow", category = Category.MOVEMENT)
 public class NoSlow extends Module {
 

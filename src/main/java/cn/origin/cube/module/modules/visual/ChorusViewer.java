@@ -4,6 +4,7 @@ import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.module.modules.client.Colors;
@@ -17,7 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
-
+@Constant(constant = false)
 @ParallelListener
 @ModuleInfo(name = "ChorusViewer", descriptions = "", category = Category.VISUAL)
 public class ChorusViewer extends Module {

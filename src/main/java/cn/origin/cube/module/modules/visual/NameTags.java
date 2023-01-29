@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.visual;
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
@@ -32,7 +33,7 @@ import net.minecraftforge.client.event.*;
 import net.minecraftforge.fml.common.eventhandler.*;
 
 import static org.lwjgl.opengl.GL11.*;
-
+@Constant(constant = false)
 @ModuleInfo(name = "NameTags", descriptions = "Always light", category = Category.VISUAL)
 public class NameTags extends Module {
     public static NameTags INSTANCE;

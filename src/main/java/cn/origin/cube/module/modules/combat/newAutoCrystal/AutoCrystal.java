@@ -5,6 +5,7 @@ import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
@@ -73,6 +74,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Full)
 @ParallelListener(priority = Priority.HIGHEST)
 @ModuleInfo(name = "NewAutoCrystal", descriptions = "", category = Category.COMBAT)

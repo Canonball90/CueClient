@@ -2,13 +2,14 @@ package cn.origin.cube.module.modules.visual;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.settings.ModeSetting;
 import net.minecraft.entity.player.EntityPlayer;
-
+@Constant(constant = false)
 @ModuleInfo(name = "Animations",
         descriptions = "Animations",
         category = Category.VISUAL)

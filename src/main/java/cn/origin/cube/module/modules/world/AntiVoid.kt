@@ -1,10 +1,11 @@
 package cn.origin.cube.module.modules.world
 
-import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.module.interfaces.Para
+import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.utils.player.BlockUtil
 import net.minecraft.block.Block
 import net.minecraft.block.BlockObsidian
@@ -15,6 +16,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.RayTraceResult
 import net.minecraft.util.math.Vec3d
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Test)
 @ModuleInfo(name = "AntiVoid", descriptions = "Prevents you from taking fall damage", category = Category.WORLD)
 class AntiVoid: Module() {

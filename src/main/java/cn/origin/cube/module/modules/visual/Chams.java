@@ -5,6 +5,7 @@ import cn.origin.cube.core.events.render.RenderEntityModelEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
@@ -14,7 +15,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
-
+@Constant(constant = false)
 @ModuleInfo(name = "Chams", descriptions = "Always light", category = Category.VISUAL)
 public class Chams extends Module {
 

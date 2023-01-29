@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.client;
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.managers.ConfigManager;
 import cn.origin.cube.core.events.player.DeathEvent;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.guis.otheruis.statistics.StatScreen;
 import cn.origin.cube.core.module.Category;
@@ -11,6 +12,7 @@ import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.module.interfaces.Para;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Full)
 @ModuleInfo(name = "Stats", descriptions = "", category = Category.CLIENT)
 public class Stats extends Module {

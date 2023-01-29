@@ -4,6 +4,7 @@ import cn.origin.cube.Cube;
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
@@ -31,7 +32,7 @@ import net.minecraft.world.Explosion;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Random;
-
+@Constant(constant = false)
 @ModuleInfo(name = "FakePlayer", descriptions = "Auto attack entity", category = Category.WORLD)
 public class FakePlayer extends Module {
     public BooleanSetting moving = registerSetting("Moving", true);

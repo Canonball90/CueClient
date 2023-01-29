@@ -1,17 +1,19 @@
 package cn.origin.cube.module.modules.visual
 
-import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.events.world.Render3DEvent
-import cn.origin.cube.inject.client.IRenderGlobal
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.module.interfaces.Para
+import cn.origin.cube.core.settings.FloatSetting
+import cn.origin.cube.inject.client.IRenderGlobal
 import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.render.Render3DUtil
 import net.minecraft.client.renderer.DestroyBlockProgress
 import net.minecraft.init.Blocks
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Test)
 @ModuleInfo(name = "BreakEsp", descriptions = "BreakEsp", category = Category.VISUAL)
 class BreakEsp: Module() {

@@ -4,6 +4,7 @@ import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
 import java.awt.Color;
 
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
@@ -23,7 +24,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.opengl.GL11;
-
+@Constant(constant = false)
 @ModuleInfo(name = "ESP",
         descriptions = "ESP",
         category = Category.VISUAL)

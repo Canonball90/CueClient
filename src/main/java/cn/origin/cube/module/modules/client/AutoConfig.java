@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.client;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.module.modules.combat.AutoArmor;
 import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal;
@@ -13,6 +14,7 @@ import cn.origin.cube.module.modules.movement.NoSlow;
 import cn.origin.cube.core.settings.ModeSetting;
 
 //ToDo finish this shit
+@Constant(constant = false)
 @ModuleInfo(name = "AutoConfig", descriptions = "AutoConfig", category = Category.CLIENT)
 public class AutoConfig extends Module {
 

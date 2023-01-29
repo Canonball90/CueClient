@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.FloatSetting
@@ -14,6 +15,7 @@ import net.minecraft.network.play.client.CPacketPlayerTryUseItem
 import net.minecraft.util.EnumHand
 import org.lwjgl.input.Mouse
 
+@Constant(constant = false)
 @ModuleInfo(name = "PacketEXP",
     descriptions = "PacketEXP",
     category = Category.FUNCTION)

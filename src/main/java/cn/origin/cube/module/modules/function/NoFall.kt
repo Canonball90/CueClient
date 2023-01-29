@@ -4,6 +4,7 @@ import cn.origin.cube.core.events.client.PacketEvent
 import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.settings.ModeSetting
@@ -16,7 +17,7 @@ import net.minecraft.util.math.Vec3d
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import java.util.concurrent.ThreadLocalRandom
 
-
+@Constant(constant = false)
 @ModuleInfo(name = "NoFall",
         descriptions = "",
         category = Category.FUNCTION)

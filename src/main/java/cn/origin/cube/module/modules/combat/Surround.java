@@ -4,6 +4,7 @@ import cn.origin.cube.Cube;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
@@ -25,7 +26,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.awt.*;
 import java.util.*;
-
+@Constant(constant = false)
 @ModuleInfo(name = "Surround", descriptions = "Auto place block surround feet", category = Category.COMBAT)
 public class Surround extends Module {
 

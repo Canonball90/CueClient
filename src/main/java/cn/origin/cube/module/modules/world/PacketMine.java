@@ -4,6 +4,7 @@ import cn.origin.cube.core.events.world.PlayerDamageBlockEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.module.interfaces.Para;
 import cn.origin.cube.core.settings.BooleanSetting;
@@ -20,7 +21,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Full)
 @ModuleInfo(name = "PacketMine", descriptions = "PacketMine", category = Category.WORLD)
 public class PacketMine extends Module {

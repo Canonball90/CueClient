@@ -5,6 +5,7 @@ import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
@@ -28,7 +29,7 @@ import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
-
+@Constant(constant = false)
 @ModuleInfo(name = "SuperheroFX", descriptions = "Always light", category = Category.VISUAL)
 public class SuperheroFX extends Module {
 

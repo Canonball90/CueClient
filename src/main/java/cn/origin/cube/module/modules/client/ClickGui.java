@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.client;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.managers.ConfigManager;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
@@ -13,6 +14,7 @@ import org.lwjgl.input.Keyboard;
 
 import java.awt.*;
 
+@Constant(constant = false)
 @ModuleInfo(name = "ClickGui", descriptions = "open click gui screen", category = Category.CLIENT, defaultKeyBind = Keyboard.KEY_RSHIFT)
 public final class ClickGui extends Module {
     public BooleanSetting rainbow = registerSetting("Rainbow", false);

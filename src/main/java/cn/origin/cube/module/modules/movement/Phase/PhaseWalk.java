@@ -3,12 +3,15 @@ package cn.origin.cube.module.modules.movement.Phase;
 import cn.origin.cube.core.events.player.ProcessRightClickBlockEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.utils.client.MathUtil;
+import cn.origin.cube.utils.client.event.event.ParallelListener;
+import cn.origin.cube.utils.client.event.event.Priority;
 import cn.origin.cube.utils.player.BlockUtil;
 import cn.origin.cube.utils.player.MovementUtils;
 import net.minecraft.entity.Entity;
@@ -21,21 +24,23 @@ import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@Constant(constant = true)
+@ParallelListener(priority = Priority.HIGHEST)
 @ModuleInfo(name = "PhaseWalk", descriptions = "", category = Category.MOVEMENT)
 public class PhaseWalk extends Module {
 
-    BooleanSetting fallPacket = registerSetting("FallPacket", true);
-    BooleanSetting instantWalk = registerSetting("InstantWalk", true);
-    DoubleSetting instantWalkSpeed = registerSetting("InstantWalkSpeed", 18.0, 10.0, 19.0).booleanVisible(instantWalk);
-    BooleanSetting pearlBypass = registerSetting("PearlBypass", true);
-    FloatSetting pitch = registerSetting("Pitch", 45F, -90F, 90F).booleanVisible(pearlBypass);
-    DoubleSetting phaseSpeed = registerSetting("PhaseSpeed", 4.24, 1.0, 7.0);
-    BooleanSetting phaseCheck = registerSetting("PhaseCheck", true);
-    BooleanSetting downOnShift = registerSetting("DownOnShift", true);
-    BooleanSetting antiKick = registerSetting("AntiKick", true);
-    BooleanSetting stopMotion = registerSetting("StopMotion", true);
-    IntegerSetting stopMotionDelay = registerSetting("StopMotionDelay", 5, 0, 20).booleanVisible(stopMotion);
-    BooleanSetting blockFly = registerSetting("BlockFly", false);
+    BooleanSetting fallPacket = this.registerSetting("FallPacket", true);
+    BooleanSetting instantWalk = this.registerSetting("InstantWalk", true);
+    DoubleSetting instantWalkSpeed = this.registerSetting("InstantWalkSpeed", 18.0, 10.0, 19.0).booleanVisible(instantWalk);
+    BooleanSetting pearlBypass = this.registerSetting("PearlBypass", true);
+    FloatSetting pitch = this.registerSetting("Pitch", 45F, -90F, 90F).booleanVisible(pearlBypass);
+    DoubleSetting phaseSpeed = this.registerSetting("PhaseSpeed", 4.24, 1.0, 7.0);
+    BooleanSetting phaseCheck = this.registerSetting("PhaseCheck", true);
+    BooleanSetting downOnShift = this.registerSetting("DownOnShift", true);
+    BooleanSetting antiKick = this.registerSetting("AntiKick", true);
+    BooleanSetting stopMotion = this.registerSetting("StopMotion", true);
+    IntegerSetting stopMotionDelay = this.registerSetting("StopMotionDelay", 5, 0, 20).booleanVisible(stopMotion);
+    BooleanSetting blockFly = this.registerSetting("BlockFly", false);
     boolean doAntiKick = false;
     int delay = 0;
     static int c;
@@ -107,7 +112,9 @@ public class PhaseWalk extends Module {
         }
 
         if(blockFly.getValue()){
-            PhaseUtils.doFly();
+            if(constant = true) {
+                PhaseUtils.doFly();
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 package cn.origin.cube.module.modules.combat.killaura;
 
 import cn.origin.cube.Cube;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.settings.*;
 import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
@@ -44,6 +45,7 @@ import java.text.DecimalFormat;
 import java.util.Comparator;
 import java.util.Date;
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Light)
 @ParallelListener(priority = Priority.HIGH)
 @ModuleInfo(name = "AuraRewrite", descriptions = "Auto attack entity", category = Category.COMBAT)

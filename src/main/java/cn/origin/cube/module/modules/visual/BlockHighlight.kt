@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.visual
 import cn.origin.cube.core.events.world.Render3DEvent
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.FloatSetting
@@ -15,6 +16,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.RayTraceResult
 import java.awt.Color
 
+@Constant(constant = false)
 @ModuleInfo(name = "BlockHighlight",
     descriptions = "Render current block",
     category = Category.VISUAL)

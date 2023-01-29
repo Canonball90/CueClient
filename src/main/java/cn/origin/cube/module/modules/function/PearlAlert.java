@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.function;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.utils.client.ChatUtil;
 import net.minecraft.entity.Entity;
@@ -11,7 +12,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
-
+@Constant(constant = false)
 @ModuleInfo(name = "PearlAlert", descriptions = "Prevents you from taking fall damage", category = Category.FUNCTION)
 public class PearlAlert extends Module {
     ConcurrentHashMap<UUID, Integer> uuidMap = new ConcurrentHashMap<>();

@@ -5,6 +5,7 @@ import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
@@ -31,7 +32,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Date;
-
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Light)
 @ParallelListener(priority = Priority.HIGHEST)
 @ModuleInfo(name = "KillAura", descriptions = "Auto attack entity", category = Category.COMBAT)

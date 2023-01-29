@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.movement;
 
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.events.player.MotionEvent;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.inject.client.INetworkManager;
 import cn.origin.cube.inject.client.ISPacketPlayerPosLook;
 import cn.origin.cube.core.module.Category;
@@ -20,7 +21,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.HashMap;
 import java.util.Map;
-
+@Constant(constant = false)
 @ModuleInfo(name = "PacketFly",
     descriptions = "Fly",
     category = Category.MOVEMENT)

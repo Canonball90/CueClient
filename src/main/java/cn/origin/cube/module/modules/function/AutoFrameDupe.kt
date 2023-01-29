@@ -2,15 +2,17 @@ package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.IntegerSetting
 import net.minecraft.entity.item.EntityItemFrame
 import net.minecraft.init.Items
-import net.minecraft.item.ItemShulkerBox
 import net.minecraft.item.Item
+import net.minecraft.item.ItemShulkerBox
 import net.minecraft.util.EnumHand
 
+@Constant(constant = false)
 @ModuleInfo(name = "AutoFrameDupe",
     descriptions = "AutoFrameDupe",
     category = Category.FUNCTION)

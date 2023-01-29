@@ -3,13 +3,14 @@ package cn.origin.cube.module.modules.world;
 import cn.origin.cube.core.events.player.TotemPopEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
 import cn.origin.cube.utils.Timer;
 import net.minecraft.network.play.client.CPacketChatMessage;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
+@Constant(constant = false)
 @ModuleInfo(name = "PoopLag", descriptions = "cringe", category = Category.WORLD)
 public class PopLag  extends Module {
 

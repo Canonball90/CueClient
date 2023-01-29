@@ -1,15 +1,16 @@
 package cn.origin.cube.module.modules.movement
 
+import cn.origin.cube.core.events.player.TravelEvent
+import cn.origin.cube.core.module.Category
+import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
+import cn.origin.cube.core.module.interfaces.ModuleInfo
+import cn.origin.cube.core.module.interfaces.Para
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.settings.ModeSetting
-import cn.origin.cube.core.events.player.TravelEvent
 import cn.origin.cube.inject.client.IMinecraft
 import cn.origin.cube.inject.client.ITimer
-import cn.origin.cube.core.module.Category
-import cn.origin.cube.core.module.Module
-import cn.origin.cube.core.module.interfaces.ModuleInfo
-import cn.origin.cube.core.module.interfaces.Para
 import cn.origin.cube.utils.Utils
 import net.minecraft.block.Block
 import net.minecraft.client.renderer.EnumFaceDirection
@@ -25,6 +26,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import kotlin.math.cos
 import kotlin.math.sin
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Test)
 @ModuleInfo(name = "ElytraFly",
     descriptions = "ElytraFly",

@@ -1,12 +1,13 @@
 package cn.origin.cube.module.modules.combat.AutoTotem
 
 import cn.origin.cube.core.events.client.PacketEvent
-import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
-import cn.origin.cube.core.settings.ModeSetting
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.module.interfaces.Para
+import cn.origin.cube.core.settings.FloatSetting
+import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.utils.player.InventoryUtil
 import net.minecraft.client.gui.inventory.GuiContainer
 import net.minecraft.client.gui.inventory.GuiInventory
@@ -18,6 +19,7 @@ import net.minecraft.network.play.client.CPacketEntityAction
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Test)
 @ModuleInfo(name = "AutoTotem",
     descriptions = "A",

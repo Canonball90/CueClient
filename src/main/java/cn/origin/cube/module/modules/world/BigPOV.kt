@@ -2,12 +2,14 @@ package cn.origin.cube.module.modules.world
 
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.utils.Utils.nullCheck
 import net.minecraft.client.renderer.entity.RenderPig
 import net.minecraft.entity.passive.EntityPig
 
+@Constant(constant = false)
 @ModuleInfo(name = "BigPOV",
     descriptions = "BigPOV",
     category = Category.WORLD)

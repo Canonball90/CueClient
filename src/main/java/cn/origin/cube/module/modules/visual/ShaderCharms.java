@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.visual;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
@@ -26,7 +27,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
 import java.util.Objects;
-
+@Constant(constant = false)
 @ModuleInfo(name = "ShaderCharms",descriptions = "",
         category = Category.VISUAL)
 public class ShaderCharms  extends Module {

@@ -1,10 +1,11 @@
 package cn.origin.cube.module.modules.visual
 
-import cn.origin.cube.core.settings.BooleanSetting
-import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.BooleanSetting
+import cn.origin.cube.core.settings.FloatSetting
 import cn.origin.cube.module.modules.client.Colors
 import cn.origin.cube.utils.render.Render2DUtil
 import net.minecraft.client.gui.ScaledResolution
@@ -13,6 +14,7 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import java.awt.Color
 
+@Constant(constant = false)
 @ModuleInfo(name = "Crosshair", descriptions = "Crosshair", category = Category.VISUAL)
 class Crosshair: Module() {
 

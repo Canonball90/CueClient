@@ -4,6 +4,7 @@ import cn.origin.cube.Cube;
 import cn.origin.cube.core.managers.ConfigManager;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.FloatSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
@@ -12,6 +13,7 @@ import cn.origin.cube.core.module.interfaces.ModuleInfo;
 
 import java.awt.*;
 
+@Constant(constant = false)
 @ModuleInfo(name = "NewClickGui", descriptions = "open click gui screen", category = Category.CLIENT)
 public final class NewClickGui extends Module {
     public BooleanSetting rainbow = registerSetting("Rainbow", false);

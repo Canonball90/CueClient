@@ -1,12 +1,14 @@
 package cn.origin.cube.module.modules.world
 
-import cn.origin.cube.core.settings.IntegerSetting
-import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
+import cn.origin.cube.core.settings.IntegerSetting
+import cn.origin.cube.core.settings.ModeSetting
 import cn.origin.cube.utils.Timer
 
+@Constant(constant = false)
 @ModuleInfo(name = "Singing", descriptions = "Sing", category = Category.WORLD)
 class Singing: Module() {
     val delay: IntegerSetting = registerSetting("Delay", 3, 0, 5);

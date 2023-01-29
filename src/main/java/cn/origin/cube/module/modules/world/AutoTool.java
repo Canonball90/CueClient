@@ -8,6 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+
 public class AutoTool extends Module {
 
     BooleanSetting silent = registerSetting("Silent", false);

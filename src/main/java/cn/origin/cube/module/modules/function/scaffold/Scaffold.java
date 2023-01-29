@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.function.scaffold;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.module.interfaces.Para;
 import cn.origin.cube.core.settings.BooleanSetting;
@@ -19,7 +20,7 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Light)
 @ModuleInfo(name = "Scaffold", descriptions = "Automatically places blocks under you", category = Category.FUNCTION)
 public class Scaffold extends Module {

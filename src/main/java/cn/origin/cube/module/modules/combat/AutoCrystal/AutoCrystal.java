@@ -6,6 +6,7 @@ import cn.origin.cube.core.events.player.RenderRotationsEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.module.interfaces.Para;
 import cn.origin.cube.module.modules.client.Colors;
@@ -51,6 +52,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Full)
 @ParallelListener(priority = Priority.HIGHEST)
 @ModuleInfo(name = "AutoCrystal", descriptions = "Auto attack entity", category = Category.COMBAT)

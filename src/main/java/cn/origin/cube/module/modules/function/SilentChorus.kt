@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.function
 
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
+import cn.origin.cube.core.module.interfaces.Constant
 import cn.origin.cube.core.module.interfaces.ModuleInfo
 import cn.origin.cube.core.module.interfaces.Para
 import cn.origin.cube.utils.player.InventoryUtil
@@ -11,6 +12,7 @@ import net.minecraft.network.play.client.CPacketHeldItemChange
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem
 import net.minecraft.util.EnumHand
 
+@Constant(constant = false)
 @Para(para = Para.ParaMode.Test)
 @ModuleInfo(name = "SilentChorus",
     descriptions = "SilentChorus",

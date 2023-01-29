@@ -2,6 +2,7 @@ package cn.origin.cube.module.modules.combat;
 
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
+import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.DoubleSetting;
@@ -15,7 +16,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
+@Constant(constant = false)
 @ModuleInfo(name = "Replenish",
         descriptions = "Automatically replenishes your health",
         category = Category.COMBAT)
