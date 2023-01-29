@@ -4,10 +4,7 @@ import cn.origin.cube.core.events.player.ProcessRightClickBlockEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
 import cn.origin.cube.core.module.interfaces.Constant;
-import cn.origin.cube.core.settings.BooleanSetting;
-import cn.origin.cube.core.settings.DoubleSetting;
-import cn.origin.cube.core.settings.FloatSetting;
-import cn.origin.cube.core.settings.IntegerSetting;
+import cn.origin.cube.core.settings.*;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.utils.client.MathUtil;
 import cn.origin.cube.utils.client.event.event.ParallelListener;
@@ -23,6 +20,7 @@ import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.lwjgl.input.Keyboard;
 
 @Constant(constant = true)
 @ParallelListener(priority = Priority.HIGHEST)
@@ -41,6 +39,8 @@ public class PhaseWalk extends Module {
     BooleanSetting stopMotion = this.registerSetting("StopMotion", true);
     IntegerSetting stopMotionDelay = this.registerSetting("StopMotionDelay", 5, 0, 20).booleanVisible(stopMotion);
     BooleanSetting blockFly = this.registerSetting("BlockFly", false);
+    BooleanSetting hotkey = this.registerSetting("Hotkey", false).booleanVisible(blockFly);
+    BindSetting key = this.registerSetting("Key", new BindSetting.KeyBind(0)).booleanVisible(blockFly).booleanVisible(hotkey);
     boolean doAntiKick = false;
     int delay = 0;
     static int c;
@@ -113,9 +113,25 @@ public class PhaseWalk extends Module {
 
         if(blockFly.getValue()){
             if(constant = true) {
-                PhaseUtils.doFly();
+                if(hotkey.getValue()) {
+                    if (Keyboard.isKeyDown(this.key.getValue().getKeyCode())) {
+                        PhaseUtils.doFly();
+                    }
+                }else{
+                    PhaseUtils.doFly();
+                }
             }
         }
+
+        if(!PhaseUtils.isPhased()){
+            toggle();
+        }
+    }
+
+    @Override
+    public void onLogout() {
+        toggle();
+        super.onLogout();
     }
 
     @Override
