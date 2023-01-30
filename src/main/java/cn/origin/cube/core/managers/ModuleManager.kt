@@ -67,6 +67,7 @@ class ModuleManager {
         registerModule(BoatPlace())
         registerModule(BaritoneClick())
         registerModule(NocomMaster())
+        registerModule(AntiEffect());
 
         //Movement
         registerModule(Velocity())
