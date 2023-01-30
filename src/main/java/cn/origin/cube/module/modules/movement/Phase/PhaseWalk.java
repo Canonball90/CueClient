@@ -1,5 +1,6 @@
 package cn.origin.cube.module.modules.movement.Phase;
 
+import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.events.player.ProcessRightClickBlockEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
@@ -19,6 +20,7 @@ import net.minecraft.network.play.client.CPacketEntityAction;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.util.EnumHand;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.input.Keyboard;
 
@@ -153,6 +155,13 @@ public class PhaseWalk extends Module {
                 mc.player.connection.sendPacket((Packet) new CPacketPlayerTryUseItem(event.hand));
                 event.setCanceled(true);
             }
+        }
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void onPacketSend(PacketEvent.Send event) {
+        if (event.getPacket() instanceof CPacketPlayer) {
+            event.setCanceled(true);
         }
     }
 

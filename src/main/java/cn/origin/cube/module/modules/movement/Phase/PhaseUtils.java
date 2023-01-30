@@ -1,6 +1,10 @@
 package cn.origin.cube.module.modules.movement.Phase;
 
+import cn.origin.cube.inject.client.INetworkManager;
+import cn.origin.cube.utils.player.MovementUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.play.client.CPacketPlayer;
+import net.minecraft.util.math.Vec3d;
 
 import static cn.origin.cube.core.module.AbstractModule.mc;
 
@@ -39,13 +43,31 @@ public class PhaseUtils {
     }
 
     public static void doFly(){
+
+        double[] strafe = MovementUtils.getMoveSpeed(0.2873);
+        int i = 1;
+
         mc.player.onGround = true;
         mc.player.motionY = 0;
+
+        double motionX = strafe[0] * i;
+        double motionZ = strafe[1] * i;
+
+        double velY = 0.0;
+
+        Vec3d posVec = mc.player.getPositionVector();
+        Vec3d moveVec = posVec.add(motionX, velY, motionZ);
+
+        send(moveVec);
         if (PhaseWalk.c > 40) {
             mc.player.posY -= 0.032;
             PhaseWalk.c = 0;
         } else PhaseWalk.c ++;
         if (mc.player.ticksExisted % 3 != 0)
             mc.player.setPosition(mc.player.posX, mc.player.posY += 1.0e-9, mc.player.posZ);
+    }
+
+    private static void send(Vec3d vec) {
+        ((INetworkManager) mc.player.connection.getNetworkManager()).hookDispatchPacket(new CPacketPlayer.Position(vec.x, vec.y, vec.z, true), null);
     }
 }
