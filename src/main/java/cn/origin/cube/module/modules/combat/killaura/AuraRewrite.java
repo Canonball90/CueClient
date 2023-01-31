@@ -253,11 +253,11 @@ public class AuraRewrite extends Module {
             if(!packet.getValue()) {
                 if (mc.player.getCooledAttackStrength(0) >= 1) {
                     mc.playerController.attackEntity(mc.player, entity);
-                    mc.player.swingArm(getHandToBreak());
+                    mc.player.swingArm(getHandToAttack());
                 }
             }else{
                 mc.playerController.connection.sendPacket(new CPacketUseEntity(entity));
-                if (swimArm.getValue()) mc.player.swingArm(getHandToBreak());
+                if (swimArm.getValue()) mc.player.swingArm(getHandToAttack());
             }
             if(betterCrit.getValue()){
                 mc.gameSettings.keyBindSneak.pressed = true;
@@ -268,7 +268,7 @@ public class AuraRewrite extends Module {
         }
         if (!hitDelay.getValue()) {
             mc.playerController.attackEntity(mc.player, entity);
-            mc.player.swingArm(getHandToBreak());
+            mc.player.swingArm(getHandToAttack());
         }
         if(betterCrit.getValue()){
             mc.gameSettings.keyBindSneak.pressed = true;
@@ -314,7 +314,7 @@ public class AuraRewrite extends Module {
         SwitchUtils.oldSwitch();
     }
 
-    private EnumHand getHandToBreak() {
+    private EnumHand getHandToAttack() {
         if (breakHand.getValue().equals(Mode.Offhand)) {
             return EnumHand.OFF_HAND;
         }else if(breakHand.getValue().equals(Mode.Both)){

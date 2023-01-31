@@ -73,6 +73,14 @@ public abstract class AbstractModule {
     public void onRender2D() {
     }
 
+    public boolean isConst(){
+        if(mc.getConnection().getNetworkManager().isEncrypted() && mc.world != null){
+            return constant = true;
+        }else{
+            return constant = false;
+        }
+    }
+
     public void enable() {
         this.toggle = true;
         MinecraftForge.EVENT_BUS.register(this);
