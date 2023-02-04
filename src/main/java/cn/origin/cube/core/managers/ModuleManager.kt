@@ -13,6 +13,7 @@ import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal
 import cn.origin.cube.module.modules.combat.Criticals.Criticals
 import cn.origin.cube.module.modules.combat.killaura.AuraRewrite
 import cn.origin.cube.module.modules.function.*
+import cn.origin.cube.module.modules.function.SearchBar.ChestSearchBar
 import cn.origin.cube.module.modules.function.scaffold.Scaffold
 import cn.origin.cube.module.modules.movement.*
 import cn.origin.cube.module.modules.movement.Phase.PhaseWalk
@@ -37,6 +38,7 @@ class ModuleManager {
         registerModule(PacketLogger())
         registerModule(NewClickGui())
         registerModule(Colors())
+        registerModule(Notif())
 
         //Combat
         registerModule(Surround())
@@ -68,6 +70,7 @@ class ModuleManager {
         registerModule(BaritoneClick())
         registerModule(NocomMaster())
         registerModule(AntiEffect());
+        registerModule(ChestSearchBar());
 
         //Movement
         registerModule(Velocity())
