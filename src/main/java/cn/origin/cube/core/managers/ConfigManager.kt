@@ -56,14 +56,6 @@ class ConfigManager {
         }
     }
 
-    //ToDo add plugin system
-    private fun initPlugin(){
-        if(!path.exists()){
-            path.mkdirs()
-        }
-        val plugFile = File(path, "PlugIn")
-    }
-
     private fun initGuis() {
         if (!path.exists()) {
             path.mkdirs()
