@@ -8,7 +8,6 @@ import cn.origin.cube.core.managers.*;
 import cn.origin.cube.guis.HudEditorScreen;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.guis.otheruis.mainmenu.Shaders;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -41,7 +40,7 @@ public class Cube {
     public static Shaders shaders;
     public static ThreadManager threadManager;
     public static PositionManager positionManager;
-    public static cn.origin.cube.utils.client.event.event.EventManager EVENT_BUS = new cn.origin.cube.utils.client.event.event.EventManager();
+    public static cn.origin.cube.core.events.event.event.EventManager EVENT_BUS = new cn.origin.cube.core.events.event.event.EventManager();
 
     public static String commandPrefix = ".";
 

@@ -1,10 +1,9 @@
 package cn.origin.cube.core.module;
 
-import cn.origin.cube.Cube;
 import cn.origin.cube.core.settings.*;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.utils.client.ChatUtil;
-import cn.origin.cube.utils.client.event.event.Parallel;
+import cn.origin.cube.core.events.event.event.Parallel;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 

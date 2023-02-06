@@ -6,8 +6,8 @@ import cn.origin.cube.core.module.interfaces.Constant;
 import cn.origin.cube.core.module.interfaces.ModuleInfo;
 import cn.origin.cube.core.settings.BooleanSetting;
 import cn.origin.cube.core.settings.IntegerSetting;
-import cn.origin.cube.utils.client.event.concurrent.repeat.RepeatUnit;
-import cn.origin.cube.utils.client.event.event.Parallel;
+import cn.origin.cube.core.events.event.concurrent.repeat.RepeatUnit;
+import cn.origin.cube.core.events.event.event.Parallel;
 import net.minecraft.network.play.client.CPacketChatMessage;
 
 import java.io.File;
@@ -19,7 +19,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.*;
 
-import static cn.origin.cube.utils.client.event.concurrent.ConcurrentTaskManager.runRepeat;
+import static cn.origin.cube.core.events.event.concurrent.ConcurrentTaskManager.runRepeat;
 
 @Parallel
 @Constant(constant = false)
