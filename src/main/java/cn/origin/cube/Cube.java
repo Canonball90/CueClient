@@ -63,20 +63,34 @@ public class Cube {
 
     private void loadManagers() throws IOException, FontFormatException {
         fontManager = new FontManager();
+        logger.info("Loaded FontManager");
         friendManager = new FriendManager();
+        logger.info("Loaded FriendManager");
         moduleManager = new ModuleManager();
+        logger.info("Loaded ModuleManager");
         eventManager = new EventManager();
+        logger.info("Loaded EventManager");
         clickGui = new ClickGuiScreen();
+        logger.info("Loaded ClickGuiManager");
         hudEditor = new HudEditorScreen();
+        logger.info("Loaded HudManager");
         configManager = new ConfigManager();
+        logger.info("Loaded ConfigManager");
         trackerManager = new TrackerManager();
+        logger.info("Loaded TrackerManager");
         commandManager = new CommandManager();
+        logger.info("Loaded CommandManager");
         capeManager = new CapeManager();
+        logger.info("Loaded CapeManager");
         shaders = new Shaders();
+        logger.info("Loaded Shaders");
         threadManager = new ThreadManager();
+        logger.info("Loaded ThreadManager");
         positionManager = new PositionManager();
+        logger.info("Loaded PositionManager");
         pluginManager = new PluginManager();
-        logger.info("AntiDump...");
+        logger.info("Loaded PluginManager");
         AntiDumpManager.check();
+        logger.info("AntiDump...");
     }
 }
