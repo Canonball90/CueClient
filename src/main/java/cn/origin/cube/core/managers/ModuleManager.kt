@@ -104,6 +104,7 @@ class ModuleManager {
         registerModule(XRay())
         registerModule(NewChunks())
         registerModule(ChorusViewer())
+        registerModule(JumpCircles())
 
         //World
         registerModule(FakePlayer())

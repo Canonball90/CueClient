@@ -40,7 +40,7 @@ public class Cube {
     public static Shaders shaders;
     public static ThreadManager threadManager;
     public static PositionManager positionManager;
-    public static cn.origin.cube.utils.client.event.event.EventManager eventManager1;
+    public static cn.origin.cube.utils.client.event.event.EventManager EVENT_BUS = new cn.origin.cube.utils.client.event.event.EventManager();
 
     public static String commandPrefix = ".";
 
@@ -55,7 +55,6 @@ public class Cube {
         try {
             logger.info("Loading Cue...");
             loadManagers();
-            MinecraftForge.EVENT_BUS.register(eventManager1);
         } catch (IOException | FontFormatException e) {
             throw new RuntimeException(e);
         }
@@ -75,7 +74,6 @@ public class Cube {
         shaders = new Shaders();
         threadManager = new ThreadManager();
         positionManager = new PositionManager();
-        eventManager1 = new cn.origin.cube.utils.client.event.event.EventManager();
         logger.info("AntiDump...");
         AntiDumpManager.check();
     }
