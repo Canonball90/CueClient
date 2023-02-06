@@ -71,6 +71,7 @@ class ModuleManager {
         registerModule(NocomMaster())
         registerModule(AntiEffect());
         registerModule(ChestSearchBar());
+        registerModule(Spammer());
 
         //Movement
         registerModule(Velocity())

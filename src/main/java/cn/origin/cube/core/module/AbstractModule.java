@@ -1,8 +1,10 @@
 package cn.origin.cube.core.module;
 
+import cn.origin.cube.Cube;
 import cn.origin.cube.core.settings.*;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.utils.client.ChatUtil;
+import cn.origin.cube.utils.client.event.event.Parallel;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -21,6 +23,8 @@ public abstract class AbstractModule {
     public float width;
     public float height;
     public boolean constant;
+    public final Parallel annotation = getClass().getAnnotation(Parallel.class);
+    public final boolean parallelRunnable = annotation != null && annotation.runnable();
 
     public final BindSetting keyBind = new BindSetting("KeyBind", new BindSetting.KeyBind(0), this);
 
@@ -167,5 +171,16 @@ public abstract class AbstractModule {
 
     public String getFullHud() {
         return this.name + (getHudInfo() == null ? "" : ChatUtil.translateAlternateColorCodes(" &8[&r&l" + getHudInfo() + "&8]"));
+    }
+
+    public void reload() {
+        if (toggle) {
+            disable();
+            MinecraftForge.EVENT_BUS.unregister(this);
+            onDisable();
+            enable();
+            MinecraftForge.EVENT_BUS.register(this);
+            onEnable();
+        }
     }
 }
