@@ -85,6 +85,7 @@ class ModuleManager {
         registerModule(ConstFly())
         registerModule(Speed())
         registerModule(PhaseWalk())
+        registerModule(EntityControl())
 
         //Visual
         registerModule(FullBright())

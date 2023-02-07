@@ -581,5 +581,17 @@ public class EntityUtil {
         return MathHelper.sqrt(d0 * d0 + d1 * d1 + d2 * d2);
     }
 
+    public static double getMovementYaw() {
+        float forward = mc.player.movementInput.moveForward > 0.0f ? 1.0f :
+                mc.player.movementInput.moveForward < 0.0f ? -1.0f : 0.0f;
+        float strafe = mc.player.movementInput.moveStrafe > 0.0f ? 1.0f :
+                mc.player.movementInput.moveStrafe < 0.0f ? -1.0f : 0.0f;
 
+        float s = 90.0f * strafe;
+        s *= forward != 0.0f ? forward * 0.5f : 1.0f;
+        float yaw = mc.player.rotationYaw - s;
+        yaw -= forward == -1.0f ? 180.0f : 0.0f;
+
+        return yaw * (Math.PI / 180.0f);
+    }
 }

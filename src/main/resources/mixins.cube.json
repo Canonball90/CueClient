@@ -28,7 +28,9 @@
     "MixinEntityLivingBase",
     "MixinBlock",
     "MixinFontRenderer",
-    "MixinEntity"
+    "MixinEntity",
+    "MixinAbstractHorse",
+    "MixinEntityPig"
   ],
   "mixins": [
     "MixinNetworkManager"

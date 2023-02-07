@@ -276,19 +276,19 @@ public class AuraRewrite extends Module {
         return !(this.mc.player.getDistance(entity) > this.range.getValue().floatValue()) && !entity.isDead && !(((EntityLivingBase)entity).getHealth() <= 0.0f);
     }
 
-    public static enum RenderMode{
+    public enum RenderMode{
         Circle,Box
     }
 
-    public static enum Mode{
+    public enum Mode{
         Offhand,Main,Both
     }
 
-    public static enum Page{
+    public enum Page{
         Target,AntiCheat,Render
     }
 
-    public static enum TargetSortingMode{
+    public enum TargetSortingMode{
         Distance,Health
     }
 
