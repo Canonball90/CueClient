@@ -13,6 +13,9 @@ import cn.origin.cube.module.modules.combat.AutoCrystal.AutoCrystal
 import cn.origin.cube.module.modules.combat.Criticals.Criticals
 import cn.origin.cube.module.modules.combat.killaura.AuraRewrite
 import cn.origin.cube.module.modules.function.*
+import cn.origin.cube.module.modules.function.Chorus.ChorusControl
+import cn.origin.cube.module.modules.function.Chorus.ChorusLag
+import cn.origin.cube.module.modules.function.Chorus.SilentChorus
 import cn.origin.cube.module.modules.function.SearchBar.ChestSearchBar
 import cn.origin.cube.module.modules.function.scaffold.Scaffold
 import cn.origin.cube.module.modules.movement.*
@@ -72,6 +75,7 @@ class ModuleManager {
         registerModule(AntiEffect());
         registerModule(ChestSearchBar());
         registerModule(Spammer());
+        registerModule(ChorusControl());
 
         //Movement
         registerModule(Velocity())

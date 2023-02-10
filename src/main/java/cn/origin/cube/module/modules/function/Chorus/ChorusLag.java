@@ -1,4 +1,4 @@
-package cn.origin.cube.module.modules.function;
+package cn.origin.cube.module.modules.function.Chorus;
 
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.module.Category;

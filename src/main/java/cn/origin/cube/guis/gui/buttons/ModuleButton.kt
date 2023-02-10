@@ -14,6 +14,7 @@ import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.Gui
 import net.minecraft.client.renderer.GlStateManager
 import net.minecraft.util.ResourceLocation
+import org.lwjgl.opengl.GL11
 import java.awt.Color
 
 
@@ -123,10 +124,10 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
         pulse.state = isShowSettings
         GlStateManager.pushMatrix()
         GlStateManager.enableBlend()
-        Minecraft.getMinecraft().textureManager.bindTexture(strem);
         GlStateManager.translate(x + width - 6.7f, y + 7.7f - 0.3f, 0.0f)
         GlStateManager.rotate(calculateRotation(progress), 0.0f, 0.0f, 1.0f)
-        drawModalRect(-5, -5, 0.0f, 0.0f, 10, 10, 10, 10, 10.0f, 10.0f)
+        Minecraft.getMinecraft().textureManager.bindTexture(strem);
+        drawCompleteImage(x, y, father.width.toInt(), father.height.toInt())
         GlStateManager.disableBlend()
         GlStateManager.popMatrix()
 
@@ -225,6 +226,22 @@ class ModuleButton(width: Float, height: Float, panel: CategoryPanel, val father
             var0 += 360.0f
         }
         return var0
+    }
+
+    fun drawCompleteImage(posX: Float, posY: Float, width: Int, height: Int) {
+        GL11.glPushMatrix()
+        GL11.glTranslatef(posX, posY, 0.0f)
+        GL11.glBegin(7)
+        GL11.glTexCoord2f(0.0f, 0.0f)
+        GL11.glVertex3f(0.0f, 0.0f, 0.0f)
+        GL11.glTexCoord2f(0.0f, 1.0f)
+        GL11.glVertex3f(0.0f, height.toFloat(), 0.0f)
+        GL11.glTexCoord2f(1.0f, 1.0f)
+        GL11.glVertex3f(width.toFloat(), height.toFloat(), 0.0f)
+        GL11.glTexCoord2f(1.0f, 0.0f)
+        GL11.glVertex3f(width.toFloat(), 0.0f, 0.0f)
+        GL11.glEnd()
+        GL11.glPopMatrix()
     }
 
 }
