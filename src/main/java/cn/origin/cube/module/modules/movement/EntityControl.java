@@ -14,6 +14,7 @@ import cn.origin.cube.utils.player.EntityUtil;
 import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.entity.passive.AbstractChestHorse;
 import net.minecraft.entity.passive.AbstractHorse;
+import net.minecraft.entity.passive.EntityDonkey;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.network.play.client.CPacketUseEntity;
 import net.minecraft.world.chunk.EmptyChunk;
@@ -31,9 +32,12 @@ public class EntityControl extends Module {
     @SubscribeEvent
     public void onPacketSend(PacketEvent.Send event) {
         if (mountBypass.getValue() && event.getPacket() instanceof CPacketUseEntity && ((CPacketUseEntity) event.getPacket()).getAction() != CPacketUseEntity.Action.INTERACT_AT
-                && ((CPacketUseEntity) event.getPacket()).getEntityFromWorld(mc.world) instanceof AbstractChestHorse) {
+                && ((CPacketUseEntity) event.getPacket()).getEntityFromWorld(mc.world) instanceof AbstractChestHorse || mountBypass.getValue() && event.getPacket() instanceof CPacketUseEntity && ((CPacketUseEntity) event.getPacket()).getAction() != CPacketUseEntity.Action.INTERACT_AT
+                && ((CPacketUseEntity) event.getPacket()).getEntityFromWorld(mc.world) instanceof EntityPig || mountBypass.getValue() && event.getPacket() instanceof CPacketUseEntity && ((CPacketUseEntity) event.getPacket()).getAction() != CPacketUseEntity.Action.INTERACT_AT
+                && ((CPacketUseEntity) event.getPacket()).getEntityFromWorld(mc.world) instanceof EntityDonkey) {
             event.setCanceled(true);
         }
+
     }
 
     @SubscribeEvent
@@ -59,6 +63,9 @@ public class EntityControl extends Module {
                     }else if(mc.player.ridingEntity instanceof AbstractHorse){
                         motionX = -Math.sin(EntityUtil.getMovementYaw()) * 0.6;
                         motionZ = Math.cos(EntityUtil.getMovementYaw()) * 0.6;
+                    }else if (mc.player.ridingEntity instanceof EntityBoat){
+                        motionX = -Math.sin(EntityUtil.getMovementYaw()) * 0.2;
+                        motionZ = Math.cos(EntityUtil.getMovementYaw()) * 0.2;
                     }else{
                         motionX = -Math.sin(EntityUtil.getMovementYaw()) * 1.2;
                         motionZ = Math.cos(EntityUtil.getMovementYaw()) * 1.2;
