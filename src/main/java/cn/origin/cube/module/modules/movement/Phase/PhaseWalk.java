@@ -29,6 +29,7 @@ import org.lwjgl.input.Keyboard;
 @ModuleInfo(name = "PhaseWalk", descriptions = "", category = Category.MOVEMENT)
 public class PhaseWalk extends Module {
 
+    BooleanSetting ccbypass = this.registerSetting("CCBypass", false);
     BooleanSetting fallPacket = this.registerSetting("FallPacket", true);
     BooleanSetting instantWalk = this.registerSetting("InstantWalk", true);
     DoubleSetting instantWalkSpeed = this.registerSetting("InstantWalkSpeed", 18.0, 10.0, 19.0).booleanVisible(instantWalk);
