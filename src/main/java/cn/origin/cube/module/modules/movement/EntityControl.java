@@ -46,9 +46,24 @@ public class EntityControl extends Module {
         if (mc.world != null && mc.player != null && mc.player.ridingEntity != null) {
             if ((mc.player.ridingEntity instanceof EntityPig || mc.player.ridingEntity instanceof AbstractHorse || mc.player.ridingEntity instanceof EntityBoat)
                     && mc.player.ridingEntity.getControllingPassenger() == mc.player) {
+                double motionX;
+                double motionZ;
 
-                double motionX = -Math.sin(EntityUtil.getMovementYaw()) * speed.getValue();
-                double motionZ = Math.cos(EntityUtil.getMovementYaw()) * speed.getValue();
+                if(speedModify.getValue()){
+                    motionX = -Math.sin(EntityUtil.getMovementYaw()) * speed.getValue();
+                    motionZ = Math.cos(EntityUtil.getMovementYaw()) * speed.getValue();
+                }else{
+                    if(mc.player.ridingEntity instanceof EntityPig){
+                        motionX = -Math.sin(EntityUtil.getMovementYaw()) * 0.3;
+                        motionZ = Math.cos(EntityUtil.getMovementYaw()) * 0.3;
+                    }else if(mc.player.ridingEntity instanceof AbstractHorse){
+                        motionX = -Math.sin(EntityUtil.getMovementYaw()) * 0.6;
+                        motionZ = Math.cos(EntityUtil.getMovementYaw()) * 0.6;
+                    }else{
+                        motionX = -Math.sin(EntityUtil.getMovementYaw()) * 1.2;
+                        motionZ = Math.cos(EntityUtil.getMovementYaw()) * 1.2;
+                    }
+                }
 
                 if ((mc.player.movementInput.moveForward != 0.0f || mc.player.movementInput.moveStrafe != 0.0f)
                         && mc.world.getChunk((int)(mc.player.ridingEntity.posX + motionX), (int)(mc.player.ridingEntity.posZ + motionZ)) instanceof EmptyChunk) {
