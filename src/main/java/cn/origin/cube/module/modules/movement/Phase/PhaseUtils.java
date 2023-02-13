@@ -5,11 +5,15 @@ import cn.origin.cube.utils.player.MovementUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.math.Vec3d;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import static cn.origin.cube.core.module.AbstractModule.mc;
 
 public class PhaseUtils {
 
+    @NotNull
+    @Contract("_ -> new")
     public static double[] getMotion(double speed) {
         float moveForward = mc.player.movementInput.moveForward;
         float moveStrafe = mc.player.movementInput.moveStrafe;
