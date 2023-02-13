@@ -77,6 +77,9 @@ class ModuleButton(width: Float, height: Float, panel: CategoryFrame, val father
         colourAnimation.state = father.isEnabled
         Render2DUtil.drawRect(x,y,width,height,hover.getColour().rgb)
         Render2DUtil.drawLine(x + width - 5,y + 2,x+width-5,y+height - 2, 5F, colourAnimation.getColour().rgb)
+        if(isHoveredButton(mouseX,mouseY)){
+            Render2DUtil.drawGlow(x.toDouble()+4,y.toDouble(), x.toDouble()+Cube.fontManager.CustomFont.getStringWidth(father.name),y.toDouble()+height,Colors.getClickGuiColor().rgb)
+        }
 
         if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {
             Render2DUtil.drawLine(x.toDouble(),y+this.height.toDouble(),x + this.width.toDouble(),y+this.height.toDouble(),3F, Color(33,33,33))
