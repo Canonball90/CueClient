@@ -71,7 +71,7 @@ public class PhaseUtils {
             mc.player.setPosition(mc.player.posX, mc.player.posY += 1.0e-9, mc.player.posZ);
     }
 
-    private static void send(Vec3d vec) {
+    private static void send(@NotNull Vec3d vec) {
         ((INetworkManager) mc.player.connection.getNetworkManager()).hookDispatchPacket(new CPacketPlayer.PositionRotation(vec.x, vec.y, vec.z,PhaseWalk.mc.player.rotationYaw * -5.0f, PhaseWalk.mc.player.rotationPitch * -5.0f, true), null);
     }
 }

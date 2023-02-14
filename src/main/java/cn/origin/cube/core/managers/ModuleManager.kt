@@ -16,6 +16,7 @@ import cn.origin.cube.module.modules.function.*
 import cn.origin.cube.module.modules.function.Chorus.ChorusControl
 import cn.origin.cube.module.modules.function.Chorus.ChorusLag
 import cn.origin.cube.module.modules.function.Chorus.SilentChorus
+import cn.origin.cube.module.modules.function.Inv.InvManager
 import cn.origin.cube.module.modules.function.SearchBar.ChestSearchBar
 import cn.origin.cube.module.modules.function.scaffold.Scaffold
 import cn.origin.cube.module.modules.movement.*
@@ -76,6 +77,7 @@ class ModuleManager {
         registerModule(ChestSearchBar());
         registerModule(Spammer());
         registerModule(ChorusControl());
+        registerModule(InvManager());
 
         //Movement
         registerModule(Velocity())

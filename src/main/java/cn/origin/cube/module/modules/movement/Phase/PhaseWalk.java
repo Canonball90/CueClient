@@ -147,7 +147,7 @@ public class PhaseWalk extends Module {
     }
 
     @SubscribeEvent
-    public void onRightClickBlockEvent (ProcessRightClickBlockEvent event) {
+    public void onRightClickBlockEvent(ProcessRightClickBlockEvent event) {
         if (fullNullCheck()) {
             return;
         }
