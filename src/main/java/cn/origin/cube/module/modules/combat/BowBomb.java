@@ -64,25 +64,25 @@ public class BowBomb extends Module {
 
             double[] strict_direction = new double[]{ 100f * -Math.sin(Math.toRadians(mc.player.rotationYaw)),100f * Math.cos(Math.toRadians(mc.player.rotationYaw))};
 
-            if(exploit.getValue() == exploitEn.Fast){
+            if(exploit.getValue().equals(exploitEn.Fast)){
                 for (int i = 0; i < getRuns(); i++) {
                     spoof(mc.player.posX,  minimize.getValue() ? mc.player.posY : mc.player.posY - 1e-10, mc.player.posZ, true);
                     spoof(mc.player.posX, mc.player.posY + 1e-10, mc.player.posZ, false);
                 }
             }
-            if(exploit.getValue() == exploitEn.Strong){
+            if(exploit.getValue().equals(exploitEn.Strong)){
                 for (int i = 0; i < getRuns(); i++) {
                     spoof(mc.player.posX, mc.player.posY + 1e-10, mc.player.posZ, false);
                     spoof(mc.player.posX, minimize.getValue() ? mc.player.posY : mc.player.posY - 1e-10, mc.player.posZ, true);
                 }
             }
-            if(exploit.getValue() == exploitEn.Phobos){
+            if(exploit.getValue().equals(exploitEn.Phobos)){
                 for (int i = 0; i < getRuns(); i++) {
                     spoof(mc.player.posX, mc.player.posY + 0.00000000000013, mc.player.posZ, true);
                     spoof(mc.player.posX, mc.player.posY + 0.00000000000027, mc.player.posZ,  false);
                 }
             }
-            if(exploit.getValue() == exploitEn.Strict){
+            if(exploit.getValue().equals(exploitEn.Strict)){
                 for (int i = 0; i < getRuns(); i++) {
                     if(rnd.nextBoolean()){
                         spoof(mc.player.posX - strict_direction[0], mc.player.posY, mc.player.posZ - strict_direction[1], false);
@@ -105,13 +105,13 @@ public class BowBomb extends Module {
     }
 
     private int getRuns(){
-        if(Mode.getValue() == ModeEn.Factorised){
+        if(Mode.getValue().equals(ModeEn.Factorised)){
             return 10 + (int)((factor.getValue() - 1));
         }
-        if(Mode.getValue() == ModeEn.Normal){
+        if(Mode.getValue().equals(ModeEn.Normal)){
             return (int) Math.floor(factor.getValue());
         }
-        if(Mode.getValue() == ModeEn.Maximum){
+        if(Mode.getValue().equals(ModeEn.Maximum) ){
             return (int) (30f * factor.getValue());
         }
         return  1;
