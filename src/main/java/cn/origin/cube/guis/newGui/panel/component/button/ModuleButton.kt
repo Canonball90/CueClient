@@ -79,7 +79,7 @@ class ModuleButton(width: Float, height: Float, panel: CategoryFrame, val father
         Render2DUtil.drawLine(x + width - 5,y + 2,x+width-5,y+height - 2, 5F, colourAnimation.getColour().rgb)
 
         if(isHoveredButton(mouseX,mouseY)){
-            Render2DUtil.drawGlow(x.toDouble()+6,y.toDouble(), x.toDouble()+Cube.fontManager.CustomFont.getStringWidth(father.name),y.toDouble()+height, Color(Colors.getClickGuiColor().red,Colors.getClickGuiColor().green,Colors.getClickGuiColor().blue,170).rgb)
+            Render2DUtil.drawGlow(x.toDouble()+6,y.toDouble(), x.toDouble()+Cube.fontManager.CustomFont.getStringWidth(father.name),y.toDouble()+height, Color(Colors.getClickGuiColor().red,Colors.getClickGuiColor().green,Colors.getClickGuiColor().blue,150).rgb)
         }
 
         if (panelFather.modules.indexOf(this) == panelFather.modules.size - 1) {

@@ -3,6 +3,9 @@ package cn.origin.cube.module.modules.client
 import cn.origin.cube.core.settings.BooleanSetting
 import cn.origin.cube.core.settings.DoubleSetting
 import cn.origin.cube.core.events.client.PacketEvent
+import cn.origin.cube.core.events.player.ProcessRightClickBlockEvent
+import cn.origin.cube.core.events.player.TravelEvent
+import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.Module
 import cn.origin.cube.core.module.interfaces.Constant
@@ -22,6 +25,9 @@ class PacketLogger: Module() {
     private var outgoing: BooleanSetting = registerSetting("OutGoing", false)
     var delay: BooleanSetting = registerSetting("Delay", true)
     private var delayS: DoubleSetting = registerSetting("Delay", 5.0, 0.0, 1000.0)
+    private var travel: BooleanSetting = registerSetting("Travel", false)
+    private var processClick: BooleanSetting = registerSetting("Travel", false)
+    private var upadtewalk: BooleanSetting = registerSetting("Travel", false)
 
     var timer: Timer = Timer()
 
@@ -37,6 +43,27 @@ class PacketLogger: Module() {
             }else{
                 ChatUtil.sendMessage(event.getPacket<Packet<*>>().toString())
             }
+        }
+    }
+
+    @SubscribeEvent
+    fun onTravel(event: TravelEvent){
+        if(travel.value){
+            ChatUtil.sendMessage(event.result.toString() + "[" + event.phase.toString() + "]")
+        }
+    }
+
+    @SubscribeEvent
+    fun onCick(event: ProcessRightClickBlockEvent){
+        if(processClick.value){
+            ChatUtil.sendMessage(event.pos.toString() + "[" + event.hand.toString() + "]")
+        }
+    }
+
+    @SubscribeEvent
+    fun Onwalk(event: UpdateWalkingPlayerEvent){
+        if(travel.value){
+            ChatUtil.sendMessage(event.result.toString() + "[" + event.phase.toString() + "]")
         }
     }
 
