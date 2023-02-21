@@ -6,6 +6,7 @@ import cn.origin.cube.core.managers.FontManager;
 import cn.origin.cube.core.managers.ModuleManager;
 import cn.origin.cube.core.managers.*;
 import cn.origin.cube.guis.HudEditorScreen;
+import cn.origin.cube.guis.alt.manage.AltManager;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.guis.otheruis.mainmenu.Shaders;
 import net.minecraftforge.fml.common.Mod;
@@ -36,6 +37,7 @@ public class Cube {
     public static CommandManager commandManager = null;
     public static CapeManager capeManager = null;
     public static TrackerManager trackerManager = null;
+    public static AltManager altManager;
     public static Shaders shaders;
     public static ThreadManager threadManager;
     public static PositionManager positionManager;
@@ -88,5 +90,6 @@ public class Cube {
         logger.info("Loaded PositionManager");
         AntiDumpManager.check();
         logger.info("AntiDump...");
+        altManager.init();
     }
 }

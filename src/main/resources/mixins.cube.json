@@ -30,7 +30,9 @@
     "MixinFontRenderer",
     "MixinEntity",
     "MixinAbstractHorse",
-    "MixinEntityPig"
+    "MixinEntityPig",
+    "MixinGuiMultiplayer",
+    "MixinGuiScreen"
   ],
   "mixins": [
     "MixinNetworkManager"

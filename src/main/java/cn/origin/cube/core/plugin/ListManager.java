@@ -47,5 +47,11 @@ extends Manager<T> {
     public boolean has(T type) {
         return this.getList().contains(type);
     }
+
+    private final List<T> contents = new ArrayList<>();
+
+    public List<T> getContents() {
+        return contents;
+    }
 }
 
