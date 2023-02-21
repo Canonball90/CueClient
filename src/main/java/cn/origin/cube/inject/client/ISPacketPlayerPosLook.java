@@ -18,4 +18,13 @@ public interface ISPacketPlayerPosLook {
 
     @Accessor("pitch")
     float getPitch();
+
+    @Accessor("x")
+    void setX(double d0);
+
+    @Accessor("y")
+    void setY(double d0);
+
+    @Accessor("z")
+    void setZ(double d0);
 }

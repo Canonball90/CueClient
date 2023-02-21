@@ -90,6 +90,5 @@ public class Cube {
         logger.info("Loaded PositionManager");
         AntiDumpManager.check();
         logger.info("AntiDump...");
-        altManager.init();
     }
 }
