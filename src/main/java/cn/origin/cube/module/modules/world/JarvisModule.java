@@ -7,4 +7,5 @@ import cn.origin.cube.core.module.interfaces.ModuleInfo;
 @ModuleInfo(name = "Jarvis", descriptions = ",",category = Category.WORLD)
 public class JarvisModule extends Module {
 
+
 }
