@@ -182,15 +182,7 @@ public class AuraRewrite extends Module {
             }
             if(rMode.getValue().equals(RenderMode.Box)) {
                 AxisAlignedBB box = target.getRenderBoundingBox().offset(-mc.getRenderManager().viewerPosX, -mc.getRenderManager().viewerPosY, -mc.getRenderManager().viewerPosZ);
-                Render3DUtil.drawBox(new RenderBuilder()
-                        .position(box)
-                        .color(new Color(Colors.getGlobalColor().getRGB()))
-                        .box(RenderBuilder.Box.FILL)
-                        .setup()
-                        .depth(true)
-                        .height(lineWidth.getValue())
-                        .blend()
-                        .texture());
+                Render3DUtil.drawBlock(box, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue(),130));
             }
         }
     }

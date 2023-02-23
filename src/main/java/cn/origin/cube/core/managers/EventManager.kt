@@ -15,9 +15,11 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent
 import net.minecraftforge.client.event.RenderWorldLastEvent
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.eventhandler.Event
+import net.minecraftforge.fml.common.eventhandler.EventPriority
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.InputEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
+import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientConnectedToServerEvent
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientDisconnectionFromServerEvent
 import org.lwjgl.input.Keyboard
@@ -45,8 +47,8 @@ class EventManager {
         }
     }
 
-    @SubscribeEvent
-    fun onTick(event: ClientTickEvent) {
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    fun onTick(event: RenderTickEvent) {
         if (Utils.nullCheck()) return
         Cube.moduleManager!!.onUpdate()
         mc.world.playerEntities.stream().filter { player -> player != null && player.getHealth() <= 0.0f }

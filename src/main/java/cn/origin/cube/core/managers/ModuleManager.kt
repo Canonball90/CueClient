@@ -113,6 +113,7 @@ class ModuleManager {
         registerModule(NewChunks())
         registerModule(ChorusViewer())
         registerModule(JumpCircles())
+        registerModule(Trajectories())
 
         //World
         registerModule(FakePlayer())
@@ -127,6 +128,7 @@ class ModuleManager {
         registerModule(AutoRacist())
         registerModule(Singing())
         registerModule(PopLag())
+        registerModule(Disabler())
 
         //Hud
         registerModule(WaterMark())

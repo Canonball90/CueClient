@@ -44,6 +44,21 @@ public class Render3DUtil extends Tessellator {
         releaseGL();
     }
 
+    public static void prepare() {
+        GL11.glBlendFunc((int)770, (int)771);
+        GlStateManager.tryBlendFuncSeparate((GlStateManager.SourceFactor)GlStateManager.SourceFactor.SRC_ALPHA, (GlStateManager.DestFactor)GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, (GlStateManager.SourceFactor)GlStateManager.SourceFactor.ONE, (GlStateManager.DestFactor)GlStateManager.DestFactor.ZERO);
+        GlStateManager.glLineWidth((float)1.0f);
+        GlStateManager.disableTexture2D();
+        GlStateManager.depthMask((boolean)false);
+        GlStateManager.enableBlend();
+        GlStateManager.disableDepth();
+        GlStateManager.disableLighting();
+        GlStateManager.disableCull();
+        GlStateManager.disableAlpha();
+        GlStateManager.color((float)1.0f, (float)1.0f, (float)1.0f);
+    }
+
+
     public static void render() {
         INSTANCE.draw();
     }
@@ -673,6 +688,51 @@ public class Render3DUtil extends Tessellator {
         bufferBuilder.pos(maxX, maxY - 0.2, minZ).color(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()).endVertex();
         bufferBuilder.pos(maxX, maxY, maxZ).color(color.getRed(), color.getGreen(), color.getBlue(), 0).endVertex();
         bufferBuilder.pos(maxX, maxY - 0.2, maxZ).color(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()).endVertex();
+    }
+
+    public static void releaseq() {
+        GlStateManager.enableAlpha();
+        GlStateManager.enableCull();
+        GlStateManager.depthMask((boolean)true);
+        GlStateManager.enableTexture2D();
+        GlStateManager.enableBlend();
+        GlStateManager.enableDepth();
+        GlStateManager.color((float)1.0f, (float)1.0f, (float)1.0f);
+        GL11.glColor4f((float)1.0f, (float)1.0f, (float)1.0f, (float)1.0f);
+    }
+
+
+    public static void drawBlock(BlockPos position, Color color) {
+        drawBlock(getRenderBB((Object)position), color);
+    }
+
+    public static void drawBlock(AxisAlignedBB bb, Color color) {
+        camera.setPosition(Objects.requireNonNull(Render3DUtil.mc.getRenderViewEntity()).posX, Render3DUtil.mc.getRenderViewEntity().posY, Render3DUtil.mc.getRenderViewEntity().posZ);
+        if (camera.isBoundingBoxInFrustum(new AxisAlignedBB(bb.minX + Render3DUtil.mc.getRenderManager().viewerPosX, bb.minY + Render3DUtil.mc.getRenderManager().viewerPosY, bb.minZ + Render3DUtil.mc.getRenderManager().viewerPosZ, bb.maxX + Render3DUtil.mc.getRenderManager().viewerPosX, bb.maxY + Render3DUtil.mc.getRenderManager().viewerPosY, bb.maxZ + Render3DUtil.mc.getRenderManager().viewerPosZ))) {
+            prepareGL();
+            RenderGlobal.renderFilledBox((AxisAlignedBB)bb, (float)((float)color.getRed() / 255.0f), (float)((float)color.getGreen() / 255.0f), (float)((float)color.getBlue() / 255.0f), (float)((float)color.getAlpha() / 255.0f));
+            Render3DUtil.releaseq();
+        }
+    }
+
+    public static void drawRect(float x, float y, float width, float height, Color color) {
+        Tessellator tessellator = Tessellator.getInstance();
+        BufferBuilder bufferBuilder = tessellator.getBuffer();
+        GlStateManager.enableBlend();
+        GlStateManager.disableTexture2D();
+        GlStateManager.tryBlendFuncSeparate((int)770, (int)771, (int)1, (int)0);
+        bufferBuilder.begin(7, DefaultVertexFormats.POSITION_COLOR);
+        bufferBuilder.pos((double)x, (double)height, 0.0).color(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()).endVertex();
+        bufferBuilder.pos((double)width, (double)height, 0.0).color(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()).endVertex();
+        bufferBuilder.pos((double)width, (double)y, 0.0).color(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()).endVertex();
+        bufferBuilder.pos((double)x, (double)y, 0.0).color(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()).endVertex();
+        tessellator.draw();
+        GlStateManager.enableTexture2D();
+        GlStateManager.disableBlend();
+    }
+
+    public static void glColor4f(Color color) {
+        GL11.glColor4f((float)((float)color.getRed() / 255.0f), (float)((float)color.getGreen() / 255.0f), (float)((float)color.getBlue() / 255.0f), (float)((float)color.getAlpha() / 255.0f));
     }
 
 }
