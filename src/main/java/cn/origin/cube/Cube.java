@@ -17,9 +17,17 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
+import vazkii.minetunes.config.MTConfig;
+import vazkii.minetunes.key.KeyBindings;
+import vazkii.minetunes.player.HUDHandler;
+import vazkii.minetunes.player.ThreadMusicPlayer;
+import vazkii.minetunes.playlist.PlaylistList;
+import vazkii.minetunes.playlist.ThreadPlaylistCreator;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.lang.management.ManagementFactory;
 
 @Mod(modid = Cube.MOD_ID, name = Cube.MOD_NAME, version = Cube.MOD_VERSION)
 public class Cube {
@@ -45,6 +53,11 @@ public class Cube {
     public static PositionManager positionManager;
     public static cn.origin.cube.core.events.event.event.EventManager EVENT_BUS = new cn.origin.cube.core.events.event.event.EventManager();
 
+    public static boolean DEBUG_MODE = ManagementFactory.getRuntimeMXBean().getInputArguments().toString().indexOf("-agentlib:jdwp") > 0;
+
+    public volatile static ThreadMusicPlayer musicPlayerThread;
+    public volatile static ThreadPlaylistCreator playlistCreatorThread;
+
     public static String commandPrefix = ".";
 
     @Mod.EventHandler
@@ -52,6 +65,12 @@ public class Cube {
         logger.info("Begin loading Cue");
         Display.setTitle(MOD_NAME + " | " + MOD_VERSION);
         Discord.startRPC();
+        KeyBindings.init();
+
+        MinecraftForge.EVENT_BUS.register(new HUDHandler());
+
+        MTConfig.findCompoundAndLoad();
+        PlaylistList.findCompoundAndLoad();
     }
 
     @Mod.EventHandler
@@ -94,6 +113,14 @@ public class Cube {
         logger.info("Loaded PositionManager");
         AntiDumpManager.check();
         logger.info("AntiDump...");
+    }
+
+    public static void startMusicPlayerThread() {
+        musicPlayerThread = new ThreadMusicPlayer();
+    }
+
+    public static void startPlaylistCreatorThread(File file, String name) {
+        playlistCreatorThread = new ThreadPlaylistCreator(file, name);
     }
 
     public static void onShutdown() {
