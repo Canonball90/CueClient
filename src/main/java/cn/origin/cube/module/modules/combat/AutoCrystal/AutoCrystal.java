@@ -41,6 +41,7 @@ import net.minecraft.potion.*;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import net.minecraft.world.*;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
@@ -151,8 +152,8 @@ public class AutoCrystal extends Module {
     private int breaks;
     private Rotation rotateAngles;
 
-    @SubscribeEvent
-    public void onTick(TickEvent.ClientTickEvent event) {
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void onTick(TickEvent.RenderTickEvent event) {
         if(fullNullCheck())return;
         if(stopWhenEating.getValue() && isEating() || stopWhenMining.getValue() && isMining()) return;
         doLogic();

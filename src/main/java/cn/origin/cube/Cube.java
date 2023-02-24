@@ -8,7 +8,9 @@ import cn.origin.cube.core.managers.*;
 import cn.origin.cube.guis.HudEditorScreen;
 import cn.origin.cube.guis.alt.manage.AltManager;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
+import cn.origin.cube.guis.mainmenu.onGuiOpenEvent;
 import cn.origin.cube.guis.otheruis.mainmenu.Shaders;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -49,6 +51,7 @@ public class Cube {
     public void preInit(FMLPreInitializationEvent event) {
         logger.info("Begin loading Cue");
         Display.setTitle(MOD_NAME + " | " + MOD_VERSION);
+        Discord.startRPC();
     }
 
     @Mod.EventHandler
@@ -56,6 +59,7 @@ public class Cube {
         try {
             logger.info("Loading Cue...");
             loadManagers();
+            MinecraftForge.EVENT_BUS.register(new onGuiOpenEvent());
         } catch (IOException | FontFormatException e) {
             throw new RuntimeException(e);
         }
@@ -90,5 +94,9 @@ public class Cube {
         logger.info("Loaded PositionManager");
         AntiDumpManager.check();
         logger.info("AntiDump...");
+    }
+
+    public static void onShutdown() {
+        Discord.stopRPC();
     }
 }

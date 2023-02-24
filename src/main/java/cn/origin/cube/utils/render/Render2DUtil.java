@@ -1,13 +1,16 @@
 package cn.origin.cube.utils.render;
 
+import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 
+import static cn.origin.cube.utils.render.Render3DUtil.mc;
 import static cn.origin.cube.utils.render.RenderUtil.tessellator;
 import static org.lwjgl.opengl.GL11.*;
 import static sun.swing.SwingUtilities2.drawVLine;
@@ -324,5 +327,167 @@ public class Render2DUtil {
         GlStateManager.enableTexture2D();
     }
 
+    public static void rect(double x, double y, double width, double height, Color color) {
+        GL11.glEnable((int) 3042);
+        GL11.glBlendFunc((int) 770, (int) 771);
+        GL11.glDisable((int) 3553);
+        GL11.glDisable((int) 2884);
+        GlStateManager.disableAlpha();
+        GlStateManager.disableDepth();
+        if (color != null) {
+            color(color);
+        }
+        GL11.glBegin((int) 6);
+        GL11.glVertex2d((double) x, (double) y);
+        GL11.glVertex2d((double) (x + width), (double) y);
+        GL11.glVertex2d((double) (x + width), (double) (y + height));
+        GL11.glVertex2d((double) x, (double) (y + height));
+        GL11.glEnd();
+        GlStateManager.enableAlpha();
+        GlStateManager.enableDepth();
+        GL11.glEnable((int) 2884);
+        GL11.glEnable((int) 3553);
+        GL11.glDisable((int) 3042);
+        color(Color.white);
+    }
 
+    public static void drawImage(int x, int y, int w, int h, int color, String location) {
+        if (color == 0) {
+            GlStateManager.color((float) 1.0f, (float) 1.0f, (float) 1.0f);
+        } else {
+            Render2DUtil.color(new Color(color));
+        }
+        ResourceLocation resourceLocation = new ResourceLocation(location);
+        mc.getTextureManager().bindTexture(resourceLocation);
+        GlStateManager.enableBlend();
+        GL11.glTexParameteri((int) 3553, (int) 10240, (int) 9729);
+        Gui.drawModalRectWithCustomSizedTexture((int) x, (int) y, (float) 0.0f, (float) 0.0f, (int) w, (int) h, (float) w, (float) h);
+        GlStateManager.disableBlend();
+    }
+
+    public static void color(Color color) {
+        if (color == null) {
+            color = Color.white;
+        }
+        GL11.glColor4d((double) ((float) color.getRed() / 255.0f), (double) ((float) color.getGreen() / 255.0f), (double) ((float) color.getBlue() / 255.0f), (double) ((float) color.getAlpha() / 255.0f));
+    }
+
+    public static boolean isHovered(int X, int Y, int W, int H, int mX, int mY) {
+        return mX >= X && mX <= X + W && mY >= Y && mY <= Y + H;
+    }
+
+    public static void roundedRect(double x, double y, double width, double height, double edgeRadius, Color color) {
+        double angle;
+        double i;
+        double halfRadius = edgeRadius / 2.0;
+        width -= halfRadius;
+        height -= halfRadius;
+        float sideLength = (float) edgeRadius;
+        sideLength /= 2.0f;
+        GL11.glEnable((int) 3042);
+        GL11.glBlendFunc((int) 770, (int) 771);
+        GL11.glDisable((int) 3553);
+        GL11.glDisable((int) 2884);
+        GlStateManager.disableAlpha();
+        GlStateManager.disableDepth();
+        if (color != null) {
+            color(color);
+        }
+        GL11.glBegin((int) 6);
+        for (i = 180.0; i <= 270.0; i += 1.0) {
+            angle = i * (Math.PI * 2) / 360.0;
+            GL11.glVertex2d((double) (x + (double) sideLength * Math.cos(angle) + (double) sideLength), (double) (y + (double) sideLength * Math.sin(angle) + (double) sideLength));
+        }
+        GL11.glVertex2d((double) (x + (double) sideLength), (double) (y + (double) sideLength));
+        GL11.glEnd();
+        GlStateManager.enableAlpha();
+        GlStateManager.enableDepth();
+        GL11.glEnable((int) 2884);
+        GL11.glEnable((int) 3553);
+        GL11.glDisable((int) 3042);
+        color(Color.white);
+        sideLength = (float) edgeRadius;
+        sideLength /= 2.0f;
+        GL11.glEnable((int) 3042);
+        GL11.glBlendFunc((int) 770, (int) 771);
+        GL11.glDisable((int) 3553);
+        GL11.glDisable((int) 2884);
+        GlStateManager.disableAlpha();
+        GlStateManager.disableDepth();
+        if (color != null) {
+            color(color);
+        }
+        GL11.glEnable((int) 2848);
+        GL11.glBegin((int) 6);
+        for (i = 0.0; i <= 90.0; i += 1.0) {
+            angle = i * (Math.PI * 2) / 360.0;
+            GL11.glVertex2d((double) (x + width + (double) sideLength * Math.cos(angle)), (double) (y + height + (double) sideLength * Math.sin(angle)));
+        }
+        GL11.glVertex2d((double) (x + width), (double) (y + height));
+        GL11.glEnd();
+        GL11.glDisable((int) 2848);
+        GlStateManager.enableAlpha();
+        GlStateManager.enableDepth();
+        GL11.glEnable((int) 2884);
+        GL11.glEnable((int) 3553);
+        GL11.glDisable((int) 3042);
+        color(Color.white);
+        sideLength = (float) edgeRadius;
+        sideLength /= 2.0f;
+        GL11.glEnable((int) 3042);
+        GL11.glBlendFunc((int) 770, (int) 771);
+        GL11.glDisable((int) 3553);
+        GL11.glDisable((int) 2884);
+        GlStateManager.disableAlpha();
+        GlStateManager.disableDepth();
+        if (color != null) {
+            color(color);
+        }
+        GL11.glEnable((int) 2848);
+        GL11.glBegin((int) 6);
+        for (i = 270.0; i <= 360.0; i += 1.0) {
+            angle = i * (Math.PI * 2) / 360.0;
+            GL11.glVertex2d((double) (x + width + (double) sideLength * Math.cos(angle)), (double) (y + (double) sideLength * Math.sin(angle) + (double) sideLength));
+        }
+        GL11.glVertex2d((double) (x + width), (double) (y + (double) sideLength));
+        GL11.glEnd();
+        GL11.glDisable((int) 2848);
+        GlStateManager.enableAlpha();
+        GlStateManager.enableDepth();
+        GL11.glEnable((int) 2884);
+        GL11.glEnable((int) 3553);
+        GL11.glDisable((int) 3042);
+        color(Color.white);
+        sideLength = (float) edgeRadius;
+        sideLength /= 2.0f;
+        GL11.glEnable((int) 3042);
+        GL11.glBlendFunc((int) 770, (int) 771);
+        GL11.glDisable((int) 3553);
+        GL11.glDisable((int) 2884);
+        GlStateManager.disableAlpha();
+        GlStateManager.disableDepth();
+        if (color != null) {
+            color(color);
+        }
+        GL11.glEnable((int) 2848);
+        GL11.glBegin((int) 6);
+        for (i = 90.0; i <= 180.0; i += 1.0) {
+            angle = i * (Math.PI * 2) / 360.0;
+            GL11.glVertex2d((double) (x + (double) sideLength * Math.cos(angle) + (double) sideLength), (double) (y + height + (double) sideLength * Math.sin(angle)));
+        }
+        GL11.glVertex2d((double) (x + (double) sideLength), (double) (y + height));
+        GL11.glEnd();
+        GL11.glDisable((int) 2848);
+        GlStateManager.enableAlpha();
+        GlStateManager.enableDepth();
+        GL11.glEnable((int) 2884);
+        GL11.glEnable((int) 3553);
+        GL11.glDisable((int) 3042);
+        color(Color.white);
+        rect(x + halfRadius, y + halfRadius, width - halfRadius, height - halfRadius, color);
+        rect(x, y + halfRadius, edgeRadius / 2.0, height - halfRadius, color);
+        rect(x + width, y + halfRadius, edgeRadius / 2.0, height - halfRadius, color);
+        rect(x + halfRadius, y, width - halfRadius, halfRadius, color);
+        rect(x + halfRadius, y + height, width - halfRadius, halfRadius, color);
+    }
 }
