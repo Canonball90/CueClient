@@ -32,7 +32,8 @@
     "MixinAbstractHorse",
     "MixinEntityPig",
     "MixinGuiMultiplayer",
-    "MixinGuiScreen"
+    "MixinGuiScreen",
+    "IEntityPlayerSP"
   ],
   "mixins": [
     "MixinNetworkManager"

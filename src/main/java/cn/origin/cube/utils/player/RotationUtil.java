@@ -44,4 +44,27 @@ public class RotationUtil {
         return new float[] {(float) yaw, (float) pitch};
     }
 
+    public static int getDirection4D() {
+        return MathHelper.floor(RotationUtil.mc.player.rotationYaw * 4.0f / 360.0f + 0.5) & 0x3;
+    }
+
+
+    public static String getDirection4D(final boolean b) {
+        final int direction4D = getDirection4D();
+        if (direction4D == 0) {
+            return "South (+Z)";
+        }
+        if (direction4D == 1) {
+            return "West (-X)";
+        }
+        if (direction4D == 2) {
+            return String.valueOf(new StringBuilder().append(b ? "§c" : "").append("North (-Z)"));
+        }
+        if (direction4D == 3) {
+            return "East (+X)";
+        }
+        return "Loading...";
+    }
+
+
 }

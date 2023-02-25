@@ -55,7 +55,7 @@ class ModuleManager {
         registerModule(Criticals())
         registerModule(AutoCrystal())
         registerModule(AuraRewrite())
-        registerModule(BowBomb())
+        //registerModule(BowBomb())
         registerModule(cn.origin.cube.module.modules.combat.newAutoCrystal.AutoCrystal())
 
         //Function
@@ -129,6 +129,7 @@ class ModuleManager {
         registerModule(Singing())
         registerModule(PopLag())
         registerModule(Disabler())
+        registerModule(AntiHunger())
 
         //Hud
         registerModule(WaterMark())

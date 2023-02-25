@@ -109,4 +109,12 @@ public class MathUtil {
     public static double add(double Num1, double Num2){
         return Num1+Num2;
     }
+
+    public static float[] calcAngle(final Vec3d vec3d, final Vec3d vec3d2) {
+        final double x = vec3d2.x - vec3d.x;
+        final double y = (vec3d2.y - vec3d.y) * -1.0;
+        final double y2 = vec3d2.z - vec3d.z;
+        return new float[] { (float)MathHelper.wrapDegrees(Math.toDegrees(Math.atan2(y2, x)) - 90.0), (float)MathHelper.wrapDegrees(Math.toDegrees(Math.atan2(y, MathHelper.sqrt(x * x + y2 * y2)))) };
+    }
+
 }

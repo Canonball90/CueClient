@@ -47,6 +47,7 @@ public class Cube {
     public static CommandManager commandManager = null;
     public static CapeManager capeManager = null;
     public static TrackerManager trackerManager = null;
+    public static RotationManager rotationManager = null;
     public static AltManager altManager;
     public static Shaders shaders;
     public static ThreadManager threadManager;
@@ -111,6 +112,8 @@ public class Cube {
         logger.info("Loaded ThreadManager");
         positionManager = new PositionManager();
         logger.info("Loaded PositionManager");
+        rotationManager = new RotationManager();
+        logger.info("Loaded RotationManager");
         AntiDumpManager.check();
         logger.info("AntiDump...");
     }

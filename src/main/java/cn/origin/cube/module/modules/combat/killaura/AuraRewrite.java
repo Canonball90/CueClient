@@ -108,7 +108,7 @@ public class AuraRewrite extends Module {
                             this.killLast = new Date().getTime();
                             if (rotate.getValue()) {
                                 if(rotateStrict.getValue()) {
-                                    Rotate.rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                    Cube.rotationManager.lookAtEntity(target);
                                 }else{
                                     Rotate.rotateTo(target);
                                 }
@@ -125,7 +125,7 @@ public class AuraRewrite extends Module {
                             this.killLast = new Date().getTime();
                             if (rotate.getValue()) {
                                 if(rotateStrict.getValue()) {
-                                    Rotate.rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                    Cube.rotationManager.lookAtEntity(target);
                                 }else{
                                     Rotate.rotateTo(target);
                                 }
@@ -142,7 +142,7 @@ public class AuraRewrite extends Module {
                             this.killLast = new Date().getTime();
                             if (rotate.getValue()) {
                                 if(rotateStrict.getValue()) {
-                                    Rotate.rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                    Cube.rotationManager.lookAtEntity(target);
                                 }else{
                                     Rotate.rotateTo(target);
                                 }
@@ -159,7 +159,7 @@ public class AuraRewrite extends Module {
                             this.killLast = new Date().getTime();
                             if (rotate.getValue()) {
                                 if(rotateStrict.getValue()) {
-                                    Rotate.rotateTo(target.posX, target.posY, target.posZ, mc.player, false);
+                                    Cube.rotationManager.lookAtEntity(target);
                                 }else{
                                     Rotate.rotateTo(target);
                                 }
@@ -232,7 +232,7 @@ public class AuraRewrite extends Module {
         }
     }
     public void attack(Entity entity) {
-        Rotate.rotateTo(entity.posX, entity.posY, entity.posZ, mc.player, false);
+        Cube.rotationManager.lookAtEntity(entity);
         if (hitDelay.getValue()) {
             final boolean isSneaking = mc.player.isSneaking();
             final boolean isSprinting = mc.player.isSprinting();
