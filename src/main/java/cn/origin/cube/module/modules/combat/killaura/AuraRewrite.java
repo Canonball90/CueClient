@@ -25,6 +25,9 @@ import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ClickType;
+import net.minecraft.network.Packet;
+import net.minecraft.network.play.client.CPacketEntityAction;
 import net.minecraft.network.play.client.CPacketUseEntity;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -69,6 +72,7 @@ public class AuraRewrite extends Module {
     BooleanSetting betterCrit = registerSetting("BetterCrit", false).modeVisible(page, Page.AntiCheat);
     BooleanSetting projectiles = registerSetting("Projectiles", true).modeVisible(page, Page.AntiCheat);
     BooleanSetting silent = registerSetting("Silent", true).modeVisible(page, Page.AntiCheat);
+    BooleanSetting armorBreak = registerSetting("ArmorBreak", false).modeVisible(page, Page.AntiCheat);
 
     //Render
     BooleanSetting render = registerSetting("Render", true).modeVisible(page, Page.Render);
@@ -229,8 +233,21 @@ public class AuraRewrite extends Module {
     public void attack(Entity entity) {
         Rotate.rotateTo(entity.posX, entity.posY, entity.posZ, mc.player, false);
         if (hitDelay.getValue()) {
-            if(betterCrit.getValue()){
-                mc.gameSettings.keyBindSneak.pressed = true;
+            final boolean isSneaking = mc.player.isSneaking();
+            final boolean isSprinting = mc.player.isSprinting();
+            if (this.betterCrit.getValue()) {
+                if (isSneaking) {
+                    mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)mc.player, CPacketEntityAction.Action.STOP_SNEAKING));
+                }
+                if (isSprinting) {
+                    mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)mc.player, CPacketEntityAction.Action.STOP_SPRINTING));
+                }
+            }
+            if (this.armorBreak.getValue()) {
+                mc.playerController.windowClick(mc.player.inventoryContainer.windowId, 9, mc.player.inventory.currentItem, ClickType.SWAP, (EntityPlayer)mc.player);
+                attack(target);
+                mc.playerController.windowClick(mc.player.inventoryContainer.windowId, 9, mc.player.inventory.currentItem, ClickType.SWAP, (EntityPlayer)mc.player);
+                attack(target);
             }
             if(!packet.getValue()) {
                 if (mc.player.getCooledAttackStrength(0) >= 1) {
@@ -241,8 +258,13 @@ public class AuraRewrite extends Module {
                 mc.playerController.connection.sendPacket(new CPacketUseEntity(entity));
                 if (swimArm.getValue()) mc.player.swingArm(getHandToAttack());
             }
-            if(betterCrit.getValue()){
-                mc.gameSettings.keyBindSneak.pressed = true;
+            if (this.betterCrit.getValue()) {
+                if (isSprinting) {
+                    mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)mc.player, CPacketEntityAction.Action.START_SPRINTING));
+                }
+                if (isSneaking) {
+                    mc.player.connection.sendPacket((Packet)new CPacketEntityAction((Entity)mc.player, CPacketEntityAction.Action.START_SNEAKING));
+                }
             }
         }
         if(betterCrit.getValue()){
@@ -268,22 +290,6 @@ public class AuraRewrite extends Module {
         return !(this.mc.player.getDistance(entity) > this.range.getValue().floatValue()) && !entity.isDead && !(((EntityLivingBase)entity).getHealth() <= 0.0f);
     }
 
-    public enum RenderMode{
-        Circle,Box
-    }
-
-    public enum Mode{
-        Offhand,Main,Both
-    }
-
-    public enum Page{
-        Target,AntiCheat,Render
-    }
-
-    public enum TargetSortingMode{
-        Distance,Health
-    }
-
     @Override
     public void onDisable() {
         if(target != null)
@@ -303,5 +309,21 @@ public class AuraRewrite extends Module {
             return EnumHand.OFF_HAND;
         }
         return EnumHand.MAIN_HAND;
+    }
+
+    public enum RenderMode{
+        Circle,Box
+    }
+
+    public enum Mode{
+        Offhand,Main,Both
+    }
+
+    public enum Page{
+        Target,AntiCheat,Render
+    }
+
+    public enum TargetSortingMode{
+        Distance,Health
     }
 }

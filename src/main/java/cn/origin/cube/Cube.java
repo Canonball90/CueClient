@@ -65,12 +65,12 @@ public class Cube {
         logger.info("Begin loading Cue");
         Display.setTitle(MOD_NAME + " | " + MOD_VERSION);
         Discord.startRPC();
-        KeyBindings.init();
-
-        MinecraftForge.EVENT_BUS.register(new HUDHandler());
-
-        MTConfig.findCompoundAndLoad();
-        PlaylistList.findCompoundAndLoad();
+//        KeyBindings.init();
+//
+//        MinecraftForge.EVENT_BUS.register(new HUDHandler());
+//
+//        MTConfig.findCompoundAndLoad();
+//        PlaylistList.findCompoundAndLoad();
     }
 
     @Mod.EventHandler
