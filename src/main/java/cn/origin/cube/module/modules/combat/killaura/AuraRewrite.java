@@ -81,6 +81,7 @@ public class AuraRewrite extends Module {
     FloatSetting CWidth = registerSetting("CWidth", 1f, -5f, 5f).booleanVisible(render).modeVisible(page, Page.Render);
     IntegerSetting Height = registerSetting("Height", 200, 0, 500).modeVisible(page, Page.Render);
     IntegerSetting Width = registerSetting("Width", 200, 0, 500).modeVisible(page, Page.Render);
+    IntegerSetting healthbarSpeed = registerSetting("HBarSpeed", 5, 1, 10).modeVisible(page, Page.Render);
 
     @SubscribeEvent
     public void onUpdate(UpdateWalkingPlayerEvent event) {
@@ -202,7 +203,7 @@ public class AuraRewrite extends Module {
             DecimalFormat dec = new DecimalFormat("#");
 
             utils.healthBarTarget = Width.getValue() / 2 - 41 + (((140) / (target.getMaxHealth())) * (target.getHealth()));
-            double HealthBarSpeed = 5;
+            double HealthBarSpeed = healthbarSpeed.getValue();
 
             if (utils.healthBar > utils.healthBarTarget) {
                 utils.healthBar = ((utils.healthBar) - ((utils.healthBar - utils.healthBarTarget) / HealthBarSpeed));
