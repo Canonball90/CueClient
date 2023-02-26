@@ -84,93 +84,10 @@ public class AuraRewrite extends Module {
     IntegerSetting healthbarSpeed = registerSetting("HBarSpeed", 5, 1, 10).modeVisible(page, Page.Render);
 
     @SubscribeEvent
-    public void onUpdate(UpdateWalkingPlayerEvent event) {
+    public void onUpdateWalkingPlayer(UpdateWalkingPlayerEvent updateWalkingPlayerEvent) {
         if(fullNullCheck()) return;
-        if(target != null) {
-            if (target.getDistance(mc.player) >= range.getValue() || target.isDead || !target.isEntityAlive())
-                target = null;
-        }
-        if(silent.getValue()){
-            SwitchUtils.silent();
-            if(target == null){
-                SwitchUtils.oldSwitch();
-            }
-        }
-        for(Entity entity : mc.world.loadedEntityList) {
-            if(entity == mc.player) continue;
-            if(entity.isDead || !entity.isEntityAlive()) continue;
-            if(entity.getDistance(mc.player) <= range.getValue()) {
-                if(mc.player.getCooledAttackStrength(0.0f) >= 1.0f) {
-                    if (entity instanceof EntityPlayer && players.getValue()) {
-                        target = (EntityLivingBase) entity;
-                        final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
-                        if (new Date().getTime() >= this.killLast + delay) {
-                            this.killLast = new Date().getTime();
-                            if (rotate.getValue()) {
-                                if(rotateStrict.getValue()) {
-                                    Cube.rotationManager.lookAtEntity(target);
-                                }else{
-                                    Rotate.rotateTo(target);
-                                }
-                            }
-                            for (int i = 0; i < this.iterations.getValue(); ++i) {
-                                attack(target);
-                            }
-                        }
-                    }
-                    if (entity instanceof EntityAnimal && animals.getValue()) {
-                        target = (EntityLivingBase) entity;
-                        final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
-                        if (new Date().getTime() >= this.killLast + delay) {
-                            this.killLast = new Date().getTime();
-                            if (rotate.getValue()) {
-                                if(rotateStrict.getValue()) {
-                                    Cube.rotationManager.lookAtEntity(target);
-                                }else{
-                                    Rotate.rotateTo(target);
-                                }
-                            }
-                            for (int i = 0; i < this.iterations.getValue(); ++i) {
-                                attack(target);
-                            }
-                        }
-                    }
-                    if(utils.isProjectile(entity) && projectiles.getValue()){
-                        target = (EntityLivingBase)entity;
-                        final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
-                        if (new Date().getTime() >= this.killLast + delay) {
-                            this.killLast = new Date().getTime();
-                            if (rotate.getValue()) {
-                                if(rotateStrict.getValue()) {
-                                    Cube.rotationManager.lookAtEntity(target);
-                                }else{
-                                    Rotate.rotateTo(target);
-                                }
-                            }
-                            for (int i = 0; i < this.iterations.getValue(); ++i) {
-                                attack(target);
-                            }
-                        }
-                    }
-                    if ((entity instanceof EntityMob || entity instanceof EntitySlime) && mobs.getValue()) {
-                        target = (EntityLivingBase) entity;
-                        final int delay = (int)(this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
-                        if (new Date().getTime() >= this.killLast + delay) {
-                            this.killLast = new Date().getTime();
-                            if (rotate.getValue()) {
-                                if(rotateStrict.getValue()) {
-                                    Cube.rotationManager.lookAtEntity(target);
-                                }else{
-                                    Rotate.rotateTo(target);
-                                }
-                            }
-                            for (int i = 0; i < this.iterations.getValue(); ++i) {
-                                attack(target);
-                            }
-                        }
-                    }
-                }
-            }
+        if(updateWalkingPlayerEvent.getStage() == 0) {
+            KA();
         }
     }
 
@@ -188,6 +105,95 @@ public class AuraRewrite extends Module {
             if(rMode.getValue().equals(RenderMode.Box)) {
                 AxisAlignedBB box = target.getRenderBoundingBox().offset(-mc.getRenderManager().viewerPosX, -mc.getRenderManager().viewerPosY, -mc.getRenderManager().viewerPosZ);
                 Render3DUtil.drawBlock(box, new Color(Colors.getGlobalColor().getRed(),Colors.getGlobalColor().getGreen(),Colors.getGlobalColor().getBlue(),130));
+            }
+        }
+    }
+
+    public void KA(){
+        if (target != null) {
+            if (target.getDistance(mc.player) >= range.getValue() || target.isDead || !target.isEntityAlive())
+                target = null;
+        }
+        if (silent.getValue()) {
+            SwitchUtils.silent();
+            if (target == null) {
+                SwitchUtils.oldSwitch();
+            }
+        }
+        for (Entity entity : mc.world.loadedEntityList) {
+            if (entity == mc.player) continue;
+            if (entity.isDead || !entity.isEntityAlive()) continue;
+            if (entity.getDistance(mc.player) <= range.getValue()) {
+                if (mc.player.getCooledAttackStrength(0.0f) >= 1.0f) {
+                    if (entity instanceof EntityPlayer && players.getValue()) {
+                        target = (EntityLivingBase) entity;
+                        final int delay = (int) (this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
+                        if (new Date().getTime() >= this.killLast + delay) {
+                            this.killLast = new Date().getTime();
+                            if (rotate.getValue()) {
+                                if (rotateStrict.getValue()) {
+                                    Cube.rotationManager.lookAtEntity(target);
+                                } else {
+                                    Rotate.rotateTo(target);
+                                }
+                            }
+                            for (int i = 0; i < this.iterations.getValue(); ++i) {
+                                attack(target);
+                            }
+                        }
+                    }
+                    if (entity instanceof EntityAnimal && animals.getValue()) {
+                        target = (EntityLivingBase) entity;
+                        final int delay = (int) (this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
+                        if (new Date().getTime() >= this.killLast + delay) {
+                            this.killLast = new Date().getTime();
+                            if (rotate.getValue()) {
+                                if (rotateStrict.getValue()) {
+                                    Cube.rotationManager.lookAtEntity(target);
+                                } else {
+                                    Rotate.rotateTo(target);
+                                }
+                            }
+                            for (int i = 0; i < this.iterations.getValue(); ++i) {
+                                attack(target);
+                            }
+                        }
+                    }
+                    if (utils.isProjectile(entity) && projectiles.getValue()) {
+                        target = (EntityLivingBase) entity;
+                        final int delay = (int) (this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
+                        if (new Date().getTime() >= this.killLast + delay) {
+                            this.killLast = new Date().getTime();
+                            if (rotate.getValue()) {
+                                if (rotateStrict.getValue()) {
+                                    Cube.rotationManager.lookAtEntity(target);
+                                } else {
+                                    Rotate.rotateTo(target);
+                                }
+                            }
+                            for (int i = 0; i < this.iterations.getValue(); ++i) {
+                                attack(target);
+                            }
+                        }
+                    }
+                    if ((entity instanceof EntityMob || entity instanceof EntitySlime) && mobs.getValue()) {
+                        target = (EntityLivingBase) entity;
+                        final int delay = (int) (this.delay.getValue() * 10 + (randomD.getValue() ? this.randomDelay.getValue() * 10 * Math.random() : 0));
+                        if (new Date().getTime() >= this.killLast + delay) {
+                            this.killLast = new Date().getTime();
+                            if (rotate.getValue()) {
+                                if (rotateStrict.getValue()) {
+                                    Cube.rotationManager.lookAtEntity(target);
+                                } else {
+                                    Rotate.rotateTo(target);
+                                }
+                            }
+                            for (int i = 0; i < this.iterations.getValue(); ++i) {
+                                attack(target);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

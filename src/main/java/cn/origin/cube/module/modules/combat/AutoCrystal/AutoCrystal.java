@@ -3,6 +3,7 @@ package cn.origin.cube.module.modules.combat.AutoCrystal;
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.events.client.PacketEvent;
 import cn.origin.cube.core.events.player.RenderRotationsEvent;
+import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent;
 import cn.origin.cube.core.events.world.Render3DEvent;
 import cn.origin.cube.core.module.Category;
 import cn.origin.cube.core.module.Module;
@@ -152,8 +153,8 @@ public class AutoCrystal extends Module {
     private int breaks;
     private Rotation rotateAngles;
 
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void onTick(TickEvent.RenderTickEvent event) {
+    @SubscribeEvent
+    public void onUpdateWalkingPlayer(UpdateWalkingPlayerEvent updateWalkingPlayerEvent) {
         if(fullNullCheck())return;
         if(stopWhenEating.getValue() && isEating() || stopWhenMining.getValue() && isMining()) return;
         doLogic();
@@ -222,7 +223,7 @@ public class AutoCrystal extends Module {
                 placeSpeed.setValue(18);
                 breakSpeed.setValue(17);
             }
-            rotateTo(crystal.posX, crystal.posY, crystal.posZ, mc.player, false);
+            Cube.rotationManager.lookAtVec3d(crystal.posX, crystal.posY, crystal.posZ);
             if (predict.getValue()) {//ToDo make better predict
 
             }
@@ -359,7 +360,7 @@ public class AutoCrystal extends Module {
                     return;
                 }
                 EnumFacing f;
-                rotateTo(q.getX() + .5, q.getY() - .5, q.getZ() + .5, mc.player, false);
+                Cube.rotationManager.lookAtVec3d(q.getX() + .5, q.getY() - .5, q.getZ() + .5);
                 if (rayTrace.getValue()) {
                     RayTraceResult result = mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(q.getX() + .5, q.getY() - .5d, q.getZ() + .5));
                     if (result == null || result.sideHit == null) {
@@ -595,7 +596,7 @@ public class AutoCrystal extends Module {
                                 Minecraft.getMinecraft().player.posZ),
                         new Vec3d((double) pos.getX() + 0.5, (double) pos.getY() - 0.5, (double) pos.getZ() + 0.5));
         EnumFacing facing = result == null || result.sideHit == null ? EnumFacing.UP : result.sideHit;
-        rotateTo(pos.getX() + 0.5, pos.getY() - 0.5, pos.getZ() + 0.5, mc.player, false);
+        Cube.rotationManager.lookAtVec3d(pos.getX() + 0.5, pos.getY() - 0.5, pos.getZ() + 0.5);
         Minecraft.getMinecraft().player.connection
                 .sendPacket(new CPacketPlayerTryUseItemOnBlock(pos, facing, hand, 0.0f, 0.0f, 0.0f));
     }

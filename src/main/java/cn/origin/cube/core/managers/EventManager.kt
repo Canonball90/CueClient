@@ -3,9 +3,11 @@ package cn.origin.cube.core.managers
 import cn.origin.cube.Cube
 import cn.origin.cube.core.events.player.DeathEvent
 import cn.origin.cube.core.events.player.TotemPopListener
+import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent
 import cn.origin.cube.core.events.render.RenderOverlayEvent
 import cn.origin.cube.core.events.world.Render3DEvent
 import cn.origin.cube.utils.Utils
+import cn.origin.cube.utils.Utils.nullCheck
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.GlStateManager
 import net.minecraft.entity.player.EntityPlayer
@@ -18,7 +20,6 @@ import net.minecraftforge.fml.common.eventhandler.Event
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.InputEvent
-import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientConnectedToServerEvent
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientDisconnectionFromServerEvent
@@ -124,4 +125,18 @@ class EventManager {
             Minecraft.getMinecraft().ingameGUI.chatGUI.addToSentMessages(event.message);
         }
     }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    fun onUpdateWalkingPlayer(updateWalkingPlayerEvent: UpdateWalkingPlayerEvent) {
+        if (nullCheck()) {
+            return
+        }
+        if (updateWalkingPlayerEvent.stage == 0) {
+            Cube.rotationManager.updateRotations()
+        }
+        if (updateWalkingPlayerEvent.stage == 1) {
+            Cube.rotationManager.restoreRotations()
+        }
+    }
+
 }
