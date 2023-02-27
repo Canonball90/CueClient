@@ -18,6 +18,7 @@ import net.minecraft.network.play.client.CPacketClickWindow
 import net.minecraft.network.play.client.CPacketEntityAction
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
+import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
 
 @Constant(constant = false)
 @Para(para = Para.ParaMode.Test)
@@ -35,7 +36,7 @@ class AutoTote : Module() {
 
 
     @SubscribeEvent
-    fun onTick(event: ClientTickEvent?) {
+    fun onTick(event: RenderTickEvent?) {
         if (fullNullCheck()) return
         if(mode.value.equals(ATMode.Normal)) {
             if (mc.currentScreen is GuiContainer && mc.currentScreen !is GuiInventory) return

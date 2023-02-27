@@ -10,12 +10,14 @@ import cn.origin.cube.guis.alt.manage.AltManager;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.guis.mainmenu.onGuiOpenEvent;
 import cn.origin.cube.guis.otheruis.mainmenu.Shaders;
+import cn.origin.cube.guis.spodify.SpotifyAPI;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 import org.lwjgl.opengl.Display;
 import vazkii.minetunes.config.MTConfig;
 import vazkii.minetunes.key.KeyBindings;
@@ -28,6 +30,9 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.*;
 
 @Mod(modid = Cube.MOD_ID, name = Cube.MOD_NAME, version = Cube.MOD_VERSION)
 public class Cube {
@@ -49,9 +54,11 @@ public class Cube {
     public static TrackerManager trackerManager = null;
     public static RotationManager rotationManager = null;
     public static AltManager altManager;
+    public static ExecutorService executorService;
     public static Shaders shaders;
     public static ThreadManager threadManager;
     public static PositionManager positionManager;
+    public static SpotifyAPI spotifyAPI;
     public static cn.origin.cube.core.events.event.event.EventManager EVENT_BUS = new cn.origin.cube.core.events.event.event.EventManager();
 
     public static boolean DEBUG_MODE = ManagementFactory.getRuntimeMXBean().getInputArguments().toString().indexOf("-agentlib:jdwp") > 0;
@@ -114,6 +121,80 @@ public class Cube {
         logger.info("Loaded PositionManager");
         rotationManager = new RotationManager();
         logger.info("Loaded RotationManager");
+        executorService = new ExecutorService() {
+            @Override
+            public void shutdown() {
+
+            }
+
+            @NotNull
+            @Override
+            public List<Runnable> shutdownNow() {
+                return null;
+            }
+
+            @Override
+            public boolean isShutdown() {
+                return false;
+            }
+
+            @Override
+            public boolean isTerminated() {
+                return false;
+            }
+
+            @Override
+            public boolean awaitTermination(long timeout, @NotNull TimeUnit unit) throws InterruptedException {
+                return false;
+            }
+
+            @NotNull
+            @Override
+            public <T> Future<T> submit(@NotNull Callable<T> task) {
+                return null;
+            }
+
+            @NotNull
+            @Override
+            public <T> Future<T> submit(@NotNull Runnable task, T result) {
+                return null;
+            }
+
+            @NotNull
+            @Override
+            public Future<?> submit(@NotNull Runnable task) {
+                return null;
+            }
+
+            @NotNull
+            @Override
+            public <T> List<Future<T>> invokeAll(@NotNull Collection<? extends Callable<T>> tasks) throws InterruptedException {
+                return null;
+            }
+
+            @NotNull
+            @Override
+            public <T> List<Future<T>> invokeAll(@NotNull Collection<? extends Callable<T>> tasks, long timeout, @NotNull TimeUnit unit) throws InterruptedException {
+                return null;
+            }
+
+            @NotNull
+            @Override
+            public <T> T invokeAny(@NotNull Collection<? extends Callable<T>> tasks) throws InterruptedException, ExecutionException {
+                return null;
+            }
+
+            @Override
+            public <T> T invokeAny(@NotNull Collection<? extends Callable<T>> tasks, long timeout, @NotNull TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException {
+                return null;
+            }
+
+            @Override
+            public void execute(@NotNull Runnable command) {
+
+            }
+        };
+        spotifyAPI = new SpotifyAPI();
         AntiDumpManager.check();
         logger.info("AntiDump...");
     }

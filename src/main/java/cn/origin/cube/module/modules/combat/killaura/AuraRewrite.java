@@ -88,6 +88,7 @@ public class AuraRewrite extends Module {
         if(fullNullCheck()) return;
         if(updateWalkingPlayerEvent.getStage() == 0) {
             KA();
+            Cube.rotationManager.updateRotations();
         }
     }
 
@@ -238,7 +239,9 @@ public class AuraRewrite extends Module {
         }
     }
     public void attack(Entity entity) {
-        Cube.rotationManager.lookAtEntity(entity);
+        if(rotate.getValue()) {
+            Cube.rotationManager.lookAtEntity(entity);
+        }
         if (hitDelay.getValue()) {
             final boolean isSneaking = mc.player.isSneaking();
             final boolean isSprinting = mc.player.isSprinting();
@@ -252,9 +255,6 @@ public class AuraRewrite extends Module {
             }
             if (this.armorBreak.getValue()) {
                 mc.playerController.windowClick(mc.player.inventoryContainer.windowId, 9, mc.player.inventory.currentItem, ClickType.SWAP, (EntityPlayer)mc.player);
-                attack(target);
-                mc.playerController.windowClick(mc.player.inventoryContainer.windowId, 9, mc.player.inventory.currentItem, ClickType.SWAP, (EntityPlayer)mc.player);
-                attack(target);
             }
             if(!packet.getValue()) {
                 if (mc.player.getCooledAttackStrength(0) >= 1) {
@@ -307,6 +307,11 @@ public class AuraRewrite extends Module {
     @Override
     public void onEnable(){
         SwitchUtils.oldSwitch();
+    }
+
+    public void rotate(float pitch, float yaw){
+        Cube.rotationManager.setPitch(pitch);
+        Cube.rotationManager.setYaw(yaw);
     }
 
     private EnumHand getHandToAttack() {

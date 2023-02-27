@@ -153,7 +153,7 @@ public class AutoCrystal extends Module {
     private int breaks;
     private Rotation rotateAngles;
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onUpdateWalkingPlayer(UpdateWalkingPlayerEvent updateWalkingPlayerEvent) {
         if(fullNullCheck())return;
         if(stopWhenEating.getValue() && isEating() || stopWhenMining.getValue() && isMining()) return;
