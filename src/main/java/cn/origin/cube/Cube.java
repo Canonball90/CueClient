@@ -41,8 +41,11 @@ public class Cube {
     public static final String MOD_NAME = "Cue";
 
     public static final String MOD_VERSION = "3";
+
     public static final Logger logger = LogManager.getLogger("Cue");
-    public static final String HWIDS_LIST = "https://pastebin.com/9n0dgckT";
+    public static final String HWIDS_LIST = "https://pastebin.com/raw/9n0dgckT";
+    public static String commandPrefix = ".";
+
     public static EventManager eventManager = null;
     public static FontManager fontManager = null;
     public static ClickGuiScreen clickGui = null;
@@ -63,13 +66,9 @@ public class Cube {
     public static cn.origin.cube.core.events.event.event.EventManager EVENT_BUS = new cn.origin.cube.core.events.event.event.EventManager();
     public static boolean isOpenAuthGui;
     public static boolean allowToConfiguredAnotherClients = true, remapped = false;
-
     public static boolean DEBUG_MODE = ManagementFactory.getRuntimeMXBean().getInputArguments().toString().indexOf("-agentlib:jdwp") > 0;
-
     public volatile static ThreadMusicPlayer musicPlayerThread;
     public volatile static ThreadPlaylistCreator playlistCreatorThread;
-
-    public static String commandPrefix = ".";
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
