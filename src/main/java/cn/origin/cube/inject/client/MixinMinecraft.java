@@ -2,6 +2,7 @@ package cn.origin.cube.inject.client;
 
 import cn.origin.cube.Cube;
 import cn.origin.cube.core.events.client.DisplayGuiScreenEvent;
+import cn.origin.cube.guis.auth.AuthGui;
 import cn.origin.cube.guis.mainmenu.MainMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
@@ -47,7 +48,7 @@ public abstract class MixinMinecraft {
 
     @Inject(method = {"init"}, at = {@At(value = "TAIL")})
     private void init(CallbackInfo ci) {
-        this.displayGuiScreen(new MainMenu());
+        this.displayGuiScreen(new AuthGui());
     }
 
 

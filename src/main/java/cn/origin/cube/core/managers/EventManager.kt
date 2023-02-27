@@ -6,15 +6,13 @@ import cn.origin.cube.core.events.player.TotemPopListener
 import cn.origin.cube.core.events.player.UpdateWalkingPlayerEvent
 import cn.origin.cube.core.events.render.RenderOverlayEvent
 import cn.origin.cube.core.events.world.Render3DEvent
+import cn.origin.cube.guis.auth.AuthGui
 import cn.origin.cube.utils.Utils
 import cn.origin.cube.utils.Utils.nullCheck
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.GlStateManager
 import net.minecraft.entity.player.EntityPlayer
-import net.minecraftforge.client.event.ClientChatEvent
-import net.minecraftforge.client.event.RenderBlockOverlayEvent
-import net.minecraftforge.client.event.RenderGameOverlayEvent
-import net.minecraftforge.client.event.RenderWorldLastEvent
+import net.minecraftforge.client.event.*
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.eventhandler.Event
 import net.minecraftforge.fml.common.eventhandler.EventPriority
@@ -33,9 +31,11 @@ class EventManager {
     init {
         MinecraftForge.EVENT_BUS.register(this)
         totemPopListener = TotemPopListener()
+        mc.displayGuiScreen(AuthGui())
+        Cube.isOpenAuthGui = true
     }
 
-    fun EventManager(){
+    public fun onInit(){
 
     }
 
@@ -137,6 +137,12 @@ class EventManager {
         if (updateWalkingPlayerEvent.stage == 1) {
             Cube.rotationManager.restoreRotations()
         }
+    }
+
+    @SubscribeEvent
+    fun onGuiOpen(event: GuiOpenEvent) {
+        if (event.gui !is AuthGui && Cube.isOpenAuthGui && !Cube.allowToConfiguredAnotherClients) event.isCanceled =
+            true
     }
 
 }

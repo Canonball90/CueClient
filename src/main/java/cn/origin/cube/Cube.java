@@ -42,6 +42,7 @@ public class Cube {
 
     public static final String MOD_VERSION = "3";
     public static final Logger logger = LogManager.getLogger("Cue");
+    public static final String HWIDS_LIST = "https://pastebin.com/9n0dgckT";
     public static EventManager eventManager = null;
     public static FontManager fontManager = null;
     public static ClickGuiScreen clickGui = null;
@@ -60,6 +61,8 @@ public class Cube {
     public static PositionManager positionManager;
     public static SpotifyAPI spotifyAPI;
     public static cn.origin.cube.core.events.event.event.EventManager EVENT_BUS = new cn.origin.cube.core.events.event.event.EventManager();
+    public static boolean isOpenAuthGui;
+    public static boolean allowToConfiguredAnotherClients = true, remapped = false;
 
     public static boolean DEBUG_MODE = ManagementFactory.getRuntimeMXBean().getInputArguments().toString().indexOf("-agentlib:jdwp") > 0;
 
@@ -73,12 +76,7 @@ public class Cube {
         logger.info("Begin loading Cue");
         Display.setTitle(MOD_NAME + " | " + MOD_VERSION);
         Discord.startRPC();
-//        KeyBindings.init();
-//
-//        MinecraftForge.EVENT_BUS.register(new HUDHandler());
-//
-//        MTConfig.findCompoundAndLoad();
-//        PlaylistList.findCompoundAndLoad();
+
     }
 
     @Mod.EventHandler
