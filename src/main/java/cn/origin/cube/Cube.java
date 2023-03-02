@@ -10,7 +10,6 @@ import cn.origin.cube.guis.alt.manage.AltManager;
 import cn.origin.cube.guis.gui.ClickGuiScreen;
 import cn.origin.cube.guis.mainmenu.onGuiOpenEvent;
 import cn.origin.cube.guis.otheruis.mainmenu.Shaders;
-import cn.origin.cube.guis.spodify.SpotifyAPI;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -62,7 +61,6 @@ public class Cube {
     public static Shaders shaders;
     public static ThreadManager threadManager;
     public static PositionManager positionManager;
-    public static SpotifyAPI spotifyAPI;
     public static cn.origin.cube.core.events.event.event.EventManager EVENT_BUS = new cn.origin.cube.core.events.event.event.EventManager();
     public static boolean isOpenAuthGui;
     public static boolean allowToConfiguredAnotherClients = true, remapped = false;
@@ -191,7 +189,6 @@ public class Cube {
 
             }
         };
-        spotifyAPI = new SpotifyAPI();
         AntiDumpManager.check();
         logger.info("AntiDump...");
     }

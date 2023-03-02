@@ -5,7 +5,6 @@ import cn.origin.cube.core.module.AbstractModule
 import cn.origin.cube.core.module.Category
 import cn.origin.cube.core.module.HudModule
 import cn.origin.cube.core.module.Module
-import cn.origin.cube.guis.spodify.module.SpotifyMod
 import cn.origin.cube.module.huds.*
 import cn.origin.cube.module.modules.combat.AutoTotem.AutoTote
 import cn.origin.cube.module.modules.client.*
@@ -44,7 +43,6 @@ class ModuleManager {
         registerModule(NewClickGui())
         registerModule(Colors())
         registerModule(Notif())
-        registerModule(SpotifyMod())
 
         //Combat
         registerModule(Surround())

@@ -94,7 +94,6 @@ dependencies {
     compile group: 'org.apache.httpcomponents', name: 'httpcore-nio', version: '4.4.14'
     compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.5.13'
     compile group: 'org.json', name: 'json', version: '20210307'
-    compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
     compileOnly "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
     implementation 'se.michaelthelin.spotify:spotify-web-api-java:6.5.4'
 
