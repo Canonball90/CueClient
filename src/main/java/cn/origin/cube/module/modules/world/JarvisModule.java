@@ -23,6 +23,7 @@ import java.awt.*;
 public class JarvisModule extends Module {
 
     FloatSetting height = registerSetting("Height", 5f, 1f, 15f);
+    FloatSetting dist = registerSetting("Distance", 100f, 100f, 500f);
 
     @Override
     public void onEnable(){
@@ -42,7 +43,7 @@ public class JarvisModule extends Module {
     public void onUpdate() {
         if(fullNullCheck()) return;
         EntityPlayer player = null;
-        float tickDis = 100f;
+        float tickDis = dist.getValue();
         for (EntityPlayer p : mc.world.playerEntities) {
             if (p instanceof EntityPlayerSP) continue;
             float dis = p.getDistance(mc.player);
