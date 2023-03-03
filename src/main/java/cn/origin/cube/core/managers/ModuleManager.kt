@@ -130,6 +130,8 @@ class ModuleManager {
         registerModule(PopLag())
         registerModule(Disabler())
         registerModule(AntiHunger())
+        registerModule(BlockReach())
+        registerModule(JarvisModule())
 
         //Hud
         registerModule(WaterMark())
