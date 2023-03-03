@@ -78,6 +78,7 @@ class ModuleManager {
         registerModule(Spammer());
         registerModule(ChorusControl());
         registerModule(InvManager());
+        registerModule(GodModule());
 
         //Movement
         registerModule(Velocity())
