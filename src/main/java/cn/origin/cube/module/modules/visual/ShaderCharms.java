@@ -286,6 +286,9 @@ public class ShaderCharms  extends Module {
                     case "Techno":
                         framebufferShader = TechnoShader.TECHNO_SHADER;
                         break;
+                    case "Purp":
+                        framebufferShader = PurpShader.PURP_SHADER;
+                        break;
                 }
 
                 if (framebufferShader == null) return;
@@ -351,6 +354,6 @@ public class ShaderCharms  extends Module {
     }
 
     public enum ShaderModes {
-        AQUA, RED, SMOKE, FLOW, ITEMGLOW, PURPLE, GRADIENT, UNU, GLOW, OUTLINE, BlueFlames, CodeX, Crazy, Golden, HideF, HotShit, Kfc, Sheldon, Smoky, SNOW, Techno
+        AQUA, RED, SMOKE, FLOW, ITEMGLOW, PURPLE, GRADIENT, UNU, GLOW, OUTLINE, BlueFlames, CodeX, Crazy, Golden, HideF, HotShit, Kfc, Sheldon, Smoky, SNOW, Techno, Purp
     }
 }
